@@ -7,9 +7,11 @@ const app = express();
 
 // Cors configuration
 app.use(cors({
-    origin:process.env.CLIENT_ORIGIN,
-    methods:['GET', 'POST']
-}));
+    origin: process.env.CLIENT_URL,
+    methods:"GET,POST,PUT,DELETE",
+    credentials:true
+}))
+
 // Middleware
 app.use(express.json());
 

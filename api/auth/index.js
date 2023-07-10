@@ -1,11 +1,10 @@
 import express from 'express';
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt';
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '../lib/db.js'
 const router = express.Router();
 
 router.post('/register', async (req, res) => {
-    const prisma = new PrismaClient();
     const { email, password } = req.body;
     if(!email || !password ) {
         return res.status(400).json({
@@ -40,15 +39,13 @@ router.post('/register', async (req, res) => {
     const token = await jwt.sign({
         id:user.id
     }, process.env.JWT_SECRET)
-    return res.status(200).json({
+    return res.cookie('auth', token).status(200).json({
         ok:true,
         response:user,
-        token
     })
 })
 
 router.post('/login', async (req, res) => {
-    const prisma = new PrismaClient();
     const { email, password } = req.body;
     if(!email || !password ) {
         return res.status(400).json({
@@ -74,9 +71,12 @@ router.post('/login', async (req, res) => {
             response:' Incorrect Email or Password '
         })
     }
-    return res.status(200).json({
+    const token = await jwt.sign({
+        id:user.id
+    }, process.env.JWT_SECRET)
+    return res.cookie('auth', token).status(200).json({
         ok:true,
-        response:user
+        response:user,
     })
 })
 
