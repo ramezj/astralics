@@ -4,6 +4,27 @@ import bcrypt from 'bcrypt';
 import { prisma } from '../lib/db.js'
 const router = express.Router();
 
+router.get('/jwt', async(req, res) => {
+    const token = req.cookies.auth;
+    if(!token) {
+        return res.status(401).json({
+            response:'Unauthorized',
+            ok:false
+        })
+    }
+    const decode = await jwt.verify(token, process.env.JWT_SECRET);
+    if(!decode) {
+        return res.status(401).json({
+            response:'Unauthorized',
+            ok:false
+        })
+    }
+    return res.status(200).json({
+        response:decode,
+        ok:true
+    })
+})
+
 router.post('/register', async (req, res) => {
     const { email, password } = req.body;
     if(!email || !password ) {
@@ -41,7 +62,7 @@ router.post('/register', async (req, res) => {
     }, process.env.JWT_SECRET)
     return res.cookie('auth', token).status(200).json({
         ok:true,
-        response:user,
+        response:'Signed Up Successfully'
     })
 })
 
@@ -76,7 +97,7 @@ router.post('/login', async (req, res) => {
     }, process.env.JWT_SECRET)
     return res.cookie('auth', token).status(200).json({
         ok:true,
-        response:user,
+        response:'Logged In Successfully'
     })
 })
 

@@ -8,7 +8,7 @@ export default function Register() {
     const [ email, setEmail ] = useState();
     const [ password, setPassword ] = useState();
     const [ loading, setLoading ] = useState(false);
-    const [ error, setError ] = useState();
+    const [ response, setResponse ] = useState();
     const [ title, setTitle ] = useState("Create Account");
     const submit = async (e) => {
         e.preventDefault();
@@ -19,14 +19,15 @@ export default function Register() {
                 "Access-Control-Allow-Credentials":"true",
             },
             method: 'POST',
+            credentials:'include',
             body: JSON.stringify({
                 email:email,
                 password:password
             })
         });
         const res = await response.json();
+        setResponse(res.response);
         setLoading(false);
-        console.log(res);
     }
   return (
     <>
@@ -39,6 +40,7 @@ export default function Register() {
             <br />
             <SubmitButton onClick={submit} title={title}/>
         </form>
+        {response}
     </div>
     </center>
     </>

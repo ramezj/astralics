@@ -2,6 +2,7 @@ import express from 'express'
 import { PrismaClient } from '@prisma/client'
 import cors from 'cors'
 import { authRoute } from './auth/index.js';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(cors({
 
 // Middleware
 app.use(express.json());
+app.use(cookieParser())
 
 app.use('/', authRoute)
 
