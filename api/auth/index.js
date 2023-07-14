@@ -60,7 +60,10 @@ router.post('/register', async (req, res) => {
     const token = await jwt.sign({
         id:user.id
     }, process.env.JWT_SECRET)
-    return res.cookie('auth', token).status(200).json({
+    return res.cookie('auth', token, {
+        httpOnly: true,
+        secure:true
+    }).status(200).json({
         ok:true,
         response:'Signed Up Successfully'
     })
@@ -95,7 +98,10 @@ router.post('/login', async (req, res) => {
     const token = await jwt.sign({
         id:user.id
     }, process.env.JWT_SECRET)
-    return res.cookie('auth', token).status(200).json({
+    return res.cookie('auth', token, {
+        httpOnly:true,
+        secure:true
+    }).status(200).json({
         ok:true,
         response:'Logged In Successfully'
     })
