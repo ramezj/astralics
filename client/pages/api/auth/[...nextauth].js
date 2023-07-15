@@ -8,6 +8,13 @@ const prisma = new PrismaClient();
 
 export const authOptions = {
   adapter: PrismaAdapter(prisma),
+  callbacks: {
+    async session ({session, token, user}) {
+        session.accessToken = token
+        session.user.id = user.id
+        return session
+    }
+  },
   // Configure one or more authentication providers
   providers: [
     GoogleProvider({
