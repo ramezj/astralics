@@ -12,22 +12,31 @@ export default function Component() {
   })
   const [ loading, setLoading ] = useState(false);
   const [ user, setUser ] = useState();
+  const [ projects, setProjects ] = useState([]);
   useEffect(() => {
     const fetchUser = async () => {
       setLoading(true);
       const response = await fetch('/api/app');
       const res = await response.json();
-      setUser(res);
+      setUser(res.user);
+      setProjects(res.user.projects);
       setLoading(false);
     }
     fetchUser();
   }, [])
-  return (
-    <>
-    {loading 
-    ? <>Loading </>
-    : <>{JSON.stringify(user)}</>
-    }
-    </>
-  )
+  console.log(projects);
+  if(loading == false) {
+    return (
+      <>
+      <br />
+      {projects.map((project) => {
+        return (
+          <>
+          <h1 key={project.id}>{project.id}</h1>
+          </>
+        )
+      })}
+      </>
+    )
+  }
 }
