@@ -34,7 +34,7 @@ export default function Page() {
     : 
     <> 
     <center>
-    <DarkButton>{data.name}</DarkButton>
+    <DarkButton>{data.name} project</DarkButton>
     <p>Project Feedbacks : </p>
     { 
     feedback.map((feedback) => {
