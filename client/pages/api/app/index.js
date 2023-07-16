@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     const session = await getServerSession(req, res, authOptions);
     if(!session) {
         return res.status(401).json({
-            ok:true,
+            ok:false,
             response: ' Unauthorized '
         })
     }
@@ -23,7 +23,8 @@ export default async function handler(req, res) {
         }
     });
     res.status(200).json({
-        user
+        ok:true,
+        response:user
     })
   }
   

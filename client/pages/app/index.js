@@ -18,9 +18,15 @@ export default function Component() {
       setLoading(true);
       const response = await fetch('/api/app');
       const res = await response.json();
-      setUser(res.user);
-      setProjects(res.user.projects);
-      setLoading(false);
+      console.log(res);
+      if(res.ok == false) {
+        router.push('/')
+      }
+      if(res.ok == true) {
+        setUser(res.response);
+        setProjects(res.response.projects);
+        setLoading(false);
+      }
     }
     fetchUser();
   }, [])
