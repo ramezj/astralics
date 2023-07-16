@@ -1,6 +1,7 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
+import DarkButton from "@/components/buttons/dark"
  
 export default function Page() {
     const router = useRouter()
@@ -8,6 +9,7 @@ export default function Page() {
     const { data: session } = useSession({})
     const [ loading, setLoading ] = useState(false);
     const [ data, setData ] = useState(false); 
+    const [ feedback, setFeedback ] = useState([])
     useEffect(() => {
         if(!id) {
             return;
@@ -20,6 +22,7 @@ export default function Page() {
                 return router.push('/404')
             }
             setData(res.response);
+            setFeedback(res.response.feedbacks)
             setLoading(false);
         }
         fetchProject();
@@ -30,9 +33,19 @@ export default function Page() {
     loading ? <>Loading..</>
     : 
     <> 
-    <p>Project Id : {data.id}</p>
-    <p>Project Name : {data.name}</p>
-    <p>Project Feedbacks : {JSON.stringify(data.feedbacks)}</p>
+    <center>
+    <DarkButton>{data.name}</DarkButton>
+    <p>Project Feedbacks : </p>
+    { 
+    feedback.map((feedback) => {
+        return (
+            <>
+            <p>{feedback.body}</p>
+            </>
+        )
+    })
+    }
+    </center>
     </>
     }
     </>
