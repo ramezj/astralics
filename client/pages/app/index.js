@@ -24,19 +24,23 @@ export default function Component() {
     }
     fetchUser();
   }, [])
-  console.log(projects);
-  if(loading == false) {
-    return (
-      <>
-      <br />
-      {projects.map((project) => {
+  return (
+    <>
+    {loading 
+    ? <>Loading Projects</>
+    :
+    <>
+    <br />
+    {projects.map((project) => {
         return (
           <>
-          <h1 key={project.id}>{project.id}</h1>
+          <a href={`/project/${project.id}`} className="cursor-pointer text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700" key={project.id}>{project.name}</a>
+          <br /><br />
           </>
         )
       })}
-      </>
-    )
-  }
+    </>
+    }
+    </>
+  )
 }
