@@ -2,6 +2,7 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import DarkButton from "@/components/buttons/dark"
+import Layout from "@/components/layout"
  
 export default function Page() {
     const router = useRouter()
@@ -29,6 +30,7 @@ export default function Page() {
     }, [id])
   return (
     <>
+    <Layout>
     { 
     loading ? <>Loading..</>
     : 
@@ -48,6 +50,7 @@ export default function Page() {
     </center>
     </>
     }
+    </Layout>
     </>
   )
 }

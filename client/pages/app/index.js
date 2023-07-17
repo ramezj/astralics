@@ -1,6 +1,8 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
+import Layout from "@/components/layout";
+
 
 export default function Component() {
   const router = useRouter();
@@ -32,6 +34,7 @@ export default function Component() {
   }, [])
   return (
     <>
+    <Layout>
     {loading 
     ? <>Loading Projects</>
     :
@@ -47,6 +50,7 @@ export default function Component() {
       })}
     </>
     }
+    </Layout>
     </>
   )
 }
