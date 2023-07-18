@@ -9,7 +9,7 @@ export default function Navbar(props) {
     return (
         <>
         <div className="navbar bg-gray-950">
-  <div className="flex-1">
+  <div className="flex-1 mt-4 ml-4">
         <Link className="btn btn-ghost normal-case text-xl" href='/'>BlitzFeedback</Link>
   </div>
   <div className="flex-none">
@@ -17,7 +17,7 @@ export default function Navbar(props) {
         session 
         ? 
         <>
-        <div className="dropdown dropdown-end">
+        <div className="dropdown dropdown-end mr-4 mt-4">
         <Link href="/app">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">

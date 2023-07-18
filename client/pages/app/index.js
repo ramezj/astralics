@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Layout from "@/components/layout";
 import Card from "@/components/app/Card";
-import CardLoading from "@/components/app/CardLoading";
+import Loading from "@/components/app/Loading";
 
 
 export default function Component() {
@@ -48,8 +48,8 @@ export default function Component() {
     <br />
     <br />
     <div className='flex flex-wrap gap-8 justify-center w-full'>
-    <CardLoading />
-    <CardLoading />
+    <Loading />
+    <Loading />
     </div>
     </>
     :

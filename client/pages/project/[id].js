@@ -31,13 +31,16 @@ export default function Page() {
   return (
     <>
     <Layout>
+     <br />
+     <center>
+     <div className='w-10/12 bg-indigo-500 h-full'>
     { 
     loading ? <>Loading..</>
     : 
     <> 
     <center>
     <DarkButton>{data.name} project</DarkButton>
-    <p>Project Feedbacks : </p>
+    <p className='float-left'>Project Feedbacks : </p>
     { 
     feedback.map((feedback) => {
         return (
@@ -47,9 +50,12 @@ export default function Page() {
         )
     })
     }
+    
     </center>
     </>
     }
+    </div>
+    </center>
     </Layout>
     </>
   )

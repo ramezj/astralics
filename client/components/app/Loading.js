@@ -1,4 +1,4 @@
-export default function CardLoading() {
+export default function Loading() {
     return (
         <div className="card w-96 bg-gray-900 shadow-xl hover:bg-gray-800 cursor-pointer">
 <div role="status" class="max-w-sm animate-pulse">
