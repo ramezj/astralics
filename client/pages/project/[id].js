@@ -33,14 +33,13 @@ export default function Page() {
     <Layout>
      <br />
      <center>
-     <div className='w-10/12 bg-indigo-500 h-full'>
     { 
     loading ? <>Loading..</>
     : 
     <> 
     <center>
-    <DarkButton>{data.name} project</DarkButton>
-    <p className='float-left'>Project Feedbacks : </p>
+    <h2 className="font-bold text-xl">{data.name}</h2>
+    <br />
     { 
     feedback.map((feedback) => {
         return (
@@ -54,7 +53,6 @@ export default function Page() {
     </center>
     </>
     }
-    </div>
     </center>
     </Layout>
     </>
