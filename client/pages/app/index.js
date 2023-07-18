@@ -39,18 +39,7 @@ export default function Component() {
     {loading 
     ?
     <>
-    <br />
-    <br />
-    <center>
-    <div class="h-3 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    </center>
-    <br />
-    <br />
-    <br />
-    <div className='flex flex-wrap gap-8 justify-center w-full'>
     <Loading />
-    <Loading />
-    </div>
     </>
     :
     <>
@@ -66,7 +55,6 @@ export default function Component() {
         return (
           <>
           <Card title={project.name} href={`/project/${project.id}`} website={project.website} />
-          <br /><br />
           </>
         )
       })}
