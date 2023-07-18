@@ -46,6 +46,7 @@ export default function Component() {
     </center>
     <br />
     <br />
+    <br />
     <div className='flex flex-wrap gap-8 justify-center w-full'>
     <CardLoading />
     <CardLoading />
