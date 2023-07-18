@@ -7,7 +7,7 @@ export default function Card(props) {
   <div className="card-body">
     <h2 className="card-title font-bold">{props.title}</h2>
     <br />
-    <Link href='/' className="font-medium -mb-3 hover:text-indigo-500 duration-150">{props.website}</Link>
+    <Link href='/' className="font-medium -mb-3 duration-150">{props.website}</Link>
     <div className="card-actions justify-end">
     </div>
   </div>

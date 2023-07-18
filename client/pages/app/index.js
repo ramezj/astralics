@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Layout from "@/components/layout";
 import Card from "@/components/app/Card";
+import CardLoading from "@/components/app/CardLoading";
 
 
 export default function Component() {
@@ -36,13 +37,29 @@ export default function Component() {
     <>
     <Layout>
     {loading 
-    ? <>Loading Projects</>
+    ?
+    <>
+    <br />
+    <br />
+    <center>
+    <div class="h-3 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    </center>
+    <br />
+    <br />
+    <div className='flex flex-wrap gap-8 justify-center w-full'>
+    <CardLoading />
+    <CardLoading />
+    </div>
+    </>
     :
     <>
     <br />
     <br />
+    <center>
+    <h2 className="font-bold text-2xl">Hello {session?.user.name}</h2>
     <br />
-    <h2 className="font-bold text-lg">Hello {session?.user.name}</h2>
+    <br />
+    </center>
     <div className='flex flex-wrap gap-8 justify-center w-full'>
     {projects.map((project) => {
         return (
