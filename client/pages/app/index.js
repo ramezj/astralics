@@ -5,7 +5,7 @@ import Link from "next/link";
 import Layout from "@/components/layout";
 import Card from "@/components/app/Card";
 import Loading from "@/components/app/Loading";
-
+import { motion } from 'framer-motion'
 
 export default function Component() {
   const router = useRouter();
@@ -53,9 +53,16 @@ export default function Component() {
     <div className='flex flex-wrap gap-8 justify-center w-full'>
     {projects.map((project) => {
         return (
-          <>
+          <motion.div
+          initial={{opacity: 0 }}
+      animate={{opacity: 1 }}
+      exit={{opacity: 0 }}
+      transition={{
+        duration:1
+      }}
+          >
           <Card title={project.name} href={`/project/${project.id}`} website={project.website} />
-          </>
+          </motion.div>
         )
       })}
       </div>
