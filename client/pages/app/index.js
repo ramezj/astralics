@@ -42,11 +42,12 @@ export default function Component() {
     <br />
     <br />
     <br />
+    <h2 className="font-bold text-lg">Hello {session?.user.name}</h2>
     <div className='flex flex-wrap gap-8 justify-center w-full'>
     {projects.map((project) => {
         return (
           <>
-          <Card title={project.name} href={`/project/${project.id}`} />
+          <Card title={project.name} href={`/project/${project.id}`} website={project.website} />
           <br /><br />
           </>
         )
