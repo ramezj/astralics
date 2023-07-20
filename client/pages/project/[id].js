@@ -29,13 +29,10 @@ export default function Page() {
             }
             setData(res.response);
             setFeedback(res.response.feedbacks)
+            setBugs(res.Bugs);
+            setIdeas(res.Ideas);
+            setOther(res.Other);
             setLoading(false);
-            // if(feedback) {
-            //     for (let index = 0; index < feedback.length; index++) {
-            //         console.log(feedback[index])
-                    
-            //     }
-            // }
         }
         fetchProject();
     }, [id])
@@ -66,10 +63,43 @@ export default function Page() {
     }
         <div className="flex flex-wrap gap-8 justify-center w-full">
                 <Bugs >
+                    {
+                        bugs.map((bug) => {
+                            return (
+                                <>
+                                <p>{bug.body}</p>
+                                <p>{bug.email}</p>
+                                <p>{bug.rating}</p>
+                                </>
+                            )
+                        })
+                    }
                 </Bugs>
                 <Idea >
+                {
+                        ideas.map((idea) => {
+                            return (
+                                <>
+                                <p>{idea.body}</p>
+                                <p>{idea.email}</p>
+                                <p>{idea.rating}</p>
+                                </>
+                            )
+                        })
+                    }
                 </Idea>
                 <Other>
+                {
+                        other.map((o) => {
+                            return (
+                                <>
+                                <p>{o.body}</p>
+                                <p>{o.email}</p>
+                                <p>{o.rating}</p>
+                                </>
+                            )
+                        })
+                    }
                 </Other>
         </div>
     </center>
