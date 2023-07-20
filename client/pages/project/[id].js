@@ -1,9 +1,11 @@
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useSession} from "next-auth/react"
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import DarkButton from "@/components/buttons/dark"
 import Layout from "@/components/layout"
- 
+import Idea from "@/components/project/Idea"
+import Bugs from "@/components/project/Bugs" 
+import Other from "@/components/project/Other"
+
 export default function Page() {
     const router = useRouter()
     const { id } = router.query;
@@ -11,6 +13,9 @@ export default function Page() {
     const [ loading, setLoading ] = useState(false);
     const [ data, setData ] = useState(false); 
     const [ feedback, setFeedback ] = useState([])
+    const [ bugs, setBugs ] = useState([])
+    const [ ideas, setIdeas ] = useState([])
+    const [ other, setOther ] = useState([])
     useEffect(() => {
         if(!id) {
             return;
@@ -25,6 +30,12 @@ export default function Page() {
             setData(res.response);
             setFeedback(res.response.feedbacks)
             setLoading(false);
+            // if(feedback) {
+            //     for (let index = 0; index < feedback.length; index++) {
+            //         console.log(feedback[index])
+                    
+            //     }
+            // }
         }
         fetchProject();
     }, [id])
@@ -33,7 +44,7 @@ export default function Page() {
     <Layout>
      <br />
      <center>
-    { 
+     { 
     loading ? <>Loading..</>
     : 
     <> 
@@ -53,6 +64,14 @@ export default function Page() {
     </center>
     </>
     }
+        <div className="flex flex-wrap gap-8 justify-center w-full">
+                <Bugs >
+                </Bugs>
+                <Idea >
+                </Idea>
+                <Other>
+                </Other>
+        </div>
     </center>
     </Layout>
     </>
