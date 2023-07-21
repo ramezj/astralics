@@ -2,9 +2,8 @@ import { useSession} from "next-auth/react"
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import Layout from "@/components/layout"
-import Idea from "@/components/project/Idea"
-import Bugs from "@/components/project/Bugs" 
-import Other from "@/components/project/Other"
+import { motion } from "framer-motion"
+import Feedback from "@/components/project/Feedback"
 
 export default function Page() {
     const router = useRouter()
@@ -13,9 +12,6 @@ export default function Page() {
     const [ loading, setLoading ] = useState(false);
     const [ data, setData ] = useState(false); 
     const [ feedback, setFeedback ] = useState([])
-    const [ bugs, setBugs ] = useState([])
-    const [ ideas, setIdeas ] = useState([])
-    const [ other, setOther ] = useState([])
     useEffect(() => {
         if(!id) {
             return;
@@ -29,9 +25,6 @@ export default function Page() {
             }
             setData(res.response);
             setFeedback(res.response.feedbacks)
-            setBugs(res.Bugs);
-            setIdeas(res.Ideas);
-            setOther(res.Other);
             setLoading(false);
         }
         fetchProject();
@@ -48,60 +41,30 @@ export default function Page() {
     <center>
     <h2 className="font-bold text-xl">{data.name}</h2>
     <br />
+    <div className='flex flex-wrap gap-8 justify-center w-full'>
     { 
     feedback.map((feedback) => {
         return (
             <>
-            <p>{feedback.body}</p>
+            <Feedback title={feedback.body} rating={feedback.rating} email={feedback.email} />
             </>
         )
     })
     }
-    
+    </div>
     </center>
     </>
     }
+    <motion.div
+          initial={{opacity: 0 }}
+      animate={{opacity: 1 }}
+      exit={{opacity: 0 }}
+      transition={{
+        duration:1
+      }}>
         <div className="flex flex-wrap gap-8 justify-center w-full">
-                <Bugs >
-                    {
-                        bugs.map((bug) => {
-                            return (
-                                <>
-                                <p>{bug.body}</p>
-                                <p>{bug.email}</p>
-                                <p>{bug.rating}</p>
-                                </>
-                            )
-                        })
-                    }
-                </Bugs>
-                <Idea >
-                {
-                        ideas.map((idea) => {
-                            return (
-                                <>
-                                <p>{idea.body}</p>
-                                <p>{idea.email}</p>
-                                <p>{idea.rating}</p>
-                                </>
-                            )
-                        })
-                    }
-                </Idea>
-                <Other>
-                {
-                        other.map((o) => {
-                            return (
-                                <>
-                                <p>{o.body}</p>
-                                <p>{o.email}</p>
-                                <p>{o.rating}</p>
-                                </>
-                            )
-                        })
-                    }
-                </Other>
         </div>
+        </motion.div>
     </center>
     </Layout>
     </>

@@ -32,29 +32,8 @@ export default async function handler(req, res) {
             response: ' Unauthorized '
         })
     }
-    const Bugs = await prisma.feedback.findMany({
-      where: {
-        projectId: projectId,
-        type: 'Bug'
-      }
-    });
-    const Ideas = await prisma.feedback.findMany({
-      where: {
-        projectId: projectId,
-        type: 'Idea'
-      }
-    });
-    const Other = await prisma.feedback.findMany({
-      where: {
-        projectId: projectId,
-        type: 'Other'
-      }
-    });
     return res.status(200).json({
         ok:true,
         response:project,
-        Bugs: Bugs,
-        Ideas: Ideas,
-        Other: Other
     })
   }

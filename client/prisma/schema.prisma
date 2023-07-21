@@ -61,7 +61,6 @@ model Feedback {
   rating Int
   createdAt DateTime @default(now())
   email String @default("")
-  type String @default("Other")
   projectId String
   project Project @relation(fields: [projectId], references: [id])
 }
