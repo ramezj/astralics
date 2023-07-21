@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Layout from "@/components/layout"
 import { motion } from "framer-motion"
 import Feedback from "@/components/project/Feedback"
+import Loading from "@/components/project/Loading"
 
 export default function Page() {
     const router = useRouter()
@@ -35,7 +36,10 @@ export default function Page() {
      <br />
      <center>
      { 
-    loading ? <>Loading..</>
+    loading ? 
+    <>
+    <Loading />
+    </>
     : 
     <> 
     <center>
