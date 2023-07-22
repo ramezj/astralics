@@ -23,8 +23,9 @@ export default function Widget(props) {
     <div className='w-12 h-10 bg-green-600 flex items-center justify-center rounded-md'>
         <p className='font-bold'>5</p>
     </div>
-    <textarea className="textarea w-full mt-2 focus:outline-none bg-gray-950 font-medium" placeholder="Leave your feedback here"></textarea>
-    <input type="text" placeholder="john@doe.com" className="input w-full mt-2 focus:outline-none bg-gray-950 font-medium text-sm -mt-1"/>
+    <textarea className="textarea w-full mt-2 focus:outline-none bg-gray-950 font-bold" placeholder="Leave your feedback here"></textarea>
+    <input type="text" placeholder="john@doe.com" className="input w-full mt-2 focus:outline-none bg-gray-950 font-bold text-sm -mt-1"/>
+    <button className='btn w-full text-white normal-case bg-gray-950 outline-none border-none hover:bg-gray-950 font-bold'>Submit Feedback</button>
     </div>
     <div className="card-actions justify-end">
     </div>
