@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/db"
 
 export default async function handler(req, res) {
+      console.log(req.body);
     const { projectId } = req.query;
     const project = await prisma.project.findFirst({
       where: {
@@ -15,8 +16,8 @@ export default async function handler(req, res) {
     }
     const feedback = await prisma.feedback.create({
       data: {
-        body: ' test ',
-        rating: 1,
+        body: req.body.feedback,
+        rating: req.body.rating,
         projectId:projectId
       }
     })
