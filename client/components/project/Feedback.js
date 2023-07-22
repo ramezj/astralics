@@ -5,7 +5,7 @@ export default function Feedback(props) {
         switch(props.rating) {
             case 1 : setColor('bg-red-500'); break;
             case 2 : setColor('bg-orange-300'); break;
-            case 3 : setColor('bg-yellow-600'); break;
+            case 3 : setColor('bg-yellow-300'); break;
             case 4 : setColor('bg-green-300'); break;
             case 5 : setColor('bg-green-600'); break;
         }
