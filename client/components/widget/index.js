@@ -1,6 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Widget(props) {
+    const [ feedback, setFeedback ] = useState();
+    const [ rating, setRating ] = useState(2);
+    const submitFeedback = async (e) => {
+        e.preventDefault();
+        const response = await fetch(`/api/feedback/new/${props.projectId}`, {
+            method:'POST',
+            body: JSON.stringify({
+                feedback:'herllo ',
+                rating:5
+            })
+        });
+        const res = await response.json();
+        console.log(res);
+    }
     return (
         <>
         <div className="card w-96 bg-gray-900 shadow-xl cursor-pointer duration-300">
@@ -23,9 +37,9 @@ export default function Widget(props) {
     <div className='w-12 h-10 bg-green-600 flex items-center justify-center rounded-md'>
         <p className='font-bold'>5</p>
     </div>
-    <textarea className="textarea w-full mt-2 focus:outline-none bg-gray-950 font-bold" placeholder="Leave your feedback here"></textarea>
+    <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="textarea w-full mt-2 focus:outline-none bg-gray-950 font-bold" placeholder="Leave your feedback here"></textarea>
     <input type="text" placeholder="john@doe.com" className="input w-full mt-2 focus:outline-none bg-gray-950 font-bold text-sm -mt-1"/>
-    <button className='btn w-full text-white normal-case bg-gray-950 outline-none border-none hover:bg-gray-950 font-bold'>Submit Feedback</button>
+    <button onClick={submitFeedback} className='btn w-full text-white normal-case bg-gray-950 outline-none border-none hover:bg-gray-950 font-bold'>Submit Feedback</button>
     </div>
     <div className="card-actions justify-end">
     </div>
