@@ -34,6 +34,7 @@ export default function Page() {
     <>
     <Layout>
      <br />
+     <br />
      <center>
      { 
     loading ? 
@@ -44,6 +45,7 @@ export default function Page() {
     <> 
     <center>
     <h2 className="font-extrabold text-2xl">{data.name}</h2>
+    <br />
     <br />
     <div className='flex flex-wrap gap-8 justify-center w-full'>
     { 

@@ -46,7 +46,7 @@ export default function Component() {
     <br />
     <br />
     <center>
-    <h2 className="font-bold text-2xl">Hello {session?.user.name}</h2>
+    <h2 className="font-extrabold text-2xl">Hello {session?.user.name}</h2>
     <br />
     <br />
     </center>
