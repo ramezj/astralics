@@ -46,6 +46,7 @@ export default function Page() {
     <center>
     <h2 className="font-extrabold text-2xl">{data.name}</h2>
     <br />
+    {/* <btn className='btn btn-error normal-case font-bold'>Delete Project</btn> */}
     <br />
     <div className='flex flex-wrap gap-8 justify-center w-full'>
     { 
