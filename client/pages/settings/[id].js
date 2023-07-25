@@ -12,7 +12,6 @@ export default function Page() {
     const { data: session } = useSession({})
     const [ loading, setLoading ] = useState(false);
     const [ data, setData ] = useState(false); 
-    const [ feedback, setFeedback ] = useState([])
     useEffect(() => {
         if(!id) {
             return;
@@ -25,7 +24,6 @@ export default function Page() {
                 return router.push('/404')
             }
             setData(res.response);
-            setFeedback(res.response.feedbacks)
             setLoading(false);
         }
         fetchProject();

@@ -11,10 +11,10 @@ export default async function handler(req, res) {
             response: ' Unauthorized '
         })
     }
-    const { projectId } = req.query;
+    const { id } = req.query;
     const project = await prisma.project.findFirst({
       where: {
-        id:projectId
+        id:id
       },
       include: {
         feedbacks:true
