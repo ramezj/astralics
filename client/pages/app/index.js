@@ -6,6 +6,7 @@ import Layout from "@/components/layout";
 import Card from "@/components/app/Card";
 import Loading from "@/components/app/Loading";
 import { motion } from 'framer-motion'
+import Create from "@/components/project/Create";
 
 export default function Component() {
   const router = useRouter();
@@ -47,6 +48,8 @@ export default function Component() {
     <br />
     <center>
     <h2 className="font-extrabold text-2xl">Hello {session?.user.name}</h2>
+    <br />
+    <Create />
     <br />
     <br />
     </center>

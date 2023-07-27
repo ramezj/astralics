@@ -10,11 +10,18 @@ export default async function handler(req, res) {
             response: ' Unauthorized '
         })
     }
-    const { name } = req.body;
+    const { name, url } = req.body;
+    if(!name || !url ) {
+        return res.status(400).json({
+            ok:false,
+            response: 'Name or Url Missing'
+        })
+    }
     try {
         const newProject = await prisma.project.create({
             data: {
-                name:'test',
+                name:name,
+                website:url,
                 userId:session.user.id
             }
         })
