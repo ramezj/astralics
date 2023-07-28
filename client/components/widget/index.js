@@ -46,7 +46,7 @@ export default function Widget(props) {
     <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="textarea w-full mt-2 focus:outline-none bg-gray-950 font-bold" placeholder="Leave your feedback here"></textarea>
     <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="input w-full mt-2 focus:outline-none bg-gray-950 font-bold text-sm -mt-1"/>
     <br /><br />
-    <button onClick={submitFeedback} className='btn w-full text-white normal-case bg-[#4c44e4] outline-none border-none hover:bg-[] font-bold'>Submit Feedback</button>
+    <button onClick={submitFeedback} className='btn w-full text-white normal-case bg-[#4c44e4] outline-none border-none hover:bg-[#2d2888] font-bold'>Submit Feedback</button>
     </form>
     </div>
     <div className="card-actions justify-end">

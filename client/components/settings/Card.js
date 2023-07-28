@@ -1,4 +1,5 @@
 import Delete from "./Delete"
+import SaveChanges from "./SaveChanges"
 
 export default function Card(props) {
     return (
@@ -10,11 +11,12 @@ export default function Card(props) {
         <input type="text" className="input w-full bg-gray-950 font-medium text-center" value={props.projectName} />
         <input type="text" className="input w-full bg-gray-950 font-medium text-center" value={props.projectId}/>
         <br />
-        <Delete projectId={props.projectId}/>
+        <div className='-mb-6 mt-4 flex gap-4'>
+            <Delete projectId={props.projectId}/>
+            <SaveChanges />
+        </div>
     </div>
     <br />
-    <div className="card-actions justify-end">
-    </div>
     </div>
     </div>
         </>
