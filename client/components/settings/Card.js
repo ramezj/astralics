@@ -9,9 +9,9 @@ export default function Card(props) {
     <div className="flex flex-wrap gap-3 justify-center">
         
         <input type="text" className="input w-full bg-gray-950 font-medium text-center" value={props.projectName} />
-        <input type="text" className="input w-full bg-gray-950 font-medium text-center" value={props.projectId}/>
+        <input type="text" disabled className="input w-full bg-gray-950 font-medium text-center" value={props.projectId}/>
         <br />
-        <div className='-mb-6 mt-4 flex gap-4'>
+        <div className='flex gap-4 mt-6'>
             <Delete projectId={props.projectId}/>
             <SaveChanges />
         </div>
