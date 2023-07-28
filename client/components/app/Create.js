@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import Router from 'next/router';
+import { useRouter } from 'next/navigation';
+
 export default function Create() {
+    const router = useRouter();
     const [ loading, setLoading ] = useState(false);
     const [ name, setName ] = useState();
     const [ error, setError ] = useState();
@@ -23,6 +25,8 @@ export default function Create() {
         if(resp.ok == true) {
             setLoading(false);
             setResponse(resp);
+            console.log(resp);
+            router.push(`/project/${resp.response.id}`)
         } else if (resp.ok == false) {
             setLoading(false);
             setError(resp.response);
@@ -41,7 +45,7 @@ export default function Create() {
     <br /><br />
     <button className="btn bg-indigo-700 text-white border-none hover:bg-indigo-800 normal-case" onClick={createProject}>Create Project</button>
     <br /><br />
-    {response}
+    {JSON.stringify(response)}
     <p className='text-red-500 font-medium'>
     {error}
     </p>
