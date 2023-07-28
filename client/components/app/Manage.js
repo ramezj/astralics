@@ -35,9 +35,9 @@ export default function Manage() {
   <form method="dialog" className="modal-box bg-gray-900">
     <h3 className="font-bold text-lg">Account Information</h3>
     <br /><br />
-    <input type="text" placeholder="Project's Name" onChange={(e) => {setName(e.target.value)}} className="input w-full max-w-xs bg-gray-950 font-bold border-none" />
+    <input autoFocus="false" type="text" placeholder="Project's Name" onChange={(e) => {setName(e.target.value)}} className="input w-full max-w-xs bg-gray-950 font-bold border-none" />
     <br /><br />
-    <input type="text" placeholder="Project's URL" onChange={(e) => {setUrl(e.target.value)}} className="input w-full max-w-xs bg-gray-950 font-bold border-none" />
+    <input autoFocus="false" type="text" placeholder="Project's URL" onChange={(e) => {setUrl(e.target.value)}} className="input w-full max-w-xs bg-gray-950 font-bold border-none" />
     <br /><br />
     <button className="btn bg-indigo-700 text-white border-none hover:bg-indigo-800 normal-case" onClick={createProject}>Create Project</button>
     <br /><br />
