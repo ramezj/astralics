@@ -15,25 +15,27 @@ export default async function handler(req, res) {
     const project = await prisma.project.findFirst({
       where: {
         id:id
-      },
-      include: {
-        feedbacks:true
       }
     })
-    if(!project) {
-      return res.status(400).json({
-        ok:false,
-        response:' Project Not Found '
-      })
-    }
     if(project.userId != session.user.id) {
         return res.status(401).json({
             ok:false,
             response: ' Unauthorized '
         })
     }
+    const deleteProject = await prisma.project.delete({
+      where: {
+        id:id
+      }
+    });
+    if(!deleteProject) {
+      return res.status(400).json({
+        ok:false,
+        response: 'something went wrong'
+      })
+    }
     return res.status(200).json({
         ok:true,
-        response:project,
+        response:'Project Deleted Successfully'
     })
   }
