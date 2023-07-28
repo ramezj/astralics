@@ -30,8 +30,8 @@ export default function Manage() {
     }
     return (
         <>
-        <button className='btn bg-gray-900 text-white border-none normal-case font-medium hover:bg-gray-900' onClick={()=>window.my_modal_1.showModal()}>Manage Account</button>
-<dialog id="my_modal_1" className="modal bg-transparent shadow-2xl">
+        <button className='btn bg-gray-900 text-white border-none normal-case font-medium hover:bg-gray-900' onClick={()=>window.my_modal_2.showModal()}>Manage Account</button>
+<dialog id="my_modal_2" className="modal bg-transparent shadow-2xl">
   <form method="dialog" className="modal-box bg-gray-900">
     <h3 className="font-bold text-lg">Account Information</h3>
     <br /><br />
