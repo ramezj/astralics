@@ -6,7 +6,8 @@ import Layout from "@/components/layout";
 import Card from "@/components/app/Card";
 import Loading from "@/components/app/Loading";
 import { motion } from 'framer-motion'
-import Create from "@/components/project/Create";
+import Create from "@/components/app/Create";
+import Manage from "@/components/app/Manage";
 
 export default function Component() {
   const router = useRouter();
@@ -49,7 +50,10 @@ export default function Component() {
     <center>
     <h2 className="font-extrabold text-2xl">Hello {session?.user.name}</h2>
     <br />
-    <Create />
+    <div className='flex flex-wrap gap-4 justify-center w-full'>
+      <Create />
+      <Manage />
+    </div>
     <br />
     <br />
     </center>
