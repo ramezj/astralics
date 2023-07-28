@@ -23,12 +23,17 @@ export default async function handler(req, res) {
             response: ' Unauthorized '
         })
     }
+    const deleteFeedback = await prisma.feedback.deleteMany({
+      where: {
+        projectId:id
+      }
+    });
     const deleteProject = await prisma.project.delete({
       where: {
         id:id
-      }
+      } 
     });
-    if(!deleteProject) {
+    if(!deleteProject || !deleteFeedback) {
       return res.status(400).json({
         ok:false,
         response: 'something went wrong'

@@ -50,7 +50,7 @@ export default function Component() {
     <center>
     <h2 className="font-extrabold text-2xl">Hello {session?.user.name}</h2>
     <br />
-    <div className='flex flex-wrap gap-4 justify-center w-full'>
+    <div className='flex flex-wrap gap-4 justify-center w-full mt-2 -mb-4'>
       <Create />
       <Manage />
     </div>
