@@ -8,7 +8,7 @@ export default function Component() {
     <Layout>
       <center>
         <br />
-        <Widget projectId={'clkmss0b00001ussg4bxlvow5'} />
+        <Widget projectId={'clkn99dp8000cmc16vh30pjh0'} />
       </center>
     </Layout>
   )

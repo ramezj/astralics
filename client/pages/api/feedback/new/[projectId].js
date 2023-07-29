@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     if(!project) {
       return res.status(400).json({
         ok:false,
-        response:' Incorrect Project ID'
+        response:'Configure Project ID'
       })
     }
     const feedback = await prisma.feedback.create({
