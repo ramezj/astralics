@@ -30,14 +30,14 @@ export default function Manage() {
     }
     return (
         <>
-        <button className='btn bg-gray-900 text-white border-none normal-case font-medium hover:bg-gray-900' onClick={()=>window.my_modal_2.showModal()}>Manage Account</button>
+        <button className='btn bg-gray-950 text-white border-none normal-case font-medium hover:bg-gray-900' onClick={()=>window.my_modal_2.showModal()}>Manage Account</button>
 <dialog id="my_modal_2" className="modal bg-transparent shadow-2xl">
-  <form method="dialog" className="modal-box bg-gray-900">
+  <form method="dialog" className="modal-box bg-gray-950">
     <h3 className="font-bold text-lg">Account Information</h3>
     <br /><br />
-    <input autoFocus="false" type="text" placeholder="Project's Name" onChange={(e) => {setName(e.target.value)}} className="input w-full max-w-xs bg-gray-950 font-bold border-none" />
+    <input autoFocus={false} type="text" placeholder="Project's Name" onChange={(e) => {setName(e.target.value)}} className="input w-full max-w-xs bg-gray-900 font-bold border-none" />
     <br /><br />
-    <input autoFocus="false" type="text" placeholder="Project's URL" onChange={(e) => {setUrl(e.target.value)}} className="input w-full max-w-xs bg-gray-950 font-bold border-none" />
+    <input autoFocus={false} type="text" placeholder="Project's URL" onChange={(e) => {setUrl(e.target.value)}} className="input w-full max-w-xs bg-gray-900 font-bold border-none" />
     <br /><br />
     <button className="btn bg-indigo-700 text-white border-none hover:bg-indigo-800 normal-case" onClick={createProject}>Create Project</button>
     <br /><br />
@@ -46,7 +46,7 @@ export default function Manage() {
     {error}
     </p>
     <div className="modal-action">
-      <button className="btn bg-gray-950 border-none hover:bg-gray-950 normal-case -mt-7 text-white">Close</button>
+      <button className="btn bg-gray-900 border-none hover:bg-gray-900 normal-case -mt-7 text-white">Close</button>
     </div>
   </form>
 </dialog>

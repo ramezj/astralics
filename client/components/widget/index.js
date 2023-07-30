@@ -33,29 +33,29 @@ export default function Widget(props) {
     }
     return (
         <>
-        <div className="card w-96 bg-gray-900 shadow-xl cursor-pointer duration-300">
+        <div className="card w-96 bg-gray-950 shadow-xl duration-300">
   <div className="card-body">
     <h2 className="card-title font-extrabold justify-center">Rate your overall experience</h2>
     <br />
     <div className='flex flex-wrap gap-4 justify-center w-full'>
-    <div className='w-12 h-10 bg-red-500 flex items-center justify-center rounded-md'>
+    <div className='w-12 h-10 bg-red-500 flex items-center justify-center rounded-md cursor-pointer'>
         <p className='font-bold'>1</p>
     </div>
-    <div className='w-12 h-10 bg-orange-300 flex items-center justify-center rounded-md'>
+    <div className='w-12 h-10 bg-orange-300 flex items-center justify-center rounded-md cursor-pointer'>
         <p className='font-bold'>2</p>
     </div>
-    <div className='w-12 h-10 bg-yellow-300 flex items-center justify-center rounded-md'>
+    <div className='w-12 h-10 bg-yellow-300 flex items-center justify-center rounded-md cursor-pointer'>
         <p className='font-bold'>3</p>
     </div>
-    <div className='w-12 h-10 bg-green-300 flex items-center justify-center rounded-md'>
+    <div className='w-12 h-10 bg-green-300 flex items-center justify-center rounded-md cursor-pointer'>
         <p className='font-bold'>4</p>
     </div>
-    <div className='w-12 h-10 bg-green-600 flex items-center justify-center rounded-md'>
+    <div className='w-12 h-10 bg-green-600 flex items-center justify-center rounded-md cursor-pointer'>
         <p className='font-bold'>5</p>
     </div>
     <form>
-    <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="textarea w-full mt-2 focus:outline-none bg-gray-950 font-bold" placeholder="Leave your feedback here"></textarea>
-    <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="input w-full mt-2 focus:outline-none bg-gray-950 font-bold text-sm -mt-1"/>
+    <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="textarea w-full mt-2 focus:outline-none bg-gray-900 font-bold" placeholder="Leave your feedback here"></textarea>
+    <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="input w-full mt-2 focus:outline-none bg-gray-900 font-bold text-sm -mt-1"/>
     <br /><br />
     <button onClick={submitFeedback} className='btn w-full text-white normal-case bg-[#4c44e4] outline-none border-none hover:bg-[#2d2888] font-bold'>
         {
