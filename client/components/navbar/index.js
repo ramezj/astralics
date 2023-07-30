@@ -10,7 +10,7 @@ export default function Navbar(props) {
         <>
         <div className="navbar bg-transparent">
   <div className="flex-1 mt-4 ml-4">
-        <Link className="btn btn-ghost font-bold normal-case text-xl" href='/'>BlitzFeedback</Link>
+        <Link className="btn btn-ghost font-extrabold normal-case text-xl" href='/'>BlitzFeedback</Link>
   </div>
   <div className="flex-none">
     {
