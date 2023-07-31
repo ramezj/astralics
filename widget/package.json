@@ -1,10 +1,10 @@
 {
   "name": "blitzfeedbacktest",
-  "description": "Testing BlitzFeedback Widget",
+  "description": "BlitzFeedback Feedback Widget",
   "author": "Ramez Joseph",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "private": false,
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
