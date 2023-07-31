@@ -36,7 +36,7 @@ export default function BlitzFeedback(props) {
         <>
         <div className="card w-96 bg-gray-950 shadow-xl duration-300">
   <div className="card-body">
-    <h2 className="card-title font-extrabold justify-center">Rate your overall experience</h2>
+    <h2 className="card-title font-extrabold justify-center text-white">Rate your overall experience</h2>
     <br />
     <div className='flex flex-wrap gap-4 justify-center w-full'>
     <motion.dev 
@@ -45,32 +45,32 @@ export default function BlitzFeedback(props) {
       }}
       whileTap={{ scale: 0.9 }}
     className='w-12 h-10 bg-red-500 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(1)}}>
-        <p className='font-bold'>1</p>
+        <p className='font-bold text-white flex justify-center'>1</p>
     </motion.dev>
     <motion.dev 
     whileHover={{
         scale: 1.1,
       }}
       whileTap={{ scale: 0.9 }} className='w-12 h-10 bg-orange-300 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(2)}}>
-        <p className='font-bold'>2</p>
+        <p className='font-bold text-white flex justify-center'>2</p>
     </motion.dev >
     <motion.dev 
     whileHover={{
         scale: 1.1,
       }} className='w-12 h-10 bg-yellow-300 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(3)}}>
-        <p className='font-bold'>3</p>
+        <p className='font-bold text-white flex justify-center'>3</p>
     </motion.dev >
     <motion.dev 
     whileHover={{
         scale: 1.1,
       }} className='w-12 h-10 bg-green-300 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(4)}}>
-        <p className='font-bold'>4</p>
+        <p className='font-bold text-white flex justify-center'>4</p>
     </motion.dev >
     <motion.dev 
     whileHover={{
         scale: 1.1,
       }} className='w-12 h-10 bg-green-600 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(5)}}>
-        <p className='font-bold'>5</p>
+        <p className='font-bold text-white flex justify-center'>5</p>
     </motion.dev >
     <form>
     <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="textarea w-full mt-2 focus:outline-none bg-gray-900 font-bold" placeholder="Leave your feedback here"></textarea>
