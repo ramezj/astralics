@@ -1,7 +1,7 @@
 {
   "name": "blitzfeedbacktest",
-  "description":"Testing BlitzFeedback Widget",
-  "author":"Ramez Joseph",
+  "description": "Testing BlitzFeedback Widget",
+  "author": "Ramez Joseph",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "version": "0.1.2",
@@ -43,6 +43,7 @@
   "devDependencies": {
     "@babel/cli": "^7.22.9",
     "@babel/core": "^7.22.9",
-    "@babel/preset-env": "^7.22.9"
+    "@babel/preset-env": "^7.22.9",
+    "tailwindcss": "^3.3.3"
   }
 }

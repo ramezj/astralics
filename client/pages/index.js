@@ -10,7 +10,7 @@ export default function Component() {
       <center>
         <br />
         <Widget projectId={'clkq68fsg0001us3w0522kvfx'} />
-        {/* <BlitzFeedback name="Ramez Joseph" /> */}
+        <BlitzFeedback name="Ramez Joseph" />
       </center>
     </Layout>
   )
