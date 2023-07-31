@@ -11,6 +11,8 @@ export default function Page() {
     const { id } = router.query;
     const { data: session } = useSession({})
     const [ loading, setLoading ] = useState(false);
+    const [ projectName, setProjectName ] = useState();
+    const [ projectWebsite, setProjectWebsite ] = useState();
     const [ data, setData ] = useState(false); 
     useEffect(() => {
         if(!id) {
@@ -23,6 +25,8 @@ export default function Page() {
             if(res.ok == false) {
                 return router.push('/404')
             }
+            setProjectName(res.response.name);
+            setProjectWebsite(res.response.website);
             setData(res.response);
             setLoading(false);
         }
@@ -45,7 +49,7 @@ export default function Page() {
     <h2 className="font-extrabold text-2xl">{data.name}</h2>
     <br />
     <br />
-    <Card projectId={data.id} projectName={data.name}/>
+    <Card projectId={data.id} projectName={data.name} projectWebsite={data.website}/>
     </center>
     </>
     }

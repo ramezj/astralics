@@ -4,7 +4,7 @@
   "author":"Ramez Joseph",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": false,
   "dependencies": {
     "@babel/polyfill": "^7.12.1",

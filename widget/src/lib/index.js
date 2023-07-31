@@ -1,3 +1,3 @@
-import Widget from "./components/Widget";
+import BlitzFeedback from "./components/BlitzFeedback";
 
-export { Widget }
+export { BlitzFeedback }

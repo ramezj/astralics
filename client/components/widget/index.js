@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Widget(props) {
     const [ loading, setLoading ] = useState(false);
@@ -16,7 +17,7 @@ export default function Widget(props) {
               },
             body: JSON.stringify({
                 body:feedback,
-                rating:5,
+                rating:rating,
                 email:email
             })
         });
@@ -38,21 +39,39 @@ export default function Widget(props) {
     <h2 className="card-title font-extrabold justify-center">Rate your overall experience</h2>
     <br />
     <div className='flex flex-wrap gap-4 justify-center w-full'>
-    <div className='w-12 h-10 bg-red-500 flex items-center justify-center rounded-md cursor-pointer'>
+    <motion.dev 
+    whileHover={{
+        scale: 1.1,
+      }}
+      whileTap={{ scale: 0.9 }}
+    className='w-12 h-10 bg-red-500 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(1)}}>
         <p className='font-bold'>1</p>
-    </div>
-    <div className='w-12 h-10 bg-orange-300 flex items-center justify-center rounded-md cursor-pointer'>
+    </motion.dev>
+    <motion.dev 
+    whileHover={{
+        scale: 1.1,
+      }}
+      whileTap={{ scale: 0.9 }} className='w-12 h-10 bg-orange-300 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(2)}}>
         <p className='font-bold'>2</p>
-    </div>
-    <div className='w-12 h-10 bg-yellow-300 flex items-center justify-center rounded-md cursor-pointer'>
+    </motion.dev >
+    <motion.dev 
+    whileHover={{
+        scale: 1.1,
+      }} className='w-12 h-10 bg-yellow-300 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(3)}}>
         <p className='font-bold'>3</p>
-    </div>
-    <div className='w-12 h-10 bg-green-300 flex items-center justify-center rounded-md cursor-pointer'>
+    </motion.dev >
+    <motion.dev 
+    whileHover={{
+        scale: 1.1,
+      }} className='w-12 h-10 bg-green-300 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(4)}}>
         <p className='font-bold'>4</p>
-    </div>
-    <div className='w-12 h-10 bg-green-600 flex items-center justify-center rounded-md cursor-pointer'>
+    </motion.dev >
+    <motion.dev 
+    whileHover={{
+        scale: 1.1,
+      }} className='w-12 h-10 bg-green-600 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(5)}}>
         <p className='font-bold'>5</p>
-    </div>
+    </motion.dev >
     <form>
     <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="textarea w-full mt-2 focus:outline-none bg-gray-900 font-bold" placeholder="Leave your feedback here"></textarea>
     <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="input w-full mt-2 focus:outline-none bg-gray-900 font-bold text-sm -mt-1"/>

@@ -17,7 +17,11 @@ export default async function handler(req, res) {
         id:projectId
       },
       include: {
-        feedbacks:true
+        feedbacks: {
+          orderBy: {
+            createdAt: 'desc',
+          },
+        }
       }
     })
     if(!project) {
