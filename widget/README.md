@@ -1,1 +1,0 @@
-# ◆ BlitzFeedback Widget

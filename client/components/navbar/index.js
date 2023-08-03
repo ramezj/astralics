@@ -29,7 +29,7 @@ export default function Navbar(props) {
         </>
         : 
         <>
-        <button className="btn mr-4 mt-4 normal-case" onClick={signUserIn}>Get Started</button>
+        <button className="btn mr-4 mt-4 normal-case text-white" onClick={signUserIn}>Get Started</button>
         </>
     }
   </div>
