@@ -15,6 +15,7 @@
     "autoprefixer": "10.4.14",
     "blitzfeedbacktest": "^1.0.0",
     "blitzfeedbackvite": "^1.0.0",
+    "blitzpackage": "^0.1.0",
     "blitzvite10": "^0.1.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",

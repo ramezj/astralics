@@ -17,7 +17,9 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -33,7 +35,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "pckg",
+  "name": "blitzpackage",
   "author": "Lunix",
   "module": "dist/pckg.esm.js",
   "size-limit": [
@@ -47,12 +49,20 @@
     }
   ],
   "devDependencies": {
+    "@babel/core": "^7.22.9",
     "@size-limit/preset-small-lib": "^8.2.6",
+    "@storybook/addon-essentials": "^7.2.1",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^7.2.1",
+    "@storybook/addons": "^7.2.1",
+    "@storybook/react": "^7.2.1",
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
+    "babel-loader": "^9.1.3",
     "husky": "^8.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
     "size-limit": "^8.2.6",
     "tsdx": "^0.14.1",
     "tslib": "^2.6.1",
