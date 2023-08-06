@@ -1,14 +1,96 @@
 import * as React from 'react';
+import { useState } from 'react';
 import './tailwind.css'
+import { motion } from 'framer-motion';
 
 export function BlitzFeedback(props:{projectId:any}) {
+    const [ loading, setLoading ] = useState(false);
+    const [ feedback, setFeedback ] = useState("");
+    const [ rating, setRating ] = useState(2);
+    const [ email, setEmail ] = useState("");
+    const [ text, setText ] = useState("Submit Feedback");
+    const submitFeedback = async (e:any) => {
+        e.preventDefault();
+        setLoading(true);
+        const response = await fetch(`/api/feedback/new/${props.projectId}`, {
+            method:'POST',
+            headers: {
+                "Content-Type": "application/json"
+              },
+            body: JSON.stringify({
+                body:feedback,
+                rating:rating,
+                email:email
+            })
+        });
+        const res = await response.json();
+        if(res.ok == true) {
+            setLoading(false);
+            setText('Feedback Received! 🚀')
+            
+        } else if (res.ok == false) {
+            setLoading(false);
+            setText(res.response)
+        }
+        console.log(res);
+    }
     return (
         <>
-            
-<a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-    <p className='font-normal text-gray-700 dark:text-gray-400'>BlitzFeedback Welcomes u from TSDX, {props.projectId}</p>
-</a>
+        <div className="card w-96 bg-gray-950 shadow-xl duration-300">
+  <div className="card-body">
+    <h2 className="card-title font-extrabold justify-center">Rate your overall experience</h2>
+    <br />
+    <div className='flex flex-wrap gap-4 justify-center w-full'>
+    <motion.div 
+    whileHover={{
+        scale: 1.1,
+      }}
+      whileTap={{ scale: 0.9 }}
+    className='w-12 h-10 bg-red-500 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(1)}}>
+        <p className='font-bold'>1</p>
+    </motion.div>
+    <motion.div  
+    whileHover={{
+        scale: 1.1,
+      }}
+      whileTap={{ scale: 0.9 }} className='w-12 h-10 bg-orange-300 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(2)}}>
+        <p className='font-bold'>2</p>
+    </motion.div>
+    <motion.div  
+    whileHover={{
+        scale: 1.1,
+      }} className='w-12 h-10 bg-yellow-300 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(3)}}>
+        <p className='font-bold'>3</p>
+    </motion.div>
+    <motion.div 
+    whileHover={{
+        scale: 1.1,
+      }} className='w-12 h-10 bg-green-300 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(4)}}>
+        <p className='font-bold'>4</p>
+    </motion.div>
+    <motion.div
+    whileHover={{
+        scale: 1.1,
+      }} className='w-12 h-10 bg-green-600 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(5)}}>
+        <p className='font-bold'>5</p>
+    </motion.div>
+    <form>
+    <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="textarea w-full mt-2 focus:outline-none bg-gray-900 font-bold" placeholder="Leave your feedback here"></textarea>
+    <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="input w-full mt-2 focus:outline-none bg-gray-900 font-bold text-sm -mt-1"/>
+    <br /><br />
+    <button onClick={submitFeedback} className='btn w-full text-white normal-case bg-[#4c44e4] outline-none border-none hover:bg-[#2d2888] font-bold'>
+        {
+            loading 
+            ? <><span className="loading loading-spinner loading-xs"></span>Loading</>
+            : <>{text}</> 
+        }    
+    </button>
+    </form>
+    </div>
+    <div className="card-actions justify-end">
+    </div>
+  </div>
+</div>
         </>
     )
 }
