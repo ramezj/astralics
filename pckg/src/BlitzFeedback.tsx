@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './tailwind.css'
 
 export function BlitzFeedback(props:{projectId:any}) {
     return (

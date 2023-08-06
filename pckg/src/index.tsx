@@ -1,1 +1,1 @@
-export * from './BlitzFeedback';
+export * from './BlitzFeedback'
