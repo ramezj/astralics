@@ -9,7 +9,7 @@ export default function Component() {
     <Layout>
       <center>
         <br />
-        {/* <Widget projectId={'clkt435x30003jq09tj4h214a'} /> */}
+        <Widget projectId={'clkt435x30003jq09tj4h214a'} />
         <BlitzFeedback projectId={'clkt435x30003jq09tj4h214a'} />
         <e />
       </center>
