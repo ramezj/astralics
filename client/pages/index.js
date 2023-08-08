@@ -10,8 +10,7 @@ export default function Component() {
       <center>
         <br />
         <Widget projectId={'clkt435x30003jq09tj4h214a'} />
-        <BlitzFeedback projectId={'clkt435x30003jq09tj4h214a'} />
-        <e />
+        {/* <BlitzFeedback projectId={'clkt435x30003jq09tj4h214a'} /> */}
       </center>
     </Layout>
   )
