@@ -4,7 +4,7 @@ import SaveChanges from "./SaveChanges"
 export default function Card(props) {
     return (
         <>
-        <div className="card w-96 bg-gray-950 shadow-xl cursor-pointer duration-300 outline-none">
+        <div className="card w-96 backgroundColor shadow-xl cursor-pointer duration-300 outline-none">
   <div className="card-body">
     <div className="flex flex-wrap gap-3 justify-center">
         

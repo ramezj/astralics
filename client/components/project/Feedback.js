@@ -16,11 +16,11 @@ export default function Feedback(props) {
   <div className="card-body">
     <h2 className="card-title font-extrabold justify-center">{props.email}</h2>
     <h2 className='float-left flex -mb-2 font-medium justify-center mt-4'>{props.body}</h2>
-    <div className="card-actions justify-end">
+    {/* <div className="card-actions justify-end">
     <div className={`${color} -mb-2 rounded-md w-12 h-8 font-bold flex items-center justify-center`}>
             {props.rating}
         </div>
-    </div>
+    </div> */}
   </div>
 </div>
         </>

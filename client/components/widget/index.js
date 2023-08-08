@@ -23,7 +23,7 @@ export default function Widget(props) {
         const res = await response.json();
         if(res.ok == true) {
             setLoading(false);
-            setText('Feedback Received! 🚀')
+            setText('Feedback Received 🥳')
             
         } else if (res.ok == false) {
             setLoading(false);
@@ -37,13 +37,13 @@ export default function Widget(props) {
   <div className="card-body">
     <h2 className="card-title text-2xl text-zinc-950 font-black justify-center">Send Feedback</h2>
     <form>
-    <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="textarea w-full mt-2 focus:outline-none bg-zinc-950 font-bold" placeholder="Leave your feedback here"></textarea>
-    <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="input w-full mt-2 focus:outline-none bg-zinc-950 font-bold text-sm -mt-1"/>
+    <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="shadow-xl textarea w-full mt-2 focus:outline-none bg-zinc-950 font-bold" placeholder="Leave your feedback here"></textarea>
+    <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="shadow-xl input w-full mt-2 focus:outline-none bg-zinc-950 font-bold text-sm -mt-1"/>
     <br /><br />
-    <button onClick={submitFeedback} className='btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold'>
+    <button onClick={submitFeedback} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold'>
         {
             loading 
-            ? <><span className="loading loading-spinner loading-xs"></span>Loading</>
+            ? <><span className="loading loading-spinner loading-xs"></span></>
             : <>{text}</> 
         }    
     </button>

@@ -34,7 +34,7 @@ export default function Create() {
     }
     return (
         <>
-        <button className='btn bg-gray-950 text-white border-none normal-case font-medium hover:bg-gray-900' onClick={()=>window.my_modal_1.showModal()}>Create Project</button>
+        <button className='btn bg-gray-900 text-white border-none normal-case font-medium hover:bg-gray-900' onClick={()=>window.my_modal_1.showModal()}>Create Project</button>
 <dialog id="my_modal_1" className="modal bg-transparent shadow-2xl">
   <form method="dialog" className="modal-box bg-gray-950">
     <h3 className="font-bold text-lg">Project Information</h3>
