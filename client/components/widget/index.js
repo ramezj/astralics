@@ -35,29 +35,12 @@ export default function Widget(props) {
         <>
         <div className="card w-96 backgroundColor shadow-xl duration-300">
   <div className="card-body">
-    <h2 className="card-title text-gray-900 font-extrabold justify-center">Rate your overall experience</h2>
-    <br />
-    <div className='flex flex-wrap gap-4 justify-center w-full'>
-    <div className='hover:scale-110 transition duration-150 ease-in-out w-12 h-10 bg-red-500 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(1)}}>
-        <p className='font-extrabold'>1</p>
-    </div>
-    <div className='hover:scale-110 transition duration-150 ease-in-out w-12 h-10 bg-orange-300 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(2)}}>
-        <p className='font-extrabold'>2</p>
-    </div>
-    <div className='hover:scale-110 transition duration-150 ease-in-out w-12 h-10 bg-yellow-300 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(3)}}>
-        <p className='font-extrabold'>3</p>
-    </div >
-    <div className='hover:scale-110 transition duration-150 ease-in-out w-12 h-10 bg-green-300 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(4)}}>
-        <p className='font-extrabold'>4</p>
-    </div >
-    <div className='hover:scale-110 transition duration-150 ease-in-out w-12 h-10 bg-green-600 flex items-center justify-center rounded-md cursor-pointer' onClick={() => {setRating(5)}}>
-        <p className='font-extrabold'>5</p>
-    </div>
+    <h2 className="card-title text-2xl text-zinc-950 font-black justify-center">Send Feedback</h2>
     <form>
-    <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="textarea w-full mt-2 focus:outline-none bg-gray-950 font-bold" placeholder="Leave your feedback here"></textarea>
-    <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="input w-full mt-2 focus:outline-none bg-gray-950 font-bold text-sm -mt-1"/>
+    <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="textarea w-full mt-2 focus:outline-none bg-zinc-950 font-bold" placeholder="Leave your feedback here"></textarea>
+    <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="input w-full mt-2 focus:outline-none bg-zinc-950 font-bold text-sm -mt-1"/>
     <br /><br />
-    <button onClick={submitFeedback} className='btn w-full text-white normal-case bg-gray-950 hover:bg-gray-900 outline-none border-none font-bold'>
+    <button onClick={submitFeedback} className='btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold'>
         {
             loading 
             ? <><span className="loading loading-spinner loading-xs"></span>Loading</>
@@ -65,7 +48,6 @@ export default function Widget(props) {
         }    
     </button>
     </form>
-    </div>
     <div className="card-actions justify-end">
     </div>
   </div>
