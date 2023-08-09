@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
  });
     const { body, rating, email } = req.body;
-    if(!body || !rating || !email) {
+    if(!body || !email) {
       return res.status(400).json({
         ok:false,
         response: 'Please Fill All Fields'
@@ -30,7 +30,7 @@ export default async function handler(req, res) {
     const feedback = await prisma.feedback.create({
       data: {
         body: req.body.body,
-        rating: req.body.rating,
+        rating:5,
         email:req.body.email,
         projectId:projectId
       }

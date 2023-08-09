@@ -5,7 +5,7 @@ export default function Widget(props) {
     const [ feedback, setFeedback ] = useState();
     const [ rating, setRating ] = useState(2);
     const [ email, setEmail ] = useState();
-    const [ text, setText ] = useState("Submit Feedback");
+    const [ text, setText ] = useState("Submit");
     const submitFeedback = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -35,7 +35,7 @@ export default function Widget(props) {
         <>
         <div className="card w-96 backgroundColor shadow-xl duration-300">
   <div className="card-body">
-    <h2 className="card-title text-2xl text-white font-black justify-center">Send Feedback</h2>
+    <h2 className="card-title text-2xl text-white font-black justify-center mb-2">Send Feedback</h2>
     <form>
     <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="shadow-xl textarea w-full mt-2 focus:outline-none bg-white text-zinc-950 font-extrabold" placeholder="Leave your feedback here"></textarea>
     <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="shadow-xl input w-full mt-2 focus:outline-none bg-white text-zinc-950 font-extrabold text-sm -mt-1"/>
