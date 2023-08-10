@@ -39,11 +39,11 @@ export default function Create() {
   <form method="dialog" className="modal-box bg-gray-950">
     <h3 className="font-bold text-lg">Project Information</h3>
     <br /><br />
-    <input autoFocus={false} type="text" placeholder="Project's Name" onChange={(e) => {setName(e.target.value)}} className="input w-full max-w-xs bg-gray-900 font-bold border-none" />
+    <input autoFocus={false} type="text" placeholder="Project's Name" onChange={(e) => {setName(e.target.value)}} className="input w-full max-w-xs bg-gray-900 font-bold border-none focus:outline-none" />
     <br /><br />
-    <input autoFocus={false} type="text" placeholder="Project's URL" onChange={(e) => {setUrl(e.target.value)}} className="input w-full max-w-xs bg-gray-900 font-bold border-none" />
+    <input autoFocus={false} type="text" placeholder="Project's URL" onChange={(e) => {setUrl(e.target.value)}} className="input w-full max-w-xs bg-gray-900 font-bold border-none focus:outline-none" />
     <br /><br />
-    <button className="btn bg-indigo-700 text-white border-none hover:bg-indigo-800 normal-case" onClick={createProject}>Create Project</button>
+    <button className="btn backgroundColor font-extrabold text-md w-3/6 text-white border-none hover:bg-indigo-800 normal-case" onClick={createProject}>Create Project</button>
     <br /><br />
     {JSON.stringify(response)}
     <p className='text-red-500 font-medium'>
