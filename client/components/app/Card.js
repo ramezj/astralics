@@ -1,9 +1,14 @@
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export default function Card(props) {
     return (
-        <>
-    <Link className="card w-96 widgetShadow backgroundColor shadow-xl hover:bg-gray-900 cursor-pointer duration-300 outline-none" href={props.href}>
+        <motion.div
+        whileHover={{
+          scale:1.05
+        }}
+        >
+    <Link className="card w-96 widgetShadow backgroundColor shadow-xl hover:bg-gray-900 cursor-pointer duration-300 outline-none rounded-xl" href={props.href}>
   <div className="card-body">
     <h2 className="card-title font-extrabold">{props.title}</h2>
     <br />
@@ -18,6 +23,6 @@ export default function Card(props) {
     </div>
   </div>
 </Link>
-        </>
+        </motion.div>
     )
 }
