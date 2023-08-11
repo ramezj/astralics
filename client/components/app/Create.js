@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 
 export default function Create() {
     const router = useRouter();
+    const [ text, setText ] = useState("Create Project");
     const [ loading, setLoading ] = useState(false);
     const [ name, setName ] = useState();
     const [ error, setError ] = useState();
@@ -24,6 +25,7 @@ export default function Create() {
         const resp = await res.json();
         if(resp.ok == true) {
             setLoading(false);
+            setText("Created Successfully");
             setResponse(resp);
             console.log(resp);
             router.push(`/project/${resp.response.id}`)
@@ -43,7 +45,13 @@ export default function Create() {
     <br /><br />
     <input autoFocus={false} type="text" placeholder="Project's URL" onChange={(e) => {setUrl(e.target.value)}} className="input w-full max-w-xs bg-gray-900 font-bold border-none focus:outline-none" />
     <br /><br />
-    <button className="btn backgroundColor font-extrabold text-md w-3/6 text-white border-none hover:bg-indigo-800 normal-case" onClick={createProject}>Create Project</button>
+    <button className="btn widgetShadow backgroundColor font-extrabold text-md w-3/6 text-white border-none hover:bg-indigo-800 normal-case" onClick={createProject}>
+      { 
+      loading 
+      ? <><><span className="loading loading-spinner loading-xs"></span></></>
+      : <>{text}</>
+      }
+      </button>
     <br /><br />
     {JSON.stringify(response)}
     <p className='text-red-500 font-medium'>
