@@ -11,7 +11,7 @@ export default function Component() {
         <br /><br />
           <h1 className=" sm:text-6xl 2xl:mt-8 text-5xl font-extrabold tracking-tight leading-none text-gray-900 md:text-6xl lg:text-6xl dark:text-white">Empowering <i className="text-transparent bg-clip-text backgroundColor">User </i> Feedback Management 🚀</h1>
           <br /><br />
-            <Widget projectId={'clkt435x30003jq09tj4h214a'} />
+            <Widget projectId={'cll5z60fq0001usysevupa81n'} />
         {/* <BlitzFeedback projectId={'clkt435x30003jq09tj4h214a'} /> */}
       </center>
     </Layout>

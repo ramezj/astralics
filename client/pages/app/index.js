@@ -19,6 +19,7 @@ export default function Component() {
   })
   const [ loading, setLoading ] = useState(false);
   const [ projects, setProjects ] = useState([]);
+  const [ noProjects, setNoProjects ] = useState(false);
   useEffect(() => {
     const fetchUser = async () => {
       setLoading(true);
