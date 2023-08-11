@@ -19,7 +19,7 @@ export default function Component() {
   })
   const [ loading, setLoading ] = useState(false);
   const [ projects, setProjects ] = useState([]);
-  const [ noProjects, setNoProjects ] = useState(false);
+  const [ premium, setPremium ] = useState(false);
   useEffect(() => {
     const fetchUser = async () => {
       setLoading(true);
@@ -30,6 +30,11 @@ export default function Component() {
         router.push('/')
       }
       if(res.ok == true) {
+        if(res.response.premium == false) {
+          setPremium(false);
+        } else if (res.response.premium == true) {
+          setPremium(true);
+        }
         setProjects(res.response.projects);
         setLoading(false);
       }
@@ -57,6 +62,12 @@ export default function Component() {
     </div>
     <br />
     <br />
+    {
+      premium 
+      ? <>Premium User</>
+      : <>Not Premium</>
+    }
+    <br /><br />
     </center>
     <div className='flex flex-wrap gap-8 justify-center w-full'>
     {projects.map((project) => {
