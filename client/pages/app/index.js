@@ -56,6 +56,8 @@ export default function Component() {
     <br />
     <br />
     <center>
+    <Premium premium={premium} />
+    <br/><br/>
     <h2 className="font-extrabold text-2xl">Hello {session?.user.name}</h2>
     <br />
     <div className='flex flex-wrap gap-4 justify-center w-full mt-2 -mb-4'>
@@ -63,9 +65,6 @@ export default function Component() {
       <Documentation />
       <Manage />
     </div>
-    <br />
-    <br />
-    <Premium premium={premium} />
     <br /><br />
     </center>
     <div className='flex flex-wrap gap-8 justify-center w-full'>
