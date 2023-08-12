@@ -8,6 +8,7 @@ import Loading from "@/components/app/Loading";
 import { motion } from 'framer-motion'
 import Create from "@/components/app/Create";
 import Manage from "@/components/app/Manage";
+import Documentation from "@/components/app/Documentation";
 
 export default function Component() {
   const router = useRouter();
@@ -58,6 +59,7 @@ export default function Component() {
     <br />
     <div className='flex flex-wrap gap-4 justify-center w-full mt-2 -mb-4'>
       <Create />
+      <Documentation />
       <Manage />
     </div>
     <br />
