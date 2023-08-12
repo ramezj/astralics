@@ -9,6 +9,7 @@ import { motion } from 'framer-motion'
 import Create from "@/components/app/Create";
 import Manage from "@/components/app/Manage";
 import Documentation from "@/components/app/Documentation";
+import Premium from "@/components/app/Premium";
 
 export default function Component() {
   const router = useRouter();
@@ -64,11 +65,7 @@ export default function Component() {
     </div>
     <br />
     <br />
-    {
-      premium 
-      ? <>Premium User</>
-      : <>Not Premium</>
-    }
+    <Premium premium={premium} />
     <br /><br />
     </center>
     <div className='flex flex-wrap gap-8 justify-center w-full'>

@@ -2,6 +2,9 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import Layout from "@/components/layout"
 import Widget from "@/components/widget"
 import { BlitzFeedback } from "blitzpackagev2"
+import hljs from 'highlight.js/lib/core';
+import javascript from 'highlight.js/lib/languages/javascript';
+hljs.registerLanguage('javascript', javascript);
 
 export default function Component() {
   const { data: session } = useSession()
