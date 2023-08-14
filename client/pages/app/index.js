@@ -58,15 +58,14 @@ export default function Component() {
     <center>
     <Premium premium={premium} />
     <br/>
-    <h2 className="font-extrabold text-2xl">Hello {session?.user.name}</h2>
     <div className='flex flex-wrap gap-4 justify-center w-full mt-6 -mb-4'>
       <Create />
-      <Documentation />
+      {/* <Documentation /> */}
       <Manage />
     </div>
     <br /><br />
     </center>
-    
+
     <div className='flex flex-wrap gap-8 justify-center w-full'>
     {projects.map((project) => {
         return (
