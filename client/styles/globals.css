@@ -53,3 +53,10 @@ body {
 -moz-box-shadow: 0px 0px 52px -13px rgba(255,77,136,0.69);
 box-shadow: 0px 0px 52px -13px rgba(255,77,136,0.69);
 }
+
+.alertShadow {
+  box-shadow: 0px 0px 35px -7px rgb(255, 0, 0);
+}
+.premiumShadow {
+  box-shadow: 0px 0px 35px -7px rgb(105, 253, 6);
+}
