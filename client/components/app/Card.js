@@ -8,7 +8,7 @@ export default function Card(props) {
           scale:1.05
         }}
         >
-    <Link className="card w-96 widgetShadow backgroundColor shadow-xl hover:bg-gray-900 cursor-pointer duration-300 outline-none rounded-xl" href={props.href}>
+    <Link className="card w-96 widgetShadow backgroundColor shadow-xl cursor-pointer duration-300 outline-none rounded-xl" href={props.href}>
   <div className="card-body">
     <h2 className="card-title font-extrabold">{props.title}</h2>
     <br />

@@ -27,15 +27,15 @@ body {
 }
 
 .backgroundColor {
-  background-color:hsla(0,100%,50%,1);
-  background-image:
-  radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
-  radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
-  radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
-  radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+  background-color:#eb99ff;
+background-image:
+radial-gradient(at 21% 86%, hsla(18,73%,74%,1) 0px, transparent 50%),
+radial-gradient(at 12% 48%, hsla(260,62%,74%,1) 0px, transparent 50%),
+radial-gradient(at 72% 28%, hsla(293,83%,67%,1) 0px, transparent 50%),
+radial-gradient(at 45% 91%, hsla(254,77%,62%,1) 0px, transparent 50%),
+radial-gradient(at 54% 74%, hsla(270,78%,67%,1) 0px, transparent 50%),
+radial-gradient(at 92% 87%, hsla(215,85%,62%,1) 0px, transparent 50%),
+radial-gradient(at 29% 39%, hsla(180,94%,66%,1) 0px, transparent 50%);
 }
 
 .buttonColor {
