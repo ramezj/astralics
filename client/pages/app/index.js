@@ -57,7 +57,6 @@ export default function Component() {
     <br />
     <center>
     <Premium premium={premium} />
-    <br/>
     <div className='flex flex-wrap gap-4 justify-center w-full mt-6 -mb-4'>
       <Create />
       {/* <Documentation /> */}

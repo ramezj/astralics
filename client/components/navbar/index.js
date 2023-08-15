@@ -9,28 +9,32 @@ export default function Navbar(props) {
     return (
         <>
         <div className="navbar bg-transparent">
-  <div className="flex-1 mt-4 ml-4">
-        <Link className="btn btn-ghost font-extrabold normal-case text-xl" href='/'>BlitzFeedback</Link>
+  <div className="navbar-start mt-2 ml-2">
+  <Link className="btn btn-ghost font-extrabold normal-case text-xl" href='/'>BlitzFeedback</Link>
   </div>
-  <div className="flex-none">
-    {
-        session 
-        ? 
-        <>
-        <div className="dropdown dropdown-end mr-4 mt-4">
-        <Link href="/app">
-        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-        <img src={session.user.image}/>
-        </div>
-        </label>
-        </Link>
-        </div>
-        </>
-        : 
-        <>
-        <button className="btn mr-4 mt-4 normal-case text-white" onClick={signUserIn}>Get Started</button>
-        </>
+  {/* <div className="navbar-center">
+    <a className="btn btn-ghost normal-case text-xl">Pricing</a>
+  </div> */}
+  <div className="navbar-end mt-2 mr-2">
+    { 
+    session 
+    ? 
+    <>
+    <button className="btn btn-ghost">
+      <div className="indicator">
+      <div className='flex items-center gap-2'>
+            <img className='w-8 rounded-full' src={session.user.image}/>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+            </div>
+      </div>
+    </button>
+    </>
+    : 
+    <>
+    <button className="btn normal-case text-white" onClick={signUserIn}>Get Started</button>
+    </>
     }
   </div>
 </div>
