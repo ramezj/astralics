@@ -16,8 +16,8 @@ export default function Navbar(props) {
     <a className="btn btn-ghost normal-case text-xl">Pricing</a>
   </div> */}
   <div className="navbar-end mt-2 mr-2 gap-2">
-    <Link className='btn btn-ghost normal-case' href='/'>Pricing</Link>
-    <Link className='btn btn-ghost normal-case' href='/'>Docs</Link>
+    <Link className='btn btn-ghost normal-case' href='/app'>Pricing</Link>
+    <Link className='btn btn-ghost normal-case' href='/app'>Docs</Link>
     { 
     session 
     ? 
