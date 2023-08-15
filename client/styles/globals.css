@@ -60,3 +60,7 @@ box-shadow: 0px 0px 52px -13px rgba(255,77,136,0.69);
 .premiumShadow {
   box-shadow: 0px 0px 35px -7px rgb(105, 253, 6);
 }
+
+.navbarShadow {
+  box-shadow: 0px 0px 41px -23px hsla(293,83%,67%,1);
+}

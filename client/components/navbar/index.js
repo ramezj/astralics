@@ -20,7 +20,7 @@ export default function Navbar(props) {
     session 
     ? 
     <>
-    <button className="btn btn-ghost">
+    {/* <button className="btn btn-ghost">
       <div className="indicator">
       <div className='flex items-center gap-2'>
             <img className='w-8 rounded-full' src={session.user.image}/>
@@ -29,7 +29,20 @@ export default function Navbar(props) {
             </svg>
             </div>
       </div>
-    </button>
+    </button> */}
+    <div className="dropdown dropdown-end">
+  <label tabIndex={0} className="btn m-1 bg-transparent border-none hover:bg-gray-950">
+            <img className='w-8 rounded-full' src={session.user.image}/>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+  </label>
+  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow rounded-box bg-[#0d041e] w-52">
+    <li><Link href='/settings'>Account Settings</Link></li>
+    <li><Link href='/app'>Dashboard</Link></li>
+    <li><a onClick={(() => {signOut()})}>Log out</a></li>
+  </ul>
+</div>
     </>
     : 
     <>
