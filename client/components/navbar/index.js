@@ -30,8 +30,8 @@ export default function Navbar(props) {
             </div>
       </div>
     </button> */}
-    <div className="dropdown dropdown-end">
-  <label tabIndex={0} className="btn m-1 bg-transparent border-none hover:bg-gray-950">
+    <div className="dropdown dropdown-end mt-2">
+  <label tabIndex={0} className="btn bg-transparent border-none hover:bg-gray-950">
             <img className='w-8 rounded-full' src={session.user.image}/>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -46,7 +46,7 @@ export default function Navbar(props) {
     </>
     : 
     <>
-    <button className="btn normal-case text-white bg-[#210a4d] border-none hover:bg-[#2c0e63]" onClick={signUserIn}>Get Started - It's free</button>
+    <button className="btn normal-case text-white bg-[#210a4d] border-none hover:bg-[#2c0e63] mt-2" onClick={signUserIn}>Get Started - It's free</button>
     </>
     }
   </div>
