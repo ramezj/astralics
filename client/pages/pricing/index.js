@@ -13,8 +13,9 @@ export default function Pricing(props) {
             </center>
             <br /><br />
             <div className='flex flex-wrap gap-12 justify-center w-full'>
-                <PricingCard title='Free' button='Get Started'/>
-                <PricingCard title='$5.99' button='Get Started'/>
+                <PricingCard price='Free' title='Starter' button='Get Started' background={'whiteBackground'} shadow={''}/>
+                <PricingCard price='$5.99' title='Pro' button='Get Started' background={'backgroundColor'} shadow={'widgetShadow'}/>
+                <PricingCard price='$75.00' title='Teams' button='Get Started' background={'whiteBackground'} shadow={''} />
             </div>
         </Layout>
         </>
