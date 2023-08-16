@@ -12,26 +12,13 @@ export default function Navbar(props) {
   <div className="navbar-start mt-2 ml-2">
   <Link className="btn btn-ghost font-extrabold normal-case text-xl" href='/'>Blitz</Link>
   </div>
-  {/* <div className="navbar-center">
-    <a className="btn btn-ghost normal-case text-xl">Pricing</a>
-  </div> */}
   <div className="navbar-end mt-2 mr-2 sm:gap-1">
     <Link className='btn btn-ghost normal-case' href='/pricing'>Pricing</Link>
-    <Link className='btn btn-ghost normal-case' href='/app'>Docs</Link>
+    <Link className='btn btn-ghost normal-case' href='/documentation'>Docs</Link>
     { 
     session 
     ? 
     <>
-    {/* <button className="btn btn-ghost">
-      <div className="indicator">
-      <div className='flex items-center gap-2'>
-            <img className='w-8 rounded-full' src={session.user.image}/>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-            </svg>
-            </div>
-      </div>
-    </button> */}
     <div className="dropdown dropdown-end">
   <label tabIndex={0} className="btn bg-transparent border-none hover:bg-gray-950">
     <div className='flex items-center gap-2'>
