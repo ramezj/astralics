@@ -15,7 +15,7 @@ export default function Navbar(props) {
   {/* <div className="navbar-center">
     <a className="btn btn-ghost normal-case text-xl">Pricing</a>
   </div> */}
-  <div className="navbar-end mt-2 mr-2 gap-2">
+  <div className="navbar-end mt-2 mr-2 sm:gap-1">
     <Link className='btn btn-ghost normal-case' href='/app'>Pricing</Link>
     <Link className='btn btn-ghost normal-case' href='/app'>Docs</Link>
     { 
