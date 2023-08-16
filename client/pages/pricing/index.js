@@ -7,7 +7,7 @@ export default function Pricing(props) {
     return (
         <>
         <Layout >
-            <br /><br />
+            <br />
             <center>
                 <h1 className='text-3xl font-bold'>Pricing</h1>
             </center>
