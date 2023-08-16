@@ -1,7 +1,7 @@
 export default function PricingCard(props) {
     return (
         <>
-        <div className="card w-96 backgroundColor widgetShadow shadow-xl cursor-pointer duration-300 hover:scale-105">
+        <div className="card w-[22rem] backgroundColor widgetShadow shadow-xl cursor-pointer duration-300 hover:scale-105">
   <div className="card-body">
     <h2 className="card-title font-extrabold justify-center text-3xl">{props.title}</h2>
     <h2 className='float-left flex -mb-2 font-bold justify-center mt-4'>aaaa</h2>
