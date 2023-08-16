@@ -1,13 +1,8 @@
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 
 export default function Card(props) {
     return (
-        <motion.div
-        whileHover={{
-          scale:1.05
-        }}
-        >
+        <div className='hover:scale-105 duration-300'>
     <Link className="card w-96 widgetShadow backgroundColor shadow-xl cursor-pointer duration-300 outline-none rounded-xl drop-shadow-2xl" href={props.href}>
   <div className="card-body">
     <h2 className="card-title font-extrabold drop-shadow-lg">{props.title}</h2>
@@ -23,6 +18,6 @@ export default function Card(props) {
     </div>
   </div>
 </Link>
-        </motion.div>
+        </div>
     )
 }
