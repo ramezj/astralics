@@ -50,7 +50,7 @@ export default function Navbar(props) {
     </>
     : 
     <>
-    <button className="btn normal-case text-white bg-[#210a4d] border-none hover:bg-[#2c0e63]" onClick={signUserIn}>Get Started - It's free</button>
+    <button className="btn normal-case text-white bg-[#210a4d] border-none hover:bg-[#2c0e63]" onClick={signUserIn}>Get Started, It's free</button>
     </>
     }
   </div>
