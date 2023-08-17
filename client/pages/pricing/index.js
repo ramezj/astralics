@@ -39,7 +39,7 @@ export default function Pricing(props) {
                 <button className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button>
                 </PricingCard>
             </div>
-            <br /><br />
+            
         </Layout>
         </>
     )
