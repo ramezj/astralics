@@ -37,7 +37,7 @@ export default function Navbar(props) {
     </>
     : 
     <>
-    <button className="btn normal-case text-white bg-[#210a4d] border-none hover:bg-[#2c0e63]" onClick={signUserIn}>Try For Free</button>
+    <button className="btn normal-case text-white bg-[#2c0e63] border-none hover:bg-[#412672]" onClick={signUserIn}>Try For Free</button>
     </>
     }
   </div>

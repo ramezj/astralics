@@ -1,3 +1,5 @@
+import Info from "./Info"
+
 export default function PricingCard(props) {
     return (
         <>
@@ -6,14 +8,7 @@ export default function PricingCard(props) {
   <h2 className="card-title font-extrabold justify-center text-3xl">{props.title}</h2>
   <br /> <br />
     <h2 className="card-title font-extrabold justify-center text-3xl">{props.price}</h2>
-    <h2 className='float-left flex -mb-2 font-bold justify-center mt-4'>aaaa</h2>
-    <h2 className='float-left flex -mb-2 font-bold justify-center mt-4'>aaaa</h2>
-    <h2 className='float-left flex -mb-2 font-bold justify-center mt-4'>aaaa</h2>
-    <h2 className='float-left flex -mb-2 font-bold justify-center mt-4'>aaaa</h2>
-    <h2 className='float-left flex -mb-2 font-bold justify-center mt-4'>aaaa</h2>
-    <h2 className='float-left flex -mb-2 font-bold justify-center mt-4'>aaaa</h2>
-    <br />
-    <button className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>{props.button}</button>
+    {props.children}
   </div>
 </div>
         </>
