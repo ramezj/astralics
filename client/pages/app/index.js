@@ -59,8 +59,6 @@ export default function Component() {
     <Premium premium={premium} />
     <div className='flex flex-wrap gap-4 justify-center w-full mt-6 -mb-4'>
       <Create />
-      {/* <Documentation /> */}
-      <Manage />
     </div>
     <br /><br />
     </center>
