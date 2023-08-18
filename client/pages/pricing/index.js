@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { signIn, signOut } from 'next-auth/react';
+import { useSession, signIn, signOut } from 'next-auth/react';
+import Link from 'next/link';
 import Layout from '@/components/layout';
 import PricingCard from '@/components/pricing/PricingCard';
 import Info from '@/components/pricing/Info';
 import Svg from '@/components/pricing/svg';
+import { PaddleLoader } from '@/components/PaddleLoader';
 
 export default function Pricing(props) {
+    const signUserIn = async () => {
+        signIn('google');
+    }
+    const { data: session } = useSession({})
+    console.log(session);
     return (
         <>
         <Layout >
+            <PaddleLoader />
             <br />
             <center>
                 <h1 className='text-3xl font-bold'>Pricing</h1>
@@ -21,7 +29,11 @@ export default function Pricing(props) {
                 <Info><Svg /> 1 Project</Info>
                 <Info><Svg /> 1 Project</Info>
                 <br />
-                <button className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button>
+                {
+                session 
+                ? <><Link href='/app' className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Go to Dashboard</Link></>
+                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button></>
+                }
                 </PricingCard>
                 <PricingCard price='$5.99' title='Pro' button='Get Started' background={'backgroundColor'} shadow={'widgetShadow'}>
                 <Info><Svg /> 3 Projects</Info>
@@ -29,7 +41,16 @@ export default function Pricing(props) {
                 <Info><Svg /> 1 Project</Info>
                 <Info><Svg /> 1 Project</Info>
                 <br />
-                <button className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button>
+                {
+                session 
+                ? <><button onClick={(() => {
+                    Paddle.Checkout.open({
+                      product:63325,
+                      success:'/success'
+                    })
+                })} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Subscribe Now</button></>
+                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button></>
+                }
                 </PricingCard>
                 <PricingCard price='$75.00' title='Teams' button='Get Started' background={'whiteBackground'} shadow={''}>
                 <Info><Svg /> Unlimited Projects</Info>
@@ -37,7 +58,16 @@ export default function Pricing(props) {
                 <Info><Svg /> 1 Project</Info>
                 <Info><Svg /> 1 Project</Info>
                 <br />
-                <button className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button>
+                {
+                session 
+                ? <><button onClick={(() => {
+                    Paddle.Checkout.open({
+                      product:63325,
+                      success:'/success'
+                    })
+                })} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Subscribe Now</button></>
+                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button></>
+                }
                 </PricingCard>
             </div>
             
