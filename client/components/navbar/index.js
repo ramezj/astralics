@@ -1,5 +1,6 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import Link from 'next/link'
+import Create from "@/components/app/Create";
 
 export default function Navbar(props) {
     const { data: session } = useSession()
@@ -13,6 +14,10 @@ export default function Navbar(props) {
   <Link className="btn btn-ghost font-extrabold normal-case text-xl" href='/'>Blitz</Link>
   </div>
   <div className="navbar-end mt-2 mr-2 sm:gap-1">
+    {
+      session ? <><Create /></>
+      : <></>
+    }
     <Link className='btn btn-ghost normal-case' href='/pricing'>Pricing</Link>
     <Link className='btn btn-ghost normal-case' href='/documentation'>Docs</Link>
     { 
@@ -28,7 +33,7 @@ export default function Navbar(props) {
             </svg>
     </div>        
   </label>
-  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow rounded-box bg-[#0d041e] w-52">
+  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow rounded-box bg-[#0d041e] w-56">
     <li><Link href='/settings'>Account Settings</Link></li>
     <li><Link href='/app'>Dashboard</Link></li>
     <li><a onClick={(() => {signOut()})}>Log out</a></li>

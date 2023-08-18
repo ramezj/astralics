@@ -44,8 +44,11 @@ export default function Create() {
           New Project</button>
 <dialog id="my_modal_1" className="modal bg-transparent shadow-2xl">
   <form method="dialog" className="modal-box bg-gray-950">
+    <center>
     <h3 className="font-bold text-lg">Project Information</h3>
+    </center>
     <br /><br />
+    <center>
     <input autoFocus={false} type="text" placeholder="Project's Name" onChange={(e) => {setName(e.target.value)}} className="input w-full max-w-xs bg-gray-900 font-bold border-none focus:outline-none" />
     <br /><br />
     <input autoFocus={false} type="text" placeholder="Project's URL" onChange={(e) => {setUrl(e.target.value)}} className="input w-full max-w-xs bg-gray-900 font-bold border-none focus:outline-none" />
@@ -57,6 +60,7 @@ export default function Create() {
       : <>{text}</>
       }
       </button>
+      </center>
     <br /><br />
     {JSON.stringify(response)}
     <p className='text-red-500 font-medium'>
