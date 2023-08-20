@@ -29,13 +29,13 @@ body {
 .backgroundColor {
   background-color:#eb99ff;
 background-image:
-radial-gradient(at 21% 86%, hsla(18,73%,74%,1) 0px, transparent 50%),
+radial-gradient(at 21% 86%, rgba(255,204,84,255) 0px, transparent 50%),
 radial-gradient(at 12% 48%, hsla(260,62%,74%,1) 0px, transparent 50%),
 radial-gradient(at 72% 28%, hsla(293,83%,67%,1) 0px, transparent 50%),
-radial-gradient(at 45% 91%, hsla(254,77%,62%,1) 0px, transparent 50%),
+radial-gradient(at 45% 91%, rgba(38,0,172,255) 0px, transparent 50%),
 radial-gradient(at 54% 74%, hsla(270,78%,67%,1) 0px, transparent 50%),
-radial-gradient(at 92% 87%, hsla(215,85%,62%,1) 0px, transparent 50%),
-radial-gradient(at 29% 39%, hsla(180,94%,66%,1) 0px, transparent 50%);
+radial-gradient(at 92% 87%, rgba(38,0,172,255) 0px, transparent 50%),
+radial-gradient(at 29% 39%, rgba(38,0,172,255) 0px, transparent 50%);
 }
 .whiteBackground {
   background-color:#0d041e;
