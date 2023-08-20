@@ -2,7 +2,7 @@ import Navbar from "../navbar";
 
 export default function Layout(props) {
     return (
-        <div className='h-full min-h-screen bg-gradient-to-br from-gray-950 to-[#0d041e]'>
+        <div className='bg-[url("/wallpaper.jpg")] h-full min-h-screen bg-bottom bg-no-repeat w-full'>
         <Navbar/>
         {props.children}
         </div>

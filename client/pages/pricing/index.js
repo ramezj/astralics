@@ -62,7 +62,7 @@ export default function Pricing(props) {
                 session 
                 ? <><button onClick={(() => {
                     Paddle.Checkout.open({
-                      product:63325,
+                      product:63601,
                       success:'/success'
                     })
                 })} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Subscribe Now</button></>
