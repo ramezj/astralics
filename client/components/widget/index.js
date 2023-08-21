@@ -40,7 +40,7 @@ export default function Widget(props) {
     <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="bg-opacity-75 shadow-xl textarea w-full mt-2 focus:outline-none bg-white text-zinc-950 font-extrabold" placeholder="Leave your feedback here"></textarea>
     <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="bg-opacity-75 shadow-xl input w-full mt-2 focus:outline-none bg-white text-zinc-950 font-extrabold text-sm -mt-1"/>
     <br /><br />
-    <button onClick={submitFeedback} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold'>
+    <button onClick={submitFeedback} className='shadow-xl btn w-full text-white normal-case bg-[#060413] hover:bg-[#04030e] outline-none border-none font-bold'>
         {
             loading 
             ? <><span className="loading loading-spinner loading-xs"></span></>
