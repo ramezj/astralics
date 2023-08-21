@@ -34,8 +34,8 @@ export default function Pricing(props) {
                 }
                 </PricingCard >
                 <PricingCard price='$3.99' title='Premium' button='Get Started' background={'backgroundColor'} shadow={'widgetShadow'}>
-                <Info><Svg /> 3 Project</Info>
-                <Info><Svg /> 500 Monthly Feedbacks</Info>
+                <Info><Svg /> 3 Projects</Info>
+                <Info><Svg /> 300 Monthly Feedbacks</Info>
                 <br />
                 {
                 session 
