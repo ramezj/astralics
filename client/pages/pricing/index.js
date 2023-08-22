@@ -12,7 +12,6 @@ export default function Pricing(props) {
         signIn('google');
     }
     const { data: session } = useSession({})
-    console.log(session);
     return (
         <>
         <Layout >
@@ -42,7 +41,8 @@ export default function Pricing(props) {
                 ? <><button onClick={(() => {
                     Paddle.Checkout.open({
                       product:63325,
-                      success:'/success'
+                      success:'/success',
+                      passthrough: session.user.id
                     })
                 })} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Subscribe Now</button></>
                 : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button></>
@@ -57,7 +57,8 @@ export default function Pricing(props) {
                 ? <><button onClick={(() => {
                     Paddle.Checkout.open({
                       product:63601,
-                      success:'/success'
+                      success:'/success',
+                      passthrough: session.user.id
                     })
                 })} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Subscribe Now</button></>
                 : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button></>
