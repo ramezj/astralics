@@ -8,6 +8,7 @@ export default async function handler(req, res) {
             response:'Invalid Method'
         })
     }
+    console.log(req.body);
     if(req.body.alert_name == "subscription_created") {
         try {
             const updateUser = await prisma.user.update({
