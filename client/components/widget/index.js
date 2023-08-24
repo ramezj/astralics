@@ -36,6 +36,20 @@ export default function Widget(props) {
         <div className="card w-96 backgroundColor widgetShadow duration-300">
   <div className="card-body">
     <h2 className="card-title text-2xl text-white font-black justify-center mb-2">Send Feedback</h2>
+    <div className='flex flex-wrap gap-8 justify-center w-full'>
+    <span className='bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
+        <p className='text-2xl flex justify-center'>💡</p>
+    </span>
+    <span className='bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
+    <p className='text-2xl flex justify-center'>🐛</p>
+    </span>
+    <span className='bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
+    <p className='text-2xl flex justify-center'>📝</p>
+    </span>
+    <span className='bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
+    <p className='text-2xl flex justify-center'>💬</p>
+    </span>
+    </div>
     <form>
     <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="bg-opacity-75 shadow-xl textarea w-full mt-2 focus:outline-none bg-white text-zinc-950 font-extrabold" placeholder="Leave your feedback here"></textarea>
     <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="bg-opacity-75 shadow-xl input w-full mt-2 focus:outline-none bg-white text-zinc-950 font-extrabold text-sm -mt-1"/>
