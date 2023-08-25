@@ -40,6 +40,9 @@ radial-gradient(at 29% 39%, rgba(38,0,172,255) 0px, transparent 50%);
 .whiteBackground {
   background-color:#0d041e;
 }
+.spanShadow {
+  box-shadow: 0px 0px 24px 7px rgba(252, 252, 252, 0.1);
+}
 
 .buttonColor {
   background-color:hsla(0,100%,50%,1);

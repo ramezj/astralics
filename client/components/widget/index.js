@@ -37,16 +37,16 @@ export default function Widget(props) {
   <div className="card-body">
     <h2 className="card-title text-2xl text-white font-black justify-center mb-2">Send Feedback</h2>
     <div className='flex flex-wrap gap-8 justify-center w-full'>
-    <span className='bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
-        <p className='text-2xl flex justify-center'>💡</p>
+    <span className='shadow-lg bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
+    <p className='text-2xl flex justify-center'>💡</p>
     </span>
-    <span className='bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
+    <span className='shadow-lg bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
     <p className='text-2xl flex justify-center'>🐛</p>
     </span>
-    <span className='bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
+    <span className='shadow-lg bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
     <p className='text-2xl flex justify-center'>📝</p>
     </span>
-    <span className='bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
+    <span className='shadow-lg bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
     <p className='text-2xl flex justify-center'>💬</p>
     </span>
     </div>
