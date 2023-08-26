@@ -13,12 +13,12 @@ export default function Component() {
           {/* <h1 className="sm:text-6xl 2xl:mt-8 text-5xl font-extrabold tracking-tight leading-none text-gray-900 md:text-6xl lg:text-6xl dark:text-white">Empowering <i className="text-transparent bg-clip-text backgroundColor">User </i> Feedback Management 🚀</h1> */}
           <h1 className='sm:text-6xl 2xl:mt-8 text-5xl font-extrabold tracking-tight leading-none text-white md:text-6xl lg:text-7xl'>Feedback Management Redefined</h1>
           <br />
-          <br /> 
+          <br />
             <Widget projectId={'cll5z60fq0001usysevupa81n'} />
             <br />
+            </center>
             <Features />
         {/* <BlitzFeedback projectId={'clkt435x30003jq09tj4h214a'} /> */}
-      </center>
     </Layout>
   )
 }
