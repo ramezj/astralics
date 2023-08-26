@@ -97,7 +97,7 @@ export default function Navbar() {
             {
               session 
               ? <> <Link href='/app'>Dashboard </Link><span aria-hidden="true">→</span></>
-              : <> <button onClick={signUserIn}>Log in </button><span aria-hidden="true">→</span></>
+              : <> <button onClick={signUserIn}>Log in </button><span aria-hidden="true"> →</span></>
             }
           </a>
         </div>
@@ -171,7 +171,7 @@ export default function Navbar() {
                   {
               session 
               ? <> <Link href='/app'>Dashboard </Link><span aria-hidden="true">→</span></>
-              : <> <button onClick={signUserIn}>Log in </button><span aria-hidden="true">→</span></>
+              : <> <button onClick={signUserIn}>Log in </button><span aria-hidden="true"> →</span></>
             }
                 </a>
               </div>
