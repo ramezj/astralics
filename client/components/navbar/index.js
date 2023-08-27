@@ -51,13 +51,10 @@ export default function Navbar() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <Link href="#" className="text-sm font-bold leading-6 text-white">
+          <Link href="/documentation" className="text-sm font-bold leading-6 text-white">
             Documentation
           </Link>
-          <Link href="#" className="text-sm font-bold leading-6 text-white">
-            Features
-          </Link>
-          <Link href="#" className="text-sm font-bold leading-6 text-white">
+          <Link href="/pricing" className="text-sm font-bold leading-6 text-white">
             Pricing
           </Link>
         </Popover.Group>
@@ -103,13 +100,10 @@ export default function Navbar() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Link href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-gray-950">
+                <Link href="/documentation" className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-gray-950">
                   Documentation
                 </Link>
-                <Link href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-gray-950">
-                  Features
-                </Link>
-                <Link href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-gray-950">
+                <Link href="/pricing" className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-gray-950">
                   Pricing
                 </Link>
               </div>
