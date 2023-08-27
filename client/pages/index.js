@@ -8,14 +8,14 @@ export default function Component() {
   const { data: session } = useSession()
   return (
     <Layout>
-      <Features />
-      {/* <center>
-          <h1 className='sm:text-6xl 2xl:mt-8 text-5xl font-extrabold tracking-tight leading-none text-white md:text-6xl lg:text-7xl'>Feedback Management Redefined</h1>
+      {/* <Features /> */}
+      <center>
+        <br />
+          <h1 className='sm:text-6xl 2xl:mt-8 text-5xl font-extrabold tracking-tight leading-none text-white md:text-6xl lg:text-5xl lg:w-3/6 sm:w-full'>Feedback is power, collect it with our platform.</h1>
           <br />
           <br />
             <Widget projectId={'cll5z60fq0001usysevupa81n'} />
             </center>
-            <Features /> */}
     </Layout>
   )
 }
