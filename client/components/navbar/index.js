@@ -26,6 +26,9 @@ export default function Navbar() {
     const signUserIn = async () => {
         signIn('google');
     }
+    const signUserOut = async () => {
+      signOut();
+    }
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -58,7 +61,15 @@ export default function Navbar() {
             Pricing
           </Link>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
+          {
+            session 
+            ? 
+            <>
+            <a onClick={signUserOut} className="text-sm font-bold leading-6 text-white cursor-pointer">Log Out</a>
+            </>
+            : <></>
+          }
           <a className="text-sm font-bold leading-6 text-white">
             {
               session 
@@ -103,12 +114,20 @@ export default function Navbar() {
                 </Link>
               </div>
               <div className="py-6">
+                {
+                  session 
+                  ? <><a onClick={signUserOut} className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-bold leading-7 text-white hover:bg-gray-950 cursor-pointer"> Log Out </a></>
+                  : <></>
+                }
                 <a
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-bold leading-7 text-white hover:bg-gray-950 curosr-pointer"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-bold leading-7 text-white hover:bg-gray-950 cursor-pointer"
                 >
                   {
               session 
-              ? <> <Link href='/app'>Dashboard </Link><span aria-hidden="true">→</span></>
+              ? 
+              <> 
+              <Link href='/app'>Dashboard </Link><span aria-hidden="true">→</span>
+              </>
               : <> <button onClick={signUserIn}>Log in </button><span aria-hidden="true"> →</span></>
             }
                 </a>
