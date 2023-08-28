@@ -12,7 +12,7 @@ export default function Component() {
       {/* <Features /> */}
       <center>
         {/* <Alert /> */}
-          <h1 className='sm:text-5xl 2xl:mt-8 text-4xl font-bold tracking-tight leading-none text-white md:text-6xl lg:text-5xl lg:w-3/6'>Feedback is power, collect it with our platform ✨</h1>
+          <h1 className='sm:text-5xl 2xl:mt-8 text-4xl w-3/5 font-bold tracking-tight leading-none text-white md:text-6xl lg:text-5xl lg:w-3/6'>Feedback is power, collect it with our platform ✨</h1>
           <br />
           <br />
             <Widget projectId={'cll5z60fq0001usysevupa81n'} />
