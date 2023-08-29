@@ -10,6 +10,7 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
+  ArrowRightIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 
@@ -63,15 +64,15 @@ export default function Navbar() {
             session 
             ? 
             <>
-            <a onClick={signUserOut} className="text-sm font-bold leading-6 text-white cursor-pointer">Log Out</a>
+            <a onClick={signUserOut} className="text-sm font-bold leading-6 text-white cursor-pointer flex px-8 py-2">Log Out</a>
             </>
             : <></>
           }
           <a className="text-sm font-bold leading-6 text-white">
             {
               session 
-              ? <> <Link href='/app'>Dashboard </Link><span aria-hidden="true">→</span></>
-              : <> <button onClick={signUserIn}>Log in </button><span aria-hidden="true"> →</span></>
+              ? <> <Link href='/app' className='px-8 py-2 backgroundColor rounded-lg font-extrabold flex justify-center widgetShadow'>Dashboard </Link></>
+              : <> <button className='px-8 py-2 backgroundColor rounded-lg font-extrabold flex justify-center widgetShadow' onClick={signUserIn}>Get Started </button></>
             }
           </a>
         </div>
