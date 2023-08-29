@@ -111,20 +111,17 @@ export default function Navbar() {
               <div className="py-6">
                 {
                   session 
-                  ? <><a onClick={signUserOut} className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-bold leading-7 text-white hover:bg-gray-950 cursor-pointer"> Log Out </a></>
+                  ? <><a onClick={signUserOut} className="px-8 py-2 backgroundColor rounded-lg font-extrabold flex justify-center widgetShadow cursor-pointer"> Log Out </a></>
                   : <></>
                 }
                 <a
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-bold leading-7 text-white hover:bg-gray-950 cursor-pointer"
                 >
-                  {
+               {
               session 
-              ? 
-              <> 
-              <Link href='/app'>Dashboard </Link><span aria-hidden="true">→</span>
-              </>
-              : <> <button onClick={signUserIn}>Log in </button><span aria-hidden="true"> →</span></>
-            }
+              ? <> <Link href='/app' className='px-8 py-2 backgroundColor rounded-lg font-extrabold flex justify-center widgetShadow'>Dashboard </Link></>
+              : <> <button className='px-8 py-2 backgroundColor rounded-lg font-extrabold flex justify-center widgetShadow' onClick={signUserIn}>Get Started </button></>
+              }
                 </a>
               </div>
             </div>
