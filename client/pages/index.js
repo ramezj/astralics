@@ -13,7 +13,7 @@ export default function Component() {
       <center>
         {/* <Alert /> */}
           <h1 className='sm:text-5xl 2xl:mt-8 text-4xl w-4/5 font-bold tracking-tight leading-none text-white md:text-6xl lg:text-5xl lg:w-3/6'>
-            Feedback is <b className="font-bold text-[#2d05ae]">power</b>, collect it with our platform ✨
+            Feedback is power, collect it with our platform ✨
             </h1>
           <br />
           <br />

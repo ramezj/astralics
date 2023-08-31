@@ -71,8 +71,8 @@ export default function Navbar() {
           <a className="text-sm font-bold leading-6 text-white">
             {
               session 
-              ? <> <Link href='/app' className='px-8 py-2 backgroundColor rounded-lg font-extrabold flex justify-center widgetShadow'>Dashboard </Link></>
-              : <> <button className='px-8 py-2 backgroundColor rounded-lg font-extrabold flex justify-center widgetShadow' onClick={signUserIn}>Get Started </button></>
+              ? <> <Link href='/app' className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center'>Dashboard </Link></>
+              : <> <button className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center' onClick={signUserIn}>Get Started </button></>
             }
           </a>
         </div>
@@ -111,7 +111,7 @@ export default function Navbar() {
               <div className="py-6">
                 {
                   session 
-                  ? <><a onClick={signUserOut} className="px-8  py-2 backgroundColor rounded-lg font-extrabold flex justify-center widgetShadow cursor-pointer"> Log Out </a></>
+                  ? <><a onClick={signUserOut} className="px-8 py-2 rounded-lg font-bold flex justify-center cursor-pointer"> Log Out </a></>
                   : <></>
                 }
                 <a
@@ -119,8 +119,8 @@ export default function Navbar() {
                 >
                {
               session 
-              ? <> <Link href='/app' className='px-8 py-2 backgroundColor rounded-lg font-extrabold flex justify-center widgetShadow'>Dashboard </Link></>
-              : <> <button className='px-8 py-2 backgroundColor rounded-lg font-extrabold flex justify-center widgetShadow' onClick={signUserIn}>Get Started </button></>
+              ? <> <Link href='/app' className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center'>Dashboard </Link></>
+              : <> <button className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center' onClick={signUserIn}>Get Started </button></>
               }
                 </a>
               </div>
