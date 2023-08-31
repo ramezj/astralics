@@ -71,7 +71,7 @@ export default function Navbar() {
           <a className="text-sm font-bold leading-6 text-white">
             {
               session 
-              ? <> <Link href='/app' className='px-8 py-2 buttonBorderGradient rounded-lg font-extrabold flex justify-center widgetShadow'>Dashboard </Link></>
+              ? <> <Link href='/app' className='px-8 py-2 backgroundColor rounded-lg font-extrabold flex justify-center widgetShadow'>Dashboard </Link></>
               : <> <button className='px-8 py-2 backgroundColor rounded-lg font-extrabold flex justify-center widgetShadow' onClick={signUserIn}>Get Started </button></>
             }
           </a>
