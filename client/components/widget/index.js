@@ -35,7 +35,7 @@ export default function Widget(props) {
         <>
         <div className="card w-[22.5rem] backgroundColor widgetShadow duration-300">
   <div className="card-body">
-    <h2 className="card-title text-2xl text-white font-black justify-center -mt-2 mb-2">Send Feedback</h2>
+    <h2 className="card-title text-2xl text-white font-black justify-center -mt-2">Send Feedback</h2>
     {/* <div className='flex flex-wrap gap-6 justify-center w-full'>
     <span className='shadow-lg bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
     <p className='text-2xl flex justify-center'>💡</p>
@@ -54,7 +54,7 @@ export default function Widget(props) {
     <input value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-[#05050a] text-white font-extrabold text-sm -mt-1"/>
     <textarea value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="bg-opacity-60 shadow-xl textarea w-full mt-3 focus:outline-none bg-[#05050a] text-white font-extrabold" placeholder="Leave your feedback here"></textarea>
     <br /><br />
-    <button onClick={submitFeedback} className='shadow-xl btn w-full text-white normal-case bg-[#05050a] hover:bg-[#04030e] outline-none border-none font-bold -mb-2'>
+    <button onClick={submitFeedback} className='-mt-3 shadow-xl btn w-full text-white normal-case bg-[#05050a] hover:bg-[#05050a] outline-none border-none font-bold -mb-2'>
         {
             loading 
             ? <><span className="loading loading-spinner loading-xs"></span></>
