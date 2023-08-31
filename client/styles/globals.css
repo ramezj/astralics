@@ -27,15 +27,19 @@ body {
 }
 
 .backgroundColor {
-  background-color:#eb99ff;
-background-image:
-radial-gradient(at 21% 86%, rgba(255,204,84,255) 0px, transparent 50%),
-radial-gradient(at 12% 48%, hsla(260,62%,74%,1) 0px, transparent 50%),
-radial-gradient(at 72% 28%, hsla(293,83%,67%,1) 0px, transparent 50%),
-radial-gradient(at 45% 91%, rgba(38,0,172,255) 0px, transparent 50%),
-radial-gradient(at 54% 74%, hsla(270,78%,67%,1) 0px, transparent 50%),
-radial-gradient(at 92% 87%, rgba(38,0,172,255) 0px, transparent 50%),
-radial-gradient(at 29% 39%, rgba(38,0,172,255) 0px, transparent 50%);
+  background-color:#99e6ff;
+  background-image:
+  radial-gradient(at 28% 6%, hsla(206,76%,79%,1) 0px, transparent 50%),
+  radial-gradient(at 96% 63%, hsla(135,94%,72%,1) 0px, transparent 50%),
+  radial-gradient(at 43% 33%, hsla(126,72%,71%,1) 0px, transparent 50%),
+  radial-gradient(at 13% 70%, hsla(198,61%,66%,1) 0px, transparent 50%),
+  radial-gradient(at 4% 72%, hsla(106,98%,69%,1) 0px, transparent 50%),
+  radial-gradient(at 25% 13%, hsla(262,95%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 32% 1%, hsla(56,86%,70%,1) 0px, transparent 50%);
+}
+
+.widgetShadow {
+  box-shadow: 0px 0px 71px -39px hsla(135,94%,72%,1);
 }
 
 .buttonBorderGradient {
@@ -70,12 +74,6 @@ radial-gradient(at 29% 39%, rgba(38,0,172,255) 0px, transparent 50%);
   radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
   radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
 }
-.widgetShadow {
-  -webkit-box-shadow: 0px 0px 52px -13px rgba(255,77,136,0.69);
--moz-box-shadow: 0px 0px 52px -13px rgba(255,77,136,0.69);
-box-shadow: 0px 0px 52px -13px rgba(255,77,136,0.69);
-}
-
 .alertShadow {
   box-shadow: 0px 0px 35px -7px rgb(255, 0, 0);
 }
