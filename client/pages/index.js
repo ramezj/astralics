@@ -9,9 +9,11 @@ export default function Component() {
   return (
     <Layout>
       <center>
-          <h1 className='sm:text-5xl 2xl:mt-8 text-4xl w-4/5 font-bold tracking-tight leading-none text-white md:text-6xl lg:text-5xl lg:w-3/6'>
-            Feedback is power, collect it with our platform ✨
+            <h1 className='sm:text-5xl 2xl:mt-8 text-4xl w-4/5 font-bold tracking-tight leading-none text-white md:text-6xl lg:text-7xl lg:w-3/6'>
+            The next generation of collecting feedback
             </h1>
+            <br />
+            <p className='text-gray-200 lg:text-xl lg:w-2/6'>An easily embeddable, light-weight feedback widget package that is used to collect user feedback from anywhere.</p>
           <br />
           <br />
             <Widget projectId={'cll5z60fq0001usysevupa81n'} />
