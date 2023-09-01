@@ -57,7 +57,6 @@ export default function Component() {
     <br />
     <center>
     {/* <Premium premium={premium} /> */}
-    <br /><br />
     </center>
     <div className='flex flex-wrap gap-8 justify-center w-full'>
     {projects.map((project) => {

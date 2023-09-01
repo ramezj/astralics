@@ -1,11 +1,6 @@
 export default function Loading() {
     return (
         <div>
-            <center>
-                <br />
-                <br />
-    <div class="h-3 bg-gray-700 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    </center>
     <br />
     <br />
     <div className='flex flex-wrap gap-8 justify-center w-full'>
