@@ -13,19 +13,11 @@ export default function Component() {
             The next generation of collecting feedback
             </h1>
             <br />
-            <p className='text-gray-200 lg:text-xl lg:w-2/6'>An easily embeddable, light-weight feedback widget package that is used to collect user feedback from anywhere.</p>
+            <p className='text-gray-200 lg:text-xl lg:w-2/6 md:w-3/6 w-4/5'>An easily embeddable, light-weight feedback widget package that is used to collect user feedback from anywhere.</p>
           <br />
           <br />
             <Widget projectId={'cll5z60fq0001usysevupa81n'} />
             </center>
-            {/* <div className='flex lg:flex-row md:flex-row flex-col sm:w-full '>
-              <div className='bg-red-500 w-3/6 h-screen'>
-              <h1 className="text-white text-3xl font-bold justify-center align-middle flex">BlitzFeedback v1.0</h1>
-              </div>
-              <div className='bg-indigo-500 w-3/6 h-full min-h-screen'>
-              <p>Hello Indigo</p>
-              </div>
-            </div> */}
     </Layout>
   )
 }
