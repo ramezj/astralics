@@ -17,7 +17,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "autoprefixer": "10.4.14",
     "blitzpackage": "^0.1.4",
-    "blitzpackagev2": "^0.1.4",
+    "blitzpackagev2": "^0.1.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "eslint": "8.44.0",

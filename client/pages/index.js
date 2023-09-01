@@ -14,6 +14,7 @@ export default function Component() {
             </h1>
           <br />
           <br />
+            {/* <BlitzFeedback projectId={'cll5z60fq0001usysevupa81n'} /> */}
             <Widget projectId={'cll5z60fq0001usysevupa81n'} />
             </center>
     </Layout>
