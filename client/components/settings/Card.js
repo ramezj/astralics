@@ -12,13 +12,13 @@ export default function Card(props) {
         <input type="text" disabled className="input w-full bg-gray-900 font-medium text-center" value={props.projectWebsite} />
         <input type="text" disabled className="input w-full bg-gray-900 font-medium text-center" value={props.projectId}/>
         <br />
-        <div className='flex gap-4 mt-6'>
+        <div className='flex gap-4 mt-6 -mb-10 justify-center content-center'>
             <Delete projectId={props.projectId}/>
         </div>
     </div>
     <br />
     </div>
     </div>
-        </>
+    </>
     )
 }
