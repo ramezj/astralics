@@ -42,6 +42,18 @@ body {
   box-shadow: 0px 0px 71px -39px hsla(135,94%,72%,1);
 }
 
+.gradientBorder {
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, hsla(135,94%,72%,1), hsla(198,61%,66%,1));
+  padding: 3px;
+}
+
+.gradient:hover {
+  transition-duration: 5s;
+  background: linear-gradient(to right, hsla(135,94%,72%,1), hsla(198,61%,66%,1));
+}
+
 .buttonBorderGradient {
         background: linear-gradient(#05050a, #05050a) padding-box,
         linear-gradient(60deg, #00f, #00e8ff) border-box;
