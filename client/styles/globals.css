@@ -46,13 +46,29 @@ body {
   transition-duration: 5s;
   padding: 1rem;
   position: relative;
-  background: linear-gradient(to right, hsla(135,94%,72%,1), hsla(198,61%,66%,1));
+  background-color:#99e6ff;
+  background-image:
+  radial-gradient(at 28% 6%, hsla(206,76%,79%,1) 0px, transparent 50%),
+  radial-gradient(at 96% 63%, hsla(135,94%,72%,1) 0px, transparent 50%),
+  radial-gradient(at 43% 33%, hsla(126,72%,71%,1) 0px, transparent 50%),
+  radial-gradient(at 13% 70%, hsla(198,61%,66%,1) 0px, transparent 50%),
+  radial-gradient(at 4% 72%, hsla(106,98%,69%,1) 0px, transparent 50%),
+  radial-gradient(at 25% 13%, hsla(262,95%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 32% 1%, hsla(56,86%,70%,1) 0px, transparent 50%);
   padding: 3px;
 }
 
 .gradient:hover {
-  transition-duration: 5s;
-  background: linear-gradient(to right, hsla(135,94%,72%,1), hsla(198,61%,66%,1));
+  transition-duration: 0.3s;
+  background-color:#99e6ff;
+  background-image:
+  radial-gradient(at 28% 6%, hsla(206,76%,79%,1) 0px, transparent 50%),
+  radial-gradient(at 96% 63%, hsla(135,94%,72%,1) 0px, transparent 50%),
+  radial-gradient(at 43% 33%, hsla(126,72%,71%,1) 0px, transparent 50%),
+  radial-gradient(at 13% 70%, hsla(198,61%,66%,1) 0px, transparent 50%),
+  radial-gradient(at 4% 72%, hsla(106,98%,69%,1) 0px, transparent 50%),
+  radial-gradient(at 25% 13%, hsla(262,95%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 32% 1%, hsla(56,86%,70%,1) 0px, transparent 50%);
 }
 
 .buttonBorderGradient {
