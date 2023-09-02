@@ -18,7 +18,7 @@ export default function documentation() {
                 <br />
                 <div className='flex flex-wrap gap-8 justify-center w-4/5'>
                 <DocumentationCard name='Installation 🔨'/>
-                <DocumentationCard name='API key 🔑'/>
+                <DocumentationCard name='API Key 🔑'/>
                 </div>
                 <br />
                 <div className='flex flex-wrap gap-8 justify-center w-4/5'>
