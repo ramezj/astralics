@@ -16,11 +16,10 @@ export default function Pricing(props) {
         <>
         <Layout >
             <PaddleLoader />
-            <br />
             <center>
-                <h1 className='text-3xl font-bold'>Simple, No Tricks Pricing</h1>
+                <h1 className='text-3xl font-bold'>Pricing</h1>
             </center>
-            <br /><br />
+            <br />
             <div className='flex flex-wrap gap-12 justify-center w-full'>
                 <PricingCard price='Free' title='Starter' button='Get Started' background={'whiteBackground'} shadow={''}>
                 <Info><Svg /> 1 Project</Info>

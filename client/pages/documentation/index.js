@@ -13,7 +13,7 @@ export default function documentation() {
         <>
         <Layout>
             <center>
-                <h1 className='font-bold text-lg'>Start by installing the package</h1>
+                <h1 className='font-bold text-3xl'>Documentation</h1>
                 <br />
             <div className='w-72 py-2.5 backgroundColor widgetShadow rounded-lg'>
             <p className="font-medium flex justify-center gap-x-3 drop-shadow-md">npm i blitzpackage@latest
