@@ -43,7 +43,6 @@ body {
 }
 
 .gradientBorder {
-  transition-duration: 5s;
   padding: 1rem;
   position: relative;
   background-color:#99e6ff;
@@ -59,7 +58,7 @@ body {
 }
 
 .gradient:hover {
-  transition-duration: 0.3s;
+  transition-duration: 0.1s;
   background-color:#99e6ff;
   background-image:
   radial-gradient(at 28% 6%, hsla(206,76%,79%,1) 0px, transparent 50%),

@@ -14,32 +14,18 @@ export default function documentation() {
         <>
         <Layout>
             <center>
-                <h1 className='font-bold text-3xl'>API Documentation</h1>
+                <br />
+                <h1 className='font-bold text-4xl'>API Documentation</h1>
+                <br />
                 <br />
                 <div className='flex flex-wrap gap-8 justify-center w-4/5'>
                 <DocumentationCard name='Installation 🔨' redirect='/documentation/installation'/>
                 <DocumentationCard name='API Key 🔑' redirect='/documentation/api'/>
                 </div>
-                <br />
-                <div className='flex flex-wrap gap-8 justify-center w-4/5'>
+                <div className='flex flex-wrap gap-8 justify-center w-4/5 mt-8'>
                 <DocumentationCard name='Configuration ⚙️' redirect='/documentation/configuration'/>
                 <DocumentationCard name='React JS' redirect='/documentation/api'/>
                 </div>
-            {/* <div className='w-72 py-2.5 backgroundColor widgetShadow rounded-lg'>
-            <p className="font-medium flex justify-center gap-x-3 drop-shadow-md">npm i blitzpackage@latest
-            <span className='w-8 h-6 bg-gray-700 rounded-md flex justify-center items-center'>
-            {
-                npmCopy 
-                ? <><CheckIcon className='flex cursor-pointer' width={20}  height={20} /></>
-                : <><ClipboardDocumentListIcon onClick={copyNPM} className='flex cursor-pointer' width={20}  height={20}/></>
-            } 
-            </span>
-            </p>    
-            </div>
-            <br />
-            <div className='w-72 py-2.5 bg-indigo-500 rounded-badge'>
-            {importText}    
-            </div>     */}
             </center> 
         </Layout>
         </>

@@ -17,8 +17,10 @@ export default function Pricing(props) {
         <Layout >
             <PaddleLoader />
             <center>
-                <h1 className='text-3xl font-bold'>Pricing</h1>
+            <br />
+            <h1 className='text-4xl font-bold'>Pricing</h1>
             </center>
+            <br />
             <br />
             <div className='flex flex-wrap gap-12 justify-center w-full'>
                 <PricingCard price='Free' title='Starter' button='Get Started' background={'whiteBackground'} shadow={''}>
