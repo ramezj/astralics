@@ -10,7 +10,10 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
-  ArrowRightIcon
+  ArrowRightIcon,
+  ArrowSmallRightIcon,
+  PencilSquareIcon,
+  CreditCardIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 
@@ -52,10 +55,12 @@ export default function Navbar() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <Link href="/documentation" className="text-sm font-bold leading-6 text-white">
+          <Link href="/documentation" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2">
+            <PencilSquareIcon width='20' className='flex'/>
             Documentation
           </Link>
-          <Link href="/pricing" className="text-sm font-bold leading-6 text-white">
+          <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2">
+            <CreditCardIcon width='20' className='flex' />
             Pricing
           </Link>
         </Popover.Group>
@@ -71,7 +76,10 @@ export default function Navbar() {
           <a className="text-sm font-bold leading-6 text-white">
             {
               session 
-              ? <> <Link href='/app' className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center'>Dashboard </Link></>
+              ? <> <Link href='/app' className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex gap-2 content-center justify-center items-center'>
+                Dashboard 
+                <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/>
+                </Link></>
               : <> <button className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center' onClick={signUserIn}>Get Started </button></>
             }
           </a>

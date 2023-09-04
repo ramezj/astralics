@@ -9,7 +9,7 @@ export default function App({
   return (
     <ErrorBoundary>
     <SessionProvider session={session}>
-      <Component {...pageProps} />
+      <Component className='' {...pageProps} />
     </SessionProvider>
     </ErrorBoundary>
   )
