@@ -10,8 +10,22 @@ export default function page() {
                 <br />
                 <br />
                 <h1 className='text-xl font-bold'>npm</h1>
+                <br />
+                <div className='w-96 py-2 backgroundColor rounded-lg shadow-md'>
+                    <p className='font-bold'>npm i blitzpackagev2@latest</p>
+                </div>
+                <br />
                 <h1 className='text-xl font-bold'>pnpm</h1>
+                <br />
+                <div className='w-96 py-2 backgroundColor rounded-lg shadow-md'>
+                    <p className='font-bold'>pnpm i blitzpackagev2@latest</p>
+                </div>
+                <br />
                 <h1 className='text-xl font-bold'>yarn</h1>
+                <br />
+                <div className='w-96 py-2 backgroundColor rounded-lg shadow-md'>
+                    <p className='font-bold'>yarn add blitzpackagev2@latest</p>
+                </div>
             </center>
         </Layout>
         </>
