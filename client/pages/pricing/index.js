@@ -23,7 +23,7 @@ export default function Pricing(props) {
             <br />
             <br />
             <div className='flex flex-wrap gap-12 justify-center w-full'>
-                <PricingCard price='Free' title='Starter' button='Get Started' background={'whiteBackground'} shadow={''}>
+                <PricingCard price='Free' title='Starter' button='Get Started' background={'bg-[#0c0c17]'} shadow={''}>
                 <Info><Svg /> 1 Project</Info>
                 <Info><Svg /> 15 Monthly Feedbacks</Info>
                 <br />
