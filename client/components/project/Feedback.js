@@ -14,7 +14,7 @@ export default function Feedback(props) {
     }, [])
     return (
         <>
-        <div className="hover:scale-105 card w-96 backgroundColor widgetShadow shadow-xl cursor-pointer duration-300">
+        <div className="hover:scale-105 card w-96 bg-black bg-opacity-60 widgetShadow shadow-xl cursor-pointer duration-300">
   <div className="card-body">
     <h2 className="card-title font-extrabold justify-center">{props.email}</h2>
     <h2 className='float-left flex -mb-2 font-bold justify-center mt-4'>{props.body}</h2>
