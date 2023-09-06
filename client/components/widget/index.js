@@ -33,7 +33,7 @@ export default function Widget(props) {
     }
     return (
         <>
-        <div className="card w-[22.5rem] bg-[#05050a] widgetShadow duration-300">
+        <div className="card w-[22.5rem] bg-black widgetShadow duration-300">
   <div className="card-body">
     <h2 className="card-title text-2xl text-white font-bold justify-center -mt-2">Send Feedback</h2>
     {/* <div className='flex flex-wrap gap-6 justify-center w-full'>
@@ -42,8 +42,8 @@ export default function Widget(props) {
     </span>
     </div> */}
     <form onSubmit={submitFeedback}>
-    <input required value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-[#0e0e1b] text-white font-extrabold text-sm -mt-1"/>
-    <textarea required value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="bg-opacity-60 shadow-xl textarea w-full mt-3 focus:outline-none bg-[#0e0e1b] text-white font-extrabold" placeholder="Leave your feedback here"></textarea>
+    <input required value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-900 text-white font-extrabold text-sm -mt-1"/>
+    <textarea required value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="bg-opacity-60 shadow-xl textarea w-full mt-3 focus:outline-none bg-neutral-900 text-white font-extrabold" placeholder="Leave your feedback here"></textarea>
     <br /><br />
     <button type='submit' className='-mt-3 shadow-xl btn w-full text-[#05050a] normal-case bg-white hover:bg-white outline-none border-none font-bold -mb-2'>
                 {
