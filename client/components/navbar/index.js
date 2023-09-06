@@ -55,11 +55,11 @@ export default function Navbar() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex">
-          <Link href="/documentation" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-8 py-2 rounded-md duration-300">
+          <Link href="/documentation" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-8 py-2 rounded-md duration-500">
             <PencilSquareIcon width='20' className='flex'/>
             Documentation
           </Link>
-          <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-8 py-2 rounded-md duration-300">
+          <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-8 py-2 rounded-md duration-500">
             <CreditCardIcon width='20' className='flex' />
             Pricing
           </Link>
