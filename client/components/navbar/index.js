@@ -78,11 +78,10 @@ export default function Navbar() {
               session 
               ? <> <Link href='/app' className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex gap-2 content-center justify-center items-center'>
                 Dashboard 
-                <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/>
                 </Link></>
               : <> <button className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center items-center gap-2' onClick={signUserIn}>
-                Get Started 
-                <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/>
+                Get Started - It's Free
+                {/* <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/> */}
                 </button></>
             }
           </a>
@@ -134,9 +133,10 @@ export default function Navbar() {
               session 
               ? <> <Link href='/app' className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center gap-2'>
                 Dashboard 
-                <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/>
                 </Link></>
-              : <> <button className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center' onClick={signUserIn}>Get Started </button></>
+              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center gap-2'>
+              Get Started - It's Free 
+              </Link></>
               }
                 </a>
               </div>
