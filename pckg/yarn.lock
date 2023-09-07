@@ -1107,11 +1107,6 @@
   resolved "https://registry.npmjs.org/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@esbuild/win32-x64@0.18.18":
-  version "0.18.18"
-  resolved "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.18.18.tgz"
-  integrity sha512-eTSg/gC3p3tdjj4roDhe5xu94l1s2jMazP8u2FsYO8SEKvSpPOO71EucprDn/IuErDPvTFUhV9lTw5z5WJCRKQ==
-
 "@floating-ui/core@^1.4.1":
   version "1.4.1"
   resolved "https://registry.npmjs.org/@floating-ui/core/-/core-1.4.1.tgz"
