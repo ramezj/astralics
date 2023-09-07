@@ -18,7 +18,9 @@ export default function Component() {
             <p className='text-gray-100 lg:text-xl lg:w-2/6 md:w-3/6 w-4/5'>An easily embeddable, light-weight feedback widget package that is used to collect user feedback from anywhere.</p>
         </div>  
           <br />
-            <Widget projectId={'cll5z60fq0001usysevupa81n'} />
+          <div className="w-full content-center items-center justify-items-center">
+          <Widget projectId={'cll5z60fq0001usysevupa81n'} />
+          </div>
             </center>
     </Layout>
   )
