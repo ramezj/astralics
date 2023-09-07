@@ -43,7 +43,7 @@ export default function Widget(props) {
     </div> */}
     <form onSubmit={submitFeedback}>
     <input required value={email} onChange={((e) => {setEmail(e.target.value)})}type="text" placeholder="john@doe.com" className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-extrabold text-sm -mt-1"/>
-    <textarea required value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="bg-opacity-60 shadow-xl textarea w-full mt-3 focus:outline-none bg-neutral-800 text-white font-extrabold" placeholder="Leave your feedback here"></textarea>
+    <textarea required value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className=" bg-opacity-60 shadow-xl textarea w-full mt-3 focus:outline-none bg-neutral-800 text-white font-extrabold" placeholder="Leave your feedback here"></textarea>
     <br /><br />
     <button type='submit' className='-mt-3 shadow-xl btn w-full text-[#05050a] normal-case bg-white hover:bg-white outline-none border-none font-bold -mb-2'>
                 {
