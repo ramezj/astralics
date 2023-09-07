@@ -54,10 +54,11 @@ export default function Component() {
     :
     <>
     <br />
-    <br />
     <center>
+      <h1 className="text-3xl font-bold">Hello, {session.user.name} 👋🏼</h1>
     {/* <Premium premium={premium} /> */}
     </center>
+    <br /><br />
     <div className='flex flex-wrap gap-8 justify-center w-full'>
     {projects.map((project) => {
         return (

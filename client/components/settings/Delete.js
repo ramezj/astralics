@@ -23,13 +23,13 @@ export default function Delete(props) {
     }
     return (
         <>
-        <button className='btn bg-red-700 text-white border-none normal-case font-medium hover:bg-red-900' onClick={deleteProject}>
+        <button className='btn bg-red-700 px-8 text-white border-none normal-case font-medium hover:bg-red-900' onClick={deleteProject}>
         { 
       loading 
       ? <><><span className="loading loading-spinner loading-xs"></span></></>
       : <>{text}</>
       }
-            </button>
+        </button>
         </>
     )
 }

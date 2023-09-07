@@ -33,7 +33,7 @@ export default function Pricing(props) {
                 : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button></>
                 }
                 </PricingCard >
-                <PricingCard price='$8.99' title='Premium' button='Get Started' background={'bg-black bg-opacity-60'} shadow={'widgetShadow'}>
+                <PricingCard price='$14.99' title='Premium' button='Get Started' background={'bg-black bg-opacity-60'} shadow={'widgetShadow'}>
                 <Info><Svg /> Unlimited Projects</Info>
                 <Info><Svg /> Unlimited Monthly Feedbacks</Info>
                 <br />
