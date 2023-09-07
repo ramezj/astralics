@@ -33,7 +33,7 @@ export default function Widget(props) {
     }
     return (
         <>
-        <div className="card w-[22.5rem] bg-black widgetShadow duration-300">
+        <div className="card w-[22.5rem] bg-black  duration-300">
   <div className="card-body">
     <h2 className="card-title text-2xl text-white font-bold justify-center -mt-2">Send Feedback</h2>
     {/* <div className='flex flex-wrap gap-6 justify-center w-full'>

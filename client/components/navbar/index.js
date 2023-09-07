@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Link from 'next/link'
+import Feedback from './Feedback'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -59,6 +60,7 @@ export default function Navbar() {
             <PencilSquareIcon width='20' className='flex'/>
             Documentation
           </Link>
+          <Feedback />
           <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-8 py-2 rounded-md duration-500">
             <CreditCardIcon width='20' className='flex' />
             Pricing
