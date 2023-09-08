@@ -45,7 +45,7 @@ export default function Feedback() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-transparent p-10 text-left align-middle transition-all">
+                <Dialog.Panel className="w-[22.5rem]  max-w-md transform overflow-hidden rounded-2xl bg-transparent  text-left align-middle transition-all">
                     <Widget />
                 </Dialog.Panel>
               </Transition.Child>
