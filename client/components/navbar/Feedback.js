@@ -16,7 +16,7 @@ export default function Feedback() {
   }
     return (
         <>
-        <Link onClick={openModal} href='' className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-8 py-2 rounded-md duration-500">
+        <Link onClick={openModal} href='' className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-6 py-2 rounded-md duration-500">
         <ChatBubbleBottomCenterTextIcon width='20' className='flex'/>
             Feedback
           </Link>
@@ -31,7 +31,7 @@ export default function Feedback() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-60"/>
+            <div className="fixed inset-0 bg-black bg-opacity-50" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -45,7 +45,7 @@ export default function Feedback() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden rounded-2xl bg-transparent text-left align-middle transition-all ">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-transparent p-10 text-left align-middle transition-all">
                     <Widget />
                 </Dialog.Panel>
               </Transition.Child>

@@ -55,13 +55,13 @@ export default function Navbar() {
             <Bars3Icon className="h-8 w-8 hover:outline-none active:outline-none outline-none" aria-hidden="true"/>
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex">
-          <Link href="/documentation" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-8 py-2 rounded-md duration-500">
+        <Popover.Group className="hidden lg:flex gap-2">
+          <Link href="/documentation" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-6 py-2 rounded-md duration-500">
             <PencilSquareIcon width='20' className='flex'/>
             Documentation
           </Link>
           <Feedback />
-          <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-8 py-2 rounded-md duration-500">
+          <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-6 py-2 rounded-md duration-500">
             <CreditCardIcon width='20' className='flex' />
             Pricing
           </Link>
@@ -117,6 +117,7 @@ export default function Navbar() {
                 <PencilSquareIcon width='20' className='flex'/>
                   Documentation
                 </Link>
+                <Feedback />
                 <Link href="/pricing" className="-mx-3 rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-gray-950 flex justify-center items-center gap-2">
                 <CreditCardIcon width='20' className='flex' />
                   Pricing
