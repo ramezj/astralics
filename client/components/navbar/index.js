@@ -56,10 +56,10 @@ export default function Navbar() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex gap-2">
-          <Link href="/documentation" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-6 py-2 rounded-md duration-500">
+          {/* <Link href="/documentation" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-6 py-2 rounded-md duration-500">
             <PencilSquareIcon width='20' className='flex'/>
             Documentation
-          </Link>
+          </Link> */}
           <Feedback />
           <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-6 py-2 rounded-md duration-500">
             <CreditCardIcon width='20' className='flex' />
@@ -91,7 +91,7 @@ export default function Navbar() {
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#05050a] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto backgroundColor px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5 outline-none">
               <span className="sr-only">Your Company</span>
@@ -113,12 +113,12 @@ export default function Navbar() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Link href="/documentation" className="-mx-3 rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-gray-950 flex justify-center items-center gap-2">
+                <Link href="/documentation" className="-mx-3 rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-white hover:text-black flex justify-center items-center gap-2 duration-500">
                 <PencilSquareIcon width='20' className='flex'/>
                   Documentation
                 </Link>
                 <Feedback />
-                <Link href="/pricing" className="-mx-3 rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-gray-950 flex justify-center items-center gap-2">
+                <Link href="/pricing" className="-mx-3 rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-white hover:text-black flex justify-center items-center gap-2 duration-500">
                 <CreditCardIcon width='20' className='flex' />
                   Pricing
                 </Link>
@@ -130,7 +130,7 @@ export default function Navbar() {
                   : <></>
                 }
                 <a
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-bold leading-7 text-white hover:bg-gray-950 cursor-pointer"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-bold leading-7 text-white cursor-pointer"
                 >
                {
               session 
