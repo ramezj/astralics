@@ -113,10 +113,6 @@ export default function Navbar() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Link href="/documentation" className="-mx-3 rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-white hover:text-black flex justify-center items-center gap-2 duration-500">
-                <PencilSquareIcon width='20' className='flex'/>
-                  Documentation
-                </Link>
                 <Feedback />
                 <Link href="/pricing" className="-mx-3 rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-white hover:text-black flex justify-center items-center gap-2 duration-500">
                 <CreditCardIcon width='20' className='flex' />
