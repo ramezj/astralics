@@ -25,7 +25,7 @@ export default function Pricing(props) {
             <div className='flex flex-wrap gap-12 justify-center w-full'>
                 <PricingCard price='Free' title='Starter' button='Get Started' background={'bg-black bg-opacity-60'} shadow={''}>
                 <Info><Svg /> 1 Project</Info>
-                <Info><Svg /> 15 Monthly Feedbacks</Info>
+                <Info><Svg /> 25 Monthly Feedbacks</Info>
                 <br />
                 {
                 session 
@@ -49,7 +49,8 @@ export default function Pricing(props) {
                 : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button></>
                 }
                 </PricingCard >
-            </div>      
+            </div>    
+            <br />  
         </Layout>
         </>
     )
