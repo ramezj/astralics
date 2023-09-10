@@ -56,7 +56,7 @@ export default function Component() {
     <br />
     <center>
       <div className='sm:w-4/5'>
-        <h1 className="text-3xl font-bold">Hello {session?.user.name}, Welcome to your dashboard 👋🏼</h1>
+        <h1 className="text-3xl font-bold">Hello, Welcome to your dashboard 👋🏼</h1>
       </div>
     {/* <Premium premium={premium} /> */}
     </center>
