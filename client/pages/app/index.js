@@ -58,6 +58,8 @@ export default function Component() {
       <div className='sm:w-4/5'>
         <h1 className="text-3xl font-bold">Hello, Welcome to your dashboard 👋🏼</h1>
       </div>
+      <br /><br />
+      <Create />
     {/* <Premium premium={premium} /> */}
     </center>
     <br /><br />

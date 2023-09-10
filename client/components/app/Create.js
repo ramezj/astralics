@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { PlusIcon } from '@heroicons/react/24/outline';
 
 export default function Create() {
     const router = useRouter();
@@ -36,12 +37,9 @@ export default function Create() {
     }
     return (
         <>
-        <button className='btn bg-gray-900 text-white border-none normal-case font-medium hover:bg-gray-900' onClick={()=>window.my_modal_1.showModal()}>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-</svg>
-
-          New Project</button>
+        <button className='btn bg-black bg-opacity-60 text-white border-none normal-case font-medium px-10' onClick={()=>window.my_modal_1.showModal()}>
+          <PlusIcon width={21}/>
+          Create Project</button>
 <dialog id="my_modal_1" className="modal bg-transparent shadow-2xl">
   <form method="dialog" className="modal-box bg-gray-950">
     <center>
