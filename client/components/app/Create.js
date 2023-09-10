@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { PlusIcon } from '@heroicons/react/24/outline';
+import { FolderPlusIcon } from '@heroicons/react/24/outline';
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
+import CreateProject from '../project/CreateProject';
 
 export default function Create() {
     const router = useRouter();
@@ -47,9 +48,9 @@ export default function Create() {
     }
     return (
         <>
-        <button className='btn bg-black bg-opacity-60 hover:bg-opacity-90 text-white border-none normal-case font-medium px-10' onClick={openModal}>
-          <PlusIcon width={21}/>
-          Create Project</button>
+        <button 
+        className='btn bg-black bg-opacity-60 hover:bg-opacity-90 text-white border-none normal-case font-medium px-12' 
+        onClick={openModal}><FolderPlusIcon width={21}/>Create Project</button>
 <dialog id="my_modal_1" className="modal bg-transparent shadow-2xl">
   <form method="dialog" className="modal-box bg-gray-950">
     <center>
@@ -105,6 +106,7 @@ export default function Create() {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-[22.5rem]  max-w-md transform overflow-hidden rounded-2xl bg-transparent  text-left align-middle transition-all">
+                <CreateProject />
                 </Dialog.Panel>
               </Transition.Child>
             </div>

@@ -10,6 +10,7 @@ import Create from "@/components/app/Create";
 import Manage from "@/components/app/Manage";
 import Documentation from "@/components/app/Documentation";
 import Premium from "@/components/app/Premium";
+import CreateProject from "@/components/project/CreateProject";
 
 export default function Component() {
   const router = useRouter();
