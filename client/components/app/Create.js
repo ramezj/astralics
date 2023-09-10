@@ -49,7 +49,7 @@ export default function Create() {
     return (
         <>
         <button 
-        className='btn bg-black bg-opacity-60 hover:bg-opacity-90 text-white border-none normal-case font-medium px-12 outline-none' 
+        className='btn bg-black bg-opacity-60 hover:bg-opacity-90 text-white border-none normal-case font-medium px-12 outline-none duration-300' 
         onClick={openModal}><FolderPlusIcon width={21}/>Create Project</button>
 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
