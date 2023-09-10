@@ -18,6 +18,23 @@ export default async function handler(req, res) {
         })
     }
     try {
+        const user = await prisma.user.findUnique({
+            where: {
+                id:session.user.id
+            },
+            include:{
+                projects:true
+            }
+        });
+        console.log(user.projects.length);
+        if(user.projects.length >= 1) {
+            if(user.premium === false) {
+                return res.status(400).json({
+                    ok:false,
+                    response: 'Upgrade to Premium'
+                })
+            }
+        }
         const newProject = await prisma.project.create({
             data: {
                 name:name,
@@ -37,7 +54,7 @@ export default async function handler(req, res) {
         })
     } catch (error) {
         console.error(error);
-        res.status(400).json({
+        return res.status(400).json({
             error
         })
     }

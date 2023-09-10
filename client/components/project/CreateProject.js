@@ -31,7 +31,8 @@ export default function CreateProject() {
             router.push(`/project/${resp.response.id}`)
         } else if (resp.ok == false) {
             setLoading(false);
-            setError(resp.response);
+            setText(resp.response);
+            setResponse(resp.response);
         }
     }
     return (
