@@ -16,6 +16,7 @@ import {
   PencilSquareIcon,
   CreditCardIcon
 } from '@heroicons/react/24/outline'
+import Settings from './Settings'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 
 const products = [
@@ -67,18 +68,20 @@ export default function Navbar() {
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
-          {
+          {/* {
             session 
             ? 
             <>
             <a onClick={signUserOut} className="text-sm font-bold leading-6 text-white cursor-pointer flex px-8 py-2">Log Out</a>
             </>
             : <></>
-          }
-          <a className="text-sm font-bold leading-6 text-white">
+          } */}
+          <a className="text-sm font-bold leading-6 text-white flex gap-3">
             {
               session 
-              ? <> <Link href='/app' className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex gap-2 content-center justify-center items-center'>
+              ? <> 
+              <Settings />
+              <Link href='/app' className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex gap-2 content-center justify-center items-center hover:bg-gray-200 duration-300'>
                 Dashboard 
                 </Link></>
               : <> <button className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center items-center gap-2' onClick={signUserIn}>
