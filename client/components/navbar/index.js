@@ -57,10 +57,6 @@ export default function Navbar() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex gap-2">
-          {/* <Link href="/documentation" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-6 py-2 rounded-md duration-500">
-            <PencilSquareIcon width='20' className='flex'/>
-            Documentation
-          </Link> */}
           <Feedback />
           <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-6 py-2 rounded-md duration-500">
             <CreditCardIcon width='20' className='flex' />
@@ -81,10 +77,10 @@ export default function Navbar() {
               session 
               ? <> 
               <Settings />
-              <Link href='/app' className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex gap-2 content-center justify-center items-center hover:bg-gray-200 duration-300'>
+              <Link href='/app' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 text-white rounded-lg font-bold flex gap-2 content-center justify-center items-center duration-300'>
                 Dashboard 
                 </Link></>
-              : <> <button className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center items-center gap-2' onClick={signUserIn}>
+              : <> <button className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-lg font-bold flex justify-center items-center gap-2' onClick={signUserIn}>
                 Get Started - It's Free
                 {/* <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/> */}
                 </button></>
@@ -133,10 +129,10 @@ export default function Navbar() {
                 >
                {
               session 
-              ? <> <Link href='/app' className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center gap-2'>
+              ? <> <Link href='/app' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-lg font-bold flex justify-center gap-2'>
                 Dashboard 
                 </Link></>
-              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-white text-[#05050a] rounded-lg font-bold flex justify-center gap-2'>
+              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-lg font-bold flex justify-center gap-2 duration-300'>
               Get Started - It's Free 
               </Link></>
               }

@@ -7,14 +7,12 @@ export default function Settings() {
          <Link href='/settings' 
          className='
          px-3 py-2 
-        bg-white 
-        text-[#05050a] 
+         bg-black bg-opacity-60 hover:bg-opacity-70
          rounded-lg 
          font-bold flex gap-2 content-center justify-center items-center
-         hover:bg-gray-200
          duration-300
          '>
-        <AdjustmentsHorizontalIcon className='text-black' width={24} height={24}/>
+        <AdjustmentsHorizontalIcon className='text-white' width={24} height={24}/>
         </Link>
         </>
     )
