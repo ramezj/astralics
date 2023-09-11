@@ -46,9 +46,6 @@ export default function Page() {
     : 
     <> 
     <center>
-    <h2 className="font-extrabold text-2xl">{data.name}</h2>
-    <br />
-    <br />
     <Card projectId={data.id} projectName={data.name} projectWebsite={data.website}/>
     </center>
     </>
