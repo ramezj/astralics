@@ -6,6 +6,7 @@ import PricingCard from '@/components/pricing/PricingCard';
 import Info from '@/components/pricing/Info';
 import Svg from '@/components/pricing/svg';
 import { PaddleLoader } from '@/components/PaddleLoader';
+import { CreditCardIcon } from '@heroicons/react/24/outline';
 
 export default function Pricing(props) {
     const signUserIn = async () => {
@@ -45,8 +46,13 @@ export default function Pricing(props) {
                       success:'/success',
                       passthrough: session.user.id
                     })
-                })} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Subscribe Now</button></>
-                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button></>
+                })} 
+                className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>
+                    <CreditCardIcon className='text-white' width={22} height={22} />
+                 Subscribe Now</button></>
+                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>
+                    <CreditCardIcon className='text-white' width={22} height={22} />
+                    Get Started</button></>
                 }
                 </PricingCard >
             </div>    
