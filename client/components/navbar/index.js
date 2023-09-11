@@ -103,7 +103,7 @@ export default function Navbar() {
             </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-500"
+              className="-m-2.5 rounded-md p-2.5 text-gray-200"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
