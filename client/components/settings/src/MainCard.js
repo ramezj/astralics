@@ -1,6 +1,9 @@
 import SaveChanges from "./SaveChanges"
 
 export default function MainCard(props) {
+    const fetchSettings = async () => {
+        
+    }
     return (
         <>
         <div className="card w-96 bg-black bg-opacity-60 shadow-xl cursor-pointer duration-300 outline-none">
@@ -15,7 +18,7 @@ export default function MainCard(props) {
         <input type="text" disabled className="input w-full bg-gray-900 font-medium text-center" value={props.profileEmail}/>
         <label className="float-left flex ml-1">Avatar URL</label>
         <input type="text" disabled className="input w-full bg-gray-900 font-medium text-center" value={props.profileAvatar}/>
-        <SaveChanges />
+        <SaveChanges onClick={fetchSettings} />
         </div>
         </div>
         </>
