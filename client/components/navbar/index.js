@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Link from 'next/link'
 import Feedback from './Feedback'
+import LogOut from './LogOut'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -76,12 +77,13 @@ export default function Navbar() {
             {
               session 
               ? <> 
+              <LogOut />
               <Settings />
               <Link href='/app' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 text-white rounded-lg font-bold flex gap-2 content-center justify-center items-center duration-300'>
                 Dashboard 
                 </Link></>
               : <> <button className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-lg font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
-                Get Started - It's Free
+                Get Started, It's Free
                 {/* <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/> */}
                 </button></>
             }
@@ -133,7 +135,7 @@ export default function Navbar() {
                 Dashboard 
                 </Link></>
               : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-lg font-bold flex justify-center gap-2 duration-300'>
-              Get Started - It's Free 
+              Get Started, It's Free 
               </Link></>
               }
                 </a>
