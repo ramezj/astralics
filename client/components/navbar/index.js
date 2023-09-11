@@ -80,7 +80,7 @@ export default function Navbar() {
               <Link href='/app' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 text-white rounded-lg font-bold flex gap-2 content-center justify-center items-center duration-300'>
                 Dashboard 
                 </Link></>
-              : <> <button className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-lg font-bold flex justify-center items-center gap-2' onClick={signUserIn}>
+              : <> <button className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-lg font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
                 Get Started - It's Free
                 {/* <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/> */}
                 </button></>
