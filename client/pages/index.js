@@ -11,7 +11,7 @@ export default function Component() {
     <Layout>
       <center>
         <div className="">
-            <h1 className='sm:text-5xl 2xl:text-7xl 2xl:mt-16 text-4xl w-4/5 font-bold tracking-tight leading-none text-white md:text-5xl lg:text-5xl lg:mt-4 lg:w-3/6 sm:mt-8'>
+            <h1 className='sm:text-5xl 2xl:text-7xl 2xl:mt-14 text-4xl w-4/5 font-bold tracking-tight leading-none text-white md:text-5xl lg:text-5xl lg:mt-4 lg:w-3/6 sm:mt-8'>
             The next generation of collecting feedback.
             </h1>
             <br />
