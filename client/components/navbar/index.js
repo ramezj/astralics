@@ -131,7 +131,11 @@ export default function Navbar() {
                 >
                {
               session 
-              ? <> <Link href='/app' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-lg font-bold flex justify-center gap-2'>
+              ? <> 
+              <Link href='/settings' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-lg font-bold flex justify-center gap-2'>
+                Settings 
+                </Link>
+              <Link href='/app' className=' mt-3 px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-lg font-bold flex justify-center gap-2'>
                 Dashboard 
                 </Link></>
               : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-lg font-bold flex justify-center gap-2 duration-300'>
