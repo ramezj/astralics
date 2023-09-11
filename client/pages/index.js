@@ -19,7 +19,7 @@ export default function Component() {
         </div>  
           <br />
           <div className="w-full content-center items-center justify-items-center">
-          <Widget projectId={'cll5z60fq0001usysevupa81n'} />
+          <Widget projectId={'clme7xrmw0001usu096n8oxev'} />
           </div>
             </center>
     </Layout>

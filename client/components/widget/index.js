@@ -48,7 +48,7 @@ export default function Widget(props) {
     <button type='submit' className='-mt-3 shadow-xl w-full py-2 rounded-md text-base text-[#05050a] normal-case bg-white hover:bg-white outline-none border-none font-bold -mb-2'>
                 {
                     loading 
-                    ? <><span className="loading loading-spinner loading-xs"></span>Loading</>
+                    ? <><span className="loading loading-spinner loading-xs"></span></>
                     : <>{text}</> 
                 }    
             </button>

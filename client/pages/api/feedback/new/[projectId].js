@@ -19,6 +19,9 @@ export default async function handler(req, res) {
     const project = await prisma.project.findFirst({
       where: {
         id:projectId
+      },
+      include: {
+        feedbacks:true
       }
     })
     if(!project) {
@@ -26,6 +29,20 @@ export default async function handler(req, res) {
         ok:false,
         response:'Configure Project ID'
       })
+    }
+    const user = await prisma.user.findFirst({
+      where: {
+        id:project.userId
+      }
+    });
+    // change number to 25 in production, 5 is only in dev mode for testing
+    if(project.feedbacks.length >= 5) {
+      if(user.premium === false) {
+        return res.status(400).json({
+          ok:false,
+          response:'Upgrade to Premium'
+        })
+      }
     }
     const feedback = await prisma.feedback.create({
       data: {
