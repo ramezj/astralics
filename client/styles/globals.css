@@ -29,15 +29,15 @@ body {
 }
 
 .backgroundColor {
-  background-color:#99a2ff;
+  background-color:#c299ff;
   background-image:
-  radial-gradient(at 92% 70%, hsla(223,91%,68%,1) 0px, transparent 50%),
-  radial-gradient(at 20% 13%, hsla(262,95%,60%,1) 0px, transparent 50%),
-  radial-gradient(at 37% 2%, hsla(171,66%,69%,1) 0px, transparent 50%),
-  radial-gradient(at 70% 21%, hsla(259,74%,68%,1) 0px, transparent 50%),
-  radial-gradient(at 80% 45%, hsla(187,83%,78%,1) 0px, transparent 50%),
-  radial-gradient(at 67% 70%, hsla(214,86%,71%,1) 0px, transparent 50%),
-  radial-gradient(at 31% 77%, hsla(241,67%,72%,1) 0px, transparent 50%);
+  radial-gradient(at 72% 15%, hsla(353,91%,75%,1) 0px, transparent 50%),
+  radial-gradient(at 11% 15%, hsla(312,70%,66%,1) 0px, transparent 50%),
+  radial-gradient(at 74% 41%, hsla(33,92%,71%,1) 0px, transparent 50%),
+  radial-gradient(at 8% 75%, hsla(151,97%,64%,1) 0px, transparent 50%),
+  radial-gradient(at 30% 48%, hsla(317,60%,77%,1) 0px, transparent 50%),
+  radial-gradient(at 90% 69%, hsla(33,78%,75%,1) 0px, transparent 50%),
+  radial-gradient(at 1% 47%, hsla(359,88%,63%,1) 0px, transparent 50%);
 }
 
 .widgetShadow {

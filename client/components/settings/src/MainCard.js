@@ -1,6 +1,8 @@
 import SaveChanges from "./SaveChanges"
+import React, { useState }from 'react';
 
 export default function MainCard(props) {
+    const [ name, setName ] = useState(props.profileName);
     const fetchSettings = async () => {
         
     }
@@ -13,7 +15,7 @@ export default function MainCard(props) {
         </center>
         <h1 className="card-title text-2xl font-bold text-white justify-center">Account Information</h1>
         <label className="float-left flex ml-1">Name</label>
-        <input type="text" disabled className="input w-full bg-gray-900 font-medium text-center" value={props.profileName}/>
+        <input type="text" className="input w-full bg-gray-900 font-medium text-center outline-none border-none" value={name} onChange={((e) => {setName(e.target.value)})} />
         <label className="float-left flex ml-1">Email</label>
         <input type="text" disabled className="input w-full bg-gray-900 font-medium text-center" value={props.profileEmail}/>
         <label className="float-left flex ml-1">Avatar URL</label>
