@@ -15,7 +15,8 @@ import {
   ArrowRightIcon,
   ArrowSmallRightIcon,
   PencilSquareIcon,
-  CreditCardIcon
+  CreditCardIcon,
+  Squares2X2Icon
 } from '@heroicons/react/24/outline'
 import Settings from './Settings'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
@@ -79,7 +80,8 @@ export default function Navbar() {
               ? <> 
               <LogOut />
               <Settings />
-              <Link href='/app' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 text-white rounded-lg font-bold flex gap-2 content-center justify-center items-center duration-300'>
+              <Link href='/app' className='px-7 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 text-white rounded-lg font-bold flex gap-2 content-center justify-center items-center duration-300'>
+                <Squares2X2Icon className='text-white' width={22} height={22}/>
                 Dashboard 
                 </Link></>
               : <> <button className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-lg font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
@@ -135,7 +137,7 @@ export default function Navbar() {
               <Link href='/settings' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-lg font-bold flex justify-center gap-2'>
                 Settings 
                 </Link>
-              <Link href='/app' className=' mt-3 px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-lg font-bold flex justify-center gap-2'>
+              <Link href='/app' className='mt-3 px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-lg font-bold flex justify-center gap-2'>
                 Dashboard 
                 </Link></>
               : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-lg font-bold flex justify-center gap-2 duration-300'>
