@@ -46,7 +46,7 @@ export default function Settings() {
                         loading 
                         ? <><Loading/></>
                         : <>
-                        <MainCard profileName={user.name} profileEmail={user.email} profileAvatar={user.image}/>
+                        <MainCard profileName={user.name} profileEmail={user.email} profileAvatar={user.image} session={session}/>
                         </>
                     }
                 </div>

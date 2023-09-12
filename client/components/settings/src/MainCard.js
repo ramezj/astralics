@@ -3,8 +3,22 @@ import React, { useState }from 'react';
 
 export default function MainCard(props) {
     const [ name, setName ] = useState(props.profileName);
+    const [ loading, setLoading ] = useState(false);
+    const [ response, setResponse ] = useState();
     const fetchSettings = async () => {
-        
+        setLoading(true);
+        const response = await fetch(`/api/settings`, {
+            method:'POST',
+            headers: {
+                "Content-Type": "application/json"
+              },
+            body: JSON.stringify({
+                name:name
+            })
+        });
+        const res = await response.json();
+            setLoading(false);
+            setResponse(res.response);
     }
     return (
         <>
@@ -20,7 +34,15 @@ export default function MainCard(props) {
         <input type="text" disabled className="input w-full bg-gray-900 font-medium text-center" value={props.profileEmail}/>
         <label className="float-left flex ml-1">Avatar URL</label>
         <input type="text" disabled className="input w-full bg-gray-900 font-medium text-center" value={props.profileAvatar}/>
-        <SaveChanges onClick={fetchSettings} />
+        <button className='bg-green-400 text-white border-none normal-case font-bold hover:bg-green-700 px-12 py-2 rounded-lg mt-4 duration-300'
+        onClick={fetchSettings}
+        >
+            {
+                loading 
+                ? <><span className="loading loading-spinner loading-xs"></span></>
+                : <>Save Changes</>
+            }
+            </button>
         </div>
         </div>
         </>
