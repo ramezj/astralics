@@ -8,7 +8,7 @@ export default function Card(props) {
   <div className="card-body">
     <h2 className="card-title font-extrabold drop-shadow-lg">{props.title}</h2>
     <br />
-    <Link href='/' className="font-medium -mb-3 duration-150 drop-shadow-lg">{props.website}</Link>
+    <h1 className="font-medium -mb-3 duration-150 drop-shadow-lg">{props.website}</h1>
     <div className="card-actions justify-end">
     <span className='-mt-6 -mr-2 w-10 h-8 rounded-md justify-center items-center float-right flex backgroundColor'>
     <Link href={`${props.settings}`} className='drop-shadow-lg float-right shadow-lg flex justify-center'>
