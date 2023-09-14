@@ -21,7 +21,7 @@ export default function Component() {
         </div>  
           <br />
           <div className="w-full content-center items-center justify-items-center">
-          <Widget projectId={'clme7xrmw0001usu096n8oxev'} />
+          <Widget projectId={'clmilxamo0003rt6hwvtibm1f'} />
           </div>
             </center>
     </Layout>

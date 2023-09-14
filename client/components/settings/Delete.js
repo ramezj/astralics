@@ -23,7 +23,7 @@ export default function Delete(props) {
     }
     return (
         <>
-        <button className='bg-red-600 bg-opacity-80 border-none outline-none text-white px-12 py-2 rounded-lg duration-200 hover:bg-red-900 mt-4' onClick={deleteProject}>
+        <button className='font-bold bg-red-600 bg-opacity-80 border-none outline-none text-white px-12 py-2 rounded-lg duration-200 hover:bg-red-900 mt-4' onClick={deleteProject}>
         { 
       loading 
       ? <><><span className="loading loading-spinner loading-xs"></span></></>

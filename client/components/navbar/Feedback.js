@@ -16,10 +16,10 @@ export default function Feedback() {
   }
     return (
         <>
-        <Link onClick={openModal} href='' className="text-base font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-6 py-2 rounded-md duration-500 outline-none">
+        <button onClick={openModal} className="text-base font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-white hover:text-black px-6 py-2 rounded-md duration-500 outline-none">
         <ChatBubbleBottomCenterTextIcon width='20' className='flex'/>
             Feedback
-          </Link>
+          </button>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
