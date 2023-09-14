@@ -51,7 +51,7 @@ export default function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -106,7 +106,7 @@ export default function Navbar() {
             </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-200"
+              className="-m-2.5 rounded-md p-2.5 text-gray-100"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
