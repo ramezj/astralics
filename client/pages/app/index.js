@@ -23,16 +23,19 @@ export default function Component() {
   const [ loading, setLoading ] = useState(false);
   const [ projects, setProjects ] = useState([]);
   const [ premium, setPremium ] = useState(false);
+  const [ noProjects, setNoProjects ] = useState();
   useEffect(() => {
     const fetchUser = async () => {
       setLoading(true);
       const response = await fetch('/api/app');
       const res = await response.json();
-      console.log(res);
       if(res.ok == false) {
         router.push('/')
       }
       if(res.ok == true) {
+        if(res.response.projects.length < 1) {
+          setNoProjects(true);
+        }
         if(res.response.premium == false) {
           setPremium(false);
         } else if (res.response.premium == true) {
@@ -65,7 +68,17 @@ export default function Component() {
     </center>
     <br /><br />
     <div className='flex flex-wrap gap-8 justify-center w-full'>
-    {projects.map((project) => {
+      {
+        noProjects 
+        ? 
+        <>
+        <center>
+          <h1 className="text-xl font-bold">No projects yet, Start by creating a project</h1>
+        </center>
+        </>
+        : 
+        <>
+        {projects.map((project) => {
         return (
           <motion.div
           initial={{opacity: 0 }}
@@ -79,6 +92,8 @@ export default function Component() {
           </motion.div>
         )
       })}
+        </>
+      }
       </div>
     </>
     }
