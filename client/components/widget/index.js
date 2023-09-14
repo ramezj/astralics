@@ -54,7 +54,6 @@ export default function Widget(props) {
                 }    
             </button>
     </form>
-    <p className='text-sm mt-4 -mb-4' >powered by <Link href='https://blitz-feedback.vercel.app' className='font-medium'>turbo feedback</Link></p>
   </div>
 </div>
         </>

@@ -27,7 +27,6 @@ export default function Pricing(props) {
                 <PricingCard price='Free' title='Starter' button='Get Started' background={'bg-black bg-opacity-60'} shadow={'shadow-lg'}>
                 <Info><Svg /> 1 Project</Info>
                 <Info><Svg /> 25 Monthly Feedbacks</Info>
-                <Info><Svg /> Turbo Branding</Info>
                 <br />
                 {
                 session 
@@ -38,7 +37,6 @@ export default function Pricing(props) {
                 <PricingCard price='$7.99' title='Premium' button='Get Started' background={'bg-black bg-opacity-60'} shadow={'shadow-lg'}>
                 <Info><Svg /> Unlimited Projects</Info>
                 <Info><Svg /> Unlimited Monthly Feedbacks</Info>
-                <Info><Svg /> No Turbo Branding</Info>
                 <br />
                 {
                 session 
