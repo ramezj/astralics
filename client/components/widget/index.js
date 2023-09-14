@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Widget(props) {
     const [ loading, setLoading ] = useState(false);
@@ -53,6 +54,7 @@ export default function Widget(props) {
                 }    
             </button>
     </form>
+    <p className='text-sm mt-4 -mb-4' >powered by <Link href='https://blitz-feedback.vercel.app' className='font-medium'>turbo feedback</Link></p>
   </div>
 </div>
         </>
