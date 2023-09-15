@@ -35,6 +35,7 @@ export default function Page() {
   return (
     <>
     <Layout>
+    <title>Turbo, Settings</title>
      <br />
      <br />
      <center>

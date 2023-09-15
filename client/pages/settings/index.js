@@ -40,6 +40,7 @@ export default function Settings() {
     return (
         <>
         <Layout>
+        <title>Turbo, Settings</title>
             <center>
                 <div className="mt-4">
                     {

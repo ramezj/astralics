@@ -10,6 +10,7 @@ export default function Component() {
   const { data: session } = useSession()
   return (
     <Layout>
+      <title>Turbo</title>
       <center>
         <div className="">
           <BetaAlert />
