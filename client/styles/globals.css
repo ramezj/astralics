@@ -29,7 +29,7 @@ body {
 }
 
 .backgroundColor {
-  background-color:hsla(258,100%,80%,1);
+  background-color:rgb(153, 177, 255);
 background-image:
 radial-gradient(at 63% 42%, hsla(335,62%,70%,1) 0px, transparent 50%),
 radial-gradient(at 26% 42%, hsla(183,93%,64%,1) 0px, transparent 50%),
