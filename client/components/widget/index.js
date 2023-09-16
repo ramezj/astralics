@@ -36,7 +36,7 @@ export default function Widget(props) {
         <>
         <div className="card w-[22.5rem] bg-black  duration-300">
   <div className="card-body">
-    <h2 className="card-title text-2xl text-white font-bold justify-center -mt-2">Send Feedback</h2>
+    <h2 className="card-title text-2xl text-white font-bold justify-center -mt-2">{props.title || "Send Feedback"}</h2>
     {/* <div className='flex flex-wrap gap-6 justify-center w-full'>
     <span className='shadow-lg bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
     <p className='text-2xl flex justify-center'>💡</p>
