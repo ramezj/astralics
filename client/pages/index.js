@@ -18,7 +18,7 @@ export default function Component() {
             The easiest, fastest way to collect user feedback.
             </h1>
             <br />
-            <p className='text-gray-100 lg:text-xl lg:w-2/6 md:w-3/6 w-4/5'>An easily embeddable, light-weight feedback widget package that is used to collect user feedback from anywhere.</p>
+            {/* <p className='text-gray-100 lg:text-xl lg:w-2/6 md:w-3/6 w-4/5'>An easily embeddable, light-weight feedback widget package that is used to collect user feedback from anywhere.</p> */}
         </div>  
           <br />
           <div className="w-full content-center items-center justify-items-center">
