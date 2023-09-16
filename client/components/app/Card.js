@@ -10,7 +10,7 @@ export default function Card(props) {
     <br />
     <h1 className="font-medium -mb-3 duration-150 drop-shadow-lg">{props.website}</h1>
     <div className="card-actions justify-end">
-    <span className='-mt-6 -mr-2 w-10 h-8 rounded-md justify-center items-center float-right flex backgroundColor'>
+    <span className='-mt-6 -mr-2 w-10 h-8 rounded-lg justify-center items-center float-right flex backgroundColor'>
     <Link href={`${props.settings}`} className='drop-shadow-lg float-right shadow-lg flex justify-center'>
     <AdjustmentsHorizontalIcon className='text-white' width={24} height={24}/>
     </Link>
