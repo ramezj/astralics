@@ -117,7 +117,7 @@ export default function Navbar() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <Feedback />
-                <Link href="/pricing" className="-mx-3 rounded-lg px-3 py-2 text-base font-bold leading-7 text-white hover:bg-black hover:bg-opacity-60 flex justify-center items-center gap-2 duration-500">
+                <Link href="/pricing" className="-mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:bg-black hover:bg-opacity-60 flex justify-center items-center gap-2 duration-500">
                 <CreditCardIcon width='20' className='flex' />
                   Pricing
                 </Link>
@@ -134,13 +134,13 @@ export default function Navbar() {
                {
               session 
               ? <> 
-              <Link href='/settings' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-lg font-bold flex justify-center gap-2'>
+              <Link href='/settings' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Settings 
                 </Link>
-              <Link href='/app' className='mt-3 px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-lg font-bold flex justify-center gap-2'>
+              <Link href='/app' className='mt-3 px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Dashboard 
                 </Link></>
-              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-lg font-bold flex justify-center gap-2 duration-300'>
+              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-xl font-bold flex justify-center gap-2 duration-300'>
               Get Started, It's Free 
               </Link></>
               }
