@@ -51,7 +51,7 @@ export default function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100"
+            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-100"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -60,7 +60,7 @@ export default function Navbar() {
         </div>
         <Popover.Group className="hidden lg:flex gap-2">
           <Feedback />
-          <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-black hover:bg-opacity-60 px-6 py-2 rounded-md duration-500">
+          <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-black hover:bg-opacity-60 px-6 py-2 rounded-xl duration-500">
             <CreditCardIcon width='20' className='flex' />
             Pricing
           </Link>
@@ -80,11 +80,11 @@ export default function Navbar() {
               ? <> 
               <LogOut />
               <Settings />
-              <Link href='/app' className='px-7 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 text-white rounded-lg font-bold flex gap-2 content-center justify-center items-center duration-300'>
+              <Link href='/app' className='rounded-xl px-7 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 text-white font-bold flex gap-2 content-center justify-center items-center duration-300'>
                 <Squares2X2Icon className='text-white' width={22} height={22}/>
                 Dashboard 
                 </Link></>
-              : <> <button className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-lg font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
+              : <> <button className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
                 Get Started, It's Free
                 {/* <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/> */}
                 </button></>
@@ -106,7 +106,7 @@ export default function Navbar() {
             </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-100"
+              className="-m-2.5 rounded-xl p-2.5 text-gray-100"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>

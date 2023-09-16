@@ -11,7 +11,7 @@ export default function LogOut() {
          className='
          px-3 py-2 
          bg-black bg-opacity-60 hover:bg-opacity-70
-         rounded-lg 
+         rounded-xl
          font-bold flex gap-2 content-center justify-center items-center
          duration-300
          cursor-pointer

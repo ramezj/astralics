@@ -17,7 +17,7 @@ export default function Feedback() {
     return (
         <>
         <a onClick={openModal} 
-        className="cursor-pointer text-base font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-black hover:bg-opacity-60 px-6 py-2 rounded-md duration-500 outline-none">
+        className="cursor-pointer text-base font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-black hover:bg-opacity-60 px-6 py-2 rounded-xl duration-500 outline-none">
         <ChatBubbleBottomCenterTextIcon width='20' className='flex'/>
             Feedback
         </a>
