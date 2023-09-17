@@ -15,7 +15,7 @@ export default function Component() {
         <div className="">
           <BetaAlert />
             <h1 className='
-            sm:text-5xl 2xl:text-7xl 2xl:mt-14 text-4xl w-4/5 font-bold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-br from-gray-200 via-white to-gray-200 md:text-5xl lg:text-5xl lg:mt-8 lg:w-3/6 sm:mt-8 mt-6'>
+            sm:text-5xl 2xl:text-7xl 2xl:mt-14 text-4xl w-4/5 font-bold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-br from-gray-200 via-white to-gray-200 md:text-5xl lg:text-5xl lg:mt-8 lg:w-3/6 sm:mt-8 mt-8'>
             The easiest, fastest way to collect user feedback.
             </h1>
             <br />
