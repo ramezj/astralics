@@ -25,7 +25,7 @@ export default function Pricing(props) {
             <br />
             <br />
             <div className='flex flex-wrap gap-12 justify-center w-full'>
-                <PricingCard price='Free' title='Starter' button='Get Started' background={'bg-black bg-opacity-60'} shadow={'shadow-lg'}>
+                <PricingCard price='$0' title='Starter' button='Get Started' background={'bg-black bg-opacity-60'} shadow={'shadow-lg'}>
                 <Info><Svg /> 1 Project</Info>
                 <Info><Svg /> 50 Monthly Feedbacks</Info>
                 <br />
@@ -35,7 +35,7 @@ export default function Pricing(props) {
                 : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button></>
                 }
                 </PricingCard >
-                <PricingCard price='$9.99' title='Developer' button='Get Started' background={'bg-black bg-opacity-60'} shadow={'shadow-lg'}>
+                <PricingCard price='$20' title='Developer' button='Get Started' background={'bg-black bg-opacity-60'} shadow={'shadow-lg'}>
                 <Info><Svg /> Unlimited Projects</Info>
                 <Info><Svg /> Unlimited Monthly Feedbacks</Info>
                 <br />
