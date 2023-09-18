@@ -1,8 +1,17 @@
 import Link from 'next/link'
 import { AdjustmentsHorizontalIcon, CodeBracketIcon } from '@heroicons/react/24/outline'
-import codeButton from './codeButton'
+import { Dialog, Transition } from '@headlessui/react'
+import { Fragment } from 'react'
+import React, { useState } from 'react';
 
 export default function Card(props) {
+    let [isOpen, setIsOpen] = useState(false)
+    function closeModal() {
+      setIsOpen(false)
+    }
+    function openModal() {
+      setIsOpen(true)
+    }
     return (
     <div className='hover:scale-105 duration-300'>
     <Link className="card w-96 shadow-lg bg-black bg-opacity-60 cursor-pointer duration-300 outline-none rounded-xl drop-shadow-2xl" href={props.href}>
