@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import { AdjustmentsHorizontalIcon, CodeBracketIcon } from '@heroicons/react/24/outline'
+import codeButton from './codeButton'
 
 export default function Card(props) {
     return (
-        <div className='hover:scale-105 duration-300'>
+    <div className='hover:scale-105 duration-300'>
     <Link className="card w-96 shadow-lg bg-black bg-opacity-60 cursor-pointer duration-300 outline-none rounded-xl drop-shadow-2xl" href={props.href}>
-  <div className="card-body">
+    <div className="card-body">
     <h2 className="card-title font-extrabold drop-shadow-lg">{props.title}</h2>
     <br />
     <h1 className="font-medium -mb-3 duration-150 drop-shadow-lg">{props.website}</h1>
