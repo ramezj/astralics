@@ -35,7 +35,7 @@ export default function Page() {
   return (
     <>
     <Layout>
-    <title>Turbo, Settings</title>
+    <title>Lunar, Settings</title>
      <br />
      <br />
      <center>

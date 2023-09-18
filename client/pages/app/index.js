@@ -50,7 +50,7 @@ export default function Component() {
   return (
     <>
     <Layout>
-    <title>Turbo, App</title>
+    <title>Lunar, App</title>
     {loading 
     ?
     <>

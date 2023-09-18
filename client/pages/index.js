@@ -10,7 +10,7 @@ export default function Component() {
   const { data: session } = useSession()
   return (
     <Layout>
-      <title>Turbo</title>
+      <title>Lunar</title>
       <center>
         <div className="">
           <BetaAlert />
@@ -23,7 +23,7 @@ export default function Component() {
         </div>  
           <br />
           <div className="w-full content-center items-center justify-items-center">
-          <Widget projectId={'clmilxamo0003rt6hwvtibm1f'} title={'Turbo Feedback'} />
+          <Widget projectId={'clmilxamo0003rt6hwvtibm1f'} title={'Send Feedback'} />
           </div>
             </center>
     </Layout>

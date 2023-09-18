@@ -16,7 +16,7 @@ export default function Pricing(props) {
     return (
         <>
         <Layout >
-            <title>Turbo, Pricing</title>
+            <title>Lunar, Pricing</title>
             <PaddleLoader />
             <center>
             <br />

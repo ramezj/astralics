@@ -33,7 +33,7 @@ export default function Page() {
   return (
     <>
     <Layout>
-    <title>Turbo, Project</title>
+    <title>Lunar, Project</title>
      <br />
      <br />
      <center>
