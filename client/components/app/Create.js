@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { FolderPlusIcon } from '@heroicons/react/24/outline';
+import { FolderPlusIcon, PlusIcon } from '@heroicons/react/24/outline';
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import CreateProject from '../project/CreateProject';
@@ -50,7 +50,7 @@ export default function Create() {
         <>
         <button 
         className='btn bg-black bg-opacity-60 hover:bg-opacity-90 text-white border-none normal-case font-bold px-12 outline-none duration-300 rounded-xl' 
-        onClick={openModal}><FolderPlusIcon width={21}/>Create Project</button>
+        onClick={openModal}><PlusIcon width={21} strokeWidth={'2.5'}/> Create Project</button>
 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
