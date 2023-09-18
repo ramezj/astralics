@@ -60,7 +60,7 @@ export default function Navbar() {
         </div>
         <Popover.Group className="hidden lg:flex gap-2">
           <Feedback />
-          <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-black hover:bg-opacity-60 px-6 py-2 rounded-xl duration-500">
+          <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-black hover:bg-opacity-80 px-6 py-2 rounded-xl duration-500">
             <CreditCardIcon width='20' className='flex' />
             Pricing
           </Link>
@@ -80,11 +80,11 @@ export default function Navbar() {
               ? <> 
               <LogOut />
               <Settings />
-              <Link href='/app' className='rounded-xl px-7 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 text-white font-bold flex gap-2 content-center justify-center items-center duration-300'>
+              <Link href='/app' className='rounded-xl px-7 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 text-white font-bold flex gap-2 content-center justify-center items-center duration-300'>
                 <Squares2X2Icon className='text-white' width={22} height={22}/>
                 Dashboard 
                 </Link></>
-              : <> <button className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
+              : <> <button className='px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
                 Get Started, It's Free
                 {/* <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/> */}
                 </button></>
@@ -117,7 +117,7 @@ export default function Navbar() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <Feedback />
-                <Link href="/pricing" className="-mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:bg-black hover:bg-opacity-60 flex justify-center items-center gap-2 duration-500">
+                <Link href="/pricing" className="-mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:bg-black hover:bg-opacity-80 flex justify-center items-center gap-2 duration-500">
                 <CreditCardIcon width='20' className='flex' />
                   Pricing
                 </Link>
@@ -134,10 +134,10 @@ export default function Navbar() {
                {
               session 
               ? <> 
-              <Link href='/settings' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-xl font-bold flex justify-center gap-2'>
+              <Link href='/settings' className='px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Settings 
                 </Link>
-              <Link href='/app' className='mt-3 px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 duration-300 rounded-xl font-bold flex justify-center gap-2'>
+              <Link href='/app' className='mt-3 px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Dashboard 
                 </Link></>
               : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-xl font-bold flex justify-center gap-2 duration-300'>

@@ -10,7 +10,8 @@ export default function LogOut() {
         <a onClick={signUserOut}
          className='
          px-3 py-2 
-         bg-black bg-opacity-60 hover:bg-opacity-70
+         bg-black 
+         bg-opacity-80 hover:bg-opacity-90
          rounded-xl
          font-bold flex gap-2 content-center justify-center items-center
          duration-300
