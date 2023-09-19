@@ -81,11 +81,11 @@ export default function Navbar() {
               <LogOut />
               <Settings />
               <Link href='/app' className='rounded-xl px-7 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 text-white font-bold flex gap-2 content-center justify-center items-center duration-300'>
-                <Squares2X2Icon className='text-white' width={22} height={22}/>
+                {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
                 Dashboard 
                 </Link></>
               : <> <button className='px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
-                Get Started, It's Free
+                Try Lunar
                 {/* <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/> */}
                 </button></>
             }
@@ -141,7 +141,7 @@ export default function Navbar() {
                 Dashboard 
                 </Link></>
               : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-xl font-bold flex justify-center gap-2 duration-300'>
-              Get Started, It's Free 
+              Try Lunar 
               </Link></>
               }
                 </a>
