@@ -43,8 +43,8 @@ export default function Widget(props) {
     </span>
     </div> */}
     <form onSubmit={submitFeedback}>
-    <input required value={email} onChange={((e) => {setEmail(e.target.value)})} type="email" placeholder="john@doe.com" className="rounded-lg bg-opacity-50 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-extrabold text-sm -mt-1"/>
-    <textarea required value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="rounded-lg bg-opacity-50 shadow-xl textarea w-full mt-3 focus:outline-none bg-neutral-800 text-white font-extrabold" placeholder="Leave your feedback here"></textarea>
+    <input required value={email} onChange={((e) => {setEmail(e.target.value)})} type="email" placeholder="john@doe.com" className="rounded-xl bg-opacity-50 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-extrabold text-sm -mt-1"/>
+    <textarea required value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="rounded-xl bg-opacity-50 shadow-xl textarea w-full mt-3 focus:outline-none bg-neutral-800 text-white font-extrabold" placeholder="Leave your feedback here"></textarea>
     <br /><br />
     <button type='submit' className='items-center justify-center -mt-3 w-full py-2 rounded-xl text-base text-[#05050a] normal-case bg-white hover:bg-white outline-none border-none font-bold -mb-3'>
                 {
