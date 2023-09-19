@@ -41,13 +41,13 @@ export default function CreateProject() {
         <div className="card-body">
         <h2 className="card-title text-xl text-white font-bold justify-center -mt-2 mb-2">Project Information</h2>
         <form onSubmit={createProject}>
-        <input required autoFocus={false} type="text" placeholder="Name" onChange={(e) => {setName(e.target.value)}} className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-extrabold text-sm" />
-        <input required autoFocus={false} type="url" placeholder="Website" onChange={(e) => {setUrl(e.target.value)}} className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-extrabold text-sm mt-4" />
+        <input required autoFocus={false} type="text" placeholder="Name" onChange={(e) => {setName(e.target.value)}} className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-bold text-sm" />
+        <input required autoFocus={false} type="url" placeholder="Website" onChange={(e) => {setUrl(e.target.value)}} className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-bold text-sm mt-4" />
         <center>
         <button className="mt-6 shadow-xl w-full py-2 rounded-md text-base text-[#05050a] normal-case bg-white hover:bg-white outline-none border-none font-bold " type='submit'>
         { 
         loading 
-        ? <><><span className="loading loading-spinner loading-xs"></span></></>
+        ? <><><span className="loading loading-spinner loading-xs align-middle"></span></></>
         : <>{text}</>
         }
         </button>
