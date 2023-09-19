@@ -6,7 +6,7 @@ export default function Widget(props) {
     const [ feedback, setFeedback ] = useState();
     const [ rating, setRating ] = useState(2);
     const [ email, setEmail ] = useState();
-    const [ text, setText ] = useState("Submit");
+    const [ text, setText ] = useState(`Submit`);
     const submitFeedback = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -43,13 +43,13 @@ export default function Widget(props) {
     </span>
     </div> */}
     <form onSubmit={submitFeedback}>
-    <input required value={email} onChange={((e) => {setEmail(e.target.value)})} type="email" placeholder="john@doe.com" className="bg-opacity-50 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-extrabold text-sm -mt-1"/>
-    <textarea required value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className=" bg-opacity-50 shadow-xl textarea w-full mt-3 focus:outline-none bg-neutral-800 text-white font-extrabold" placeholder="Leave your feedback here"></textarea>
+    <input required value={email} onChange={((e) => {setEmail(e.target.value)})} type="email" placeholder="john@doe.com" className="rounded-lg bg-opacity-50 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-extrabold text-sm -mt-1"/>
+    <textarea required value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="rounded-lg bg-opacity-50 shadow-xl textarea w-full mt-3 focus:outline-none bg-neutral-800 text-white font-extrabold" placeholder="Leave your feedback here"></textarea>
     <br /><br />
-    <button type='submit' className='-mt-3 w-full py-2 rounded-md text-base text-[#05050a] normal-case bg-white hover:bg-white outline-none border-none font-bold -mb-3'>
+    <button type='submit' className='items-center justify-center -mt-3 w-full py-2 rounded-xl text-base text-[#05050a] normal-case bg-white hover:bg-white outline-none border-none font-bold -mb-3'>
                 {
                     loading 
-                    ? <><span className="loading loading-spinner loading-xs"></span></>
+                    ? <><span className="loading loading-spinner loading-xs align-middle"></span></>
                     : <>{text}</> 
                 }    
             </button>
