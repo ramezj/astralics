@@ -140,7 +140,7 @@ export default function Navbar() {
               <Link href='/app' className='mt-3 px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Dashboard 
                 </Link></>
-              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black bg-opacity-60 hover:bg-opacity-70 rounded-xl font-bold flex justify-center gap-2 duration-300'>
+              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 rounded-xl font-bold flex justify-center gap-2 duration-300'>
               Try Lunar 
               </Link></>
               }
