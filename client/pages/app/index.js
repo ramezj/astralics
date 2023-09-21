@@ -74,7 +74,7 @@ export default function Component() {
         ? 
         <>
         <center>
-          <h1 className="text-xl font-bold">No projects yet, Start by creating a project</h1>
+          <h1 className="text-2xl 2xl:text-lg lg:text-lg md:text-lg font-bold">No projects yet, Start by creating a project</h1>
         </center>
         </>
         : 
