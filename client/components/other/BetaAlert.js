@@ -13,7 +13,7 @@ export default function BetaAlert(props) {
         2xl:mt-4 
         2xl:-mb-6
         '>
-        <h1 className="font-bold">Lunar 1.0 just Launched 🪐</h1>
+        <h1 className="font-bold">🪐 Lunar 1.0 just Launched</h1>
         </div>
         </>
     )
