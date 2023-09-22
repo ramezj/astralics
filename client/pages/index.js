@@ -15,16 +15,28 @@ export default function Component() {
       <center>
         <div className="">
           <motion.div
-          initial={{opacity: 0}}
-          animate={{opacity: 1}}
-          transition={{duration: 1}}
+          initial={{
+            opacity: 0,
+            y:-10
+          }}
+          animate={{
+            opacity: 1,
+            y:0
+          }}
+          transition={{duration: 0.8}}
           >
               <BetaAlert />
           </motion.div>
             <motion.h1 
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            transition={{duration: 1,  delay:0.2}}
+            initial={{
+              opacity: 0,
+              y:-10
+            }}
+            animate={{
+              opacity: 1,
+              y:0
+            }}
+            transition={{duration: 0.8}}
             className='
             sm:text-5xl 2xl:text-7xl 2xl:mt-14 text-4xl w-4/5 font-bold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-br from-gray-200 via-white to-gray-200 md:text-5xl lg:text-5xl lg:mt-8 lg:w-3/6 sm:mt-8 mt-8'>
             The easiest, fastest way to collect user feedback.
@@ -35,9 +47,15 @@ export default function Component() {
           <br />
           <div className="w-full content-center items-center justify-items-center">
             <motion.div
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            transition={{duration: 1, delay:0.3}}
+           initial={{
+            opacity: 0,
+            y:-10
+          }}
+          animate={{
+            opacity: 1,
+            y:0
+          }}
+            transition={{duration: 0.8, delay:0.3}}
             >
                 <Widget projectId={'clmilxamo0003rt6hwvtibm1f'} title={'Feedback 🪐'} />
             </motion.div>
