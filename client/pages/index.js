@@ -55,7 +55,7 @@ export default function Component() {
             opacity: 1,
             y:0
           }}
-            transition={{duration: 0.8, delay:0.3}}
+            transition={{duration: 0.8}}
             >
                 <Widget projectId={'clmilxamo0003rt6hwvtibm1f'} title={'Feedback 🪐'} />
             </motion.div>
