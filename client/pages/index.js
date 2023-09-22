@@ -30,11 +30,11 @@ export default function Component() {
             <motion.h1 
             initial={{
               opacity: 0,
-              y:-10
+              x:20
             }}
             animate={{
               opacity: 1,
-              y:0
+              x:0
             }}
             transition={{duration: 0.8}}
             className='
@@ -49,11 +49,11 @@ export default function Component() {
             <motion.div
            initial={{
             opacity: 0,
-            y:-10
+            x:-20
           }}
           animate={{
             opacity: 1,
-            y:0
+            x:0
           }}
             transition={{duration: 0.8}}
             >
