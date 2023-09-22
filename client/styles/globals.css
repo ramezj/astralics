@@ -30,14 +30,14 @@ body {
 
 .backgroundColor {
   background-color:#fff599;
-  background-image:
-  radial-gradient(at 11% 11%, hsla(280,98%,65%,1) 0px, transparent 50%),
-  radial-gradient(at 57% 99%, hsla(32,99%,72%,1) 0px, transparent 50%),
-  radial-gradient(at 48% 91%, hsla(80,85%,65%,1) 0px, transparent 50%),
-  radial-gradient(at 35% 54%, hsla(327,81%,76%,1) 0px, transparent 50%),
-  radial-gradient(at 90% 75%, hsla(233,80%,75%,1) 0px, transparent 50%),
-  radial-gradient(at 80% 91%, hsla(239,91%,69%,1) 0px, transparent 50%),
-  radial-gradient(at 9% 42%, hsla(233,86%,64%,1) 0px, transparent 50%);
+background-image:
+radial-gradient(at 11% 11%, hsla(310,70%,55%,1) 0px, transparent 50%),
+radial-gradient(at 57% 99%, hsla(32,99%,72%,1) 0px, transparent 50%),
+radial-gradient(at 48% 91%, hsla(80,85%,65%,1) 0px, transparent 50%),
+radial-gradient(at 35% 54%, hsla(327,81%,76%,1) 0px, transparent 50%),
+radial-gradient(at 90% 75%, hsla(321,79%,75%,1) 0px, transparent 50%),
+radial-gradient(at 80% 91%, hsla(327,91%,69%,1) 0px, transparent 50%),
+radial-gradient(at 9% 42%, hsla(317,86%,64%,1) 0px, transparent 50%);
 }
 
 .alertShadow {
