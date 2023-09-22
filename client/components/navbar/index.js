@@ -29,8 +29,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar() {
-  const { data: session } = useSession()
+export default function Navbar(props) {
     const signUserIn = async () => {
         signIn('google');
     }
@@ -76,7 +75,7 @@ export default function Navbar() {
           } */}
           <a className="text-sm font-bold leading-6 text-white flex gap-3">
             {
-              session 
+              props.session 
               ? <> 
               <LogOut />
               <Settings />
@@ -124,7 +123,7 @@ export default function Navbar() {
               </div>
               <div className="py-6">
                 {
-                  session 
+                  props.session 
                   ? <><a onClick={signUserOut} className="px-8 py-2 rounded-lg font-bold flex justify-center cursor-pointer"> Log Out </a></>
                   : <></>
                 }
@@ -132,7 +131,7 @@ export default function Navbar() {
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-bold leading-7 text-white cursor-pointer"
                 >
                {
-              session 
+              props.session 
               ? <> 
               <Link href='/settings' className='px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Settings 
