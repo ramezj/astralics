@@ -6,6 +6,7 @@ import Features from "@/components/Features"
 import Link from "next/link"
 import BetaAlert from "@/components/other/BetaAlert"
 import { motion } from 'framer-motion'
+import MultiStepWidget from "@/components/v2/MultiStepWidget"
 
 export default function Component() {
   const { data: session } = useSession()
@@ -57,6 +58,7 @@ export default function Component() {
           }}
             transition={{duration: 0.8}}
             >
+                {/* <MultiStepWidget /> */}
                 <Widget projectId={'clmilxamo0003rt6hwvtibm1f'} title={'Feedback 🪐'} />
             </motion.div>
           </div>
