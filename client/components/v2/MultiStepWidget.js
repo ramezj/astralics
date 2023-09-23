@@ -6,8 +6,17 @@ export default function MultiStepWidget(props) {
         <>
         <div className="card w-[22.5rem] bg-black  duration-300">
         <div className="card-body">
-        <h1 className='card-title'>Email</h1>
-        <input></input>
+            {step === 0 && 
+            <>
+            <h1 className='duration-300'>First step, choose what category the feedback is</h1>
+            </>
+            }
+            <button onClick={(() => setStep(step+1))}>Next Step</button>
+            {step === 1 && 
+            <>
+            <h1 className='duration-300'>Second step, type in your email</h1>
+            </>
+            }
         </div>
         </div>
         </>
