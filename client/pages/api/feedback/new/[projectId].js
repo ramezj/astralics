@@ -36,7 +36,7 @@ export default async function handler(req, res) {
       }
     });
     // change number to 25 in production, 5 is only in dev mode for testing
-    if(project.feedbacks.length >= 5) {
+    if(project.feedbacks.length >= 20) {
       if(user.premium === false) {
         return res.status(400).json({
           ok:false,
