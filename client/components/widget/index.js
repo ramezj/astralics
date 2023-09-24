@@ -71,6 +71,7 @@ export default function Widget(props) {
     className='text-2xl font-bold flex justify-center mt-[5rem]'>
         Feedback Received Successfully 🎉
     </motion.h1>
+    <motion.button className='font-medium text-white mt-14' onClick={(() => setStep(1))}>back</motion.button>
     </>
     }
   </div>
