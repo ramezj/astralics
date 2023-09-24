@@ -1,12 +1,12 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import Layout from "@/components/layout"
 import Widget from "@/components/widget"
-import { BlitzFeedback } from "blitzpackagev2"
 import Features from "@/components/Features"
 import Link from "next/link"
 import BetaAlert from "@/components/other/BetaAlert"
 import { motion } from 'framer-motion'
 import MultiStepWidget from "@/components/v2/MultiStepWidget"
+import { BlitzFeedback } from "blitzpackagev2"
 
 export default function Component() {
   const { data: session } = useSession()
@@ -59,7 +59,8 @@ export default function Component() {
             transition={{duration: 0.8}}
             >
                 {/* <MultiStepWidget /> */}
-                <Widget projectId={'clmilxamo0003rt6hwvtibm1f'} title={'Feedback 🪐'} />
+                {/* <BlitzFeedback /> */}
+                <Widget projectId={'clmxv44iq000busggjdja28am'} title={'Feedback 🪐'} />
             </motion.div>
           </div>
             </center>

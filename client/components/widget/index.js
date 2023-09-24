@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Widget(props) {
+    const [ step, setStep ] = useState(1);
     const [ loading, setLoading ] = useState(false);
     const [ feedback, setFeedback ] = useState();
     const [ rating, setRating ] = useState(2);
@@ -24,6 +26,7 @@ export default function Widget(props) {
         const res = await response.json();
         if(res.ok == true) {
             setLoading(false);
+            setStep(2);
             setText('Feedback Received 🥳')
             
         } else if (res.ok == false) {
@@ -34,19 +37,16 @@ export default function Widget(props) {
     }
     return (
         <>
-        <div className="card w-[22.5rem] bg-black  duration-300">
+        <div className="card w-[22.5rem] h-[18.3rem] bg-black duration-300">
   <div className="card-body">
+    { step === 1 && 
+    <>
     <h2 className="card-title text-2xl text-white font-bold justify-center -mt-2">{props.title || "Send Feedback"}</h2>
-    {/* <div className='flex flex-wrap gap-6 justify-center w-full'>
-    <span className='shadow-lg bg-white bg-opacity-75 cursor-pointer w-14 h-12 rounded-lg justify-center items-center flex hover:bg-opacity-50 duration-200'>
-    <p className='text-2xl flex justify-center'>💡</p>
-    </span>
-    </div> */}
     <form onSubmit={submitFeedback}>
     <input required value={email} onChange={((e) => {setEmail(e.target.value)})} type="email" placeholder="john@doe.com" className="rounded-xl bg-opacity-50 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-bold text-sm -mt-1"/>
     <textarea required value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="rounded-xl bg-opacity-50 shadow-xl textarea w-full mt-3 focus:outline-none bg-neutral-800 text-white font-bold" placeholder="Leave your feedback here"></textarea>
     <br /><br />
-    <button type='submit' className='items-center justify-center -mt-3 w-full py-2 rounded-xl text-base text-[#05050a] normal-case bg-white hover:bg-white outline-none border-none font-bold -mb-3'>
+    <button type='submit' className='backgroundColor items-center justify-center -mt-3 w-full py-2 rounded-xl text-base text-white normal-caseoutline-none border-none font-bold -mb-3'>
                 {
                     loading 
                     ? <><span className="loading loading-spinner loading-xs align-middle"></span></>
@@ -54,6 +54,25 @@ export default function Widget(props) {
                 }    
             </button>
     </form>
+    </>
+    }
+    { step === 2 && 
+    <>
+    <motion.h1 
+    initial={{
+        opacity: 0,
+        y:-20
+      }}
+      animate={{
+        opacity: 1,
+        y:0
+      }}
+      transition={{duration: 0.1}}
+    className='text-2xl font-bold flex justify-center mt-[5rem]'>
+        Feedback Received Successfully 🎉
+    </motion.h1>
+    </>
+    }
   </div>
 </div>
         </>
