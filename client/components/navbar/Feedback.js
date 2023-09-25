@@ -46,8 +46,10 @@ export default function Feedback() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-[22.5rem]  max-w-md transform overflow-hidden rounded-2xl bg-transparent  text-left align-middle transition-all">
-                    <Widget />
+                <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden rounded-2xl bg-transparent align-middle transition-all">
+                  <center>
+                   <Widget projectId={'clmxv44iq000busggjdja28am'}/>
+                  </center>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
