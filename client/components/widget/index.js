@@ -37,14 +37,14 @@ export default function Widget(props) {
     }
     return (
         <>
-        <div className="card w-[22.5rem] h-[18.3rem] bg-black duration-300">
+        <div className="card w-[22.5rem] h-[20rem] bg-black duration-300">
   <div className="card-body">
     { step === 1 && 
     <>
     <h2 className="card-title text-2xl text-white font-bold justify-center -mt-2">{props.title || "Send Feedback"}</h2>
     <form onSubmit={submitFeedback}>
-    <input required value={email} onChange={((e) => {setEmail(e.target.value)})} type="email" placeholder="john@doe.com" className="rounded-xl bg-opacity-50 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-bold text-sm -mt-1"/>
-    <textarea required value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="rounded-xl bg-opacity-50 shadow-xl textarea w-full mt-3 focus:outline-none bg-neutral-800 text-white font-bold" placeholder="Leave your feedback here"></textarea>
+    <input required value={email} onChange={((e) => {setEmail(e.target.value)})} type="email" placeholder="hello@trylunar.co" className="rounded-xl bg-opacity-50 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-bold text-sm -mt-1"/>
+    <textarea rows='3' required value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="resize-none rounded-xl bg-opacity-50 shadow-xl textarea w-full mt-3 focus:outline-none bg-neutral-800 text-white font-bold" placeholder="leave your feedback here"></textarea>
     <br /><br />
     <button type='submit' className='backgroundColor items-center justify-center -mt-3 w-full py-2 rounded-xl text-base text-white normal-caseoutline-none border-none font-bold -mb-3'>
                 {
