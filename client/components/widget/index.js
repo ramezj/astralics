@@ -61,13 +61,11 @@ export default function Widget(props) {
     <motion.h1 
     initial={{
         opacity: 0,
-        y:-20
       }}
       animate={{
         opacity: 1,
-        y:0
       }}
-      transition={{duration: 0.1}}
+      transition={{duration: 0.5}}
     className='text-2xl font-bold flex justify-center mt-[5rem]'>
         Feedback Received Successfully 🎉
     </motion.h1>
