@@ -43,7 +43,7 @@ export default function Widget(props) {
     <>
     <h2 className="card-title text-2xl text-white font-bold justify-center -mt-2">{props.title || "Send Feedback"}</h2>
     <form onSubmit={submitFeedback}>
-    <input required value={email} onChange={((e) => {setEmail(e.target.value)})} type="email" placeholder="hello@trylunar.co" className="rounded-xl bg-opacity-50 shadow-xl input w-full mt-3 focus:outline-none bg-neutral-800 text-white font-bold text-sm -mt-1"/>
+    <input required value={email} onChange={((e) => {setEmail(e.target.value)})} type="email" placeholder="hello@trylunar.co" className="rounded-xl bg-opacity-50 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-bold text-sm -mt-1"/>
     <textarea rows='3' required value={feedback} onChange={((e) => {setFeedback(e.target.value)})} className="resize-none rounded-xl bg-opacity-50 shadow-xl textarea w-full mt-3 focus:outline-none bg-neutral-800 text-white font-bold" placeholder="leave your feedback here"></textarea>
     <br /><br />
     <button type='submit' className='bg-blue-500 hover:bg-blue-600 duration-300 items-center justify-center -mt-3 w-full py-2 rounded-xl text-base text-white normal-caseoutline-none border-none font-bold -mb-3'>
