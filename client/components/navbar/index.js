@@ -30,6 +30,13 @@ function classNames(...classes) {
 }
 
 export default function Navbar(props) {
+    let [isOpen, setIsOpen] = useState(false)
+    function closeModal() {
+      setIsOpen(false)
+    }
+    function openModal() {
+      setIsOpen(true)
+    }
     const signUserIn = async () => {
         signIn('google');
     }
@@ -37,7 +44,7 @@ export default function Navbar(props) {
       signOut();
     }
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
+    
   return (
     <header className="bg-transparent">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -65,14 +72,7 @@ export default function Navbar(props) {
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
-          {/* {
-            session 
-            ? 
-            <>
-            <a onClick={signUserOut} className="text-sm font-bold leading-6 text-white cursor-pointer flex px-8 py-2">Log Out</a>
-            </>
-            : <></>
-          } */}
+
           <a className="text-sm font-bold leading-6 text-white flex gap-3">
             {
               props.session 
@@ -83,10 +83,46 @@ export default function Navbar(props) {
                 {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
                 Dashboard 
                 </Link></>
-              : <> <button className='px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
+              : <> <button className='px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={openModal}>
                 Try Lunar
                 {/* <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/> */}
-                </button></>
+                </button>
+                <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-80" />
+          </Transition.Child>
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden rounded-2xl bg-transparent align-middle transition-all">
+                  <center>
+                  <button className='px-8 py-2 bg-white text-black rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
+                  Sign in with Google</button>  
+                  </center>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+                </>
             }
           </a>
         </div>
