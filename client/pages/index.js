@@ -54,7 +54,7 @@ export default function Component() {
           }}
             transition={{duration: 0.8}}
             >
-
+              
                 <Widget projectId={'clmxv44iq000busggjdja28am'} title={'Feedback 🪐'} />
             </motion.div>
           </div>
