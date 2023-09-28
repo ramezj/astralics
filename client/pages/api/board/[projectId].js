@@ -11,10 +11,10 @@ export default async function handler(req, res) {
             response: ' Unauthorized '
         })
     }
-    const { projectId } = req.query;
-    const project = await prisma.project.findFirst({
+    const { boardId } = req.query;
+    const board = await prisma.board.findFirst({
       where: {
-        id:projectId
+        id:boardId
       },
       include: {
         feedbacks: {
@@ -24,13 +24,13 @@ export default async function handler(req, res) {
         }
       }
     })
-    if(!project) {
+    if(!board) {
       return res.status(400).json({
         ok:false,
-        response:' Project Not Found '
+        response:' Board Not Found '
       })
     }
-    if(project.userId != session.user.id) {
+    if(board.userId != session.user.id) {
         return res.status(401).json({
             ok:false,
             response: ' Unauthorized '
@@ -38,6 +38,6 @@ export default async function handler(req, res) {
     }
     return res.status(200).json({
         ok:true,
-        response:project,
+        response:board,
     })
   }

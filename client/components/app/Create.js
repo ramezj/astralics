@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import { FolderPlusIcon, PlusIcon } from '@heroicons/react/24/outline';
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
-import CreateProject from '../project/CreateProject';
+import CreateProject from '../board/CreateProject';
 
 export default function Create() {
     const router = useRouter();
@@ -15,7 +15,7 @@ export default function Create() {
     function openModal() {
       setIsOpen(true)
     }
-    const [ text, setText ] = useState("Create Project");
+    const [ text, setText ] = useState("Create Board");
     const [ loading, setLoading ] = useState(false);
     const [ name, setName ] = useState();
     const [ error, setError ] = useState();
@@ -24,7 +24,7 @@ export default function Create() {
     const createProject = async (e) => {
         e.preventDefault();
         setLoading(true);
-        const res = await fetch('/api/project/new', {
+        const res = await fetch('/api/board/new', {
             method:'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -40,7 +40,7 @@ export default function Create() {
             setText("Created Successfully");
             setResponse(resp);
             console.log(resp);
-            router.push(`/project/${resp.response.id}`)
+            router.push(`/board/${resp.response.id}`)
         } else if (resp.ok == false) {
             setLoading(false);
             setError(resp.response);
@@ -64,7 +64,6 @@ export default function Create() {
           >
             <div className="fixed inset-0 bg-black bg-opacity-60" />
           </Transition.Child>
-
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center text-center">
               <Transition.Child

@@ -7,10 +7,6 @@ import Card from "@/components/app/Card";
 import Loading from "@/components/app/Loading";
 import { motion } from 'framer-motion'
 import Create from "@/components/app/Create";
-import Manage from "@/components/app/Manage";
-import Documentation from "@/components/app/Documentation";
-import Premium from "@/components/app/Premium";
-import CreateProject from "@/components/project/CreateProject";
 
 export default function Component() {
   const router = useRouter();
@@ -21,9 +17,9 @@ export default function Component() {
     }
   })
   const [ loading, setLoading ] = useState(false);
-  const [ projects, setProjects ] = useState([]);
+  const [ boards, setBoards ] = useState([]);
   const [ premium, setPremium ] = useState(false);
-  const [ noProjects, setNoProjects ] = useState();
+  const [ noBoards, setNoBoards ] = useState();
   useEffect(() => {
     const fetchUser = async () => {
       setLoading(true);
@@ -33,15 +29,15 @@ export default function Component() {
         router.push('/')
       }
       if(res.ok == true) {
-        if(res.response.projects.length < 1) {
-          setNoProjects(true);
+        if(res.response.boards.length < 1) {
+          setNoBoards(true);
         }
         if(res.response.premium == false) {
           setPremium(false);
         } else if (res.response.premium == true) {
           setPremium(true);
         }
-        setProjects(res.response.projects);
+        setBoards(res.response.boards);
         setLoading(false);
       }
     }
@@ -70,16 +66,16 @@ export default function Component() {
     <br /><br />
     <div className='flex flex-wrap gap-8 justify-center w-full'>
       {
-        noProjects 
+        noBoards 
         ? 
         <>
         <center>
-          <h1 className="text-2xl 2xl:text-lg lg:text-lg md:text-lg font-bold">No projects yet, Start by creating a project</h1>
+          <h1 className="text-2xl 2xl:text-lg lg:text-lg md:text-lg font-bold">No boards yet, Start by creating a project</h1>
         </center>
         </>
         : 
         <>
-        {projects.map((project) => {
+        {boards.map((board) => {
         return (
           <motion.div
           initial={{opacity: 0 }}
@@ -89,7 +85,7 @@ export default function Component() {
         duration:1
       }}
           >
-          <Card title={project.name} href={`/board/${project.id}`} website={project.website} settings={`/settings/${project.id}`} code={`/code/${project.id}`} />
+          <Card title={board.name} href={`/board/${board.id}`} website={board.website} settings={`/settings/${board.id}`} code={`/code/${board.id}`} />
           </motion.div>
         )
       })}

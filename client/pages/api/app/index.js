@@ -15,7 +15,7 @@ export default async function handler(req, res) {
             id:session.user.id
         },
         include: {
-            projects: {
+            boards: {
                 include: {
                     feedbacks:true
                 }

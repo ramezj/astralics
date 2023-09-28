@@ -3,8 +3,8 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import Layout from "@/components/layout"
 import { motion } from "framer-motion"
-import Feedback from "@/components/project/Feedback"
-import Loading from "@/components/project/Loading"
+import Feedback from "@/components/board/Feedback"
+import Loading from "@/components/board/Loading"
 
 export default function Page() {
     const router = useRouter()
@@ -19,7 +19,7 @@ export default function Page() {
         }
         const fetchProject = async () => {
             setLoading(true);
-            const response = await fetch(`/api/project/${router.query.id}`)
+            const response = await fetch(`/api/board/${router.query.id}`)
             const res = await response.json();
             if(res.ok == false) {
                 return router.push('/404')

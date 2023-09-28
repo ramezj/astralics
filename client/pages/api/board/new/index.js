@@ -23,11 +23,11 @@ export default async function handler(req, res) {
                 id:session.user.id
             },
             include:{
-                projects:true
+                boards:true
             }
         });
-        console.log(user.projects.length);
-        if(user.projects.length >= 1) {
+        console.log(user.boards.length);
+        if(user.boards.length >= 1) {
             if(user.premium === false) {
                 return res.status(400).json({
                     ok:false,
@@ -35,14 +35,14 @@ export default async function handler(req, res) {
                 })
             }
         }
-        const newProject = await prisma.project.create({
+        const newBoard = await prisma.board.create({
             data: {
                 name:name,
                 website:url,
                 userId:session.user.id
             }
         })
-        if(!newProject) {
+        if(!newBoard) {
             return res.status(400).json({
                 ok:false,
                 response:'Something went wrong'
@@ -50,7 +50,7 @@ export default async function handler(req, res) {
         }
         return res.status(200).json({
             ok:true,
-            response:newProject
+            response:newBoard
         })
     } catch (error) {
         console.error(error);

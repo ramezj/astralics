@@ -12,7 +12,7 @@ export default function CreateProject() {
     const createProject = async (e) => {
         e.preventDefault();
         setLoading(true);
-        const res = await fetch('/api/project/new', {
+        const res = await fetch('/api/board/new', {
             method:'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -28,7 +28,7 @@ export default function CreateProject() {
             setText("Created Successfully");
             setResponse(resp);
             console.log(resp);
-            router.push(`/project/${resp.response.id}`)
+            router.push(`/board/${resp.response.id}`)
         } else if (resp.ok == false) {
             setLoading(false);
             setText(resp.response);

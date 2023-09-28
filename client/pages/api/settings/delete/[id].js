@@ -12,12 +12,12 @@ export default async function handler(req, res) {
         })
     }
     const { id } = req.query;
-    const project = await prisma.project.findFirst({
+    const board = await prisma.board.findFirst({
       where: {
         id:id
       }
     })
-    if(project.userId != session.user.id) {
+    if(board.userId != session.user.id) {
         return res.status(401).json({
             ok:false,
             response: ' Unauthorized '
@@ -25,15 +25,15 @@ export default async function handler(req, res) {
     }
     const deleteFeedback = await prisma.feedback.deleteMany({
       where: {
-        projectId:id
+        boardId:id
       }
     });
-    const deleteProject = await prisma.project.delete({
+    const deleteBoard = await prisma.board.delete({
       where: {
         id:id
       } 
     });
-    if(!deleteProject || !deleteFeedback) {
+    if(!deleteBoard || !deleteFeedback) {
       return res.status(400).json({
         ok:false,
         response: 'something went wrong'
