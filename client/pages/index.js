@@ -3,7 +3,6 @@ import Layout from "@/components/layout"
 import Widget from "@/components/widget"
 import BetaAlert from "@/components/other/BetaAlert"
 import { motion } from 'framer-motion'
-import { BlitzFeedback } from "blitzpackagev2"
 
 export default function Component() {
   const { data: session } = useSession()
