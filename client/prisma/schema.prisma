@@ -42,17 +42,17 @@ model User {
   image         String?
   premium       Boolean   @default(false)
   accounts      Account[]
-  boards      Board[]
+  boards        Board[]
   sessions      Session[]
 }
 
 model Board {
   id        String     @id @default(cuid())
   name      String?
-  userId    String
   website   String     @default("")
-  feedbacks Feedback[]
+  userId    String
   user      User       @relation(fields: [userId], references: [id])
+  feedbacks Feedback[]
 }
 
 model Feedback {
@@ -61,8 +61,8 @@ model Feedback {
   rating    Int
   createdAt DateTime @default(now())
   email     String   @default("")
-  boardId String
-  board   Board  @relation(fields: [boardId], references: [id])
+  boardId   String
+  board     Board    @relation(fields: [boardId], references: [id])
 }
 
 model VerificationToken {
