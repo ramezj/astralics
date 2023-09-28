@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from 'next/navigation';
 
-export default function CreateProject() {
+export default function CreateBoard() {
     const router = useRouter();
     const [ text, setText ] = useState("Create Board");
     const [ loading, setLoading ] = useState(false);

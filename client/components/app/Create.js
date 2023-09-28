@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { FolderPlusIcon, PlusIcon } from '@heroicons/react/24/outline';
+import { PlusIcon } from '@heroicons/react/24/outline';
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
-import CreateProject from '../board/CreateProject';
+import CreateBoard from './createBoard';
 
 export default function Create() {
     const router = useRouter();
@@ -62,7 +62,7 @@ export default function Create() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-60" />
+            <div className="fixed inset-0 bg-black bg-opacity-70" />
           </Transition.Child>
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center text-center">
@@ -76,7 +76,7 @@ export default function Create() {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-[22.5rem]  max-w-md transform overflow-hidden rounded-2xl bg-transparent  text-left align-middle transition-all">
-                <CreateProject />
+                <CreateBoard />
                 </Dialog.Panel>
               </Transition.Child>
             </div>
