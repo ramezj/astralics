@@ -13,7 +13,6 @@
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@prisma/client": "^5.2.0",
-    "autoprefixer": "10.4.14",
     "blitzpackage": "^0.1.4",
     "blitzpackagev2": "^1.0.0",
     "class-variance-authority": "^0.7.0",
@@ -27,14 +26,15 @@
     "next": "13.4.9",
     "next-auth": "^4.22.1",
     "nextjs-cors": "^2.1.2",
-    "postcss": "8.4.25",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwind-merge": "^1.14.0",
-    "tailwindcss": "3.3.2",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "daisyui": "^3.2.1"
+    "autoprefixer": "^10.4.16",
+    "daisyui": "^3.2.1",
+    "postcss": "^8.4.30",
+    "tailwindcss": "^3.3.3"
   }
 }
