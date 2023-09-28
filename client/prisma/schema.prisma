@@ -1,27 +1,28 @@
-datasource db {
-  provider = "postgres"
-  url      = env("DATABASE_URL")
-  shadowDatabaseUrl = env("SHADOW_DATABASE_URL") // Only needed when using a cloud provider that doesn't support the creation of new databases, like Heroku. Learn more: https://pris.ly/d/migrate-shadow
+generator client {
+  provider = "prisma-client-js"
 }
 
-generator client {
-  provider        = "prisma-client-js"
+datasource db {
+  provider          = "postgres"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
 model Account {
-  id                 String  @id @default(cuid())
-  userId             String
-  type               String
-  provider           String
-  providerAccountId  String
-  refresh_token      String?  @db.Text
-  access_token       String?  @db.Text
-  expires_at         Int?
-  token_type         String?
-  scope              String?
-  id_token           String?  @db.Text
-  session_state      String?
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@unique([provider, providerAccountId])
 }
 
@@ -37,31 +38,31 @@ model User {
   id            String    @id @default(cuid())
   name          String?
   email         String?   @unique
-  premium       Boolean@default(false)
   emailVerified DateTime?
   image         String?
+  premium       Boolean   @default(false)
   accounts      Account[]
+  projects      Project[]
   sessions      Session[]
-  projects Project[]
 }
 
 model Project {
-  id String @id @default(cuid())
-  name String?
-  website String @default("")
-  userId String
-  user User @relation(fields: [userId], references: [id])
+  id        String     @id @default(cuid())
+  name      String?
+  userId    String
+  website   String     @default("")
   feedbacks Feedback[]
+  user      User       @relation(fields: [userId], references: [id])
 }
 
 model Feedback {
-  id String @id @default(cuid())
-  body String
-  rating Int
+  id        String   @id @default(cuid())
+  body      String
+  rating    Int
   createdAt DateTime @default(now())
-  email String @default("")
+  email     String   @default("")
   projectId String
-  project Project @relation(fields: [projectId], references: [id])
+  project   Project  @relation(fields: [projectId], references: [id])
 }
 
 model VerificationToken {

@@ -12,7 +12,7 @@
     "@auth/prisma-adapter": "^1.0.1",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
-    "@prisma/client": "^5.0.0",
+    "@prisma/client": "^5.2.0",
     "autoprefixer": "10.4.14",
     "blitzpackage": "^0.1.4",
     "blitzpackagev2": "^1.0.0",
