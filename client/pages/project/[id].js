@@ -74,6 +74,7 @@ export default function Page() {
         </div>
         </motion.div>
     </center>
+    <br /><br />
     </Layout>
     </>
   )

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { EnvelopeOpenIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon } from '@heroicons/react/24/outline';
 export default function Feedback(props) {
     const [ color, setColor ] = useState();
     useEffect(() => {
@@ -20,8 +20,8 @@ export default function Feedback(props) {
     <h2 className='float-left flex -mb-2 font-bold justify-center mt-4'>{props.body}</h2>
     <br />
     <a href={`mailto:${props.email}?subject=${props.body}`} className='px-8 py-2 bg-black bg-opacity-70 text-white rounded-lg font-bold flex justify-center items-center gap-2'>
-        Reply 
-    <EnvelopeOpenIcon width='18' className='flex content-center'/>
+    <EnvelopeIcon width='18' className='flex content-center'/>
+        Reply
     </a>
   </div>
 </div>
