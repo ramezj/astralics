@@ -15,16 +15,16 @@ export default async function handler(req, res) {
         response: 'Please Fill All Fields'
       })
     }
-    const { projectId } = req.query;
-    const project = await prisma.project.findFirst({
+    const { boardId } = req.query;
+    const board = await prisma.board.findFirst({
       where: {
-        id:projectId
+        id:boardId
       },
       include: {
         feedbacks:true
       }
     })
-    if(!project) {
+    if(!board) {
       return res.status(400).json({
         ok:false,
         response:'Configure Project ID'
@@ -32,11 +32,11 @@ export default async function handler(req, res) {
     }
     const user = await prisma.user.findFirst({
       where: {
-        id:project.userId
+        id:board.userId
       }
     });
     // change number to 25 in production, 5 is only in dev mode for testing
-    if(project.feedbacks.length >= 20) {
+    if(board.feedbacks.length >= 20) {
       if(user.premium === false) {
         return res.status(400).json({
           ok:false,
@@ -49,7 +49,7 @@ export default async function handler(req, res) {
         body: req.body.body,
         rating:5,
         email:req.body.email,
-        projectId:projectId
+        boardId:boardId
       }
     })
     return res.status(200).json({
