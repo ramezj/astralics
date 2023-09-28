@@ -2,16 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
 export default function Feedback(props) {
-    const [ color, setColor ] = useState();
-    useEffect(() => {
-        switch(props.rating) {
-            case 1 : setColor('bg-red-500'); break;
-            case 2 : setColor('bg-orange-300'); break;
-            case 3 : setColor('bg-yellow-300'); break;
-            case 4 : setColor('bg-green-300'); break;
-            case 5 : setColor('bg-green-600'); break;
-        }
-    }, [])
     return (
         <>
         <div className="hover:scale-105 card w-96 bg-black bg-opacity-70 shadow-xl cursor-pointer duration-300">

@@ -55,8 +55,7 @@ export default function Component() {
           }}
             transition={{duration: 0.8}}
             >
-                {/* <MultiStepWidget /> */}
-                {/* <BlitzFeedback /> */}
+
                 <Widget projectId={'clmxv44iq000busggjdja28am'} title={'Feedback 🪐'} />
             </motion.div>
           </div>
