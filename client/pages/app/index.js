@@ -89,7 +89,7 @@ export default function Component() {
         duration:1
       }}
           >
-          <Card title={project.name} href={`/project/${project.id}`} website={project.website} settings={`/settings/${project.id}`} code={`/code/${project.id}`} />
+          <Card title={project.name} href={`/board/${project.id}`} website={project.website} settings={`/settings/${project.id}`} code={`/code/${project.id}`} />
           </motion.div>
         )
       })}

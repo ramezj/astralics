@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 
 export default function CreateProject() {
     const router = useRouter();
-    const [ text, setText ] = useState("Create Project");
+    const [ text, setText ] = useState("Create Board");
     const [ loading, setLoading ] = useState(false);
     const [ name, setName ] = useState();
     const [ error, setError ] = useState();
@@ -39,7 +39,7 @@ export default function CreateProject() {
         <>
         <div className="card w-[22.5rem] bg-black duration-300">
         <div className="card-body">
-        <h2 className="card-title text-xl text-white font-bold justify-center -mt-2 mb-2">Project Information</h2>
+        <h2 className="card-title text-xl text-white font-bold justify-center -mt-2 mb-2">Board Information</h2>
         <form onSubmit={createProject}>
         <input required autoFocus={false} type="text" placeholder="Name" onChange={(e) => {setName(e.target.value)}} className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-bold text-sm" />
         <input required autoFocus={false} type="url" placeholder="Website" onChange={(e) => {setUrl(e.target.value)}} className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-bold text-sm mt-4" />

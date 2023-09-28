@@ -50,7 +50,7 @@ export default function Create() {
         <>
         <button 
         className='btn bg-black bg-opacity-80 hover:bg-opacity-90 hover:bg-black text-white border-none normal-case font-bold px-12 outline-none duration-300 rounded-xl' 
-        onClick={openModal}><PlusIcon width={21} strokeWidth={'2.5'}/> Create Project</button>
+        onClick={openModal}><PlusIcon width={21} strokeWidth={'2.5'}/> Create Board</button>
 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child

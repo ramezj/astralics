@@ -38,7 +38,6 @@ model User {
   name          String?
   email         String?   @unique
   premium       Boolean@default(false)
-  level         Int@default(0)
   emailVerified DateTime?
   image         String?
   accounts      Account[]

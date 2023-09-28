@@ -1,11 +1,8 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import Layout from "@/components/layout"
 import Widget from "@/components/widget"
-import Features from "@/components/Features"
-import Link from "next/link"
 import BetaAlert from "@/components/other/BetaAlert"
 import { motion } from 'framer-motion'
-import MultiStepWidget from "@/components/v2/MultiStepWidget"
 import { BlitzFeedback } from "blitzpackagev2"
 
 export default function Component() {
