@@ -29,20 +29,26 @@ export default function Page() {
   return (
     <>
     <Layout>
+    <title>Feedback Board</title>
         { loading === false && 
         <>
         <center>
             <br />
-            <div className="card w-4/5 bg-black duration-300">
+            <div className="card 2xl:w-2/5 w-4/5 bg-black duration-300">
             <div className="card-body items-center">
             <h1 className="font-bold text-2xl">{data.name}'s Feedback Board</h1>
             <br />
             {
-                data.feedbacks.map((feedback) => {
-                    return (
-                        <BoardFeedbackDiv feedback={feedback.body}/>
-                    )
-                })
+                data.feedbacks != null && 
+                <>
+                {
+                    data.feedbacks.map((feedback) => {
+                        return (
+                            <BoardFeedbackDiv feedback={feedback.body}/>
+                        )
+                    })
+                }
+                </>
             }
             </div>
             </div>
