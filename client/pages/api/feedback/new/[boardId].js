@@ -47,7 +47,6 @@ export default async function handler(req, res) {
     const feedback = await prisma.feedback.create({
       data: {
         body: req.body.body,
-        rating:5,
         email:req.body.email,
         boardId:boardId
       }

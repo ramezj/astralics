@@ -19,7 +19,6 @@ export default function Widget(props) {
               },
             body: JSON.stringify({
                 body:feedback,
-                rating:rating,
                 email:email
             })
         });

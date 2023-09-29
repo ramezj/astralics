@@ -59,8 +59,8 @@ model Board {
 model Feedback {
   id        String   @id @default(cuid())
   body      String
-  upvotes Int
-  downvotes Int
+  upvotes Int @default(0)
+  downvotes Int @default(0)
   createdAt DateTime @default(now())
   email     String   @default("")
   boardId   String

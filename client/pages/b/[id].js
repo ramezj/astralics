@@ -2,10 +2,7 @@ import { useSession} from "next-auth/react"
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import Layout from "@/components/layout"
-import { motion } from "framer-motion"
-import Feedback from "@/components/board/Feedback"
-import Loading from "@/components/board/Loading"
-import Widget from "@/components/widget"
+import BoardFeedbackDiv from "@/components/b/BoardFeedbackDiv"
 
 export default function Page() {
     const router = useRouter()
@@ -36,10 +33,18 @@ export default function Page() {
         <>
         <center>
             <br />
-            <div className='w-3/5 bg-black rounded-lg bg-opacity-80'>
-                <br />
-                <h1 className="font-bold text-2xl h-96">{data.name}'s Feedback Board</h1>
-                <button className="btn bg-blue-500 hover:bg-blue-700 font-bold normal-case text-white">Send Feedback</button>
+            <div className="card w-4/5 bg-black duration-300">
+            <div className="card-body items-center">
+            <h1 className="font-bold text-2xl">{data.name}'s Feedback Board</h1>
+            <br />
+            {
+                data.feedbacks.map((feedback) => {
+                    return (
+                        <BoardFeedbackDiv feedback={feedback.body}/>
+                    )
+                })
+            }
+            </div>
             </div>
         </center>
         </>
