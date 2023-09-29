@@ -34,7 +34,7 @@ export default function Page() {
         <>
         <center>
             <br />
-            <div className="card 2xl:w-2/5 w-4/5 bg-black duration-300">
+            <div className="card 2xl:w-2/5 w-4/5 bg-black bg-opacity-80 duration-300">
             <div className="card-body items-center">
             <h1 className="font-bold text-2xl">{data.name}'s Feedback Board</h1>
             <br />
@@ -44,7 +44,7 @@ export default function Page() {
                 {
                     data.feedbacks.map((feedback) => {
                         return (
-                            <BoardFeedbackDiv feedback={feedback.body}/>
+                            <BoardFeedbackDiv feedback={feedback.body} upvotes={feedback.upvotes}/>
                         )
                     })
                 }
