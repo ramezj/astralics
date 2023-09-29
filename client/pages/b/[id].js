@@ -33,6 +33,9 @@ export default function Page() {
     <Layout>
         { loading === false && 
         <>
+        <center>
+            <h1 className="font-bold text-2xl">{data.name}'s Feedback Board</h1>
+        </center>
         {JSON.stringify(data)}
         </>
         }

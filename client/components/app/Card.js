@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { AdjustmentsHorizontalIcon } from '@heroicons/react/24/outline'
+import { AdjustmentsHorizontalIcon, LinkIcon } from '@heroicons/react/24/outline'
 import React, { useState } from 'react';
 
 export default function Card(props) {
@@ -21,6 +21,11 @@ export default function Card(props) {
     <span className='-mt-6 -mr-2 w-10 h-8 rounded-lg justify-center items-center float-right flex backgroundColor hover:scale-[1.18] duration-300'>
     <Link href={`${props.settings}`} className='drop-shadow-lg float-right flex justify-center'>
     <AdjustmentsHorizontalIcon className='text-white' width={24} height={24} strokeWidth={'2'}/>
+    </Link>
+    </span>
+    <span className='-mt-6 -mr-2 w-10 h-8 rounded-lg justify-center items-center float-right flex backgroundColor hover:scale-[1.18] duration-300'>
+    <Link href={`${props.handle}`} className='drop-shadow-lg float-right flex justify-center'>
+    <LinkIcon className='text-white' width={22} height={24} strokeWidth={'2.3'}/>
     </Link>
     </span>
     </div>
