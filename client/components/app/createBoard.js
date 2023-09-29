@@ -6,6 +6,7 @@ export default function CreateBoard() {
     const [ text, setText ] = useState("Create Board");
     const [ loading, setLoading ] = useState(false);
     const [ name, setName ] = useState();
+    const [ handle, setHandle ] = useState();
     const [ error, setError ] = useState();
     const [ url, setUrl ] = useState();
     const [ response, setResponse ] = useState();
@@ -19,7 +20,8 @@ export default function CreateBoard() {
               },
               body: JSON.stringify({
                 name: name,
-                url: url
+                url: url,
+                handle:handle
               })
         });
         const resp = await res.json();
@@ -43,6 +45,7 @@ export default function CreateBoard() {
         <form onSubmit={createProject}>
         <input required autoFocus={false} type="text" placeholder="Name" onChange={(e) => {setName(e.target.value)}} className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-bold text-sm" />
         <input required autoFocus={false} type="url" placeholder="Website" onChange={(e) => {setUrl(e.target.value)}} className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-bold text-sm mt-4" />
+        <input required autoFocus={false} type="text" placeholder="/handle" onChange={(e) => {setHandle(e.target.value)}} className="bg-opacity-60 shadow-xl input w-full mt-2 focus:outline-none bg-neutral-800 text-white font-bold text-sm mt-4" />
         <center>
         <button className="mt-6 shadow-xl w-full py-2 rounded-md text-base text-[#05050a] normal-case bg-white hover:bg-white outline-none border-none font-bold " type='submit'>
         { 

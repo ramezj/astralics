@@ -48,6 +48,7 @@ model User {
 
 model Board {
   id        String     @id @default(cuid())
+  handle String @unique
   name      String?
   website   String     @default("")
   userId    String
@@ -58,7 +59,8 @@ model Board {
 model Feedback {
   id        String   @id @default(cuid())
   body      String
-  rating    Int
+  upvotes Int
+  downvotes Int
   createdAt DateTime @default(now())
   email     String   @default("")
   boardId   String

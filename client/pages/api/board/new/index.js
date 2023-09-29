@@ -10,11 +10,11 @@ export default async function handler(req, res) {
             response: ' Unauthorized '
         })
     }
-    const { name, url } = req.body;
-    if(!name || !url ) {
+    const { name, url, handle} = req.body;
+    if(!name || !url || !handle ) {
         return res.status(400).json({
             ok:false,
-            response: 'Name or Url Missing'
+            response: 'Credentials Missing'
         })
     }
     try {
@@ -35,10 +35,22 @@ export default async function handler(req, res) {
                 })
             }
         }
+        const boardExist = await prisma.board.findFirst({
+            where: { 
+                handle:handle
+            }
+        });
+        if(boardExist) {
+            return res.status(400).json({
+                ok:false,
+                response:' Handle In Use '
+            })
+        }
         const newBoard = await prisma.board.create({
             data: {
                 name:name,
                 website:url,
+                handle:handle,
                 userId:session.user.id
             }
         })
