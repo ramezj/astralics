@@ -39,7 +39,7 @@ export default function Page() {
             <div className='w-3/5 bg-black rounded-lg bg-opacity-80'>
                 <br />
                 <h1 className="font-bold text-2xl h-96">{data.name}'s Feedback Board</h1>
-                <button className="btn bg-blue-500 hover:bg-blue-700">Send Feedback</button>
+                <button className="btn bg-blue-500 hover:bg-blue-700 font-bold normal-case text-white">Send Feedback</button>
             </div>
         </center>
         </>
