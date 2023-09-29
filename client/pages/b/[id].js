@@ -5,6 +5,7 @@ import Layout from "@/components/layout"
 import { motion } from "framer-motion"
 import Feedback from "@/components/board/Feedback"
 import Loading from "@/components/board/Loading"
+import Widget from "@/components/widget"
 
 export default function Page() {
     const router = useRouter()
@@ -34,9 +35,13 @@ export default function Page() {
         { loading === false && 
         <>
         <center>
-            <h1 className="font-bold text-2xl">{data.name}'s Feedback Board</h1>
+            <br />
+            <div className='w-3/5 bg-black rounded-lg bg-opacity-80'>
+                <br />
+                <h1 className="font-bold text-2xl h-96">{data.name}'s Feedback Board</h1>
+                <button className="btn bg-blue-500 hover:bg-blue-700">Send Feedback</button>
+            </div>
         </center>
-        {JSON.stringify(data)}
         </>
         }
     </Layout>
