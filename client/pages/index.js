@@ -3,6 +3,7 @@ import Layout from "@/components/layout"
 import Widget from "@/components/widget"
 import BetaAlert from "@/components/other/BetaAlert"
 import { motion } from 'framer-motion'
+import Mvp from "@/components/mvp"
 
 export default function Component() {
   const { data: session } = useSession()
@@ -55,7 +56,8 @@ export default function Component() {
             transition={{duration: 0.8}}
             >
               
-                <Widget projectId={'cln4gj99h0008uslk24siic30'} title={'Feedback 🪐'} />
+                {/* <Widget projectId={'cln4gj99h0008uslk24siic30'} title={'Feedback 🪐'} /> */}
+                <Mvp />
             </motion.div>
           </div>
             </center>
