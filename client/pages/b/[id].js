@@ -33,25 +33,15 @@ export default function Page() {
         { loading === false && 
         <>
         <center>
-            <br />
-            <div className="card 2xl:w-2/5 w-4/5 bg-black bg-opacity-80 duration-300">
-            <div className="card-body items-center">
-            <h1 className="font-bold text-2xl">{data.name}'s Feedback Board</h1>
-            <br />
-            {
-                data.feedbacks != null && 
-                <>
-                {
-                    data.feedbacks.map((feedback) => {
-                        return (
-                            <BoardFeedbackDiv feedback={feedback.body} upvotes={feedback.upvotes}/>
-                        )
-                    })
-                }
-                </>
-            }
+            <br /><br />
+            <h1 className="text-2xl font-bold">{data.name}'s Feedback Board</h1>
+            <br /><br />
+            <div className="flex flex-wrap gap-8 place-content-center">
+                <button className='text-white bg-neutral-900 hover:bg-neutral-950 normal-case px-16 py-2.5 rounded-lg font-medium shadow-md'>💡 Feature Request</button>
+                <button className='text-white bg-neutral-900 hover:bg-neutral-950 normal-case px-16 py-2.5 rounded-lg font-medium shadow-md'>🐛 Bug Report</button>
             </div>
-            </div>
+            <br />
+            <br />
         </center>
         </>
         }

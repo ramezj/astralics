@@ -1,4 +1,4 @@
-import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline"
+import { ChatBubbleBottomCenterTextIcon, ChatBubbleOvalLeftEllipsisIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import Widget from "../widget"
 import { Dialog, Transition } from '@headlessui/react'
@@ -16,7 +16,7 @@ export default function Feedback() {
         <>
         <a onClick={openModal} 
         className="cursor-pointer text-base font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-black hover:bg-opacity-80 px-6 py-2 rounded-xl duration-500 outline-none">
-        <ChatBubbleBottomCenterTextIcon width='20' className='flex'/>
+        <ChatBubbleOvalLeftEllipsisIcon width='20' className='flex'/>
             Feedback
         </a>
       <Transition appear show={isOpen} as={Fragment}>
