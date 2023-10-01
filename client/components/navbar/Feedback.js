@@ -1,6 +1,7 @@
 import { ChatBubbleBottomCenterTextIcon, ChatBubbleOvalLeftEllipsisIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import Widget from "../widget"
+import Mvp from "../mvp"
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 
@@ -44,9 +45,10 @@ export default function Feedback() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden rounded-2xl bg-transparent align-middle transition-all">
+                <Dialog.Panel className="w-[22rem] max-w-md transform overflow-hidden rounded-2xl bg-transparent align-middle transition-all">
                   <center>
-                   <Widget projectId={'clmxv44iq000busggjdja28am'}/>
+                    <Mvp />
+                   {/* <Widget projectId={'clmxv44iq000busggjdja28am'}/> */}
                   </center>
                 </Dialog.Panel>
               </Transition.Child>
