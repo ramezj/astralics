@@ -9,13 +9,13 @@ export default function Mvp(props) {
     const featureRequestClick = (e) => {
         e.preventDefault();
         setTitle('Feature Request');
-        setPlaceholder('I think you should implement...')
+        setPlaceholder('i think you should implement..')
         setStep(step+1);
     }
     const bugReportClick = (e) => {
         e.preventDefault();
         setTitle('Bug Report');
-        setPlaceholder('This is not working on my device...')
+        setPlaceholder('this is not working on my device..')
         setStep(step+1);
     }
     return (
@@ -43,14 +43,14 @@ export default function Mvp(props) {
                     <div>
                     <ArrowLeftIcon onClick={(() => {setStep(step-1)})} className='text-gray-200 float-left flex cursor-pointer hover:text-white' width={17} height={17} strokeWidth={'2'}/>
                     </div>
-                    <div className='justify-center items-center justify-items-center'>
+                    <div className='justify-center items-center justify-items-center '>
                         <center>
                         <h1 className="font-bold text-white text-xl -mt-2 mb-1 mr-[1.1rem]">{title}</h1>
                         </center>
                     </div>
-                <textarea rows={3} className='bg-white text-black placeholder-gray-400 font-bold rounded-lg w-full mt-4 textarea focus:outline-none' placeholder={placeholder}></textarea>
+                <textarea rows={3} className='resize-none bg-white text-black placeholder-gray-400 font-bold rounded-lg w-full mt-4 textarea focus:outline-none' placeholder={placeholder}></textarea>
                 </center>
-                <button className='py-1.5 bg-white text-black rounded-lg font-bold'>Submit</button>
+                <button className='py-1.5 -mt-2  bg-white hover:bg-gray-200 text-black rounded-lg font-bold'>Submit</button>
                 <a href='https://blitz-feedback.vercel.app' className='text-gray-300 text-xs -mb-5 -mt-2 hover:text-white duration-200'>powered by lunar</a>
                 </>
                 }
