@@ -25,13 +25,13 @@ export default function Mvp(props) {
                 { step === 1 &&
                  <>
                  <center>
-                    <h1 className="font-medium text-white text-2xl -mt-2 mb-1">How can we help?</h1>
+                    <h1 className="font-bold text-white text-xl -mt-2 mb-1">How can we help?</h1>
                 </center>
-                <span onClick={featureRequestClick} className="rounded-lg bg-indigo-600 hover:bg-indigo-800 duration-200 py-3.5 cursor-pointer">
-                    <h1 className="font-bold">Feature Request</h1>
+                <span onClick={featureRequestClick} className="rounded-lg bg-white hover:bg-gray-300 duration-200 py-3.5 cursor-pointer">
+                    <h1 className="font-bold text-black">Feature Request</h1>
                 </span>
-                <span onClick={bugReportClick} className="rounded-lg bg-indigo-600 hover:bg-indigo-800 duration-200 py-3.5 cursor-pointer">
-                    <h1 className="font-bold">Bug Report</h1>
+                <span onClick={bugReportClick} className="rounded-lg bg-white hover:bg-gray-300 duration-200 py-3.5 cursor-pointer">
+                    <h1 className="font-bold text-black">Bug Report</h1>
                 </span>
                  </>
                 }
@@ -39,13 +39,17 @@ export default function Mvp(props) {
                 step === 2 &&
                 <>
                 <center>
-                <div className='flex gap-x-10'>
+                    <div>
                     <ArrowLeftIcon onClick={(() => {setStep(step-1)})} className='text-gray-200 float-left flex cursor-pointer hover:text-white' width={17} height={17} strokeWidth={'2'}/>
-               <h1 className="font-medium text-white text-2xl -mt-2 mb-1">{title}</h1>
-                </div>
-                <textarea rows={3} className='bg-gray-900 rounded-lg w-full mt-4 textarea focus:outline-none' placeholder={placeholder}></textarea>
+                    </div>
+                    <div className='justify-center items-center justify-items-center'>
+                        <center>
+                        <h1 className="font-bold text-white text-xl -mt-2 mb-1 mr-[1.1rem]">{title}</h1>
+                        </center>
+                    </div>
+                <textarea rows={3} className='bg-white text-black placeholder-gray-400 font-bold rounded-lg w-full mt-4 textarea focus:outline-none' placeholder={placeholder}></textarea>
                 </center>
-                <button className='py-1 bg-indigo-600 text-white rounded-lg font-medium'>Submit</button>
+                <button className='py-1.5 bg-white text-black rounded-lg font-bold'>Submit</button>
                 </>
                 }
             </div>
