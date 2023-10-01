@@ -33,7 +33,7 @@ export default function Mvp(props) {
                 <span onClick={bugReportClick} className="rounded-lg bg-white hover:bg-gray-300 duration-200 py-3.5 cursor-pointer">
                     <h1 className="font-bold text-black">Bug Report</h1>
                 </span>
-                <a href='https://blitz-feedback.vercel.app' className='text-gray-300 text-xs -mb-3 hover:text-white duration-200'>powered by lunar</a>
+                <a href='https://blitz-feedback.vercel.app' className='text-gray-300 text-xs -mb-5 -mt-2 hover:text-white duration-200'>powered by lunar</a>
                  </>
                 }
                 {
@@ -51,7 +51,7 @@ export default function Mvp(props) {
                 <textarea rows={3} className='bg-white text-black placeholder-gray-400 font-bold rounded-lg w-full mt-4 textarea focus:outline-none' placeholder={placeholder}></textarea>
                 </center>
                 <button className='py-1.5 bg-white text-black rounded-lg font-bold'>Submit</button>
-                <a href='https://blitz-feedback.vercel.app' className='text-gray-300 text-xs -mb-3 hover:text-white duration-200'>powered by lunar</a>
+                <a href='https://blitz-feedback.vercel.app' className='text-gray-300 text-xs -mb-5 -mt-2 hover:text-white duration-200'>powered by lunar</a>
                 </>
                 }
             </div>
