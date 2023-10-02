@@ -34,11 +34,12 @@ export default function Page() {
         <>
         <center>
             <br /><br />
-            <h1 className="text-2xl font-bold">{data.name}'s Feedback Board</h1>
+            <h1 className="text-2xl font-bold">{data.name}'s Roadmap</h1>
             <br /><br />
             <div className="flex flex-wrap gap-8 place-content-center">
-                <button className='text-white bg-neutral-900 hover:bg-neutral-950 normal-case px-16 py-2.5 rounded-lg font-medium shadow-md'>💡 Feature Request</button>
-                <button className='text-white bg-neutral-900 hover:bg-neutral-950 normal-case px-16 py-2.5 rounded-lg font-medium shadow-md'>🐛 Bug Report</button>
+            <BoardFeedbackDiv title={'✨ Planned'} />
+            <BoardFeedbackDiv title={'⚒️ In Progress'} />
+            <BoardFeedbackDiv title={'🥳 Done'} />
             </div>
             <br />
             <br />
