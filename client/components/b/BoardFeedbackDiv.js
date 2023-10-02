@@ -5,7 +5,7 @@ export default function BoardFeedbackDiv(props) {
         <>
        <div className="card bg-black w-[20rem]">
         <div className="card-title">
-        <h1 className="text-sm text-white justify-center ml-4 mt-4">{props.title}</h1>
+        <h1 className="text-lg text-white justify-center ml-4 mt-4">{props.title}</h1>
         </div>
         <div className="card-body">
             <div className="bg-white w-full flex flex-wrap gap-8">
