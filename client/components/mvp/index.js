@@ -67,8 +67,8 @@ export default function Mvp(props) {
                     <button 
                     disabled={!data}
                 onClick={(() => {setStep(step+1)})} 
-                className='py-1.5 -mt-2 duration-300 bg-white hover:bg-gray-200 text-black rounded-lg font-bold'>
-                Submit
+                className='py-1.5 -mt-2 duration-300 bg-white hover:bg-gray-200 text-black rounded-lg font-bold text-sm'>
+                Send Feedback
                 </button>
                     </>
                 }
