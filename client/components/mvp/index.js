@@ -30,12 +30,12 @@ export default function Mvp(props) {
                     <h1 className="font-bold text-white text-xl -mt-1 mb-1">How can we improve?</h1>
                 </center>
                 <span onClick={featureRequestClick} className="rounded-lg bg-white hover:bg-gray-300 duration-300 py-4 cursor-pointer">
-                    <h1 className="font-bold text-black">Feature Request</h1>
+                    <h1 className="font-extrabold text-black">Feature Request</h1>
                 </span>
                 <span onClick={bugReportClick} className="rounded-lg bg-white hover:bg-gray-300 duration-300 py-4 cursor-pointer">
-                    <h1 className="font-bold text-black">Bug Report</h1>
+                    <h1 className="font-extrabold text-black">Bug Report</h1>
                 </span>
-                <a href='https://blitz-feedback.vercel.app' className='text-gray-300 text-xs hover:text-white duration-200 -mt-1.5'>powered by lunar</a>
+                <a href='https://blitz-feedback.vercel.app' className='text-gray-300 text-xs hover:text-white duration-200 -mt-1.5'>powered by <b className='font-bold'>lunar</b></a>
                  </>
                 }
                 {
@@ -52,7 +52,7 @@ export default function Mvp(props) {
                     </div>
                 <textarea value={data} onChange={((e) => {setData(e.target.value)})} rows={3} className='resize-none bg-white text-black placeholder-gray-400 font-bold rounded-lg w-full textarea focus:outline-none' placeholder={placeholder}></textarea>
                 </center>
-                <div className='mt-1'>
+                <div className='mt-[0.35rem]'>
                 <button onClick={(() => {setStep(step-1)})} 
                 className='float-left px-6 py-2 -mt-2 duration-300 bg-white hover:bg-gray-200 text-black rounded-lg font-bold text-sm'>
                 back
