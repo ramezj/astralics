@@ -173,7 +173,7 @@ export default function Navbar(props) {
                 Settings 
                 </Link>
               <Link href='/app' className='mt-3 px-8 py-2 bg-black hover:bg-neutral-800  duration-300 rounded-xl font-bold flex justify-center gap-2'>
-                Dashboard 
+                Dashboard
                 </Link></>
               : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black hover:bg-neutral-800  rounded-xl font-bold flex justify-center gap-2 duration-300'>
               Try Lunar 

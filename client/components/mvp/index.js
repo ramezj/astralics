@@ -43,38 +43,29 @@ export default function Mvp(props) {
                 <>
                 <center>
                     <div>
-                    <ArrowLeftIcon onClick={(() => {setStep(step-1)})} className='text-gray-400 duration-200 float-left flex cursor-pointer hover:text-white' width={17} height={17} strokeWidth={'3'}/>
+                    {/* <ArrowLeftIcon onClick={(() => {setStep(step-1)})} className='text-gray-400 duration-200 float-left flex cursor-pointer hover:text-white' width={17} height={17} strokeWidth={'3'}/> */}
                     </div>
-                    <div className='justify-center items-center justify-items-center '>
+                    <div className='justify-center items-center justify-items-center flex'>
                         <center>
-                        <h1 className="font-bold text-white text-xl -mt-2 mb-1 mr-[1.1rem]">{title}</h1>
+                        <h1 className="font-bold text-white text-xl -mt-2 mb-1 flex float-left">{title}</h1>
                         </center>
                     </div>
                 <textarea value={data} onChange={((e) => {setData(e.target.value)})} rows={2} className='resize-none bg-white text-black placeholder-gray-400 font-bold rounded-lg w-full mt-4 textarea focus:outline-none' placeholder={placeholder}></textarea>
                 </center>
-                {/* {
-                    disabled === true && 
-                    <>
-                    <button 
-                className='py-1.5 -mt-2 duration-300 bg-gray-400 cursor-default text-gray-600 rounded-lg font-bold'>
-                Submit
+                <div className='mt-1'>
+                <button onClick={(() => {setStep(step-1)})} 
+                className='float-left px-6 py-1.5 -mt-2 duration-300 bg-white hover:bg-gray-200 text-black rounded-lg font-bold text-sm'>
+                    back
                 </button>
-                    </>
-                } */}
-                {/* {
-                    disabled === false && 
-                    <> */}
-                    <button 
-                    disabled={!data}
+                <button 
+                disabled={!data}
                 onClick={(() => {setStep(step+1)})} 
-                className='py-1.5 -mt-2 duration-300 bg-white hover:bg-gray-200 text-black rounded-lg font-bold text-sm'>
+                className='float-right px-8 py-1.5 -mt-2 duration-300 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-bold text-sm'>
                 Send Feedback
                 </button>
+                </div>
                     </>
                 }
-                {/* <a href='https://blitz-feedback.vercel.app' className='text-gray-300 text-xs  hover:text-white duration-200'>powered by lunar</a> */}
-                {/* </>
-                } */}
                 {
                 step === 3 && 
                 <>
