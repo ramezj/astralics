@@ -11,13 +11,13 @@ export default function Mvp(props) {
     const featureRequestClick = (e) => {
         e.preventDefault();
         setTitle('💡 Feature Request');
-        setPlaceholder('i think you should implement..')
+        setPlaceholder('Describe your feature request')
         setStep(step+1);
     }
     const bugReportClick = (e) => {
         e.preventDefault();
         setTitle('🐛 Bug Report');
-        setPlaceholder('this is not working on my device..')
+        setPlaceholder('Describe the bug')
         setStep(step+1);
     }
     return (
@@ -50,7 +50,7 @@ export default function Mvp(props) {
                         <h1 className="font-bold text-white text-xl -mt-4 mb-4 flex float-left">{title}</h1>
                         </center>
                     </div>
-                <textarea value={data} onChange={((e) => {setData(e.target.value)})} rows={3} className='resize-none bg-white text-black placeholder-gray-400 font-bold rounded-lg w-full textarea focus:outline-none' placeholder={placeholder}></textarea>
+                <textarea value={data} onChange={((e) => {setData(e.target.value)})} rows={3} className='resize-none bg-white text-black placeholder-gray-300 font-bold rounded-lg w-full textarea focus:outline-none' placeholder={placeholder}></textarea>
                 </center>
                 <div className='mt-[0.35rem]'>
                 <button onClick={(() => {setStep(step-1)})} 
