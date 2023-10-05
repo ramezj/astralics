@@ -79,13 +79,13 @@ export default function Navbar(props) {
               ? <> 
               <LogOut />
               <Settings />
-              <Link href='/app' className='rounded-xl px-7 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 text-white font-bold flex gap-2 content-center justify-center items-center duration-300'>
+              <Link href='/app' className='rounded-xl px-7 py-2 bg-black hover:bg-neutral-800  text-white font-bold flex gap-2 content-center justify-center items-center duration-300'>
                 {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
                 Dashboard 
                 </Link></>
-              : <> <button className='px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={openModal}>
-                Try Lunar
-                {/* <ArrowSmallRightIcon width={20} className='flex content-center align-middle'/> */}
+              : <> 
+                <button className='px-8 py-2 bg-black hover:bg-neutral-800 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={openModal}>
+                Get Started
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -169,13 +169,13 @@ export default function Navbar(props) {
                {
               props.session 
               ? <> 
-              <Link href='/settings' className='px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 duration-300 rounded-xl font-bold flex justify-center gap-2'>
+              <Link href='/settings' className='px-8 py-2 bg-black hover:bg-neutral-800  duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Settings 
                 </Link>
-              <Link href='/app' className='mt-3 px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 duration-300 rounded-xl font-bold flex justify-center gap-2'>
+              <Link href='/app' className='mt-3 px-8 py-2 bg-black hover:bg-neutral-800  duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Dashboard 
                 </Link></>
-              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black bg-opacity-80 hover:bg-opacity-90 rounded-xl font-bold flex justify-center gap-2 duration-300'>
+              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black hover:bg-neutral-800  rounded-xl font-bold flex justify-center gap-2 duration-300'>
               Try Lunar 
               </Link></>
               }
