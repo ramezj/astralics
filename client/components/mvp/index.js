@@ -22,20 +22,20 @@ export default function Mvp(props) {
     }
     return (
         <>
-        <div className="card w-[22rem] h-[13.7rem] bg-black">
+        <div className="card w-[22rem] h-[15rem] bg-black">
             <div className="card-body gap-y-4">
                 { step === 1 &&
                  <>
                  <center>
-                    <h1 className="font-bold text-white text-xl -mt-2 mb-1">How can we improve?</h1>
+                    <h1 className="font-bold text-white text-xl -mt-1 mb-1">How can we improve?</h1>
                 </center>
-                <span onClick={featureRequestClick} className="rounded-lg bg-white hover:bg-gray-300 duration-300 py-3.5 cursor-pointer">
+                <span onClick={featureRequestClick} className="rounded-lg bg-white hover:bg-gray-300 duration-300 py-4 cursor-pointer">
                     <h1 className="font-bold text-black">Feature Request</h1>
                 </span>
-                <span onClick={bugReportClick} className="rounded-lg bg-white hover:bg-gray-300 duration-300 py-3.5 cursor-pointer">
+                <span onClick={bugReportClick} className="rounded-lg bg-white hover:bg-gray-300 duration-300 py-4 cursor-pointer">
                     <h1 className="font-bold text-black">Bug Report</h1>
                 </span>
-                {/* <a href='https://blitz-feedback.vercel.app' className='text-gray-300 text-xs  hover:text-white duration-200'>powered by lunar</a> */}
+                <a href='https://blitz-feedback.vercel.app' className='text-gray-300 text-xs hover:text-white duration-200 -mt-1.5'>powered by lunar</a>
                  </>
                 }
                 {
@@ -47,20 +47,20 @@ export default function Mvp(props) {
                     </div>
                     <div className='justify-center items-center justify-items-center flex'>
                         <center>
-                        <h1 className="font-bold text-white text-xl -mt-2 mb-1 flex float-left">{title}</h1>
+                        <h1 className="font-bold text-white text-xl -mt-4 mb-4 flex float-left">{title}</h1>
                         </center>
                     </div>
-                <textarea value={data} onChange={((e) => {setData(e.target.value)})} rows={2} className='resize-none bg-white text-black placeholder-gray-400 font-bold rounded-lg w-full mt-4 textarea focus:outline-none' placeholder={placeholder}></textarea>
+                <textarea value={data} onChange={((e) => {setData(e.target.value)})} rows={3} className='resize-none bg-white text-black placeholder-gray-400 font-bold rounded-lg w-full textarea focus:outline-none' placeholder={placeholder}></textarea>
                 </center>
                 <div className='mt-1'>
                 <button onClick={(() => {setStep(step-1)})} 
-                className='float-left px-6 py-1.5 -mt-2 duration-300 bg-white hover:bg-gray-200 text-black rounded-lg font-bold text-sm'>
-                    back
+                className='float-left px-6 py-2 -mt-2 duration-300 bg-white hover:bg-gray-200 text-black rounded-lg font-bold text-sm'>
+                back
                 </button>
                 <button 
                 disabled={!data}
                 onClick={(() => {setStep(step+1)})} 
-                className='float-right px-8 py-1.5 -mt-2 duration-300 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-bold text-sm'>
+                className='float-right px-8 py-2 -mt-2 duration-300 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-bold text-sm'>
                 Send Feedback
                 </button>
                 </div>
