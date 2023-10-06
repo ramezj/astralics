@@ -77,7 +77,7 @@ export default function Navbar(props) {
             {
               props.session 
               ? <> 
-              <LogOut />
+              {/* <LogOut /> */}
               <Settings />
               <Link href='/app' className='rounded-xl px-7 py-2 bg-black hover:bg-neutral-800  text-white font-bold flex gap-2 content-center justify-center items-center duration-300'>
                 {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
@@ -160,7 +160,9 @@ export default function Navbar(props) {
               <div className="py-6">
                 {
                   props.session 
-                  ? <><a onClick={signUserOut} className="px-8 py-2 rounded-lg font-bold flex justify-center cursor-pointer"> Log Out </a></>
+                  ? <>
+                  {/* <a onClick={signUserOut} className="px-8 py-2 rounded-lg font-bold flex justify-center cursor-pointer"> Log Out </a> */}
+                  </>
                   : <></>
                 }
                 <a
