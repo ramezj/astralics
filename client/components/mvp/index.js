@@ -8,6 +8,7 @@ export default function Mvp(props) {
     const [ placeholder, setPlaceholder ] = useState('');
     const [ data, setData ] = useState("");
     const [ disabled, setDisabled ] = useState(true);
+    const [ loading, setLoading ] = useState(false);
     const featureRequestClick = (e) => {
         e.preventDefault();
         setTitle('💡 Feature Request');
@@ -20,6 +21,30 @@ export default function Mvp(props) {
         setPlaceholder('Describe the bug')
         setStep(step+1);
     }
+    const submitFeedback = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        const response = await fetch(`/api/feedback/new/${props.projectId}`, {
+            method:'POST',
+            headers: {
+                "Content-Type": "application/json"
+              },
+            body: JSON.stringify({
+                body:data,
+                email:'email'
+            })
+        });
+        const res = await response.json();
+        if(res.ok == true) {
+            setLoading(false);
+            // setStep(2);
+            // setText('Feedback Received 🥳')
+            
+        } else if (res.ok == false) {
+            setLoading(false);
+        }
+        console.log(res);
+    }
     return (
         <>
         <div className="card w-[22rem] h-[15rem] bg-black">
@@ -30,10 +55,10 @@ export default function Mvp(props) {
                     <h1 className="font-bold text-white text-xl -mt-1 mb-1">How can we improve?</h1>
                 </center>
                 <span onClick={featureRequestClick} className="rounded-lg bg-white hover:bg-gray-300 duration-300 py-4 cursor-pointer">
-                    <h1 className="font-extrabold text-black">Feature Request</h1>
+                    <h1 className="font-bold text-black">Feature Request</h1>
                 </span>
                 <span onClick={bugReportClick} className="rounded-lg bg-white hover:bg-gray-300 duration-300 py-4 cursor-pointer">
-                    <h1 className="font-extrabold text-black">Bug Report</h1>
+                    <h1 className="font-bold text-black">Bug Report</h1>
                 </span>
                 <a href='https://blitz-feedback.vercel.app' className='text-gray-300 text-xs hover:text-white duration-200 -mt-1.5'>powered by <b className='font-bold'>lunar</b></a>
                  </>
@@ -59,9 +84,13 @@ export default function Mvp(props) {
                 </button>
                 <button 
                 disabled={!data}
-                onClick={(() => {setStep(step+1)})} 
+                onClick={submitFeedback}
                 className='float-right px-8 py-2 -mt-2 duration-300 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-bold text-sm'>
-                Send Feedback
+                {
+                    loading 
+                    ? <><span className="loading loading-spinner loading-xs align-middle"></span></>
+                    : <>Send Feedback</>
+                }
                 </button>
                 </div>
                     </>
