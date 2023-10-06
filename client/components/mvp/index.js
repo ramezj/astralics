@@ -86,7 +86,7 @@ export default function Mvp(props) {
                 <button 
                 disabled={!data}
                 onClick={submitFeedback}
-                className='float-right px-8  w-[10.7rem]  py-2 -mt-2 duration-300 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-bold text-sm'>
+                className='float-right px-8 w-[10.9rem]  py-2 -mt-2 duration-300 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-bold text-sm'>
                 {
                     loading 
                     ? <><span className="loading loading-spinner loading-xs align-middle"></span></>
