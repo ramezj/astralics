@@ -9,6 +9,7 @@ export default function Mvp(props) {
     const [ data, setData ] = useState("");
     const [ disabled, setDisabled ] = useState(true);
     const [ loading, setLoading ] = useState(false);
+    const [ text, setText ] = useState('Send Feedback');
     const featureRequestClick = (e) => {
         e.preventDefault();
         setTitle('💡 Feature Request');
@@ -37,8 +38,8 @@ export default function Mvp(props) {
         const res = await response.json();
         if(res.ok == true) {
             setLoading(false);
-            // setStep(2);
-            // setText('Feedback Received 🥳')
+            setStep(3);
+            setText('Sent Successfully')
             
         } else if (res.ok == false) {
             setLoading(false);
@@ -85,11 +86,11 @@ export default function Mvp(props) {
                 <button 
                 disabled={!data}
                 onClick={submitFeedback}
-                className='float-right px-8 py-2 -mt-2 duration-300 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-bold text-sm'>
+                className='float-right px-8  w-[10.7rem]  py-2 -mt-2 duration-300 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-bold text-sm'>
                 {
                     loading 
                     ? <><span className="loading loading-spinner loading-xs align-middle"></span></>
-                    : <>Send Feedback</>
+                    : <>{text}</>
                 }
                 </button>
                 </div>
@@ -98,6 +99,9 @@ export default function Mvp(props) {
                 {
                 step === 3 && 
                 <>
+                <div className='flex justify-center items-center content-center align-middle'>
+                    <h1 className='text-xl font-bold align-middle flex'>Feedback Received Successfully 🎉</h1>
+                </div>
                 </>
                 }
             </div>

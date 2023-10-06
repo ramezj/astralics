@@ -57,7 +57,7 @@ export default function Component() {
             >
               
                 {/* <Widget projectId={'cln4gj99h0008uslk24siic30'} title={'Feedback 🪐'} /> */}
-                <Mvp />
+                <Mvp projectId={'cln4gj99h0008uslk24siic30'}/>
             </motion.div>
           </div>
             </center>
