@@ -56,13 +56,13 @@ export default function Mvp(props) {
                 { step === 1 &&
                  <>
                  <center>
-                    <h1 className="font-bold text-black text-xl -mt-1 mb-1">How can we improve?</h1>
+                    <h1 className="font-extrabold text-black text-xl -mt-1 mb-1">How can we improve?</h1>
                 </center>
                 <span onClick={featureRequestClick} className="rounded-lg bg-gray-200 hover:bg-gray-300 duration-300 py-4 cursor-pointer">
-                    <h1 className="font-extrabold text-black">Feature Request</h1>
+                    <h1 className="font-bold text-black">Feature Request</h1>
                 </span>
                 <span onClick={bugReportClick} className="rounded-lg bg-gray-200 hover:bg-gray-300 duration-300 py-4 cursor-pointer">
-                    <h1 className="font-extrabold text-black">Bug Report</h1>
+                    <h1 className="font-bold text-black">Bug Report</h1>
                 </span>
                 <a href='https://blitz-feedback.vercel.app' className=' outline-none border-none text-gray-800 text-xs hover:text-gray-950 duration-200 -mt-2'>powered by <b className='font-bold'>lunar</b></a>
                  </>
