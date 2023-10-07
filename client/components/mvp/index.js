@@ -25,6 +25,13 @@ export default function Mvp(props) {
         setPlaceholder('Describe the bug')
         setStep(step+1);
     }
+    const otherClick = (e) => {
+        setType('Other');
+        e.preventDefault();
+        setTitle('💬 Other');
+        setPlaceholder(`Let's talk`)
+        setStep(step+1);
+    }
     const submitFeedback = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -64,7 +71,7 @@ export default function Mvp(props) {
                 <span onClick={bugReportClick} className="rounded-lg bg-gray-200 hover:bg-gray-300 duration-300 py-4 cursor-pointer">
                     <h1 className="font-bold text-black">Bug Report</h1>
                 </span>
-                <span onClick={bugReportClick} className="rounded-lg bg-gray-200 hover:bg-gray-300 duration-300 py-4 cursor-pointer">
+                <span onClick={otherClick} className="rounded-lg bg-gray-200 hover:bg-gray-300 duration-300 py-4 cursor-pointer">
                     <h1 className="font-bold text-black">Other</h1>
                 </span>
                 <a href='https://blitz-feedback.vercel.app' className=' outline-none border-none text-gray-800 text-xs hover:text-gray-950 duration-200 -mt-2'>powered by <b className='font-bold'>lunar</b></a>
@@ -82,18 +89,18 @@ export default function Mvp(props) {
                         <h1 className="font-extrabold text-black text-xl -mt-2 mb-4 flex float-left">{title}</h1>
                         </center>
                     </div>
-                <input className='input bg-gray-200 focus:outline-none border-none text-black placeholder-gray-400 font-bold rounded-lg w-full' placeholder='email'></input>
+                <input className='input bg-gray-200 focus:outline-none border-none text-black placeholder-gray-400 font-bold rounded-lg w-full' placeholder='Email'></input>
                 <textarea value={data} onChange={((e) => {setData(e.target.value)})} rows={3} className='mt-4 resize-none bg-gray-200 text-black placeholder-gray-400 font-bold rounded-lg w-full textarea focus:outline-none' placeholder={placeholder}></textarea>
                 </center>
                 <div className='mt-[0.35rem]'>
                 <button onClick={(() => {setStep(step-1)})} 
-                className='float-left px-6 py-[0.45rem] -mt-2 duration-300 bg-gray-200 hover:bg-gray-300 text-black rounded-lg font-bold text-sm'>
+                className='float-left px-6 py-[0.50rem] -mt-2 duration-300 bg-gray-200 hover:bg-gray-300 text-black rounded-lg font-bold text-sm'>
                 back
                 </button>
                 <button 
                 disabled={!data}
                 onClick={submitFeedback}
-                className='float-right px-8 w-[10.9rem] py-[0.45rem] -mt-2 duration-300 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-extrabold text-sm'>
+                className='float-right px-8 w-[10.9rem] py-[0.47rem] -mt-2 duration-300 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-extrabold text-sm'>
                 {
                     loading 
                     ? <><span className="loading loading-spinner loading-xs align-middle"></span></>
