@@ -89,7 +89,7 @@ export default function Mvp(props) {
                         <h1 className="font-extrabold text-black text-xl -mt-2 mb-4 flex float-left">{title}</h1>
                         </center>
                     </div>
-                <input className='input bg-gray-200 focus:outline-none border-none text-black placeholder-gray-400 font-bold rounded-lg w-full' placeholder='Email'></input>
+                <input className='input bg-gray-200 focus:outline-none border-none text-black placeholder-gray-400 font-bold rounded-lg w-full text-sm' placeholder='hey@trylunar.xyz'></input>
                 <textarea value={data} onChange={((e) => {setData(e.target.value)})} rows={3} className='mt-4 resize-none bg-gray-200 text-black placeholder-gray-400 font-bold rounded-lg w-full textarea focus:outline-none' placeholder={placeholder}></textarea>
                 </center>
                 <div className='mt-[0.35rem]'>
