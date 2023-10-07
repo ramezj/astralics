@@ -83,7 +83,7 @@ export default function Mvp(props) {
                 </center>
                 <div className='mt-[0.35rem]'>
                 <button onClick={(() => {setStep(step-1)})} 
-                className='float-left px-6 py-[0.45rem] -mt-2 duration-300 bg-gray-200 hover:bg-gray-200 text-black rounded-lg font-extrabold text-sm'>
+                className='float-left px-6 py-[0.45rem] -mt-2 duration-300 bg-gray-200 hover:bg-gray-300 text-black rounded-lg font-bold text-sm'>
                 back
                 </button>
                 <button 
