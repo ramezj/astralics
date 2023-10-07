@@ -51,7 +51,7 @@ export default function Mvp(props) {
     }
     return (
         <>
-        <div className="card w-[22rem] h-[14.8rem] bg-white rounded-2xl">
+        <div className="card w-[22rem] h-[19.3rem] bg-white rounded-2xl">
             <div className="card-body gap-y-4">
                 { step === 1 &&
                  <>
@@ -63,6 +63,9 @@ export default function Mvp(props) {
                 </span>
                 <span onClick={bugReportClick} className="rounded-lg bg-gray-200 hover:bg-gray-300 duration-300 py-4 cursor-pointer">
                     <h1 className="font-bold text-black">Bug Report</h1>
+                </span>
+                <span onClick={bugReportClick} className="rounded-lg bg-gray-200 hover:bg-gray-300 duration-300 py-4 cursor-pointer">
+                    <h1 className="font-bold text-black">Other</h1>
                 </span>
                 <a href='https://blitz-feedback.vercel.app' className=' outline-none border-none text-gray-800 text-xs hover:text-gray-950 duration-200 -mt-2'>powered by <b className='font-bold'>lunar</b></a>
                  </>
@@ -76,10 +79,11 @@ export default function Mvp(props) {
                     </div>
                     <div className='justify-center items-center justify-items-center flex'>
                         <center>
-                        <h1 className="font-extrabold text-black text-xl -mt-4 mb-4 flex float-left">{title}</h1>
+                        <h1 className="font-extrabold text-black text-xl -mt-2 mb-4 flex float-left">{title}</h1>
                         </center>
                     </div>
-                <textarea value={data} onChange={((e) => {setData(e.target.value)})} rows={3} className='resize-none bg-gray-200 text-black placeholder-gray-400 font-bold rounded-lg w-full textarea focus:outline-none' placeholder={placeholder}></textarea>
+                <input className='input bg-gray-200 focus:outline-none border-none text-black placeholder-gray-400 font-bold rounded-lg w-full' placeholder='email'></input>
+                <textarea value={data} onChange={((e) => {setData(e.target.value)})} rows={3} className='mt-4 resize-none bg-gray-200 text-black placeholder-gray-400 font-bold rounded-lg w-full textarea focus:outline-none' placeholder={placeholder}></textarea>
                 </center>
                 <div className='mt-[0.35rem]'>
                 <button onClick={(() => {setStep(step-1)})} 
@@ -103,7 +107,7 @@ export default function Mvp(props) {
                 step === 3 && 
                 <>
                 <div className='flex justify-center items-center content-center align-middle'>
-                    <h1 className='text-xl font-bold align-middle flex'>Feedback Received Successfully 🎉</h1>
+                    <h1 className='text-xl font-bold align-middle flex text-black'>Feedback Received Successfully 🎉</h1>
                 </div>
                 </>
                 }
