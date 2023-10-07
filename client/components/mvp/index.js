@@ -10,13 +10,16 @@ export default function Mvp(props) {
     const [ disabled, setDisabled ] = useState(true);
     const [ loading, setLoading ] = useState(false);
     const [ text, setText ] = useState('Send Feedback');
+    const [ type, setType ] = useState();
     const featureRequestClick = (e) => {
+        setType('featureRequest');
         e.preventDefault();
         setTitle('💡 Feature Request');
         setPlaceholder('Describe your feature request')
         setStep(step+1);
     }
     const bugReportClick = (e) => {
+        setType('bugReport');
         e.preventDefault();
         setTitle('🐛 Bug Report');
         setPlaceholder('Describe the bug')
@@ -48,7 +51,7 @@ export default function Mvp(props) {
     }
     return (
         <>
-        <div className="card w-[22rem] h-[15rem] bg-black">
+        <div className="card w-[22rem] h-[14.8rem] bg-black rounded-2xl">
             <div className="card-body gap-y-4">
                 { step === 1 &&
                  <>
@@ -61,7 +64,7 @@ export default function Mvp(props) {
                 <span onClick={bugReportClick} className="rounded-lg bg-white hover:bg-gray-300 duration-300 py-4 cursor-pointer">
                     <h1 className="font-bold text-black">Bug Report</h1>
                 </span>
-                <a href='https://blitz-feedback.vercel.app' className='text-gray-300 text-xs hover:text-white duration-200 -mt-1.5'>powered by <b className='font-bold'>lunar</b></a>
+                <a href='https://blitz-feedback.vercel.app' className=' outline-none border-none  text-gray-300 text-xs hover:text-white duration-200 -mt-2'>powered by <b className='font-bold'>lunar</b></a>
                  </>
                 }
                 {
@@ -80,13 +83,13 @@ export default function Mvp(props) {
                 </center>
                 <div className='mt-[0.35rem]'>
                 <button onClick={(() => {setStep(step-1)})} 
-                className='float-left px-6 py-2 -mt-2 duration-300 bg-white hover:bg-gray-200 text-black rounded-lg font-bold text-sm'>
+                className='float-left px-6 py-[0.45rem] -mt-2 duration-300 bg-white hover:bg-gray-200 text-black rounded-lg font-bold text-sm'>
                 back
                 </button>
                 <button 
                 disabled={!data}
                 onClick={submitFeedback}
-                className='float-right px-8 w-[10.9rem]  py-2 -mt-2 duration-300 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-bold text-sm'>
+                className='float-right px-8 w-[10.9rem] py-[0.45rem] -mt-2 duration-300 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-bold text-sm'>
                 {
                     loading 
                     ? <><span className="loading loading-spinner loading-xs align-middle"></span></>
