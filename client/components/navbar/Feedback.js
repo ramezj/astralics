@@ -31,7 +31,7 @@ export default function Feedback() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-60" />
+            <div className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm"/>
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -47,7 +47,6 @@ export default function Feedback() {
               >
                 <Dialog.Panel className="w-[22] max-w-md transform overflow-hidden rounded-2xl bg-transparent align-middle transition-all">
                   <center>
-                   
                    <Mvp />
                   </center>
                 </Dialog.Panel>

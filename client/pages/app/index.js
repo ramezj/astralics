@@ -46,6 +46,7 @@ export default function Component() {
   return (
     <>
     <Layout>
+      
     <title>Lunar, App</title>
     {loading 
     ?

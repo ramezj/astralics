@@ -51,7 +51,7 @@ export default function Mvp(props) {
     }
     return (
         <>
-        <div className="card w-[22rem] h-[14.8rem] bg-black rounded-2xl">
+        <div className="card w-[22rem] h-[14.8rem] bg-[#0C090A] rounded-2xl">
             <div className="card-body gap-y-4">
                 { step === 1 &&
                  <>
