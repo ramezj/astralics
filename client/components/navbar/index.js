@@ -1,8 +1,6 @@
 import { Fragment, useState } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Link from 'next/link'
-import Feedback from './Feedback'
-import LogOut from './LogOut'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -65,7 +63,10 @@ export default function Navbar(props) {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex gap-2">
-          <Feedback />
+        <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-black hover:bg-opacity-80 px-6 py-2 rounded-xl duration-500">
+            <CreditCardIcon width='20' className='flex' />
+            Pricing
+          </Link>
           <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-black hover:bg-opacity-80 px-6 py-2 rounded-xl duration-500">
             <CreditCardIcon width='20' className='flex' />
             Pricing
@@ -79,12 +80,12 @@ export default function Navbar(props) {
               ? <> 
               {/* <LogOut /> */}
               <Settings />
-              <Link href='/app' className='rounded-xl px-7 py-2 bg-black hover:bg-neutral-800  text-white font-bold flex gap-2 content-center justify-center items-center duration-300'>
+              <Link href='/app' className='rounded-xl px-7 py-2 bg-zinc-950 hover:bg-neutral-900  text-white font-bold flex gap-2 content-center justify-center items-center duration-300'>
                 {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
                 Dashboard 
                 </Link></>
               : <> 
-                <button className='px-8 py-2 bg-black hover:bg-neutral-800 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={openModal}>
+                <button className='px-8 py-2 bg-zinc-950 hover:bg-neutral-900 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={openModal}>
                 Get Started
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>
@@ -151,7 +152,10 @@ export default function Navbar(props) {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Feedback />
+              <Link href="/pricing" className="-mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:bg-black hover:bg-opacity-80 flex justify-center items-center gap-2 duration-500">
+                <CreditCardIcon width='20' className='flex' />
+                  Pricing
+                </Link>
                 <Link href="/pricing" className="-mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:bg-black hover:bg-opacity-80 flex justify-center items-center gap-2 duration-500">
                 <CreditCardIcon width='20' className='flex' />
                   Pricing
@@ -171,13 +175,13 @@ export default function Navbar(props) {
                {
               props.session 
               ? <> 
-              <Link href='/settings' className='px-8 py-2 bg-black hover:bg-neutral-800  duration-300 rounded-xl font-bold flex justify-center gap-2'>
+              <Link href='/settings' className='px-8 py-2 bg-zinc-950 hover:bg-neutral-900  duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Settings 
                 </Link>
-              <Link href='/app' className='mt-3 px-8 py-2 bg-black hover:bg-neutral-800  duration-300 rounded-xl font-bold flex justify-center gap-2'>
+              <Link href='/app' className='mt-3 px-8 py-2 bg-zinc-950 hover:bg-neutral-900  duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Dashboard
                 </Link></>
-              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-black hover:bg-neutral-800  rounded-xl font-bold flex justify-center gap-2 duration-300'>
+              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-zinc-950 hover:bg-neutral-900  rounded-xl font-bold flex justify-center gap-2 duration-300'>
               Try Lunar 
               </Link></>
               }
