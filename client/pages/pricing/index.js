@@ -5,6 +5,7 @@ import Layout from '@/components/layout';
 import PricingCard from '@/components/pricing/PricingCard';
 import Info from '@/components/pricing/Info';
 import Svg from '@/components/pricing/svg';
+import Xsvg from '@/components/pricing/Xsvg';
 import { PaddleLoader } from '@/components/PaddleLoader';
 import { CreditCardIcon } from '@heroicons/react/24/outline';
 
@@ -28,6 +29,7 @@ export default function Pricing(props) {
                 <PricingCard price='$0' title='Starter' button='Get Started' background={'bg-black bg-opacity-60'} shadow={'shadow-lg'}>
                 <Info><Svg /> 1 Project</Info>
                 <Info><Svg /> 50 Monthly Feedbacks</Info>
+                <Info><Xsvg /> Custom Domain </Info>
                 <br />
                 {
                 session 
@@ -38,6 +40,7 @@ export default function Pricing(props) {
                 <PricingCard price='$25' title='Developer' button='Get Started' background={'bg-black bg-opacity-60'} shadow={'shadow-lg'}>
                 <Info><Svg /> Unlimited Projects</Info>
                 <Info><Svg /> Unlimited Monthly Feedbacks</Info>
+                <Info><Svg /> Custom Domain</Info>
                 <br />
                 {
                 session 

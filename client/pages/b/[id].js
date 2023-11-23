@@ -1,8 +1,9 @@
 import { useSession} from "next-auth/react"
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import Layout from "@/components/layout"
 import BoardFeedbackDiv from "@/components/b/BoardFeedbackDiv"
+import BoardLayout from "@/components/b/Layout"
+
 
 export default function Page() {
     const router = useRouter()
@@ -29,7 +30,7 @@ export default function Page() {
     }, [id])
   return (
     <>
-    <Layout>
+    <BoardLayout>
     <title>Feedback Board</title>
         { loading === false && 
         <>
@@ -47,7 +48,7 @@ export default function Page() {
         </center>
         </>
         }
-    </Layout>
+    </BoardLayout>
     </>
   )
 }

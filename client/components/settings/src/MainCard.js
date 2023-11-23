@@ -29,7 +29,7 @@ export default function MainCard(props) {
         </center> */}
         <h1 className="card-title text-2xl font-bold text-white justify-center mb-4">Account Information</h1>
         <label className="float-left flex ml-1">Name</label>
-        <input type="text" className="input w-full bg-gray-950 font-medium text-center outline-none border-none" value={name} onChange={((e) => {setName(e.target.value)})} />
+        <input type="text" className="input w-full bg-zinc-950 font-medium text-center outline-none border-none" value={name} onChange={((e) => {setName(e.target.value)})} />
         <label className="float-left flex ml-1">Email</label>
         <input type="text" disabled className="input w-full bg-gray-950 font-medium text-center" value={props.profileEmail}/>
         <label className="float-left flex ml-1">Avatar URL</label>
