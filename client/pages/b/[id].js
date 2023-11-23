@@ -22,6 +22,7 @@ export default function Page() {
                 return router.push('/404')
             }
             setData(res.response);
+            console.log(res.response);
             setLoading(false);
         }
         fetchProject();
@@ -33,13 +34,13 @@ export default function Page() {
         { loading === false && 
         <>
         <center>
-            <br /><br />
-            <h1 className="text-2xl font-bold">{data.name}'s Roadmap</h1>
+            <br />
+            <h1 className="text-2xl font-bold">{data.name}'s Feedback Board</h1>
             <br /><br />
             <div className="flex flex-wrap gap-8 place-content-center">
-            <BoardFeedbackDiv title={'✨ Planned'} />
-            <BoardFeedbackDiv title={'⚒️ In Progress'} />
-            <BoardFeedbackDiv title={'🥳 Done'} />
+            <BoardFeedbackDiv title={'🐛 Bug Report'} />
+            <BoardFeedbackDiv title={'💡 Feature Request'} />
+            <BoardFeedbackDiv title={'💬 Other'} />
             </div>
             <br />
             <br />
