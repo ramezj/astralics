@@ -5,6 +5,8 @@ import BoardFeedbackDiv from "@/components/b/BoardFeedbackDiv"
 import BoardLayout from "@/components/b/Layout"
 import Layout from "@/components/layout"
 import Loading from "@/components/board/Loading"
+import NewBoard from "@/components/b/NewBoard"
+import Feedback from "@/components/b/Feedback"
 
 
 export default function Page() {
@@ -56,9 +58,12 @@ export default function Page() {
             <h1 className="text-2xl font-bold">{data.name}'s Feedback Board</h1>
             <br /><br />
             <div className="flex flex-wrap gap-8 place-content-center">
-            <BoardFeedbackDiv title={'🐛 Bug Report'} />
+            {/* <BoardFeedbackDiv title={'🐛 Bug Report'} />
             <BoardFeedbackDiv title={'💡 Feature Request'} />
-            <BoardFeedbackDiv title={'💬 Other'} />
+            <BoardFeedbackDiv title={'💬 Other'} /> */}
+            <NewBoard>
+                <Feedback />
+            </NewBoard>
             </div>
             <br />
             <br />

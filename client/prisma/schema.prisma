@@ -63,6 +63,7 @@ model Feedback {
   downvotes Int @default(0)
   createdAt DateTime @default(now())
   email     String   @default("")
+  type String @default("other")
   boardId   String
   board     Board    @relation(fields: [boardId], references: [id])
 }
