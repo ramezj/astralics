@@ -81,12 +81,12 @@ export default function Navbar(props) {
               ? <> 
               {/* <LogOut /> */}
               <Settings />
-              <Link href='/app' className='rounded-xl px-7 py-2 bg-neutral-900 hover:bg-zinc-950  text-white font-bold flex gap-2 content-center justify-center items-center duration-300'>
+              <Link href='/app' className='rounded-xl px-7 py-2 bg-zinc-950 hover:bg-zinc-950  text-white font-bold flex gap-2 content-center justify-center items-center duration-300'>
                 {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
                 Dashboard 
                 </Link></>
               : <> 
-                <button className='px-8 py-2 bg-neutral-900 hover:bg-zinc-950 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={openModal}>
+                <button className='px-8 py-2 bg-zinc-950 hover:bg-zinc-950 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={openModal}>
                 Get Started
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>
@@ -176,13 +176,13 @@ export default function Navbar(props) {
                {
               props.session 
               ? <> 
-              <Link href='/settings' className='px-8 py-2 bg-neutral-900 hover:bg-zinc-950  duration-300 rounded-xl font-bold flex justify-center gap-2'>
+              <Link href='/settings' className='px-8 py-2 bg-zinc-950 hover:bg-zinc-950  duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Settings 
                 </Link>
-              <Link href='/app' className='mt-3 px-8 py-2 bg-neutral-900 hover:bg-zinc-950  duration-300 rounded-xl font-bold flex justify-center gap-2'>
+              <Link href='/app' className='mt-3 px-8 py-2 bg-zinc-950 hover:bg-zinc-950  duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Dashboard
                 </Link></>
-              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-neutral-900 hover:bg-zinc-950  rounded-xl font-bold flex justify-center gap-2 duration-300'>
+              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-zinc-950 hover:bg-zinc-950  rounded-xl font-bold flex justify-center gap-2 duration-300'>
               Try Lunar 
               </Link></>
               }
