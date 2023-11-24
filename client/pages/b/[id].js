@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import BoardFeedbackDiv from "@/components/b/BoardFeedbackDiv"
 import BoardLayout from "@/components/b/Layout"
+import Layout from "@/components/layout"
+import Loading from "@/components/board/Loading"
 
 
 export default function Page() {
@@ -30,8 +32,23 @@ export default function Page() {
     }, [id])
   return (
     <>
-    <BoardLayout>
-    <title>Feedback Board</title>
+    <Layout>
+    <title>Lunar, Feedback Board</title>
+    { loading === true && 
+    <>
+    <center>
+        <br />
+        <br /><br />
+        <div className="flex flex-wrap gap-8 place-content-center">
+        <BoardFeedbackDiv title={'Loading..'} />
+        <BoardFeedbackDiv title={'Loading..'} />
+        <BoardFeedbackDiv title={'Loading..'} />
+        </div>
+        <br />
+        <br />
+    </center>
+    </>
+    }
         { loading === false && 
         <>
         <center>
@@ -48,7 +65,7 @@ export default function Page() {
         </center>
         </>
         }
-    </BoardLayout>
+    </Layout>
     </>
   )
 }
