@@ -57,14 +57,12 @@ export default function Page() {
             <br />
             <h1 className="text-2xl font-bold">{data.name}'s Feedback Board</h1>
             <br /><br />
-            <div className="flex flex-wrap gap-8 place-content-center">
             {/* <BoardFeedbackDiv title={'🐛 Bug Report'} />
             <BoardFeedbackDiv title={'💡 Feature Request'} />
             <BoardFeedbackDiv title={'💬 Other'} /> */}
             <NewBoard>
                 <Feedback />
             </NewBoard>
-            </div>
             <br />
             <br />
         </center>
