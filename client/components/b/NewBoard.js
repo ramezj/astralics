@@ -4,9 +4,9 @@ import { HandThumbUpIcon} from "@heroicons/react/24/solid"
 export default function NewBoard(props) {
     return (
         <>
-        <div className='h-100 2xl:w-3/6 lg:w-3/5 w-full h-full min-h-screen'>
+        <div className='h-100 2xl:w-3/6 lg:w-3/5 w-full h-full'>
             <div className="w-5/6 flex justify-between">
-            <div className='gap-4 flex float-left'>
+            <div className='gap-4 flex'>
             <Dropdown />
             </div>
             <div className='gap-4 flex'>
