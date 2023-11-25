@@ -63,6 +63,12 @@ export default function CreateFeedback() {
                       <textarea className="textarea bg-black/70 rounded-lg outline-none py-1 w-full" rows={3} />
                       <br />
                     </div>
+                    
+                    {/* <div className="mt-3">
+                      <span className="px-2 py-2 bg-red-500">
+                            Bug
+                      </span>
+                    </div> */}
                   </div>
 
                   <div className="mt-4">
