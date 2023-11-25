@@ -1,6 +1,7 @@
 import Dropdown from "./Dropdown"
 import { PlusCircleIcon } from "@heroicons/react/24/outline"
-import { HandThumbUpIcon} from "@heroicons/react/24/solid"
+import CreateFeedback from "./CreateFeedback"
+
 export default function NewBoard(props) {
     return (
         <>
@@ -10,11 +11,7 @@ export default function NewBoard(props) {
             <Dropdown />
             </div>
             <div className='gap-4 flex'>
-            <button className='px-4 py-2.5 bg-blue-600 rounded-xl flex font-medium'>
-                Submit Feedback
-                <HandThumbUpIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/>
-                {/* <PlusCircleIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/> */}
-            </button>
+            <CreateFeedback />
             </div>
             </div>
             <br />

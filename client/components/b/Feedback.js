@@ -5,7 +5,7 @@ export default function Feedback(props) {
         <>
         <div className="w-full flex bg-zinc-950 rounded-2xl items-center">
         <div className="m-8 flex flex-col items-start">
-        <p className='text-sm font-medium text-left'>GRAINY LOW QUALITY, LACK OF RESEMBLANCE;WRITES OFF CREDITS</p>
+        <p className='text-lg font-medium text-left'>Allow setting "Created Date" in the API create post call.</p>
         <p className='text-xs  text-left text-gray-200'>For 40$ it is expected at least high quality images and not grainy yellowbacks.</p>
         {/* <img class="2xl:w-10 2xl:h-10 md:w-9 md:h-9 w-7 h-7 rounded-full shadow-2xl" src="https://pbs.twimg.com/profile_images/1684753206264430592/iumsH271_400x400.jpg" alt="Rounded avatar"></img> */}
         </div>

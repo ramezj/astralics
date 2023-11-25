@@ -34,7 +34,7 @@ export default function Page() {
     }, [id])
   return (
     <>
-    <Layout>
+    <BoardLayout>
     <title>Lunar, Feedback Board</title>
     { loading === true && 
     <>
@@ -68,7 +68,7 @@ export default function Page() {
         </center>
         </>
         }
-    </Layout>
+    </BoardLayout>
     </>
   )
 }
