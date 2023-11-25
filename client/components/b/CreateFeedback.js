@@ -54,13 +54,13 @@ export default function CreateFeedback() {
                     <div className="mt-3">
                       <label className="text-white font-medium">Title</label>
                       <br />
-                      <input className='input-sm py-2 bg-black/70 rounded-lg outline-none w-full'/>
+                      <input className='input-sm h-10 bg-black/70 rounded-lg outline-none w-full'/>
                       <br />
                     </div>
                     <div className="mt-3">
                       <label className="text-white font-medium">Description</label>
                       <br />
-                      <textarea className="bg-black/70 rounded-lg outline-none py-1 w-full" rows={3} />
+                      <textarea className="textarea bg-black/70 rounded-lg outline-none py-1 w-full" rows={3} />
                       <br />
                     </div>
                   </div>
