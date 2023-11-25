@@ -8,8 +8,8 @@ export default async function handler(req, res) {
     origin: '*',
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
  });
-    const { body, rating, email } = req.body;
-    if(!body || !email) {
+    const { title, description, type } = req.body;
+    if(!title || !description || !type) {
       return res.status(400).json({
         ok:false,
         response: 'Please Fill All Fields'
@@ -18,12 +18,13 @@ export default async function handler(req, res) {
     const { boardId } = req.query;
     const board = await prisma.board.findFirst({
       where: {
-        id:boardId
+        handle:boardId
       },
       include: {
         feedbacks:true
       }
     })
+    console.log(board);
     if(!board) {
       return res.status(400).json({
         ok:false,
@@ -47,8 +48,10 @@ export default async function handler(req, res) {
     const feedback = await prisma.feedback.create({
       data: {
         body: req.body.body,
-        email:req.body.email,
-        boardId:boardId
+        title:req.body.title,
+        description:req.body.description,
+        type:req.body.type,
+        boardId:board.id
       }
     })
     return res.status(200).json({

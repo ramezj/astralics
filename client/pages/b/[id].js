@@ -15,6 +15,7 @@ export default function Page() {
     const { data: session } = useSession({})
     const [ loading, setLoading ] = useState(false);
     const [ data, setData ] = useState(false); 
+    const [ feedbacks, setFeedbacks ] = useState([]);
     useEffect(() => {
         if(!id) {
             return;
@@ -27,6 +28,7 @@ export default function Page() {
                 return router.push('/404')
             }
             setData(res.response);
+            setFeedbacks(res.response.feedbacks);
             console.log(res.response);
             setLoading(false);
         }
@@ -61,7 +63,16 @@ export default function Page() {
             <BoardFeedbackDiv title={'💡 Feature Request'} />
             <BoardFeedbackDiv title={'💬 Other'} /> */}
             <NewBoard>
-                <Feedback />
+                {
+                    feedbacks.map((x) => {
+                        return (
+                            <>
+                            <Feedback title={x.title} description={x.description} upvotes={x.upvotes} />
+                            <br />
+                            </>
+                        )
+                    })
+                }
             </NewBoard>
             <br />
             <br />

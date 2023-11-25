@@ -58,11 +58,10 @@ model Board {
 
 model Feedback {
   id        String   @id @default(cuid())
-  body      String
+  title String
+  description      String
   upvotes Int @default(0)
-  downvotes Int @default(0)
   createdAt DateTime @default(now())
-  email     String   @default("")
   type String @default("other")
   boardId   String
   board     Board    @relation(fields: [boardId], references: [id])
