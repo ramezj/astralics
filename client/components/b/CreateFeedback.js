@@ -13,9 +13,9 @@ export default function CreateFeedback() {
 
     return (
         <>
-        <button onClick={openModal} className='px-4 py-2.5 bg-blue-600 rounded-xl flex font-medium'>
+        <button onClick={openModal} className='px-4 py-2.5 backgroundColor rounded-xl flex font-medium outline-none'>
                 Create Feedback
-                <HandThumbUpIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/>
+                {/* <HandThumbUpIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/> */}
                 {/* <PlusCircleIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/> */}
             </button>
             <Transition appear show={isOpen} as={Fragment}>
@@ -43,18 +43,26 @@ export default function CreateFeedback() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl backgroundColor p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
+                    className="text-xl font-medium leading-6 text-white"
                   >
                     Create Feedback
                   </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Your payment has been successfully submitted. We’ve sent
-                      you an email with all of the details of your order.
-                    </p>
+                  <div className="mt-4">
+                    <div className="mt-3">
+                      <label className="text-white font-medium">Title</label>
+                      <br />
+                      <input className='input-sm py-2 bg-black/70 rounded-lg outline-none w-full'/>
+                      <br />
+                    </div>
+                    <div className="mt-3">
+                      <label className="text-white font-medium">Description</label>
+                      <br />
+                      <textarea className="bg-black/70 rounded-lg outline-none py-1 w-full" rows={3} />
+                      <br />
+                    </div>
                   </div>
 
                   <div className="mt-4">
