@@ -47,7 +47,7 @@ export default function CreateFeedback(props) {
   }
     return (
         <>
-        <button onClick={openModal} className='px-4 py-2.5 backgroundColor rounded-xl flex font-medium outline-none'>
+        <button onClick={openModal} className='px-4 py-2.5 bg-blue-500 rounded-xl flex font-medium outline-none'>
                 Create Feedback
                 {/* <HandThumbUpIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/> */}
                 {/* <PlusCircleIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/> */}
@@ -77,7 +77,7 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-blue-500 p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-zinc-900 p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
                     className="text-xl font-medium leading-6 text-white"
@@ -89,13 +89,13 @@ export default function CreateFeedback(props) {
                     <div className="mt-3">
                       <label className="text-white font-medium">Title</label>
                       <br />
-                      <input required value={title} onChange={((e) => {setTitle(e.target.value)})} className='input-sm h-10 bg-black/70 rounded-lg outline-none w-full shadow-xl'/>
+                      <input required value={title} onChange={((e) => {setTitle(e.target.value)})} className='input-sm h-10 bg-black/70 rounded-xl outline-none w-full shadow-xl'/>
                       <br />
                     </div>
                     <div className="mt-3">
                       <label className="text-white font-medium">Description</label>
                       <br />
-                      <textarea required value={description} onChange={((e) => {setDescription(e.target.value)})}  className="textarea bg-black/70 rounded-lg outline-none py-1 w-full shadow-xl" rows={3} />
+                      <textarea required value={description} onChange={((e) => {setDescription(e.target.value)})}  className="textarea bg-black/70 rounded-xl outline-none py-1 w-full shadow-xl" rows={3} />
                       <br />
                     </div>
                     {/* <div className="mt-3">
@@ -105,7 +105,7 @@ export default function CreateFeedback(props) {
                     </div> */}
                   </div>
                   <div className="mt-4">
-                  <button type="submit" className='px-4 py-2.5 bg-zinc-900 rounded-xl flex font-medium outline-none'>
+                  <button type="submit" className='px-4 py-2.5 bg-blue-500 rounded-xl flex font-medium outline-none'>
                     Create Feedback
                   </button>
                   </div>
