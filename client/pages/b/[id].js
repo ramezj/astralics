@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import BoardFeedbackDiv from "@/components/b/BoardFeedbackDiv"
 import BoardLayout from "@/components/b/Layout"
 import Layout from "@/components/layout"
-import Loading from "@/components/board/Loading"
+import Loading from "@/components/b/Loading"
 import NewBoard from "@/components/b/NewBoard"
 import Feedback from "@/components/b/Feedback"
 
@@ -41,16 +41,22 @@ export default function Page() {
     { loading === true && 
     <>
     <center>
-        <br />
-        <br /><br />
-        <div className="flex flex-wrap gap-8 place-content-center">
-        <BoardFeedbackDiv title={'Loading..'} />
-        <BoardFeedbackDiv title={'Loading..'} />
-        <BoardFeedbackDiv title={'Loading..'} />
-        </div>
-        <br />
-        <br />
-    </center>
+            <br />
+            <h1 className="text-2xl font-bold">{data.name}'s Feedback Board</h1>
+            <br /><br />
+            {/* <BoardFeedbackDiv title={'🐛 Bug Report'} />
+            <BoardFeedbackDiv title={'💡 Feature Request'} />
+            <BoardFeedbackDiv title={'💬 Other'} /> */}
+            <NewBoard>
+                <Loading />
+                <br />
+                <Loading />
+                <br />
+                <Loading />
+            </NewBoard>
+            <br />
+            <br />
+        </center>
     </>
     }
         { loading === false && 
