@@ -37,7 +37,7 @@ export default function Page() {
   return (
     <>
     <BoardLayout>
-    <title>Lunar, Feedback Board</title>
+    <title>Feedback Board</title>
     { loading === true && 
     <>
     <center>
