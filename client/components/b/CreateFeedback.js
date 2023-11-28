@@ -1,7 +1,8 @@
 import { HandThumbUpIcon} from "@heroicons/react/24/solid"
-import { Dialog, Transition } from '@headlessui/react'
+import { Dialog, Transition, Listbox } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { useRouter } from 'next/router'
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
 export default function CreateFeedback(props) {
     const router = useRouter()
@@ -19,6 +20,15 @@ export default function CreateFeedback(props) {
     const [ loading, setLoading ] = useState(false);
     const [ text, setText ] = useState();
     const [ response, setResponse ] = useState(null);
+    const people = [
+      { name: 'Wade Cooper' },
+      { name: 'Arlene Mccoy' },
+      { name: 'Devon Webb' },
+      { name: 'Tom Cook' },
+      { name: 'Tanya Fox' },
+      { name: 'Hellen Schmidt' },
+    ]    
+    const [selected, setSelected] = useState(people[0])
     const createFeedback = async (e) => {
       e.preventDefault();
       setLoading(true);
@@ -89,18 +99,24 @@ export default function CreateFeedback(props) {
                     <div className="mt-3">
                       <label className="text-white font-medium">Title</label>
                       <br />
-                      <input required value={title} onChange={((e) => {setTitle(e.target.value)})} className='input-sm h-10 bg-black/70 rounded-xl outline-none w-full shadow-xl mt-1'/>
+                      <input placeholder='' required value={title} onChange={((e) => {setTitle(e.target.value)})} className='input-sm h-10 bg-zinc-950 rounded-xl outline-none w-full shadow-xl mt-1'/>
                       <br />
                     </div>
                     <div className="mt-3">
                       <label className="text-white font-medium">Description</label>
                       <br />
-                      <textarea required value={description} onChange={((e) => {setDescription(e.target.value)})}  className="textarea bg-black/70 rounded-xl outline-none py-1 w-full shadow-xl mt-1" rows={3} />
+                      <textarea placeholder='Please improve this' required value={description} onChange={((e) => {setDescription(e.target.value)})}  className="textarea bg-zinc-950 rounded-xl outline-none py-1 w-full shadow-xl mt-1" rows={3} />
                       <br />
                     </div>
                     {/* <div className="mt-3">
-                      <span className="px-2 py-2 bg-red-500">
-                            Bug
+                      <span className="w-full py-2 bg-zinc-950 rounded-xl">
+                       🐛 Bug Report
+                      </span>
+                      <span className="py-2 bg-zinc-950 rounded-xl">
+                       🐛 Bug Report
+                      </span>
+                      <span className="py-2 bg-zinc-950 rounded-xl">
+                       🐛 Bug Report
                       </span>
                     </div> */}
                   </div>

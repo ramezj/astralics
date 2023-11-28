@@ -3,7 +3,7 @@ import { ChevronUpIcon } from "@heroicons/react/24/outline"
 export default function Feedback(props) {
     return (
         <>
-        <div className="w-full flex bg-zinc-900 rounded-2xl items-center">
+        <div className="w-full flex bg-zinc-900 rounded-2xl items-center cursor-pointer hover:bg-[#242429] duration-300">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left'>{props.title}</p>
         <p className='text-xs text-left text-gray-200'>{props.description}</p>
