@@ -70,7 +70,7 @@ export default function Page() {
                     feedbacks.map((x) => {
                         return (
                             <>
-                            <Feedback title={x.title} description={x.description} upvotes={x.upvotes} />
+                            <Feedback title={x.title} description={x.description} upvotes={x.upvotes} type={x.type} />
                             <br />
                             </>
                         )

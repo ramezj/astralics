@@ -7,7 +7,7 @@ export default function Dropdown() {
     <div className="">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center bg-zinc-900 px-4 py-2.5 rounded-xl font-medium text-white focus:outline-none">
+          <Menu.Button className="inline-flex w-full justify-center bg-zinc-950 px-4 py-2.5 rounded-xl font-medium text-white focus:outline-none">
             Filter
             <ChevronDownIcon
               className="mt-[0.20rem] ml-2 h-5 w-5 text-violet-200 hover:text-violet-100"
@@ -24,7 +24,7 @@ export default function Dropdown() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute left-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-zinc-900 shadow-lg ring-1 ring-black/5 focus:outline-none">
+          <Menu.Items className="absolute left-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-zinc-950 shadow-lg ring-1 ring-black/5 focus:outline-none">
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {({ active }) => (
@@ -56,17 +56,6 @@ export default function Dropdown() {
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     📝 Feedback
-                  </button>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? 'bg-blue-500 text-gray-100' : 'text-white'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    💬 Other
                   </button>
                 )}
               </Menu.Item>
