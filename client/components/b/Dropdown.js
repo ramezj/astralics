@@ -33,7 +33,7 @@ export default function Dropdown() {
                       active ? 'bg-blue-500 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    🐛 Bugs
+                    🐛 Bug Report
                   </button>
                 )}
               </Menu.Item>

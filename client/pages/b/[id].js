@@ -41,12 +41,9 @@ export default function Page() {
     { loading === true && 
     <>
     <center>
-            <br />
-            <h1 className="text-2xl font-bold">{data.name}'s Feedback Board</h1>
+            <br /><br /><br />
+            <h1 className="text-2xl font-bold">Feedback Board</h1>
             <br /><br />
-            {/* <BoardFeedbackDiv title={'🐛 Bug Report'} />
-            <BoardFeedbackDiv title={'💡 Feature Request'} />
-            <BoardFeedbackDiv title={'💬 Other'} /> */}
             <NewBoard>
                 <Loading />
                 <br />
@@ -62,7 +59,7 @@ export default function Page() {
         { loading === false && 
         <>
         <center>
-            <br />
+        <br /><br /><br />
             <h1 className="text-2xl font-bold">{data.name}'s Feedback Board</h1>
             <br /><br />
             {/* <BoardFeedbackDiv title={'🐛 Bug Report'} />
