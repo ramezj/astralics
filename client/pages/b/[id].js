@@ -60,7 +60,7 @@ export default function Page() {
         <>
         <center>
         <br /><br /><br />
-            <h1 className="text-2xl font-bold">{data.name}'s Feedback Board</h1>
+            <h1 className="text-2xl font-bold">{data.name}</h1>
             <br /><br />
             {/* <BoardFeedbackDiv title={'🐛 Bug Report'} />
             <BoardFeedbackDiv title={'💡 Feature Request'} />
