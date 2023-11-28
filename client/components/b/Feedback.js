@@ -14,7 +14,13 @@ export default function Feedback(props) {
         const resp = await res.json();
         console.log(resp);
         if(resp.ok == true) {
-            toast.success("Upvoted Successfully!")
+            toast.success("Upvoted Successfully!", {
+                style: {
+                borderRadius: '10px',
+                background: '#09090b',
+                color: '#fff',
+                },
+            })
         }
     }
     return (
