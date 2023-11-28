@@ -11,7 +11,7 @@ export default function Feedback(props) {
             props.type == "🐛 Bug Report"
             ? 
             <>
-            <span class="mt-2 bg-indigo-900 text-indigo-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded-md dark:bg-indigo-900 dark:text-indigo-300">{props.type}</span>
+            <span class="mt-2 bg-indigo-900 text-indigo-200 text-xs font-medium me-2 px-2.5 py-0.5 rounded-md dark:bg-indigo-900 dark:text-indigo-300">{props.type}</span>
             </>
             : <></>
         }
@@ -19,7 +19,7 @@ export default function Feedback(props) {
             props.type == "💡 Feature Request"
             ? 
             <>
-            <span class="mt-2 bg-yellow-900 text-yellow-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded-md dark:bg-indigo-900 dark:text-indigo-300">{props.type}</span>
+            <span class="mt-2 bg-yellow-900 text-yellow-200 text-xs font-medium me-2 px-2.5 py-0.5 rounded-md dark:bg-indigo-900 dark:text-indigo-300">{props.type}</span>
             </>
             : <></>
         }
@@ -27,7 +27,7 @@ export default function Feedback(props) {
             props.type == "📝 Feedback"
             ? 
             <>
-            <span class="mt-2 bg-green-900 text-green-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded-md dark:bg-indigo-900 dark:text-indigo-300">{props.type}</span>
+            <span class="mt-2 bg-green-900 text-green-200 text-xs font-medium me-2 px-2.5 py-0.5 rounded-md dark:bg-indigo-900 dark:text-indigo-300">{props.type}</span>
             </>
             : <></>
         }
