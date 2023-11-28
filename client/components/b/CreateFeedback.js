@@ -95,17 +95,17 @@ export default function CreateFeedback(props) {
                     Create Feedback
                   </Dialog.Title>
                   <form onSubmit={createFeedback}>
-                  <div className="mt-5">
+                  <div className="mt-6">
                     <div className="mt-3">
                       <label className="text-white font-medium">Title</label>
                       <br />
-                      <input placeholder='' required value={title} onChange={((e) => {setTitle(e.target.value)})} className='input-sm h-10 bg-zinc-950 rounded-xl outline-none w-full shadow-xl mt-1'/>
+                      <input placeholder='Title of your feedback' required value={title} onChange={((e) => {setTitle(e.target.value)})} className='input-sm h-10 bg-zinc-950 rounded-xl outline-none w-full shadow-xl mt-1'/>
                       <br />
                     </div>
                     <div className="mt-3">
                       <label className="text-white font-medium">Description</label>
                       <br />
-                      <textarea placeholder='Please improve this' required value={description} onChange={((e) => {setDescription(e.target.value)})}  className="textarea bg-zinc-950 rounded-xl outline-none py-1 w-full shadow-xl mt-1" rows={3} />
+                      <textarea placeholder='Description of your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})}  className="textarea bg-zinc-950 rounded-xl outline-none py-1 w-full shadow-xl mt-1" rows={3} />
                       <br />
                     </div>
                     {/* <div className="mt-3">
