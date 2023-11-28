@@ -62,15 +62,12 @@ export default function Page() {
         <br /><br />
             <h1 className="text-2xl font-bold">{data.name}</h1>
             <br /><br />
-            {/* <BoardFeedbackDiv title={'🐛 Bug Report'} />
-            <BoardFeedbackDiv title={'💡 Feature Request'} />
-            <BoardFeedbackDiv title={'💬 Other'} /> */}
             <NewBoard>
                 {
                     feedbacks.map((x) => {
                         return (
                             <>
-                            <Feedback title={x.title} description={x.description} upvotes={x.upvotes} type={x.type} />
+                            <Feedback id={x.id} title={x.title} description={x.description} upvotes={x.upvotes} type={x.type} />
                             <br />
                             </>
                         )

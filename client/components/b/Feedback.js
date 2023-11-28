@@ -1,9 +1,29 @@
 import { ChevronUpIcon } from "@heroicons/react/24/outline"
+import { useState } from "react";
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Feedback(props) {
+    const upvoteFeedback = async (e) => {
+        e.preventDefault();
+        const res = await fetch(`/api/feedback/upvote/${props.id}`, {
+            method:'POST',
+            headers: {
+                "Content-Type": "application/json"
+              },
+        });
+        const resp = await res.json();
+        console.log(resp);
+        if(resp.ok == true) {
+            toast.success("Upvoted Successfully!")
+        }
+    }
     return (
         <>
-        <div className=" w-full flex bg-zinc-950 rounded-2xl items-center cursor-pointer duration-300">
+<Toaster
+  position="bottom-right"
+  reverseOrder={true}
+/>
+        <div key={props.id} className=" w-full flex bg-zinc-950 rounded-2xl items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left'>{props.title}</p>
         <p className='text-xs text-left text-gray-200'>{props.description}</p>
@@ -31,10 +51,9 @@ export default function Feedback(props) {
             </>
             : <></>
         }
-        {/* <img class="2xl:w-10 2xl:h-10 md:w-9 md:h-9 w-7 h-7 rounded-full shadow-2xl" src="https://pbs.twimg.com/profile_images/1684753206264430592/iumsH271_400x400.jpg" alt="Rounded avatar"></img> */}
         </div>
         <div className="m-8 ml-auto">
-        <button className="border border-white/10 w-[4.5rem] h-12 shadow-xl bg-zinc-900 rounded-xl items-center flex justify-center">
+        <button onClick={upvoteFeedback} className="border border-white/10 w-[4.5rem] h-12 shadow-xl bg-zinc-900 rounded-xl items-center flex justify-center">
         <h1 className="m-1 font-medium">{props.upvotes}</h1>
         <ChevronUpIcon className="w-7 h-7 text-white"/>
         </button>
