@@ -11,7 +11,6 @@ export default function NewBoard(props) {
             <div className='gap-4 flex'>
             <Dropdown />
             <SortBy />
-            
             </div>
             <div className='gap-4 flex'>
             <CreateFeedback />
