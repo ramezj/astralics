@@ -30,8 +30,8 @@ export default function Dropdown() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? 'bg-blue-500 text-gray-100' : 'text-white'
-                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm`}
+                      active ? 'bg-blue-700 text-gray-100' : 'text-white'
+                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-medium`}
                   >
                     🐛 Bug Report
                   </button>
@@ -41,8 +41,8 @@ export default function Dropdown() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? 'bg-blue-500 text-gray-100' : 'text-white'
-                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm`}
+                      active ? 'bg-blue-700 text-gray-100' : 'text-white'
+                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-medium`}
                   >
                     💡 Feature Request
                   </button>
@@ -52,8 +52,8 @@ export default function Dropdown() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? 'bg-blue-500 text-gray-100' : 'text-white'
-                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm`}
+                      active ? 'bg-blue-700 text-gray-100' : 'text-white'
+                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-medium`}
                   >
                     📝 Feedback
                   </button>
