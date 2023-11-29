@@ -3,6 +3,7 @@ import { useState } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function Feedback(props) {
+    const [ upvotes, setUpvotes ] = useState(props.upvotes)
     const upvoteFeedback = async (e) => {
         e.preventDefault();
         const res = await fetch(`/api/feedback/upvote/${props.id}`, {
@@ -14,13 +15,14 @@ export default function Feedback(props) {
         const resp = await res.json();
         console.log(resp);
         if(resp.ok == true) {
-            toast.success("Upvoted Successfully!", {
+            toast.success("Upvoted Successfully", {
                 style: {
                 borderRadius: '10px',
                 background: '#09090b',
                 color: '#fff',
                 },
             })
+            setUpvotes(upvotes+ 1);
         }
     }
     return (
@@ -59,8 +61,8 @@ export default function Feedback(props) {
         }
         </div>
         <div className="m-8 ml-auto">
-        <button onClick={upvoteFeedback} className="border border-white/10 w-[4.5rem] h-12 shadow-xl bg-zinc-900 rounded-xl items-center flex justify-center">
-        <h1 className="m-1 font-medium">{props.upvotes}</h1>
+        <button onClick={upvoteFeedback} className="hover:bg-zinc-800 duration-100 border border-white/10 w-[4.5rem] h-12 shadow-xl bg-zinc-900 rounded-xl items-center flex justify-center">
+        <h1 className="m-1 font-medium">{upvotes}</h1>
         <ChevronUpIcon className="w-7 h-7 text-white"/>
         </button>
         </div>
