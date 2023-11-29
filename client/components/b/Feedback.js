@@ -6,6 +6,7 @@ export default function Feedback(props) {
     const [ upvotes, setUpvotes ] = useState(props.upvotes)
     const upvoteFeedback = async (e) => {
         e.preventDefault();
+        setUpvotes(upvotes+ 1);
         const res = await fetch(`/api/feedback/upvote/${props.id}`, {
             method:'POST',
             headers: {
@@ -22,7 +23,10 @@ export default function Feedback(props) {
                 color: '#fff',
                 },
             })
-            setUpvotes(upvotes+ 1);
+        } 
+        else if(resp.ok == false) {
+            toast.error(resp.response);
+            setUpvotes(upvotes-1);
         }
     }
     return (
