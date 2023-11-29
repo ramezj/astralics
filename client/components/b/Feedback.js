@@ -3,7 +3,8 @@ import { useState } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function Feedback(props) {
-    const [ upvotes, setUpvotes ] = useState(props.upvotes)
+    const [ upvotes, setUpvotes ] = useState(props.upvotes);
+    const [ title, setTitle ] = useState(props.title);
     const upvoteFeedback = async (e) => {
         e.preventDefault();
         setUpvotes(upvotes+ 1);
@@ -37,7 +38,11 @@ export default function Feedback(props) {
 />
         <div key={props.id} className="w-full flex bg-gradient-to-t from-zinc-950 to-zinc-900  rounded-2xl items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
-        <p className='text-lg font-bold text-left'>{props.title}</p>
+        <p className='text-lg font-bold text-left'>
+        {
+            title.length > 20 ? `${title.substring(0,20)}...` : `${title}`
+        }       
+        </p>
         <p className='text-xs text-left text-gray-200'>{props.description}</p>
         {
             props.type == "🐛 Bug Report"
