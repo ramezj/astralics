@@ -63,6 +63,11 @@ export default function Page() {
             <h1 className="text-2xl font-bold">{data.name}</h1>
             <br /><br />
             <NewBoard>
+                {feedbacks.length == 0 && 
+                <>
+                <Feedback title="👋🏻 Welcome" description="This is your feedback board, where you will be able to see all your users feedback" upvotes={1} type={"👋🏻 Welcome"}/>
+                </>
+                }
                 {
                     feedbacks.map((x) => {
                         return (
