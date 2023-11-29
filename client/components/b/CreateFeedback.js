@@ -87,7 +87,7 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-zinc-950 p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-gradient-to-t from-zinc-950 to-zinc-900 p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
                     className="text-xl font-medium leading-6 text-white"
@@ -108,17 +108,6 @@ export default function CreateFeedback(props) {
                       <textarea placeholder='Description of your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})}  className="textarea bg-black rounded-xl outline-none py-1 w-full shadow-xl mt-1" rows={3} />
                       <br />
                     </div>
-                    {/* <div className="mt-3">
-                      <span className="w-full py-2 bg-zinc-950 rounded-xl">
-                       🐛 Bug Report
-                      </span>
-                      <span className="py-2 bg-zinc-950 rounded-xl">
-                       🐛 Bug Report
-                      </span>
-                      <span className="py-2 bg-zinc-950 rounded-xl">
-                       🐛 Bug Report
-                      </span>
-                    </div> */}
                   </div>
                   <div className="mt-4">
                   <button type="submit" className='px-4 py-2.5 bg-blue-700 rounded-xl flex font-medium outline-none'>

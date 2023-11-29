@@ -35,7 +35,7 @@ export default function Feedback(props) {
   position="bottom-right"
   reverseOrder={true}
 />
-        <div key={props.id} className="w-full flex bg-zinc-950 rounded-2xl items-center cursor-pointer duration-300">
+        <div key={props.id} className="w-full flex bg-gradient-to-t from-zinc-950 to-zinc-900  rounded-2xl items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left'>{props.title}</p>
         <p className='text-xs text-left text-gray-200'>{props.description}</p>
