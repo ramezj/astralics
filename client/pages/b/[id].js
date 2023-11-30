@@ -47,9 +47,6 @@ export default function Page() {
             <NewBoard>
                 <Loading />
                 <br />
-                <Loading />
-                <br />
-                <Loading />
             </NewBoard>
             <br />
             <br />
