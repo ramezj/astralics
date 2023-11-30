@@ -47,8 +47,6 @@ export default function CreateFeedback(props) {
       if(resp.ok == true) {
           setLoading(false);
           setText("Created Successfully");
-          setResponse(resp);
-          console.log(resp);
       } else if (resp.ok == false) {
           setLoading(false);
           setText(resp.response);
@@ -75,7 +73,6 @@ export default function CreateFeedback(props) {
           >
             <div className="fixed inset-0 bg-black/70"/>
           </Transition.Child>
-
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
