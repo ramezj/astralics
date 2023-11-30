@@ -16,7 +16,7 @@ export default function CreateFeedback(props) {
     }
     const [ title, setTitle ] = useState(null);
     const [ description, setDescription ] = useState(null);
-    const [ type, setType ] = useState(null);
+    const [ type, setType ] = useState("");
     const [ loading, setLoading ] = useState(false);
     const [ text, setText ] = useState();
     const [ response, setResponse ] = useState(null);
@@ -40,7 +40,7 @@ export default function CreateFeedback(props) {
             body: JSON.stringify({
               title,
               description,
-              type:'Bug'
+              type:type,
             })
       });
       const resp = await res.json();
@@ -99,14 +99,23 @@ export default function CreateFeedback(props) {
                     <div className="mt-3">
                       <label className="text-white font-medium">Title</label>
                       <br />
-                      <input placeholder='Title of your feedback' required value={title} onChange={((e) => {setTitle(e.target.value)})} className='input-md h-10 bg-black rounded-xl outline-none w-full shadow-xl mt-1'/>
+                      <input placeholder='Title of your feedback' required value={title} onChange={((e) => {setTitle(e.target.value)})} className='input-md h-10 bg-black rounded-xl outline-none w-full shadow-xl mt-1.5'/>
                       <br />
                     </div>
                     <div className="mt-3">
                       <label className="text-white font-medium">Description</label>
                       <br />
-                      <textarea placeholder='Description of your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})} className="textarea-md bg-black rounded-xl outline-none py-1 w-full shadow-xl mt-1" rows={3} />
+                      <textarea placeholder='Description of your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})} className="textarea-md bg-black rounded-xl outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
                       <br />
+                    </div>
+                    <div className="mt-3">
+                    <label className="text-white font-medium">Category</label>
+                    <select className="mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-black rounded-xl" onChange={((e) => {setType(e.target.value)})}>
+                      <option disabled selected>Category</option>
+                      <option className="text-md font-medium">🐛 Bug Report</option>
+                      <option className="text-md font-medium">💡 Feature Request</option>
+                      <option className="text-md font-medium">📝 Feedback</option>
+                    </select>
                     </div>
                   </div>
                   <div className="mt-4">
