@@ -70,9 +70,9 @@ export default function Feedback(props) {
         }
         </div>
         <div className="m-8 ml-auto">
-        <button onClick={upvoteFeedback} className="hover:bg-zinc-800 duration-100 border border-white/10 w-[4.5rem] h-12 shadow-sm bg-zinc-900 rounded-xl items-center flex justify-center">
-        <h1 className="m-1 font-medium text-white">{upvotes}</h1>
-        <ChevronUpIcon className="w-7 h-7 text-white"/>
+        <button onClick={upvoteFeedback} className="group hover:bg-black duration-100 w-[4.5rem] h-12 shadow-sm bg-white border-2 border-black rounded-xl items-center flex justify-center">
+        <h1 className="m-1 font-bold text-black group-hover:text-white">{upvotes}</h1>
+        <ChevronUpIcon className="w-7 h-7 text-black group-hover:text-white" strokeWidth={2}/>
         </button>
         </div>
         </div>
