@@ -54,13 +54,13 @@ export default function Component() {
           }}
             transition={{duration: 0.8}}
             >
-            <Image 
+            {/* <Image 
             src='/IndexPicture2.png'
             width={800}
             height={600}
             alt='Picture..'
             className='rounded-2xl shadow-2xl'
-            />
+            /> */}
             </motion.div>
           </div>
             </center>
