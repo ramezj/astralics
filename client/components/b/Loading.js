@@ -3,7 +3,7 @@ import { ChevronUpIcon } from "@heroicons/react/24/outline"
 export default function Loading(props) {
     return (
         <>
-        <div className="w-full flex bg-gradient-to-t from-gray-200 to-white rounded-2xl items-center">
+        <div className="w-full flex bg-white rounded-2xl items-center">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left'>{props.title}</p>
         <p className='text-xs text-left text-gray-200'>{props.description}</p>
