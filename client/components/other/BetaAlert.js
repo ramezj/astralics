@@ -7,7 +7,8 @@ export default function BetaAlert(props) {
         lg:w-[20rem] 
         w-[21rem] 
         rounded-2xl 
-        bg-black bg-opacity-80 
+        bg-white bg-opacity-25
+        shadow-sm
         text-white 
         py-2 
         2xl:mt-4 

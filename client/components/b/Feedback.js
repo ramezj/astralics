@@ -36,14 +36,14 @@ export default function Feedback(props) {
   position="bottom-right"
   reverseOrder={true}
 />
-        <div key={props.id} className="w-full flex bg-gradient-to-t from-zinc-950 to-zinc-900  rounded-2xl items-center cursor-pointer duration-300">
+        <div key={props.id} className="w-full flex bg-gradient-to-t from-gray-200 to-white rounded-2xl items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
-        <p className='text-lg font-bold text-left'>
+        <p className='text-lg font-bold text-left text-black'>
         {
             title.length > 20 ? `${title.substring(0,20)}...` : `${title}`
         }       
         </p>
-        <p className='text-xs text-left text-gray-200'>{props.description}</p>
+        <p className='text-xs text-left text-black'>{props.description}</p>
         {
             props.type == "🐛 Bug Report"
             ? 
@@ -71,7 +71,7 @@ export default function Feedback(props) {
         </div>
         <div className="m-8 ml-auto">
         <button onClick={upvoteFeedback} className="hover:bg-zinc-800 duration-100 border border-white/10 w-[4.5rem] h-12 shadow-xl bg-zinc-900 rounded-xl items-center flex justify-center">
-        <h1 className="m-1 font-medium">{upvotes}</h1>
+        <h1 className="m-1 font-medium text-white">{upvotes}</h1>
         <ChevronUpIcon className="w-7 h-7 text-white"/>
         </button>
         </div>

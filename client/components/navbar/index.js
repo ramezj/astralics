@@ -64,11 +64,11 @@ export default function Navbar(props) {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex gap-2">
-        <Link href="/b/lunar" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-black hover:bg-opacity-80 px-6 py-2 rounded-xl duration-500">
+        <Link href="/b/lunar" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:text-gray-200 px-6 py-2 rounded-xl duration-200">
             <BoltIcon width='20' className='flex' />
             Demo
           </Link>
-          <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:bg-black hover:bg-opacity-80 px-6 py-2 rounded-xl duration-500">
+          <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:text-gray-200 px-6 py-2 rounded-xl duration-200">
             <CreditCardIcon width='20' className='flex' />
             Pricing
           </Link>
