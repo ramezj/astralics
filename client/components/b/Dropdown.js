@@ -7,7 +7,7 @@ export default function Dropdown() {
     <div className="">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center bg-white px-4 py-2.5 rounded-xl font-medium text-black focus:outline-none">
+          <Menu.Button className="inline-flex w-full justify-center bg-white px-4 py-2.5 rounded-xl font-bold text-black focus:outline-none">
             Filter
             <ChevronDownIcon
               className="mt-[0.20rem] ml-2 h-5 w-5 text-gray-800 hover:text-gray-950"
@@ -31,7 +31,7 @@ export default function Dropdown() {
                   <button
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-black'
-                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-medium`}
+                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-bold`}
                   >
                     🐛 Bug Report
                   </button>
@@ -42,7 +42,7 @@ export default function Dropdown() {
                   <button
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-black'
-                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-medium`}
+                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-bold`}
                   >
                     💡 Feature Request
                   </button>
@@ -53,7 +53,7 @@ export default function Dropdown() {
                   <button
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-black'
-                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-medium`}
+                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-bold`}
                   >
                     📝 Feedback
                   </button>

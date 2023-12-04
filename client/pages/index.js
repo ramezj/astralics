@@ -35,8 +35,8 @@ export default function Component() {
             }}
             transition={{duration: 0.8}}
             className='
-            sm:text-5xl 2xl:text-7xl 2xl:mt-14 text-5xl w-4/5 font-extrabold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-t from-zinc-950 to-zinc-900 md:text-5xl lg:text-5xl lg:mt-8 lg:w-3/6 sm:mt-8 mt-8'>
-            Centralized feedback for the internet
+            sm:text-5xl 2xl:text-7xl 2xl:mt-14 text-5xl w-4/5 font-extrabold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-t from-zinc-950 to-zinc-800 md:text-5xl lg:text-5xl lg:mt-8 lg:w-3/6 sm:mt-8 mt-8'>
+            Centralized feedback for the internet.
             </motion.h1>
             <br />
             {/* <p className='text-gray-100 lg:text-xl lg:w-2/6 md:w-3/6 w-4/5'>An easily embeddable, light-weight feedback widget package that is used to collect user feedback from anywhere.</p> */}
