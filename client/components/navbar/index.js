@@ -87,7 +87,7 @@ export default function Navbar(props) {
                 </Link></>
               : <> 
                 <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-xl font-bold flex justify-center items-center gap-2 duration-200' onClick={openModal}>
-                Try Lunar
+                try lunar
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -183,7 +183,7 @@ export default function Navbar(props) {
                 Dashboard
                 </Link></>
               : <><Link onClick={signUserIn} href='/' className='text-black px-8 py-2 bg-white hover:bg-gray-200 rounded-xl font-bold flex justify-center gap-2 duration-200'>
-              Try Lunar 
+              try lunar 
               </Link></>
               }
                 </a>
