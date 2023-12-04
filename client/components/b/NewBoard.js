@@ -10,7 +10,7 @@ export default function NewBoard(props) {
             <div className="w-5/6 flex justify-between">
             <div className='gap-4 flex'>
             <Dropdown />
-            <SortBy />
+            {/* <SortBy /> */}
             </div>
             <div className='gap-4 flex'>
             <CreateFeedback />
