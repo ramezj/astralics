@@ -3,6 +3,7 @@ import Layout from "@/components/layout"
 import BetaAlert from "@/components/other/BetaAlert"
 import { motion } from 'framer-motion'
 import Image from "next/image"
+import Feedback from "@/components/b/Feedback"
 
 export default function Component() {
   const { data: session } = useSession()
@@ -54,13 +55,9 @@ export default function Component() {
           }}
             transition={{duration: 0.8}}
             >
-            {/* <Image 
-            src='/IndexPicture2.png'
-            width={800}
-            height={600}
-            alt='Picture..'
-            className='rounded-2xl shadow-2xl'
-            /> */}
+              <div className="2xl:w-2/6 xl:w-2/5 w-4/5 flex">
+                <Feedback title="Hello Lunar" type="📝 Feedback" upvotes="1"/>
+              </div>
             </motion.div>
           </div>
             </center>
