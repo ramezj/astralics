@@ -80,14 +80,14 @@ export default function Navbar(props) {
               props.session 
               ? <> 
               {/* <LogOut /> */}
-              <Settings />
-              <Link href='/app' className='rounded-xl px-7 py-2 bg-zinc-950 hover:bg-zinc-950  text-white font-bold flex gap-2 content-center justify-center items-center duration-300'>
+              {/* <Settings /> */}
+              <Link href='/app' className='rounded-xl px-7 py-2 bg-white hover:bg-gray-200 text-black font-bold flex gap-2 content-center justify-center items-center duration-200'>
                 {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
                 Dashboard 
                 </Link></>
               : <> 
-                <button className='px-8 py-2 bg-zinc-950 hover:bg-zinc-950 rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={openModal}>
-                Get Started
+                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-xl font-bold flex justify-center items-center gap-2 duration-200' onClick={openModal}>
+                Try Lunar
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -153,11 +153,11 @@ export default function Navbar(props) {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-              <Link href="/b/lunar" className="-mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:bg-black hover:bg-opacity-80 flex justify-center items-center gap-2 duration-500">
+              <Link href="/b/lunar" className="-mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
                 <BoltIcon width='20' className='flex' />
                   Demo
                 </Link>
-                <Link href="/pricing" className="-mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:bg-black hover:bg-opacity-80 flex justify-center items-center gap-2 duration-500">
+                <Link href="/pricing" className="-mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
                 <CreditCardIcon width='20' className='flex' />
                   Pricing
                 </Link>
@@ -176,13 +176,13 @@ export default function Navbar(props) {
                {
               props.session 
               ? <> 
-              <Link href='/settings' className='px-8 py-2 bg-zinc-950 hover:bg-zinc-950  duration-300 rounded-xl font-bold flex justify-center gap-2'>
+              <Link href='/settings' className='text-black px-8 py-2 bg-white hover:bg-gray-200 duration-200 rounded-xl font-bold flex justify-center gap-2'>
                 Settings 
                 </Link>
-              <Link href='/app' className='mt-3 px-8 py-2 bg-zinc-950 hover:bg-zinc-950  duration-300 rounded-xl font-bold flex justify-center gap-2'>
+              <Link href='/app' className='text-black mt-3 px-8 py-2 bg-white hover:bg-gray-200  duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 Dashboard
                 </Link></>
-              : <><Link onClick={signUserIn} href='/' className='px-8 py-2 bg-zinc-950 hover:bg-zinc-950  rounded-xl font-bold flex justify-center gap-2 duration-300'>
+              : <><Link onClick={signUserIn} href='/' className='text-black px-8 py-2 bg-white hover:bg-gray-200 rounded-xl font-bold flex justify-center gap-2 duration-200'>
               Try Lunar 
               </Link></>
               }
