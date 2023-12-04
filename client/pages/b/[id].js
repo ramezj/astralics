@@ -7,6 +7,7 @@ import Layout from "@/components/layout"
 import Loading from "@/components/b/Loading"
 import NewBoard from "@/components/b/NewBoard"
 import Feedback from "@/components/b/Feedback"
+import { motion } from "framer-motion"
 
 
 export default function Page() {
@@ -45,7 +46,9 @@ export default function Page() {
             <h1 className="text-2xl font-bold">Feedback Board</h1>
             <br /><br />
             <NewBoard>
-                <Loading />
+                {/* <Loading /> */}
+                <br /><br /><br />
+                <h1 className="text-xl">this usually doesn't take long :)</h1>
                 <br />
             </NewBoard>
             <br />
@@ -60,10 +63,22 @@ export default function Page() {
             <br /><br />
             <NewBoard>
                 {
-                    feedbacks.map((x) => {
+                    feedbacks.map((x, i) => {
                         return (
                             <>
+                            <motion.div
+                            initial={{
+                                 opacity: 0,
+                                y:-10
+                            }}
+                            animate={{
+                                opacity: 1,
+                                y:0
+                            }}
+                            transition={{duration: 0.5, delay: i * 0.1}}
+                            >
                             <Feedback id={x.id} title={x.title} description={x.description} upvotes={x.upvotes} type={x.type} />
+                            </motion.div>
                             <br />
                             </>
                         )
