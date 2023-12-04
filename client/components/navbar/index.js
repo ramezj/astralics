@@ -56,11 +56,11 @@ export default function Navbar(props) {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex gap-2">
-        <Link href="/b/lunar" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:text-gray-200 px-6 py-2 rounded-xl duration-200">
+        <Link href="/b/lunar" className="drop-shadow-md text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:text-gray-200 px-6 py-2 rounded-xl duration-200">
             <BoltIcon width='20' className='flex' />
             Demo
           </Link>
-          <Link href="/pricing" className="text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:text-gray-200 px-6 py-2 rounded-xl duration-200">
+          <Link href="/pricing" className="drop-shadow-md text-sm font-bold leading-6 text-white flex justify-center items-center gap-2 hover:text-gray-200 px-6 py-2 rounded-xl duration-200">
             <CreditCardIcon width='20' className='flex' />
             Pricing
           </Link>
@@ -145,11 +145,11 @@ export default function Navbar(props) {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-              <Link href="/b/lunar" className="-mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
+              <Link href="/b/lunar" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
                 <BoltIcon width='20' className='flex' />
                   Demo
                 </Link>
-                <Link href="/pricing" className="-mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
+                <Link href="/pricing" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
                 <CreditCardIcon width='20' className='flex' />
                   Pricing
                 </Link>
