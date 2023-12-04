@@ -56,11 +56,11 @@ export default function Navbar(props) {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-100"
+            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-white"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-8 w-8 hover:outline-none active:outline-none outline-none" aria-hidden="true"/>
+            <Bars3Icon className="h-8 w-8 hover:outline-none active:outline-none outline-none text-white" aria-hidden="true"/>
           </button>
         </div>
         <Popover.Group className="hidden lg:flex gap-2">
@@ -143,7 +143,7 @@ export default function Navbar(props) {
             </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-xl p-2.5 text-gray-100"
+              className="-m-2.5 rounded-xl p-2.5 text-white"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>

@@ -117,7 +117,11 @@ export default function CreateFeedback(props) {
                   </div>
                   <div className="mt-4">
                   <button type="submit" className='px-4 py-2.5 bg-blue-700 rounded-xl flex font-medium outline-none'>
-                    Create Feedback
+                    {
+                      loading 
+                      ? "Creating Feedback.."
+                      : "Create Feedback"
+                    }
                   </button>
                   </div>
                   </form>
