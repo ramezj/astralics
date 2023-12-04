@@ -11,7 +11,7 @@ export default function Component() {
     <Layout>
       <title>Lunar</title>
       <center>
-        <div className="">
+        <div className="lg:-mt-4 2xl:mt-0">
           <motion.div
           initial={{
             opacity: 0,
@@ -23,7 +23,7 @@ export default function Component() {
           }}
           transition={{duration: 0.8}}
           >
-              <BetaAlert />
+          <BetaAlert />
           </motion.div>
             <motion.h1 
             initial={{
@@ -36,7 +36,7 @@ export default function Component() {
             }}
             transition={{duration: 0.8}}
             className='
-            sm:text-6xl 2xl:text-7xl 2xl:mt-14 md:text-7xl lg:text-6xl lg:mt-8 lg:w-3/6 sm:mt-8 text-5xl w-4/5 font-extrabold tracking-tight leading-none text-transparent bg-clip-text text-white mt-8 drop-shadow-sm'>
+            sm:text-6xl 2xl:text-7xl 2xl:mt-14 md:text-7xl lg:text-6xl lg:mt-4 lg:w-3/6 sm:mt-8 text-5xl w-4/5 font-extrabold tracking-tight leading-none text-transparent bg-clip-text text-white mt-8 drop-shadow-sm'>
             connecting developers with users.
             </motion.h1>
             <br />
@@ -59,8 +59,6 @@ export default function Component() {
                 <Feedback title="Feedback" type="📝 Feedback" description={"Lunar is launching soon.."} upvotes="1"/>
                 <br />
                 <Feedback title="Feature Request" type="💡 Feature Request" description={"Lunar is launching soon.."} upvotes="1"/>
-                <br />
-                <Feedback title="Bug Report" type="🐛 Bug Report" description={"Lunar is launching soon.."} upvotes="1"/>
               </div>
             </motion.div>
           </div>
