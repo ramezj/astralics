@@ -55,8 +55,8 @@ export default function Component() {
           }}
             transition={{duration: 0.8}}
             >
-              <div className="2xl:w-2/6 xl:w-2/5 w-4/5 flex">
-                <Feedback title="Hello Lunar" type="📝 Feedback" upvotes="1"/>
+              <div className="-mt-3 2xl:w-2/6 xl:w-2/5 w-4/5 flex">
+                <Feedback title="Hello Lunar" type="📝 Feedback" description={"Lunar is launching soon.."} upvotes="1"/>
               </div>
             </motion.div>
           </div>
