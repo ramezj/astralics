@@ -44,23 +44,35 @@ export default function Component() {
         </div>  
           <br />
           <div className="w-full content-center items-center justify-items-center">
-            <motion.div
-           initial={{
-            opacity: 0,
-            x:-20
-          }}
-          animate={{
-            opacity: 1,
-            x:0
-          }}
-            transition={{duration: 0.8}}
-            >
-              <div className="-mt-3 2xl:w-2/6 xl:w-2/5 w-4/5 flex-row">
+              <div className="-mt-5 2xl:w-2/6 xl:w-2/5 w-4/5 flex-row">
+              <motion.div
+                  initial={{
+                    opacity: 0,
+                      y:-10
+                  }}
+                  animate={{
+                   opacity: 1,
+                   y:0
+                  }}
+                  transition={{duration: 0.5, delay: 0.15}}
+                  >
                 <Feedback title="Feedback" type="📝 Feedback" description={"Lunar is launching soon.."} upvotes="1"/>
+                </motion.div>
                 <br />
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                      y:-10
+                  }}
+                  animate={{
+                   opacity: 1,
+                   y:0
+                  }}
+                  transition={{duration: 0.5, delay: 0.3}}
+                  >
                 <Feedback title="Feature Request" type="💡 Feature Request" description={"Lunar is launching soon.."} upvotes="1"/>
+                  </motion.div>
               </div>
-            </motion.div>
           </div>
             </center>
     </Layout>
