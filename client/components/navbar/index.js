@@ -3,19 +3,11 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import Link from 'next/link'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  ChartPieIcon,
   CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
-  ArrowRightIcon,
-  ArrowSmallRightIcon,
-  PencilSquareIcon,
   CreditCardIcon,
   BoltIcon,
-  Squares2X2Icon
 } from '@heroicons/react/24/outline'
 import Settings from './Settings'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'

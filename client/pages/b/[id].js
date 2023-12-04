@@ -41,7 +41,6 @@ export default function Page() {
     { loading === true && 
     <>
     <center>
-            <br /><br />
             <h1 className="text-2xl font-bold">Feedback Board</h1>
             <br /><br />
             <NewBoard>
@@ -56,7 +55,6 @@ export default function Page() {
         { loading === false && 
         <>
         <center>
-        <br /><br />
             <h1 className="text-2xl font-bold">{data.name}</h1>
             <br /><br />
             <NewBoard>
