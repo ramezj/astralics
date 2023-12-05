@@ -38,12 +38,12 @@ export default function Page() {
   return (
     <>
     <BoardLayout>
-    <title>Feedback Board</title>
+    <title>{router.query.id}</title>
     <br /><br />
     { loading === true && 
     <>
     <center>
-            <h1 className="text-2xl font-bold">Feedback Board</h1>
+            <h1 className="text-2xl font-bold">{router.query.id}</h1>
             <br /><br />
             <NewBoard>
                 {/* <Loading /> */}
