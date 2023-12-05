@@ -15,7 +15,7 @@ export default function BetaAlert(props) {
         2xl:-mb-6
         '>
         <h1 className="font-bold">
-            🪐 Lunar 1.0 just launched
+            🪐 lunar 1.0 just launched
         </h1>
         </div>
         </>
