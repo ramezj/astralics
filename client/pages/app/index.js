@@ -58,7 +58,7 @@ export default function Component() {
     <br />
     <center>
       <div className='sm:w-4/5'>
-        <h1 className="text-3xl font-bold">Hello, Welcome to your dashboard 👋🏼</h1>
+        <h1 className="2xl:text-2xl text-2xl font-bold">Welcome to your dashboard 👋🏼</h1>
       </div>
       <br /><br />
       <Create />
