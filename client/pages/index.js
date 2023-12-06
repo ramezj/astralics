@@ -56,7 +56,7 @@ export default function Component() {
                   }}
                   transition={{duration: 0.5, delay: 0.15}}
                   >
-                <Feedback title="Feedback" type="📝 Feedback" description={"Lunar is launching soon.."} upvotes="1"/>
+                <Feedback session={session} title="Feedback" type="📝 Feedback" description={"Lunar is launching soon.."} upvotes="1"/>
                 </motion.div>
                 <br />
                 <motion.div
@@ -70,7 +70,7 @@ export default function Component() {
                   }}
                   transition={{duration: 0.5, delay: 0.3}}
                   >
-                <Feedback title="Feature Request" type="💡 Feature Request" description={"Lunar is launching soon.."} upvotes="1"/>
+                <Feedback session={session} title="Feature Request" type="💡 Feature Request" description={"Lunar is launching soon.."} upvotes="1"/>
                   </motion.div>
               </div>
           </div>
