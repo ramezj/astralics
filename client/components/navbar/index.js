@@ -11,6 +11,7 @@ import {
 } from '@heroicons/react/24/outline'
 import Settings from './Settings'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import {Button} from "@nextui-org/react";
 
 const products = [
   { name: 'Feedback Widget', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon }

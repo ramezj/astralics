@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -8,54 +8,48 @@ export default function Nav() {
     "Dashboard",
     "Activity",
   ];
-
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent>
-        <NavbarBrand>
-          {/* <AcmeLogo /> */}
-          <p className="font-bold text-2xl">Lunar</p>
-        </NavbarBrand>
-      </NavbarContent>
+    <Navbar>
+      <NavbarBrand>
+        <p className="font-bold text-inherit">ACME</p>
+      </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-6" justify="center">
         <NavbarItem>
-          <Link className="font-bold" color="foreground" href="#">
-            Demo
+          <Link className="font-bold text-black" color="foreground" href="#">
+            Features
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="font-bold" color="foreground" href="#">
+          <Link className="font-bold text-black" color="foreground" href="#">
             Pricing
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem>
-          <Button size="md" className="bg-black text-white">
-            try lunar
-          </Button>
-        </NavbarItem>
-        {/* <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        /> */}
+      <NavbarContent as="div" justify="end">
+        <Dropdown placement="bottom-end">
+          <DropdownTrigger>
+            <Avatar
+              isBordered
+              as="button"
+              className="transition-transform"
+              name="Jason Hughes"
+              size="md"
+              src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+            />
+          </DropdownTrigger>
+          <DropdownMenu aria-label="Profile Actions" variant="flat">
+            <DropdownItem key="profile" className="h-14 gap-2">
+              <p className="font-semibold text-black">Signed in as</p>
+              <p className="font-semibold text-black">zoey@example.com</p>
+            </DropdownItem>
+            <DropdownItem key="settings" className="text-black">My Settings</DropdownItem>
+            <DropdownItem key="team_settings" className="text-black">Team Settings</DropdownItem>
+            <DropdownItem key="logout" color="danger" className="text-black">
+              Log Out
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
       </NavbarContent>
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
     </Navbar>
   );
 }
