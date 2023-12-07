@@ -17,29 +17,28 @@ export default function Nav() {
           <p className="font-bold text-2xl">Lunar</p>
         </NavbarBrand>
       </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-6" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link className="font-bold" color="foreground" href="#">
             Demo
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link className="font-bold" color="foreground" href="#">
             Pricing
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button size="md" className="bg-black text-white">
             try lunar
           </Button>
         </NavbarItem>
-        <NavbarMenuToggle
+        {/* <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
-        />
+        /> */}
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (
