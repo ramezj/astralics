@@ -105,10 +105,13 @@ export default function Navbar(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden rounded-2xl bg-transparent align-middle transition-all">
+                <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden rounded-2xl align-middle transition-all">
                   <center>
                   <button className='px-8 py-2 bg-white text-black rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
-                  Sign in with Google</button>  
+                  Sign in with Google</button> 
+                  <br />
+                  <button className='px-8 py-2 bg-white text-black rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
+                  Sign in with Github</button> 
                   </center>
                 </Dialog.Panel>
               </Transition.Child>

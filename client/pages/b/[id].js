@@ -48,7 +48,7 @@ export default function Page() {
             <NewBoard>
                 {/* <Loading /> */}
                 <br /><br /><br />
-                <h1 className="text-xl">this usually doesn't take long :)</h1>
+                <h1 className="text-2xl ">this usually doesn't take long :)</h1>
                 <br />
             </NewBoard>
             <br />
