@@ -1,4 +1,4 @@
-import Navbar from "../navbar";
+import {Navbar} from "../navbar";
 import { useSession, signIn, signOut } from "next-auth/react"
 import BoardNav from "./BoardNav";
 
