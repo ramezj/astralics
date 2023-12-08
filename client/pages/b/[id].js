@@ -77,7 +77,7 @@ export default function Page() {
                             }}
                             transition={{duration: 0.5, delay: i * 0.1}}
                             >
-                            <Feedback id={x.id} title={x.title} description={x.description} upvotes={x.itemVotes.length} type={x.type} session={session}/>
+                            <Feedback id={x.id} title={x.title} description={x.description} upvotes={x.itemVotes.length} type={x.type} session={session} itemVotes={x.itemVotes}/>
                             </motion.div>
                             <br />
                             </>
