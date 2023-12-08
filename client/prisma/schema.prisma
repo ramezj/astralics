@@ -68,9 +68,9 @@ model Feedback {
 model itemVote {
   id            String    @id @default(cuid())
   feedbackId String
-  feedback Feedback @relation(fields: [feedbackId], references: [id])
+  feedback Feedback? @relation(fields: [feedbackId], references: [id])
   userId    String
-  user      User       @relation(fields: [userId], references: [id])
+  user      User?       @relation(fields: [userId], references: [id])
 }
 model VerificationToken {
   identifier String

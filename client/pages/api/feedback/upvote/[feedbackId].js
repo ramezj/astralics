@@ -17,7 +17,6 @@ export default async function handler(req, res) {
             response: ' Unauthorized '
         })
     }
-    console.log(session);
     const { feedbackId } = req.query;
     const feedback = await prisma.feedback.findFirst({
         where: {
@@ -30,37 +29,47 @@ export default async function handler(req, res) {
             response:"Feedback not found"
         })
     };
-    const updateFeedback = await prisma.feedback.update({
+    const voteExists = await prisma.itemVote.findFirst({
         where: {
-            id: feedbackId
-        },
-        data: { 
-            upvotes: {
-                increment: 1
-            }
-        }
-    })
-    const createUpvote = await prisma.itemVote.create({
-        data: {
             feedbackId:feedback.id,
             userId:session.user.id
         }
-    })
-    if(!createUpvote) {
-        return res.status(400).json({
-            ok:false,
-            response:"Couldnt add vote"
-        })
+    });
+    if(voteExists) {
+        try {
+            const deleteVote = await prisma.itemVote.delete({
+                where: {
+                    id:voteExists.id
+                }
+            })
+            return res.status(200).json({
+                ok:true,
+                response:"Downvoted Successfully"
+            })
+        } catch (error) {
+            return res.status(401).json({
+                ok:false,
+                response: "something went completely wrong"
+            })
+        }
     }
-    if(updateFeedback) {
-        return res.status(200).json({
-            ok:true,
-            response:"Upvoted Successfully"
-        })
-    } else {
-        return res.status(400).json({
-            ok:false,
-            response:"Something went wrong"
-        })
+    if(!voteExists) {
+        try {
+            const createUpvote = await prisma.itemVote.create({
+                data: {
+                    feedbackId:feedback.id,
+                    userId:session.user.id
+                }
+            })
+            return res.status(200).json({
+                ok:true,
+                response:"Upvoted!"
+            })
+        } catch (error) {
+            return res.status(401).json({
+                ok:false,
+                response:"something went completely wrong"
+            })
+        }
     }
 }

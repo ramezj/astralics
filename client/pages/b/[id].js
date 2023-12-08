@@ -9,7 +9,6 @@ import NewBoard from "@/components/b/NewBoard"
 import Feedback from "@/components/b/Feedback"
 import { motion } from "framer-motion"
 
-
 export default function Page() {
     const router = useRouter()
     const { id } = router.query;
@@ -17,6 +16,7 @@ export default function Page() {
     const [ loading, setLoading ] = useState(false);
     const [ data, setData ] = useState(false); 
     const [ feedbacks, setFeedbacks ] = useState([]);
+    const [ upvotes, setUpvotes ] = useState();
     useEffect(() => {
         if(!id) {
             return;
@@ -77,7 +77,7 @@ export default function Page() {
                             }}
                             transition={{duration: 0.5, delay: i * 0.1}}
                             >
-                            <Feedback id={x.id} title={x.title} description={x.description} upvotes={x.upvotes} type={x.type} session={session}/>
+                            <Feedback id={x.id} title={x.title} description={x.description} upvotes={x.itemVotes.length} type={x.type} session={session}/>
                             </motion.div>
                             <br />
                             </>

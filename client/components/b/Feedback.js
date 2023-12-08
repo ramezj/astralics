@@ -22,11 +22,6 @@ export default function Feedback(props) {
     }
     const upvoteFeedback = async (e) => {
         setUpvotes(upvotes+ 1);
-        toast.success("Upvoted Successfully", {
-            style: {
-            borderRadius: '10px',
-            },
-        })
         const res = await fetch(`/api/feedback/upvote/${props.id}`, {
             method:'POST',
             headers: {
@@ -35,6 +30,13 @@ export default function Feedback(props) {
         });
         const resp = await res.json();
         console.log(resp);
+        if(resp.ok == true) {
+          toast.success(resp.response, {
+            style: {
+            borderRadius: '10px',
+            },
+        })
+        }
         if(resp.ok == false) {
             toast.error(resp.response);
             setUpvotes(upvotes-1);

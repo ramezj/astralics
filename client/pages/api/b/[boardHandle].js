@@ -17,8 +17,11 @@ export default async function handler(req, res) {
               orderBy: {
                 createdAt: 'desc',
               },
+              include:{
+                itemVotes:true
             }
-          }
+            },
+        }
     })
     if(!board) {
         return res.status(400).json({
