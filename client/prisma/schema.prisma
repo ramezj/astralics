@@ -33,7 +33,6 @@ model Session {
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
-
 model User {
   id            String    @id @default(cuid())
   name          String?
@@ -44,8 +43,8 @@ model User {
   accounts      Account[]
   boards        Board[]
   sessions      Session[]
+  itemVotes     itemVote[]
 }
-
 model Board {
   id        String     @id @default(cuid())
   handle String @unique
@@ -55,7 +54,6 @@ model Board {
   user      User       @relation(fields: [userId], references: [id])
   feedbacks Feedback[]
 }
-
 model Feedback {
   id        String   @id @default(cuid())
   title String
@@ -65,8 +63,15 @@ model Feedback {
   type String @default("other")
   boardId   String
   board     Board    @relation(fields: [boardId], references: [id])
+  itemVotes itemVote[]
 }
-
+model itemVote {
+  id            String    @id @default(cuid())
+  feedbackId String
+  feedback Feedback @relation(fields: [feedbackId], references: [id])
+  userId    String
+  user      User       @relation(fields: [userId], references: [id])
+}
 model VerificationToken {
   identifier String
   token      String   @unique

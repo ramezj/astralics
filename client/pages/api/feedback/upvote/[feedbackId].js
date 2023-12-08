@@ -1,5 +1,7 @@
 import { prisma } from "@/lib/db"
 import NextCors from 'nextjs-cors';
+import { getServerSession } from "next-auth/next"
+import { authOptions } from "../../auth/[...nextauth]";
 
 export default async function handler(req, res) {
   await NextCors(req, res, {
@@ -8,8 +10,15 @@ export default async function handler(req, res) {
     origin: '*',
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
  });
+    const session = await getServerSession(req, res, authOptions);
+    if(!session) {
+        return res.status(401).json({
+            ok:true,
+            response: ' Unauthorized '
+        })
+    }
+    console.log(session);
     const { feedbackId } = req.query;
-    console.log(feedbackId);
     const feedback = await prisma.feedback.findFirst({
         where: {
             id: feedbackId
@@ -31,6 +40,18 @@ export default async function handler(req, res) {
             }
         }
     })
+    const createUpvote = await prisma.itemVote.create({
+        data: {
+            feedbackId:feedback.id,
+            userId:session.user.id
+        }
+    })
+    if(!createUpvote) {
+        return res.status(400).json({
+            ok:false,
+            response:"Couldnt add vote"
+        })
+    }
     if(updateFeedback) {
         return res.status(200).json({
             ok:true,
