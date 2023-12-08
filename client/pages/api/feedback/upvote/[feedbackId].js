@@ -44,7 +44,7 @@ export default async function handler(req, res) {
             })
             return res.status(200).json({
                 ok:true,
-                response:"Downvoted Successfully"
+                response:"Downvoted"
             })
         } catch (error) {
             return res.status(401).json({
@@ -63,7 +63,7 @@ export default async function handler(req, res) {
             })
             return res.status(200).json({
                 ok:true,
-                response:"Upvoted!"
+                response:"Upvoted"
             })
         } catch (error) {
             return res.status(401).json({

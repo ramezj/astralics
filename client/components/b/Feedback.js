@@ -21,7 +21,6 @@ export default function Feedback(props) {
       signOut();
     }
     const upvoteFeedback = async (e) => {
-        setUpvotes(upvotes+ 1);
         const res = await fetch(`/api/feedback/upvote/${props.id}`, {
             method:'POST',
             headers: {
@@ -30,6 +29,11 @@ export default function Feedback(props) {
         });
         const resp = await res.json();
         console.log(resp);
+        if(resp.ok == true && resp.response == "Upvoted") {
+          setUpvotes(upvotes+ 1);
+        } else if (resp.ok == true && resp.response == "Downvoted") {
+          setUpvotes(upvotes-1);
+        }
         if(resp.ok == true) {
           toast.success(resp.response, {
             style: {
