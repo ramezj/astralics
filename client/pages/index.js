@@ -44,7 +44,7 @@ export default function Component() {
         </div>  
           <br />
           <div className="w-full content-center items-center justify-items-center">
-              <div className="2xl:-mt-5 -mt-6 2xl:w-2/6 xl:w-2/5 w-4/5 flex-row">
+              {/* <div className="2xl:-mt-5 -mt-6 2xl:w-2/6 xl:w-2/5 w-4/5 flex-row">
               <motion.div
                   initial={{
                     opacity: 0,
@@ -72,7 +72,7 @@ export default function Component() {
                   >
                 <Feedback session={session} title="Feature Request" type="💡 Feature Request" description={"Lunar is launching soon.."} upvotes="1"/>
                   </motion.div>
-              </div>
+              </div> */}
           </div>
             </center>
     </Layout>

@@ -1,5 +1,5 @@
 import { ChevronUpIcon } from "@heroicons/react/24/outline"
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import toast, { Toaster } from 'react-hot-toast';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
@@ -7,7 +7,11 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 export default function Feedback(props) {
     const [ upvotes, setUpvotes ] = useState(props.upvotes);
     const [ title, setTitle ] = useState(props.title);
-    let [isOpen, setIsOpen] = useState(false)
+    const [ highlight, setHighlight] = useState();
+    let [isOpen, setIsOpen] = useState(false);
+    const testexists = props.itemVotes.some((x) => {
+      return x.userId === "clpwxv8bl0000uuwg3mss431q";
+    })
     function closeModal() {
       setIsOpen(false)
     }
@@ -85,6 +89,11 @@ export default function Feedback(props) {
             : <></>
         }
         </div>
+        {
+          highlight
+          ? <> <p className="font-bold text-black">User upvoted</p></>
+          : <> <p className="font-bold text-black">User didnt upvote</p></>
+        }
         <div className="m-8 ml-auto">
         <button onClick={(() => {
             {
