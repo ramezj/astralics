@@ -9,8 +9,30 @@ export default async function handler(req, res) {
             response: 'Wrong Request Method'
         })
     }
-    const session = await getServerSession(req, res, authOptions);
     const { boardHandle } = req.query;
+    const session = await getServerSession(req, res, authOptions);
+    if(session) {
+        const boardTest = await prisma.board.findFirst({
+            where: {
+                handle:boardHandle
+            },
+            include: {
+                feedbacks: {
+                  orderBy: {
+                    createdAt: 'desc',
+                  },
+                  where: {
+                    itemVotes: {
+                        some: {
+                            userId: session.user.id
+                        }
+                    }
+                  }
+                },
+            }
+        })
+        console.log(boardTest);
+    }
     const board = await prisma.board.findFirst({
         where: {
             handle:boardHandle
