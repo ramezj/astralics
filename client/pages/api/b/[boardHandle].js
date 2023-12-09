@@ -1,4 +1,6 @@
 import { prisma } from "@/lib/db";
+import { getServerSession } from "next-auth/next"
+import { authOptions } from "../auth/[...nextauth]";
 
 export default async function handler(req, res) {
     if(req.method === 'POST') {
@@ -7,6 +9,7 @@ export default async function handler(req, res) {
             response: 'Wrong Request Method'
         })
     }
+    const session = await getServerSession(req, res, authOptions);
     const { boardHandle } = req.query;
     const board = await prisma.board.findFirst({
         where: {

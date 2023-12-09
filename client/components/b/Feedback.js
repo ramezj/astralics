@@ -9,6 +9,7 @@ export default function Feedback(props) {
     const [ title, setTitle ] = useState(props.title);
     const [ highlight, setHighlight] = useState();
     let [isOpen, setIsOpen] = useState(false);
+    console.log(props.itemVotes);
     const testexists = props.itemVotes.some((x) => {
       return x.userId === "clpwxv8bl0000uuwg3mss431q";
     })
@@ -89,11 +90,6 @@ export default function Feedback(props) {
             : <></>
         }
         </div>
-        {
-          highlight
-          ? <> <p className="font-bold text-black">User upvoted</p></>
-          : <> <p className="font-bold text-black">User didnt upvote</p></>
-        }
         <div className="m-8 ml-auto">
         <button onClick={(() => {
             {
