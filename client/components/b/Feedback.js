@@ -97,7 +97,9 @@ export default function Feedback(props) {
                 ? upvoteFeedback()
                 : setIsOpen(true)
             }
-        })} className="group hover:bg-black duration-100 w-[4.5rem] h-12 shadow-sm bg-black border-2 border-black rounded-xl items-center flex justify-center">
+        })}
+        className={`group hover:bg-black duration-100 w-[4.5rem] h-12 shadow-sm border-2 border-black rounded-xl items-center flex justify-center 
+        ${props.isUpvoted ? 'bg-blue-700 border-none hover:bg-blue-700' : 'bg-black'}`}>
         <h1 className="m-1 font-bold text-white group-hover:text-white">{upvotes}</h1>
         <ChevronUpIcon className="w-7 h-7 text-white group-hover:text-white" strokeWidth={2}/>
         </button>

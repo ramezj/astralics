@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/db";
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "../auth/[...nextauth]";
+import sortFeedback from "@/utils/sortFeedback";
 
 export default async function handler(req, res) {
     if(req.method === 'POST') {
@@ -12,7 +13,63 @@ export default async function handler(req, res) {
     const { boardHandle } = req.query;
     const session = await getServerSession(req, res, authOptions);
     if(session) {
-        const boardTest = await prisma.board.findFirst({
+        try {
+            const board = await prisma.board.findFirst({
+                where: {
+                    handle:boardHandle
+                },
+                include: {
+                    feedbacks: {
+                      orderBy: {
+                        createdAt: 'desc',
+                      },
+                      include:{
+                        itemVotes:true
+                    }
+                    },
+                }
+            })
+            if(!board) {
+                return res.status(400).json({
+                    ok:false,
+                    response: ' Board Not Found '
+                })
+            };
+            const upvotes = await prisma.board.findFirst({
+                where: {
+                    handle:boardHandle
+                },
+                include: {
+                    feedbacks: {
+                      orderBy: {
+                        createdAt: 'desc',
+                      },
+                      where: {
+                        itemVotes: {
+                            some: {
+                                userId: session.user.id
+                            }
+                        }
+                      }
+                    },
+                }
+            })
+            const test = await sortFeedback(board.feedbacks,upvotes.feedbacks);
+            return res.status(200).json({
+                ok:true,
+                auth:true,
+                response:board,
+                merged:test
+            })
+        } catch (error) {
+            console.error(error);
+            return res.status(400).json({
+                ok:false,
+                response:error
+            })
+        }
+    } else {
+        const board = await prisma.board.findFirst({
             where: {
                 handle:boardHandle
             },
@@ -21,41 +78,22 @@ export default async function handler(req, res) {
                   orderBy: {
                     createdAt: 'desc',
                   },
-                  where: {
-                    itemVotes: {
-                        some: {
-                            userId: session.user.id
-                        }
-                    }
-                  }
+                  include:{
+                    itemVotes:true
+                }
                 },
             }
         })
-        console.log(boardTest);
-    }
-    const board = await prisma.board.findFirst({
-        where: {
-            handle:boardHandle
-        },
-        include: {
-            feedbacks: {
-              orderBy: {
-                createdAt: 'desc',
-              },
-              include:{
-                itemVotes:true
-            }
-            },
-        }
-    })
-    if(!board) {
-        return res.status(400).json({
-            ok:false,
-            response: ' Board Not Found '
+        if(!board) {
+            return res.status(400).json({
+                ok:false,
+                response: ' Board Not Found '
+            })
+        };
+        return res.status(200).json({
+            ok:true,
+            auth:false,
+            response:board
         })
-    };
-    return res.status(200).json({
-        ok:true,
-        response:board
-    })
+    }
 }

@@ -8,6 +8,7 @@ import Loading from "@/components/b/Loading"
 import NewBoard from "@/components/b/NewBoard"
 import Feedback from "@/components/b/Feedback"
 import { motion } from "framer-motion"
+import sortFeedback from "@/utils/sortFeedback"
 
 export default function Page() {
     const router = useRouter()
@@ -16,7 +17,7 @@ export default function Page() {
     const [ loading, setLoading ] = useState(false);
     const [ data, setData ] = useState(false); 
     const [ feedbacks, setFeedbacks ] = useState([]);
-    const [ upvotes, setUpvotes ] = useState();
+    const [ mergedData, setMergedData ] = useState([]);
     useEffect(() => {
         if(!id) {
             return;
@@ -28,9 +29,12 @@ export default function Page() {
             if(res.ok == false) {
                 return router.push('/404')
             }
+            if(res.ok == true && res.auth == true) {
+                setMergedData(res.merged);
+                console.log("Merged Data :", mergedData);
+            }
             setData(res.response);
             setFeedbacks(res.response.feedbacks);
-            console.log(res.response);
             setLoading(false);
         }
         fetchProject();
@@ -63,6 +67,35 @@ export default function Page() {
             <br /><br />
             <NewBoard>
                 {
+                    session 
+                    ? 
+                    <>
+                    {
+                    mergedData.map((x, i) => {
+                        return (
+                            <>
+                            <motion.div
+                            initial={{
+                                 opacity: 0,
+                                y:-10
+                            }}
+                            animate={{
+                                opacity: 1,
+                                y:0
+                            }}
+                            transition={{duration: 0.5, delay: i * 0.1}}
+                            >
+                            <Feedback isUpvoted={x.isUpvoted} id={x.id} title={x.title} description={x.description} upvotes={x.itemVotes.length} type={x.type} session={session} itemVotes={x.itemVotes}/>
+                            </motion.div>
+                            <br />
+                            </>
+                        )
+                    })
+                }
+                    </>
+                    : 
+                    <>
+                    {
                     feedbacks.map((x, i) => {
                         return (
                             <>
@@ -77,12 +110,14 @@ export default function Page() {
                             }}
                             transition={{duration: 0.5, delay: i * 0.1}}
                             >
-                            <Feedback id={x.id} title={x.title} description={x.description} upvotes={x.itemVotes.length} type={x.type} session={session} itemVotes={x.itemVotes}/>
+                            <Feedback isUpvoted={false} id={x.id} title={x.title} description={x.description} upvotes={x.itemVotes.length} type={x.type} session={session} itemVotes={x.itemVotes}/>
                             </motion.div>
                             <br />
                             </>
                         )
                     })
+                }
+                    </>
                 }
             </NewBoard>
             <br />
