@@ -45,15 +45,13 @@ export default function FeedbackDemo(props) {
         }
         </div>
         <div className="m-8 ml-auto">
-        <button
-        className={`group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm border-2 border-blue-700 rounded-xl items-center flex justify-center 
-        ${test ? 'bg-blue-700 border-none hover:bg-blue-700' : 'bg-white'}`}>
+        <button className={`group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm border-2 border-blue-700 rounded-xl items-center flex justify-center bg-blue-700 border-none`}>
         <h1 
-        className={`m-1 font-bold group-hover:text-white ${test ? 'text-white' : 'text-blue-700'}`}>
+        className={`m-1 font-bold group-hover:text-white text-white`}>
         {upvotes}</h1>
         <ChevronUpIcon 
         strokeWidth={2.5}
-        className={`w-6 h-6 group-hover:text-white strokeWidth={2} ${test ? 'text-white' : 'text-blue-700'}`}/>
+        className={`w-6 h-6 group-hover:text-white text-white`}/>
         </button>
         </div>
         </div>
