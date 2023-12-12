@@ -4,6 +4,7 @@ import BetaAlert from "@/components/other/BetaAlert"
 import { motion } from 'framer-motion'
 import Image from "next/image"
 import Feedback from "@/components/b/Feedback"
+import FeedbackDemo from "@/components/layout/FeedbackDemo"
 
 export default function Component() {
   const { data: session } = useSession()
@@ -44,7 +45,7 @@ export default function Component() {
         </div>  
           <br />
           <div className="w-full content-center items-center justify-items-center">
-              {/* <div className="2xl:-mt-5 -mt-6 2xl:w-2/6 xl:w-2/5 w-4/5 flex-row">
+              <div className="2xl:-mt-5 -mt-6 2xl:w-2/6 xl:w-2/5 w-4/5 flex-row">
               <motion.div
                   initial={{
                     opacity: 0,
@@ -56,7 +57,7 @@ export default function Component() {
                   }}
                   transition={{duration: 0.5, delay: 0.15}}
                   >
-                <Feedback session={session} title="Feedback" type="📝 Feedback" description={"Lunar is launching soon.."} upvotes="1"/>
+                <FeedbackDemo session={session} title="Feedback" type="📝 Feedback" description={"Lunar is launching soon.."} upvotes="1"/>
                 </motion.div>
                 <br />
                 <motion.div
@@ -70,9 +71,9 @@ export default function Component() {
                   }}
                   transition={{duration: 0.5, delay: 0.3}}
                   >
-                <Feedback session={session} title="Feature Request" type="💡 Feature Request" description={"Lunar is launching soon.."} upvotes="1"/>
+                <FeedbackDemo session={session} title="Feature Request" type="💡 Feature Request" description={"Lunar is launching soon.."} upvotes="1"/>
                   </motion.div>
-              </div> */}
+              </div>
           </div>
             </center>
     </Layout>
