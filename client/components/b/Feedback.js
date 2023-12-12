@@ -8,6 +8,7 @@ export default function Feedback(props) {
     const [ upvotes, setUpvotes ] = useState(props.upvotes);
     const [ title, setTitle ] = useState(props.title);
     const [ highlight, setHighlight] = useState();
+    const [ up, setUp ] = useState();
     let [isOpen, setIsOpen] = useState(false);
     console.log(props.itemVotes);
     const testexists = props.itemVotes.some((x) => {
@@ -35,6 +36,7 @@ export default function Feedback(props) {
         const resp = await res.json();
         console.log(resp);
         if(resp.ok == true && resp.response == "Upvoted") {
+          setUp(true);
           setUpvotes(upvotes+ 1);
         } else if (resp.ok == true && resp.response == "Downvoted") {
           setUpvotes(upvotes-1);
@@ -99,11 +101,12 @@ export default function Feedback(props) {
             }
         })}
         className={`group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm border-2 border-blue-700 rounded-xl items-center flex justify-center 
-        ${props.isUpvoted ? 'bg-blue-700 border-none hover:bg-blue-700' : 'bg-white'}`}>
-        <h1 className={`m-1 font-bold group-hover:text-white ${props.isUpvoted ? 'text-white' : 'text-blue-700'}`}>{upvotes}</h1>
+        ${props.isUpvoted || up ? 'bg-blue-700 border-none hover:bg-blue-700' : 'bg-white'}`}>
+        <h1 
+        className={`m-1 font-bold group-hover:text-white ${props.isUpvoted || up ? 'text-white' : 'text-blue-700'}`}>{upvotes}</h1>
         <ChevronUpIcon 
         strokeWidth={2.5}
-        className={`w-6 h-6 group-hover:text-white strokeWidth={2} ${props.isUpvoted ? 'text-white' : 'text-blue-700'}`} />
+        className={`w-6 h-6 group-hover:text-white strokeWidth={2} ${props.isUpvoted || up ? 'text-white' : 'text-blue-700'}`} />
         </button>
         </div>
         </div>
