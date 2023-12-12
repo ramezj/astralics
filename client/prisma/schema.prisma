@@ -58,7 +58,6 @@ model Feedback {
   id        String   @id @default(cuid())
   title String
   description      String
-  upvotes Int @default(0)
   createdAt DateTime @default(now())
   type String @default("other")
   boardId   String
