@@ -55,7 +55,7 @@ export default function Feedback(props) {
         position="bottom-right"
         reverseOrder={true}
         />
-        <div key={props.id} className="w-full flex bg-white rounded-2xl items-center cursor-pointer duration-300">
+        <div key={props.id} className="w-full flex bg-gradient-to-t from-gray-200 to-white rounded-2xl items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left text-black'>
         {
@@ -97,7 +97,7 @@ export default function Feedback(props) {
             }
         })}
         className={`group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm border-2 border-blue-700 rounded-xl items-center flex justify-center 
-        ${test ? 'bg-blue-700 border-none hover:bg-blue-700' : 'bg-white'}`}>
+        ${test ? 'bg-gradient-to-t from-blue-800 to-blue-700 border-none hover:bg-blue-700' : 'bg-white'}`}>
         <h1 
         className={`m-1 font-bold group-hover:text-white ${test ? 'text-white' : 'text-blue-700'}`}>
         {upvotes}</h1>
