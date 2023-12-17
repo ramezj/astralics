@@ -49,7 +49,7 @@ export default function Page() {
     { loading === true && 
     <>
     <center>
-    <h1 className="text-2xl font-bold">{data.name}</h1>
+    <h1 className="text-2xl font-bold">{router.query.id}</h1>
             <br /><br />
             <NewBoard>
                 {/* <Loading /> */}
@@ -65,7 +65,7 @@ export default function Page() {
         { loading === false && 
         <>
         <center>
-            <h1 className="text-2xl font-bold">{data.name}</h1>
+            <h1 className="text-2xl font-bold">{router.query.id}</h1>
             <br /><br />
             <NewBoard>
                 {
