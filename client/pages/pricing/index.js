@@ -38,7 +38,7 @@ export default function Pricing(props) {
                 }
                 </PricingCard >
                 <PricingCard price='$15' title='Developer' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
-                <Info><Svg /> Unlimited Boards</Info>
+                <Info><Svg /> Up to 5 Boards</Info>
                 <Info><Svg /> Unlimited Monthly Feedbacks</Info>
                 <Info><Svg /> Custom Domain</Info>
                 <br />

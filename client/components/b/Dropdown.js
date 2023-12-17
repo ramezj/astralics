@@ -7,7 +7,7 @@ export default function Dropdown() {
     <div className="">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center bg-gradient-to-t from-gray-200 to-white px-4 py-2.5 rounded-xl font-medium text-black focus:outline-none">
+          <Menu.Button className="inline-flex w-full justify-center bg-white px-4 py-2.5 rounded-xl font-medium text-black focus:outline-none">
             Filter
             <ChevronDownIcon
               className="mt-[0.20rem] ml-2 h-5 w-5 text-gray-800 hover:text-gray-950"
