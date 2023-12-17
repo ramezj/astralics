@@ -55,14 +55,14 @@ export default function Feedback(props) {
         position="bottom-right"
         reverseOrder={true}
         />
-        <div key={props.id} className="w-full flex bg-white rounded-2xl items-center cursor-pointer duration-300">
+        <div key={props.id} className="border border-white/10 w-full flex bg-zinc-950 rounded-2xl items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
-        <p className='text-lg font-bold text-left text-black'>
+        <p className='text-lg font-bold text-left text-white'>
         {
             title.length > 100 ? `${title.substring(0,50)}...` : `${title}`
         }       
         </p>
-        <p className='text-xs text-left text-black'>{props.description}</p>
+        <p className='text-xs text-left text-white'>{props.description}</p>
         {
             props.type == "🐛 Bug Report"
             ? 
