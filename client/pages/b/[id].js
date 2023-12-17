@@ -42,6 +42,7 @@ export default function Page() {
     }, [id])
   return (
     <>
+    <title>{router.query.id}</title>
     <BoardLayout>
     {/* <title>{router.query.id}</title> */}
     <br /><br />
