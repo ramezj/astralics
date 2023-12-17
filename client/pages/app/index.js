@@ -76,16 +76,19 @@ export default function Component() {
         </>
         : 
         <>
-        {boards.map((board) => {
+        {boards.map((board, i) => {
         return (
           <motion.div
-          initial={{opacity: 0 }}
-      animate={{opacity: 1 }}
-      exit={{opacity: 0 }}
-      transition={{
-        duration:1
-      }}
-          >
+                            initial={{
+                                 opacity: 0,
+                                y:-10
+                            }}
+                            animate={{
+                                opacity: 1,
+                                y:0
+                            }}
+                            transition={{duration: 0.5, delay: i * 0.15}}
+                            >
           <Card title={board.name} href={`/board/${board.id}`} website={board.website} settings={`/settings/${board.id}`} handle={`/b/${board.handle}`}/>
           </motion.div>
         )
