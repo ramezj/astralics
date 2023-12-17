@@ -96,8 +96,8 @@ export default function Feedback(props) {
                 : setIsOpen(true)
             }
         })}
-        className={`group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm border-2 border-blue-700 rounded-xl items-center flex justify-center 
-        ${test ? 'bg-gradient-to-t from-blue-800 to-blue-700 border-none hover:bg-blue-700' : 'bg-white'}`}>
+        className={`group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-xl items-center flex justify-center 
+        ${test ? 'bg-blue-700 border-none hover:bg-blue-700' : 'bg-white'}`}>
         <h1 
         className={`m-1 font-bold group-hover:text-white ${test ? 'text-white' : 'text-blue-700'}`}>
         {upvotes}</h1>

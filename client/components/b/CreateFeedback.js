@@ -55,7 +55,7 @@ export default function CreateFeedback(props) {
   }
     return (
         <>
-        <button onClick={openModal} className='px-4 py-2.5 bg-gradient-to-t from-blue-800 to-blue-700 rounded-xl flex font-medium outline-none'>
+        <button onClick={openModal} className='px-4 py-2.5 bg-blue-700 border border-white/40 rounded-xl flex font-medium outline-none'>
                 Leave Feedback ✨
                 {/* <HandThumbUpIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/> */}
                 {/* <PlusCircleIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/> */}

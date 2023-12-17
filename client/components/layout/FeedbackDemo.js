@@ -11,14 +11,14 @@ export default function FeedbackDemo(props) {
     const [ test, setTest ] = useState(props.isUpvoted)
     return (
         <>
-        <div key={props.id} className="w-full flex bg-white rounded-2xl items-center cursor-pointer duration-300">
+        <div key={props.id} className="border border-white/10 w-full flex bg-zinc-950 rounded-2xl items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
-        <p className='text-lg font-bold text-left text-black'>
+        <p className='text-lg font-bold text-left text-white'>
         {
             title.length > 20 ? `${title.substring(0,20)}...` : `${title}`
         }       
         </p>
-        <p className='text-xs text-left text-black'>{props.description}</p>
+        <p className='text-xs text-left text-white'>{props.description}</p>
         {
             props.type == "🐛 Bug Report"
             ? 
@@ -45,7 +45,7 @@ export default function FeedbackDemo(props) {
         }
         </div>
         <div className="m-8 ml-auto">
-        <button className={`group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm border-2 border-blue-700 rounded-xl items-center flex justify-center bg-gradient-to-t from-blue-800 to-blue-700 border-none`}>
+        <button className={`group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-xl items-center flex justify-center bg-blue-700 border-none`}>
         <h1 
         className={`m-1 font-bold group-hover:text-white text-white`}>
         {upvotes}</h1>
