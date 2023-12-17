@@ -26,18 +26,18 @@ export default function Pricing(props) {
             <br />
             <br />
             <div className='flex flex-wrap gap-12 justify-center w-full'>
-                <PricingCard price='$0' title='Starter' button='Get Started' background={'bg-black bg-opacity-60'} shadow={'shadow-lg'}>
+                <PricingCard price='$0' title='Starter' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
                 <Info><Svg /> 1 Board</Info>
                 <Info><Svg /> 50 Monthly Feedbacks</Info>
                 <Info><Xsvg /> Custom Domain </Info>
                 <br />
                 {
                 session 
-                ? <><Link href='/app' className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Go to Dashboard</Link></>
-                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>Get Started</button></>
+                ? <><Link href='/app' className='shadow-xl btn w-full text-white normal-case bg-black hover:bg-black outline-none border-none font-bold rounded-xl'>Go to Dashboard</Link></>
+                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-black hover:bg-black outline-none border-none font-bold rounded-xl'>Get Started</button></>
                 }
                 </PricingCard >
-                <PricingCard price='$15' title='Developer' button='Get Started' background={'bg-black bg-opacity-60'} shadow={'shadow-lg'}>
+                <PricingCard price='$15' title='Developer' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
                 <Info><Svg /> Unlimited Boards</Info>
                 <Info><Svg /> Unlimited Monthly Feedbacks</Info>
                 <Info><Svg /> Custom Domain</Info>
@@ -51,10 +51,10 @@ export default function Pricing(props) {
                       passthrough: session.user.id
                     })
                 })} 
-                className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>
+                className='shadow-xl btn w-full text-white normal-case bg-black hover:bg-black outline-none border-none font-bold rounded-xl'>
                     <CreditCardIcon className='text-white' width={22} height={22} />
                  Subscribe Now</button></>
-                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-zinc-950 hover:bg-zinc-950 outline-none border-none font-bold rounded-xl'>
+                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-black hover:bg-black outline-none border-none font-bold rounded-xl'>
                     <CreditCardIcon className='text-white' width={22} height={22} />
                     Get Started</button></>
                 }
