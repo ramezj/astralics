@@ -9,6 +9,7 @@ import NewBoard from "@/components/b/NewBoard"
 import Feedback from "@/components/b/Feedback"
 import { motion } from "framer-motion"
 import sortFeedback from "@/utils/sortFeedback"
+import Header from "@/components/b/Header"
 
 export default function Page() {
     const router = useRouter()
@@ -42,12 +43,12 @@ export default function Page() {
   return (
     <>
     <BoardLayout>
-    <title>{router.query.id}</title>
+    {/* <title>{router.query.id}</title> */}
     <br /><br />
     { loading === true && 
     <>
     <center>
-            <h1 className="text-2xl font-bold">{router.query.id}</h1>
+    <h1 className="text-2xl font-bold">{data.name}</h1>
             <br /><br />
             <NewBoard>
                 {/* <Loading /> */}
