@@ -64,7 +64,7 @@ export default function Feedback(props) {
         </p>
         <p className='text-xs text-left text-white'>
           {props.description.length > 150 ? `${props.description.substring(0,150)}...` : `${props.description}`}
-          </p>
+        </p>
         {
             props.type == "🐛 Bug Report"
             ? 
@@ -89,6 +89,10 @@ export default function Feedback(props) {
             </>
             : <></>
         }
+        {/* <div className='flex mt-4 -mb-4 items-center'>
+        <img className="rounded-full w-6 flex" src={props.session.user.image}></img>
+        <p className="text-xs font-bold text-left text-white m-2">Ramez Joseph</p>
+        </div> */}
         </div>
         <div className="m-6 ml-auto">
         <button onClick={(() => {
@@ -98,8 +102,8 @@ export default function Feedback(props) {
                 : setIsOpen(true)
             }
         })}
-        className={` border border-white/10 group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-xl items-center flex justify-center 
-        ${test ? 'bg-blue-700 border-none hover:bg-blue-700' : 'bg-transparent'}`}>
+        className={`border border-white/20 group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-xl items-center flex justify-center 
+        ${test ? 'bg-blue-700 border-none hover:bg-blue-700 ' : 'bg-transparent'}`}>
         <h1 
         className={`m-1 font-bold group-hover:text-white ${test ? 'text-white' : 'text-white'}`}>
         {upvotes}</h1>
