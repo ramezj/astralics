@@ -62,7 +62,9 @@ export default function Feedback(props) {
             title.length > 100 ? `${title.substring(0,50)}...` : `${title}`
         }       
         </p>
-        <p className='text-xs text-left text-white'>{props.description}</p>
+        <p className='text-xs text-left text-white'>
+          {props.description.length > 150 ? `${props.description.substring(0,150)}...` : `${props.description}`}
+          </p>
         {
             props.type == "🐛 Bug Report"
             ? 
@@ -88,7 +90,7 @@ export default function Feedback(props) {
             : <></>
         }
         </div>
-        <div className="m-8 ml-auto">
+        <div className="m-6 ml-auto">
         <button onClick={(() => {
             {
                 props.session 
