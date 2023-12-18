@@ -108,8 +108,9 @@ export default function CreateFeedback(props) {
                     </select>
                     </div>
                   </div>
+                  <center>
                   <div className="mt-4">
-                  <button type="submit" className='px-4 py-2.5 bg-blue-700 rounded-xl flex font-medium outline-none'>
+                  <button type="submit" className='text-middle w-full py-2.5 bg-blue-700 rounded-xl font-medium outline-none'>
                     {
                       loading 
                       ? "Creating Feedback.."
@@ -117,6 +118,7 @@ export default function CreateFeedback(props) {
                     }
                   </button>
                   </div>
+                  </center>
                   </form>
                 </Dialog.Panel>
               </Transition.Child>
