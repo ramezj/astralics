@@ -44,8 +44,6 @@ export default function Page() {
     <>
     <title>{router.query.id}</title>
     <BoardLayout>
-    {/* <title>{router.query.id}</title> */}
-    <br /><br />
     { loading === true && 
     <>
     <center>

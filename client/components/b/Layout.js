@@ -9,7 +9,7 @@ export default function BoardLayout(props) {
             {/* <Navbar session={session}/> */}
             {/* bg-[#05050a] */}
         {/* <Navbar session={session}/> */}
-        {/* <BoardNav session={session}/> */}
+        <BoardNav session={session}/>
         {props.children}
         </div>
     )
