@@ -20,15 +20,6 @@ export default function CreateFeedback(props) {
     const [ loading, setLoading ] = useState(false);
     const [ text, setText ] = useState();
     const [ response, setResponse ] = useState(null);
-    const people = [
-      { name: 'Wade Cooper' },
-      { name: 'Arlene Mccoy' },
-      { name: 'Devon Webb' },
-      { name: 'Tom Cook' },
-      { name: 'Tanya Fox' },
-      { name: 'Hellen Schmidt' },
-    ]    
-    const [selected, setSelected] = useState(people[0])
     const createFeedback = async (e) => {
       e.preventDefault();
       setLoading(true);
@@ -84,13 +75,15 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-gradient-to-t from-zinc-950 to-zinc-900 p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-zinc-950 border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
+                  <center>
                   <Dialog.Title
                     as="h3"
                     className="text-xl font-medium leading-6 text-white"
                   >
                     Create Feedback
                   </Dialog.Title>
+                  </center>
                   <form onSubmit={createFeedback}>
                   <div className="mt-6">
                     <div className="mt-3">
@@ -105,7 +98,7 @@ export default function CreateFeedback(props) {
                       <textarea placeholder='Description of your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})} className="textarea-md bg-black rounded-xl outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
                       <br />
                     </div>
-                    <div className="mt-3">
+                    <div className="mt-1">
                     <label className="text-white font-medium">Category</label>
                     <select className="mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-black rounded-xl" onChange={((e) => {setType(e.target.value)})}>
                       <option disabled selected>Category</option>
