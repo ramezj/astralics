@@ -41,7 +41,7 @@ export default function CreateBoard() {
         <>
         <div className="card w-[22.5rem] backgroundColor duration-300">
         <div className="card-body">
-        <h2 className="card-title text-xl text-white font-bold justify-center -mt-2 mb-2">Board Information</h2>
+        <h2 className="card-title text-xl text-white font-bold justify-center -mt-2 mb-2 drop-shadow">Board Information</h2>
         <form onSubmit={createProject}>
         <input required autoFocus={false} type="text" placeholder="Name" onChange={(e) => {setName(e.target.value)}} className="shadow-md input w-full mt-2 focus:outline-none bg-white text-black font-bold text-sm rounded-xl" />
         <input required autoFocus={false} type="url" placeholder="Link" onChange={(e) => {setUrl(e.target.value)}} className="shadow-md input w-full mt-2 focus:outline-none bg-white text-black font-bold text-sm mt-4 rounded-xl" />
