@@ -7,6 +7,7 @@ import Card from "@/components/app/Card";
 import Loading from "@/components/app/Loading";
 import { motion } from 'framer-motion'
 import Create from "@/components/app/Create";
+import AppLayout from "@/components/app/AppLayout";
 
 export default function Component() {
   const router = useRouter();
@@ -45,8 +46,7 @@ export default function Component() {
   }, [])
   return (
     <>
-    <Layout>
-      
+    <AppLayout>
     <title>Lunar, App</title>
     {loading 
     ?
@@ -55,15 +55,6 @@ export default function Component() {
     </>
     :
     <>
-    <br />
-    <center>
-      <div className='sm:w-4/5'>
-        <h1 className="2xl:text-2xl text-2xl font-bold">boards</h1>
-      </div>
-      <br /><br />
-      <Create />
-    {/* <Premium premium={premium} /> */}
-    </center>
     <br /><br />
     <div className='flex flex-wrap gap-8 justify-center w-full'>
       {
@@ -98,7 +89,7 @@ export default function Component() {
       </div>
     </>
     }
-    </Layout>
+    </AppLayout>
     </>
   )
 }
