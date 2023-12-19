@@ -80,7 +80,7 @@ export default function Navbar(props) {
               {/* <Settings /> */}
               <Link href='/app' className='rounded-xl px-7 py-2 bg-white hover:bg-gray-200 text-black font-bold flex gap-2 content-center justify-center items-center duration-200'>
                 {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
-                dashboard 
+                Dashboard 
                 </Link></>
               : <> 
                 <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-xl font-bold flex justify-center items-center gap-2 duration-200' onClick={openModal}>
@@ -184,7 +184,7 @@ export default function Navbar(props) {
                 Settings 
                 </Link> */}
               <Link href='/app' className='text-black -mt-2 px-8 py-2 bg-white hover:bg-gray-200  duration-300 rounded-xl font-bold flex justify-center gap-2'>
-                dashboard
+              Dashboard
                 </Link></>
               : <><Link onClick={signUserIn} href='/' className='text-black -mt-2 px-8 py-2 bg-white hover:bg-gray-200 rounded-xl font-bold flex justify-center gap-2 duration-200'>
               try lunar 
