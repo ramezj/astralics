@@ -5,6 +5,8 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import CreateBoard from './createBoard';
 import { ChevronDownIcon } from 'lucide-react';
+import { ClipboardDocumentListIcon } from '@heroicons/react/20/solid';
+import { ClipboardIcon } from 'lucide-react';
 
 export default function Create() {
     const router = useRouter();
@@ -50,7 +52,7 @@ export default function Create() {
     return (
         <>
         <button className='px-5 py-2 bg-white text-black hover:bg-gray-200 rounded-xl font-bold flex justify-center items-center gap-2 duration-200' onClick={openModal}>
-                New Board
+                <ClipboardIcon width={16} /> New Board
         </button>
 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
