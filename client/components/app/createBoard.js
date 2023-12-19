@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 
 export default function CreateBoard() {
     const router = useRouter();
-    const [ text, setText ] = useState("Create Board");
+    const [ text, setText ] = useState("New Board");
     const [ loading, setLoading ] = useState(false);
     const [ name, setName ] = useState();
     const [ handle, setHandle ] = useState();
@@ -43,9 +43,9 @@ export default function CreateBoard() {
         <div className="card-body">
         <h2 className="card-title text-xl text-white font-bold justify-center -mt-2 mb-2">Board Information</h2>
         <form onSubmit={createProject}>
-        <input required autoFocus={false} type="text" placeholder="Name" onChange={(e) => {setName(e.target.value)}} className="shadow-xl input w-full mt-2 focus:outline-none bg-white text-black font-bold text-sm rounded-xl" />
-        <input required autoFocus={false} type="url" placeholder="Website" onChange={(e) => {setUrl(e.target.value)}} className="shadow-xl input w-full mt-2 focus:outline-none bg-white text-black font-bold text-sm mt-4 rounded-xl" />
-        <input required autoFocus={false} type="text" placeholder="/handle" onChange={(e) => {setHandle(e.target.value)}} className="shadow-xl input w-full mt-2 focus:outline-none bg-white text-black font-bold text-sm mt-4 rounded-xl" />
+        <input required autoFocus={false} type="text" placeholder="Name" onChange={(e) => {setName(e.target.value)}} className="shadow-md input w-full mt-2 focus:outline-none bg-white text-black font-bold text-sm rounded-xl" />
+        <input required autoFocus={false} type="url" placeholder="Link" onChange={(e) => {setUrl(e.target.value)}} className="shadow-md input w-full mt-2 focus:outline-none bg-white text-black font-bold text-sm mt-4 rounded-xl" />
+        <input required autoFocus={false} type="text" placeholder="Handle" onChange={(e) => {setHandle(e.target.value)}} className="shadow-md input w-full mt-2 focus:outline-none bg-white text-black font-bold text-sm mt-4 rounded-xl" />
         <center>
         <button className="mt-6 shadow-xl w-full py-2 rounded-xl text-base text-black normal-case bg-white hover:bg-white outline-none border-none font-bold " type='submit'>
         { 
