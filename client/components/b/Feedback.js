@@ -3,6 +3,7 @@ import { Fragment, useState, useEffect } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import toast, { Toaster } from 'react-hot-toast';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import AuthModal from "../Auth/AuthModal";
 
 export default function Feedback(props) {
     const [ upvotes, setUpvotes ] = useState(props.upvotes);
@@ -138,10 +139,7 @@ export default function Feedback(props) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden rounded-2xl bg-transparent align-middle transition-all">
-                  <center>
-                  <button className='outline-none px-8 py-2 bg-white text-black rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
-                  Sign in with Google</button>  
-                  </center>
+                <AuthModal />
                 </Dialog.Panel>
               </Transition.Child>
             </div>
