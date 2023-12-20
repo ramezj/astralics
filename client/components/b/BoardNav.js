@@ -9,7 +9,7 @@ import {
   CreditCardIcon,
   BoltIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import AuthModal from '../Auth/AuthModal'
 
 const products = [
   { name: 'Feedback Widget', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon }
@@ -26,12 +26,6 @@ export default function BoardNav(props) {
     }
     function openModal() {
       setIsOpen(true)
-    }
-    const signUserIn = async () => {
-        signIn('google');
-    }
-    const signUserOut = async () => {
-      signOut();
     }
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
@@ -63,7 +57,7 @@ export default function BoardNav(props) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-80" />
+            <div className="fixed inset-0 backdrop-blur-[1px]" />
           </Transition.Child>
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center text-center">
@@ -77,10 +71,7 @@ export default function BoardNav(props) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden rounded-2xl bg-transparent align-middle transition-all">
-                  <center>
-                  <button className='px-8 py-2 bg-white text-black rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
-                  Sign in with Google</button>  
-                  </center>
+                  
                 </Dialog.Panel>
               </Transition.Child>
             </div>
@@ -111,7 +102,7 @@ export default function BoardNav(props) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-80" />
+            <div className="fixed inset-0 bg-black bg-opacity-70" />
           </Transition.Child>
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center text-center">
@@ -125,10 +116,7 @@ export default function BoardNav(props) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden rounded-2xl bg-transparent align-middle transition-all">
-                  <center>
-                  <button className='px-8 py-2 bg-white text-black rounded-xl font-bold flex justify-center items-center gap-2 duration-300' onClick={signUserIn}>
-                  Sign in with Google</button>  
-                  </center>
+                  <AuthModal />
                 </Dialog.Panel>
               </Transition.Child>
             </div>
