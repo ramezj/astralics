@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import MainCard from "@/components/settings/src/MainCard"
 import Loading from "@/components/settings/Loading"
+import AppLayout from "@/components/app/AppLayout"
 
 export default function Settings() {
     const [ loading, setLoading ] = useState(true);
@@ -39,7 +40,7 @@ export default function Settings() {
       }, [])
     return (
         <>
-        <Layout>
+        <AppLayout>
         <title>Lunar, Settings</title>
             <center>
                 <div className="mt-4">
@@ -52,7 +53,7 @@ export default function Settings() {
                     }
                 </div>
             </center>
-        </Layout>
+        </AppLayout>
         </>
     )
 }

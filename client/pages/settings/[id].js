@@ -5,6 +5,7 @@ import Layout from "@/components/layout"
 import { motion } from "framer-motion"
 import Card from "@/components/settings/Card"
 import Loading from "@/components/settings/Loading"
+import AppLayout from "@/components/app/AppLayout"
 
 export default function Page() {
     const router = useRouter()
@@ -34,7 +35,7 @@ export default function Page() {
     }, [id])
   return (
     <>
-    <Layout>
+    <AppLayout>
     <title>Lunar, Settings</title>
      <br />
      <br />
@@ -52,7 +53,7 @@ export default function Page() {
     </>
     }
     </center>
-    </Layout>
+    </AppLayout>
     </>
   )
 }
