@@ -113,7 +113,7 @@ export default function Navbar(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden rounded-2xl align-middle transition-all">
+                <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden align-middle transition-all">
                   <AuthModal />
                 </Dialog.Panel>
               </Transition.Child>

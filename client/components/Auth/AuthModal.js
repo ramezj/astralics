@@ -6,7 +6,7 @@ export default function AuthModal() {
     }
     return (
         <>
-        <div className="backgroundColor">
+        <div className="bg-zinc-950 border border-white/10 rounded-xl">
         <center>
             <br/>
                   <h1 className="-mt-1 font-bold text-lg">Sign In</h1>
