@@ -30,7 +30,7 @@ export default function BoardNav(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <header className="bg-transparent">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 outline-none">
             <span className="sr-only">Your Company</span>
@@ -43,8 +43,8 @@ export default function BoardNav(props) {
               ? <> 
               <img class="inline-block h-8 w-8 rounded-full" src={`${props.session.user.image}`} alt="" /></>
               : <> 
-                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-xl font-bold flex justify-center items-center gap-2 duration-200' onClick={openModal}>
-                log in
+                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
+                Sign In
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -88,8 +88,8 @@ export default function BoardNav(props) {
               ? <> 
               <img class="inline-block h-8 w-8 rounded-full" src={`${props.session.user.image}`} alt="" /></>
               : <> 
-                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-xl font-bold flex justify-center items-center gap-2 duration-200' onClick={openModal}>
-                log in
+                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
+                Sign In
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>

@@ -30,7 +30,7 @@ export default function AppNavbar(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <header className="bg-transparent">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8 " aria-label="Global">
+      <nav className="mx-auto flex items-center justify-between p-6 lg:px-8 " aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 outline-none">
             <span className="sr-only">Your Company</span>
@@ -66,12 +66,12 @@ export default function AppNavbar(props) {
               ? <> 
               <Billing />
               <Create />
-              <Link href='/app' className='rounded-xl px-7 py-2 bg-white hover:bg-gray-200 text-black font-bold flex gap-2 content-center justify-center items-center duration-200'>
+              <Link href='/app' className='rounded-lg px-7 py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
                 {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
                 Dashboard 
                 </Link></>
               : <> 
-                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-xl font-bold flex justify-center items-center gap-2 duration-200' onClick={openModal}>
+                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-xl flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 try lunar
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>
