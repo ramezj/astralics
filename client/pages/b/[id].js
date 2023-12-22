@@ -39,6 +39,8 @@ export default function Page() {
             setLoading(false);
         }
         fetchProject();
+        const category = router.query.category;
+        console.log(category);
     }, [id])
   return (
     <>
