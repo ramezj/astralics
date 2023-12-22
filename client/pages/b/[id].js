@@ -19,6 +19,9 @@ export default function Page() {
     const [ data, setData ] = useState(false); 
     const [ feedbacks, setFeedbacks ] = useState([]);
     const [ mergedData, setMergedData ] = useState([]);
+    const [ f, setF ] = useState([])
+    const [ fr, setFR ] = useState([])
+    const [ b, setB ] = useState([])
     useEffect(() => {
         if(!id) {
             return;
@@ -32,7 +35,15 @@ export default function Page() {
             }
             if(res.ok == true && res.auth == true) {
                 setMergedData(res.merged);
-                console.log("Merged Data :", mergedData);
+                let f = mergedData.filter((x) => x.type === "📝 Feedback");
+                setF(f);
+                let fr = mergedData.filter((x) => x.type === "💡 Feature Request");
+                setFR(fr);
+                let b = mergedData.filter((x) => x.type === "🐛 Bug Report");
+                setB(b)
+                console.log("Feedback :", f);
+                console.log("Feature Request :", fr);
+                console.log("Bug Report : ", b);
             }
             setData(res.response);
             setFeedbacks(res.response.feedbacks);
@@ -52,9 +63,8 @@ export default function Page() {
     <h1 className="text-2xl font-bold">{router.query.id}</h1>
             <br /><br />
             <NewBoard>
-                {/* <Loading /> */}
                 <br /><br /><br />
-                <h1 className="text-2xl ">this usually doesn't take long :)</h1>
+                <h1 className="text-2xl ">this usually doesn't take long</h1>
                 <br />
             </NewBoard>
             <br />
