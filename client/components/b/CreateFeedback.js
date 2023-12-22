@@ -89,13 +89,15 @@ export default function CreateFeedback(props) {
                     <div className="mt-3">
                       <label className="text-white font-medium">Title</label>
                       <br />
-                      <input placeholder='Title of your feedback' required value={title} onChange={((e) => {setTitle(e.target.value)})} className='input-md h-10 bg-black rounded-xl outline-none w-full shadow-xl mt-1.5'/>
+                      <input placeholder='Title of your feedback' required value={title} onChange={((e) => {setTitle(e.target.value)})} 
+                      className='input-md h-10 bg-black rounded-xl outline-none w-full shadow-xl mt-1.5'/>
                       <br />
                     </div>
                     <div className="mt-3">
                       <label className="text-white font-medium">Description</label>
                       <br />
-                      <textarea placeholder='Description of your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})} className="textarea-md bg-black rounded-xl outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
+                      <textarea placeholder='Description of your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})} 
+                      className="textarea-md bg-black rounded-xl outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
                       <br />
                     </div>
                     <div className="mt-1">

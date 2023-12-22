@@ -39,7 +39,7 @@ export default function CreateBoard() {
     }
     return (
         <>
-        <div className="card w-[22.5rem] backgroundColor duration-300">
+        <div className="card w-[22.5rem] bg-zinc-950 border border-white/10 duration-300">
         <div className="card-body">
         <h2 className="card-title text-xl text-white font-bold justify-center -mt-2 mb-2 drop-shadow">Board Information</h2>
         <form onSubmit={createProject}>

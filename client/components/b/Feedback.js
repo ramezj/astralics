@@ -56,7 +56,7 @@ export default function Feedback(props) {
         position="bottom-right"
         reverseOrder={true}
         />
-        <div key={props.id} className="border border-white/10 w-full flex bg-zinc-950 rounded-2xl items-center cursor-pointer duration-300">
+        <div key={props.id} className="border border-white/10 w-full flex bg-zinc-950 rounded-2xl items-center cursor-pointer duration-300 hover:border-white/20">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left text-white'>
         {
@@ -90,10 +90,6 @@ export default function Feedback(props) {
             </>
             : <></>
         }
-        {/* <div className='flex mt-4 -mb-4 items-center'>
-        <img className="rounded-full w-6 flex" src={props.session.user.image}></img>
-        <p className="text-xs font-bold text-left text-white m-2">Ramez Joseph</p>
-        </div> */}
         </div>
         <div className="m-6 ml-auto">
         <button onClick={(() => {
