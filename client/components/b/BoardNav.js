@@ -43,7 +43,7 @@ export default function BoardNav(props) {
               ? <> 
               <img class="inline-block h-8 w-8 rounded-full" src={`${props.session.user.image}`} alt="" /></>
               : <> 
-                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
+                <button className='font-medium px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 Sign In
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>
@@ -88,7 +88,7 @@ export default function BoardNav(props) {
               ? <> 
               <img class="inline-block h-8 w-8 rounded-full" src={`${props.session.user.image}`} alt="" /></>
               : <> 
-                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
+                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 Sign In
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>

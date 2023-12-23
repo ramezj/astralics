@@ -47,31 +47,19 @@ export default function AppNavbar(props) {
             <Bars3Icon className="h-8 w-8 hover:outline-none active:outline-none outline-none text-white" aria-hidden="true"/>
           </button>
         </div>
-        {/* <Popover.Group className="hidden lg:flex gap-2">
-        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-white flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
-            Why?
-          </Link>
-        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-white flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
-            Demo
-          </Link>
-          <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-white flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
-            Pricing
-          </Link>
-        </Popover.Group> */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
-
           <a className="text-sm font-bold leading-6 text-white flex gap-4">
             {
               props.session 
               ? <> 
               <Billing />
               <Create />
-              <Link href='/app' className='rounded-lg px-7 py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
+              <Link href='/app' className='rounded-md px-7 py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
                 {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
                 Dashboard 
                 </Link></>
               : <> 
-                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-xl flex justify-center items-center gap-2 duration-200' onClick={openModal}>
+                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 try lunar
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>
