@@ -41,7 +41,9 @@ export default function BoardNav(props) {
         {
               props.session 
               ? <> 
-              <img class="inline-block h-8 w-8 rounded-full" src={`${props.session.user.image}`} alt="" /></>
+              <button className='font-medium px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200'>
+                {props.session.user.name}
+                </button></>
               : <> 
                 <button className='font-medium px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 Sign In
@@ -86,7 +88,9 @@ export default function BoardNav(props) {
             {
               props.session 
               ? <> 
-              <img class="inline-block h-8 w-8 rounded-full" src={`${props.session.user.image}`} alt="" /></>
+                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200'>
+                {props.session.user.name}
+                </button></>
               : <> 
                 <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 Sign In
