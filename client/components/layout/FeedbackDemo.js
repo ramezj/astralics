@@ -11,7 +11,7 @@ export default function FeedbackDemo(props) {
     const [ test, setTest ] = useState(props.isUpvoted)
     return (
         <>
-        <div key={props.id} className="border border-white/10 w-full flex bg-zinc-950 rounded-2xl items-center cursor-pointer duration-300">
+        <div key={props.id} className="border border-white/10 w-full flex bg-zinc-950 rounded-lg items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left text-white'>
         {
@@ -45,7 +45,7 @@ export default function FeedbackDemo(props) {
         }
         </div>
         <div className="m-8 ml-auto">
-        <button className={`group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-xl items-center flex justify-center bg-blue-700 border-none`}>
+        <button className={`group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-lg items-center flex justify-center bg-blue-700 border-none`}>
         <h1 
         className={`m-1 font-bold group-hover:text-white text-white`}>
         {upvotes}</h1>
