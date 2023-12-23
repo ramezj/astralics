@@ -56,7 +56,7 @@ export default function Feedback(props) {
         position="bottom-right"
         reverseOrder={true}
         />
-        <div key={props.id} className="border border-white/10 w-full flex bg-zinc-950 rounded-2xl items-center cursor-pointer duration-300 hover:border-white/20">
+        <div key={props.id} className="border border-white/10 w-full flex bg-zinc-950 rounded-lg items-center cursor-pointer duration-300 hover:border-white/20">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left text-white'>
         {
@@ -99,7 +99,7 @@ export default function Feedback(props) {
                 : setIsOpen(true)
             }
         })}
-        className={`border border-white/20 group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-xl items-center flex justify-center 
+        className={`border border-white/20 group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-lg items-center flex justify-center 
         ${test ? 'bg-blue-700 border-none hover:bg-blue-700 ' : 'bg-transparent'}`}>
         <h1 
         className={`m-1 font-bold group-hover:text-white ${test ? 'text-white' : 'text-white'}`}>

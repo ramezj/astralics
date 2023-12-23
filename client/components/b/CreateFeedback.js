@@ -46,7 +46,7 @@ export default function CreateFeedback(props) {
   }
     return (
         <>
-        <button onClick={openModal} className='px-4 py-2.5 bg-blue-700 duration-300 hover:bg-blue-800 rounded-xl flex font-medium outline-none'>
+        <button onClick={openModal} className='px-4 py-2.5 bg-blue-700 duration-300 hover:bg-blue-800 rounded-lg flex font-medium outline-none'>
                 Leave Feedback ✨
                 {/* <HandThumbUpIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/> */}
                 {/* <PlusCircleIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/> */}
@@ -75,7 +75,7 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-zinc-950 border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-lg bg-zinc-950 border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
                   <center>
                   <Dialog.Title
                     as="h3"
