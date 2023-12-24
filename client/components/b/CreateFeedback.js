@@ -4,6 +4,7 @@ import { Fragment, useState } from 'react'
 import { useRouter } from 'next/router'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import SelectCategory from "./SelectCategory"
+import { ChevronLeftIcon } from "@heroicons/react/24/outline"
 
 export default function CreateFeedback(props) {
     const router = useRouter()
@@ -15,6 +16,7 @@ export default function CreateFeedback(props) {
     function openModal() {
         setIsOpen(true)
     }
+    const [ step, setStep ] = useState(1);
     const [ title, setTitle ] = useState(null);
     const [ description, setDescription ] = useState(null);
     const [ type, setType ] = useState("");
@@ -49,8 +51,6 @@ export default function CreateFeedback(props) {
         <>
         <button onClick={openModal} className='px-4 py-2.5 bg-blue-700 duration-300 hover:bg-blue-800 rounded-lg flex font-medium outline-none'>
                 Leave Feedback ✨
-                {/* <HandThumbUpIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/> */}
-                {/* <PlusCircleIcon className='mt-[0.15rem] ml-2 h-5 w-5 text-white hover:text-gray-100'/> */}
             </button>
             <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -76,8 +76,33 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-lg bg-zinc-950 border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
-                  <center>
+                <Dialog.Panel className="h-[24rem] w-full max-w-md transform overflow-hidden rounded-lg bg-black border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
+                  {
+                    step == 1 && (
+                      <>
+                      <center>
+                      <Dialog.Title as="h3" className="text-xl font-medium leading-6 text-white">
+                          Choose Category
+                      </Dialog.Title>
+                      <button onClick={(() => {setStep(2)})} className="font-medium w-full border border-white/10 rounded-md mt-8 py-7 bg-zinc-950 duration-300 hover:border-white/20">
+                      🐛 Bug Report
+                      </button>
+                      <button className="font-medium w-full border border-white/10 rounded-md mt-4 py-7 bg-zinc-950 duration-300 hover:border-white/20">
+                      💡 Feature Request
+                      </button>
+                      <button className="font-medium w-full border border-white/10 rounded-md mt-4 py-7 bg-zinc-950 duration-300 hover:border-white/20">
+                      📝 Feedback
+                      </button>
+                      </center>
+                      </>
+                    )
+                  }
+                  { step == 2 && (
+                    <>
+                    <center>
+                      <button onClick={(() => setStep(1))} className="float-left">
+                        <ChevronLeftIcon strokeWidth={2} className="text-white w-6 h-6"/>
+                      </button>
                   <Dialog.Title
                     as="h3"
                     className="text-xl font-medium leading-6 text-white"
@@ -91,18 +116,17 @@ export default function CreateFeedback(props) {
                       <label className="text-white font-medium">Title</label>
                       <br />
                       <input placeholder='Title of your feedback' required value={title} onChange={((e) => {setTitle(e.target.value)})} 
-                      className='input-md h-10 bg-black rounded-xl outline-none w-full shadow-xl mt-1.5'/>
+                      className='input-md h-10 bg-zinc-950 rounded-xl outline-none w-full shadow-xl mt-1.5'/>
                       <br />
                     </div>
                     <div className="mt-3">
                       <label className="text-white font-medium">Description</label>
                       <br />
                       <textarea placeholder='Description of your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})} 
-                      className="textarea-md bg-black rounded-xl outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
+                      className="textarea-md bg-zinc-950 rounded-xl outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
                       <br />
                     </div>
-                    <div className="mt-1">
-                      <SelectCategory />
+                    {/* <div className="mt-1">
                     <label className="text-white font-medium">Category</label>
                     <select className="mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-black rounded-xl" onChange={((e) => {setType(e.target.value)})}>
                       <option disabled selected>Category</option>
@@ -110,7 +134,7 @@ export default function CreateFeedback(props) {
                       <option className="text-md font-medium">💡 Feature Request</option>
                       <option className="text-md font-medium">📝 Feedback</option>
                     </select>
-                    </div>
+                    </div> */}
                   </div>
                   <center>
                   <div className="mt-6">
@@ -124,6 +148,8 @@ export default function CreateFeedback(props) {
                   </div>
                   </center>
                   </form>
+                    </>
+                  )}
                 </Dialog.Panel>
               </Transition.Child>
             </div>
