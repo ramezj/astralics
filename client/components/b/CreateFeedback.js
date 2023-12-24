@@ -16,7 +16,7 @@ export default function CreateFeedback(props) {
     function openModal() {
         setIsOpen(true)
     }
-    const [ step, setStep ] = useState(1);
+    // const [ step, setStep ] = useState(1);
     const [ title, setTitle ] = useState(null);
     const [ description, setDescription ] = useState(null);
     const [ type, setType ] = useState("");
@@ -76,36 +76,11 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="h-[23rem] w-full max-w-md transform overflow-hidden rounded-lg bg-black border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
-                  {
-                    step == 1 && (
-                      <>
-                      <center>
-                      <Dialog.Title as="h3" className="text-xl font-medium leading-6 text-white">
-                          Choose Category
-                      </Dialog.Title>
-                      <button onClick={(() => {setStep(2)})} className="font-medium w-full border border-white/10 rounded-md mt-8 py-6 bg-zinc-950 duration-300 hover:border-white/20">
-                      🐛 Bug Report
-                      </button>
-                      <button className="font-medium w-full border border-white/10 rounded-md mt-4 py-6 bg-zinc-950 duration-300 hover:border-white/20">
-                      💡 Feature Request
-                      </button>
-                      <button className="font-medium w-full border border-white/10 rounded-md mt-4 py-6 bg-zinc-950 duration-300 hover:border-white/20">
-                      📝 Feedback
-                      </button>
-                      </center>
-                      </>
-                    )
-                  }
-                  { step == 2 && (
-                    <>
-                    <button onClick={(() => setStep(1))} className="flex self-start">
-                        <ChevronLeftIcon strokeWidth={2} className="text-white w-6 h-6"/>
-                    </button>
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-lg bg-black border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
                     <center>
                   <Dialog.Title
                     as="h3"
-                    className="text-xl font-medium leading-6 text-white justify-center items-center self-center -mt-6"
+                    className="text-xl font-medium leading-6 text-white justify-center items-center self-center"
                   >
                     Create Feedback
                   </Dialog.Title>
@@ -125,6 +100,11 @@ export default function CreateFeedback(props) {
                       <textarea placeholder='Description of your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})} 
                       className="textarea-md bg-zinc-950 rounded-xl outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
                       <br />
+                    </div>
+                    <div className="flex mt-3 gap-3">
+                        <button className="py-2 px-4 border border-white/10 rounded-md bg-zinc-950 text-sm">Feature Request</button>
+                        <button className="py-2 px-4 border border-white/10 rounded-md bg-zinc-950 text-sm">Bug Report</button>
+                        <button className="py-2 px-4 border border-white/10 rounded-md bg-zinc-950 text-sm">Feedback</button>
                     </div>
                     {/* <div className="mt-1">
                     <label className="text-white font-medium">Category</label>
@@ -148,8 +128,6 @@ export default function CreateFeedback(props) {
                   </div>
                   </center>
                   </form>
-                    </>
-                  )}
                 </Dialog.Panel>
               </Transition.Child>
             </div>
