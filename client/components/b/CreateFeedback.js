@@ -3,6 +3,7 @@ import { Dialog, Transition, Listbox } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { useRouter } from 'next/router'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import SelectCategory from "./SelectCategory"
 
 export default function CreateFeedback(props) {
     const router = useRouter()
@@ -101,6 +102,7 @@ export default function CreateFeedback(props) {
                       <br />
                     </div>
                     <div className="mt-1">
+                      <SelectCategory />
                     <label className="text-white font-medium">Category</label>
                     <select className="mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-black rounded-xl" onChange={((e) => {setType(e.target.value)})}>
                       <option disabled selected>Category</option>

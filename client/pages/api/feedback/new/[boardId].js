@@ -15,6 +15,18 @@ export default async function handler(req, res) {
         response: 'Please Fill All Fields'
       })
     }
+    if(typeof type != "string") {
+      return res.status(400).json({
+        ok:false,
+        response:'Invalid type API'
+      })
+    }
+    if(!(type === "feedback" || type === "feature_request" || type === "bug_report")) {
+      return res.status(400).json({
+        ok:false,
+        response:"Invalid type, please choose from menu"
+      })
+    }
     const { boardId } = req.query;
     const board = await prisma.board.findFirst({
       where: {
