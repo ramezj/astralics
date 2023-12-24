@@ -76,7 +76,7 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="h-[24rem] w-full max-w-md transform overflow-hidden rounded-lg bg-black border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="h-[23rem] w-full max-w-md transform overflow-hidden rounded-lg bg-black border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
                   {
                     step == 1 && (
                       <>
@@ -84,13 +84,13 @@ export default function CreateFeedback(props) {
                       <Dialog.Title as="h3" className="text-xl font-medium leading-6 text-white">
                           Choose Category
                       </Dialog.Title>
-                      <button onClick={(() => {setStep(2)})} className="font-medium w-full border border-white/10 rounded-md mt-8 py-7 bg-zinc-950 duration-300 hover:border-white/20">
+                      <button onClick={(() => {setStep(2)})} className="font-medium w-full border border-white/10 rounded-md mt-8 py-6 bg-zinc-950 duration-300 hover:border-white/20">
                       🐛 Bug Report
                       </button>
-                      <button className="font-medium w-full border border-white/10 rounded-md mt-4 py-7 bg-zinc-950 duration-300 hover:border-white/20">
+                      <button className="font-medium w-full border border-white/10 rounded-md mt-4 py-6 bg-zinc-950 duration-300 hover:border-white/20">
                       💡 Feature Request
                       </button>
-                      <button className="font-medium w-full border border-white/10 rounded-md mt-4 py-7 bg-zinc-950 duration-300 hover:border-white/20">
+                      <button className="font-medium w-full border border-white/10 rounded-md mt-4 py-6 bg-zinc-950 duration-300 hover:border-white/20">
                       📝 Feedback
                       </button>
                       </center>
@@ -99,13 +99,13 @@ export default function CreateFeedback(props) {
                   }
                   { step == 2 && (
                     <>
-                    <center>
-                      <button onClick={(() => setStep(1))} className="float-left">
+                    <button onClick={(() => setStep(1))} className="flex self-start">
                         <ChevronLeftIcon strokeWidth={2} className="text-white w-6 h-6"/>
-                      </button>
+                    </button>
+                    <center>
                   <Dialog.Title
                     as="h3"
-                    className="text-xl font-medium leading-6 text-white"
+                    className="text-xl font-medium leading-6 text-white justify-center items-center self-center -mt-6"
                   >
                     Create Feedback
                   </Dialog.Title>
