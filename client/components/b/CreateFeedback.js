@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import SelectCategory from "./SelectCategory"
 import { ChevronLeftIcon } from "@heroicons/react/24/outline"
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function CreateFeedback(props) {
     const router = useRouter()
@@ -16,7 +17,6 @@ export default function CreateFeedback(props) {
     function openModal() {
         setIsOpen(true)
     }
-    // const [ step, setStep ] = useState(1);
     const [ title, setTitle ] = useState(null);
     const [ description, setDescription ] = useState(null);
     const [ type, setType ] = useState("");
@@ -50,14 +50,24 @@ export default function CreateFeedback(props) {
       if(resp.ok == true) {
           setLoading(false);
           setText("Created Successfully");
+          toast.success("Created Successfully!", {
+            style: {
+            borderRadius: '10px',
+            },
+        })
       } else if (resp.ok == false) {
           setLoading(false);
           setText(resp.response);
           setResponse(resp.response);
+          toast.error(resp.response);
       }
   }
     return (
         <>
+        <Toaster
+        position="bottom-right"
+        reverseOrder={true}
+        />
         <button onClick={openModal} className='px-4 py-2.5 bg-blue-700 duration-300 hover:bg-blue-800 rounded-lg flex font-medium outline-none'>
                 Leave Feedback ✨
             </button>
@@ -127,7 +137,7 @@ export default function CreateFeedback(props) {
                   </div>
                   <center>
                   <div className="mt-6">
-                  <button type="submit" className='text-middle w-full py-2.5 bg-blue-700 rounded-lg font-medium outline-none'>
+                  <button type="submit" className='text-middle w-full py-2.5 bg-blue-700 rounded-md font-medium outline-none'>
                     {
                       loading 
                       ? "Creating Feedback.."

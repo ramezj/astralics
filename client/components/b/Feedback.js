@@ -39,7 +39,7 @@ export default function Feedback(props) {
           setUpvotes(upvotes-1);
         }
         if(resp.ok == true) {
-          toast.success(resp.response, {
+          return toast.success(resp.response, {
             style: {
             borderRadius: '10px',
             },
