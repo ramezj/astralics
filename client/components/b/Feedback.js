@@ -67,26 +67,26 @@ export default function Feedback(props) {
           {props.description.length > 150 ? `${props.description.substring(0,150)}...` : `${props.description}`}
         </p>
         {
-            props.type == "🐛 Bug Report"
+            props.type === "bug_report"
             ? 
             <>
-            <span class="border border-white/10 mt-2 -mb-1 bg-indigo-900 text-indigo-100 text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md dark:bg-indigo-900 dark:text-indigo-300">{props.type}</span>
+            <span class="border border-white/10 mt-2 -mb-1 bg-indigo-900 text-indigo-100 text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md dark:bg-indigo-900 dark:text-indigo-300">🐛 Bug Report</span>
             </>
             : <></>
         }
         {
-            props.type == "💡 Feature Request"
+            props.type === "feature_request"
             ? 
             <>
-            <span class="border border-white/10 mt-2 -mb-1 bg-yellow-900 text-yellow-100 text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md dark:bg-indigo-900 dark:text-indigo-300">{props.type}</span>
+            <span class="border border-white/10 mt-2 -mb-1 bg-yellow-900 text-yellow-100 text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md dark:bg-indigo-900 dark:text-indigo-300">💡 Feature Request</span>
             </>
             : <></>
         }
         {
-            props.type == "📝 Feedback"
+            props.type === "feedback"
             ? 
             <>
-            <span class="border border-white/10 mt-2 -mb-1 bg-green-900 text-green-100 text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md dark:bg-indigo-900 dark:text-indigo-300">{props.type}</span>
+            <span class="border border-white/10 mt-2 -mb-1 bg-green-900 text-green-100 text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md dark:bg-indigo-900 dark:text-indigo-300">📝 Feedback</span>
             </>
             : <></>
         }

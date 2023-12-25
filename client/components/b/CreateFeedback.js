@@ -23,6 +23,15 @@ export default function CreateFeedback(props) {
     const [ loading, setLoading ] = useState(false);
     const [ text, setText ] = useState();
     const [ response, setResponse ] = useState(null);
+    if(type === "🐛 Bug Report") {
+      setType("bug_report");
+    }
+    if(type === "💡 Feature Request") {
+      setType("feature_request");
+    }
+    if(type === "📝 Feedback") {
+      setType("feedback")
+    }
     const createFeedback = async (e) => {
       e.preventDefault();
       setLoading(true);
@@ -91,34 +100,34 @@ export default function CreateFeedback(props) {
                       <label className="text-white font-medium">Title</label>
                       <br />
                       <input placeholder='Title of your feedback' required value={title} onChange={((e) => {setTitle(e.target.value)})} 
-                      className='input-md h-10 bg-zinc-950 rounded-xl outline-none w-full shadow-xl mt-1.5'/>
+                      className='input-md h-10 bg-zinc-950 rounded-lg outline-none w-full shadow-xl mt-1.5'/>
                       <br />
                     </div>
                     <div className="mt-3">
                       <label className="text-white font-medium">Description</label>
                       <br />
                       <textarea placeholder='Description of your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})} 
-                      className="textarea-md bg-zinc-950 rounded-xl outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
+                      className="textarea-md resize-none bg-zinc-950 rounded-lg outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
                       <br />
                     </div>
-                    <div className="flex mt-3 gap-3">
-                        <button className="py-2 px-4 border border-white/10 rounded-md bg-zinc-950 text-sm">Feature Request</button>
-                        <button className="py-2 px-4 border border-white/10 rounded-md bg-zinc-950 text-sm">Bug Report</button>
-                        <button className="py-2 px-4 border border-white/10 rounded-md bg-zinc-950 text-sm">Feedback</button>
-                    </div>
-                    {/* <div className="mt-1">
+                    {/* <div className="flex mt-3 gap-3">
+                        <button className="py-2 px-4 border border-white/10 rounded-md bg-zinc-950 text-xs">Feature Request</button>
+                        <button className="py-2 px-4 border border-white/10 rounded-md bg-zinc-950 text-xs">Bug Report</button>
+                        <button className="py-2 px-4 border border-white/10 rounded-md bg-zinc-950 text-xs">Feedback</button>
+                    </div> */}
+                    <div className="mt-1">
                     <label className="text-white font-medium">Category</label>
-                    <select className="mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-black rounded-xl" onChange={((e) => {setType(e.target.value)})}>
+                    <select className="mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-zinc-950 rounded-lg" onChange={((e) => {setType(e.target.value)})}>
                       <option disabled selected>Category</option>
                       <option className="text-md font-medium">🐛 Bug Report</option>
                       <option className="text-md font-medium">💡 Feature Request</option>
                       <option className="text-md font-medium">📝 Feedback</option>
                     </select>
-                    </div> */}
+                    </div>
                   </div>
                   <center>
                   <div className="mt-6">
-                  <button type="submit" className='text-middle w-full py-2.5 bg-blue-700 rounded-xl font-medium outline-none'>
+                  <button type="submit" className='text-middle w-full py-2.5 bg-blue-700 rounded-lg font-medium outline-none'>
                     {
                       loading 
                       ? "Creating Feedback.."
