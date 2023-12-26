@@ -14,14 +14,14 @@ import Header from "@/components/b/Header"
 export default function Page() {
     const router = useRouter()
     const { id } = router.query;
+    const { category } = router.query;
     const { data: session } = useSession({})
     const [ loading, setLoading ] = useState(false);
-    const [ data, setData ] = useState(false); 
     const [ feedbacks, setFeedbacks ] = useState([]);
-    const [ mergedData, setMergedData ] = useState([]);
     const [ f, setF ] = useState([])
     const [ fr, setFR ] = useState([])
     const [ b, setB ] = useState([])
+    const [ sort, setSort ] = useState();
     useEffect(() => {
         if(!id) {
             return;
@@ -34,25 +34,29 @@ export default function Page() {
                 return router.push('/404')
             }
             if(res.ok == true && res.auth == true) {
-                setMergedData(res.merged);
-                let f = mergedData.filter((x) => x.type === "📝 Feedback");
+                setFeedbacks(res.merged);
+                let f = res.merged.filter((x) => x.type === "feedback");
                 setF(f);
-                let fr = mergedData.filter((x) => x.type === "💡 Feature Request");
+                let fr = res.merged.filter((x) => x.type === "feature_request");
                 setFR(fr);
-                let b = mergedData.filter((x) => x.type === "🐛 Bug Report");
+                let b = res.merged.filter((x) => x.type === "bug_report");
                 setB(b)
-                console.log("Feedback :", f);
-                console.log("Feature Request :", fr);
-                console.log("Bug Report : ", b);
+            } else if(res.ok == true && res.auth == false) {
+                setFeedbacks(res.response.feedbacks);
+                let f = res.response.feedbacks.filter((x) => x.type === "feedback");
+                setF(f);
+                let fr = res.response.feedbacks.filter((x) => x.type === "feature_request");
+                setFR(fr);
+                let b = res.response.feedbacks.filter((x) => x.type === "bug_report");
+                setB(b)
             }
-            setData(res.response);
-            setFeedbacks(res.response.feedbacks);
             setLoading(false);
         }
         fetchProject();
-        const category = router.query.category;
-        console.log(category);
     }, [id])
+    console.log("F :", f);
+    console.log("FR :", fr);
+    console.log("B :", b);
   return (
     <>
     <title>{router.query.id}</title>
@@ -62,7 +66,7 @@ export default function Page() {
     <center>
     <h1 className="text-2xl font-bold">{router.query.id}</h1>
             <br /><br />
-            <NewBoard>
+            <NewBoard setSort={setSort} sort={sort}>
                 <br /><br /><br />
                 <h1 className="text-2xl ">this usually doesn't take long</h1>
                 <br />
@@ -77,33 +81,23 @@ export default function Page() {
         <center>
             <h1 className="text-2xl font-bold">{router.query.id}</h1>
             <br /><br />
-            <NewBoard>
-                {
+            <NewBoard setSort={setSort} sort={sort}>
+            {
                     session 
                     ? 
                     <>
                     {
-                    mergedData.map((x, i) => {
+                    feedbacks.map((x, i) => {
                         return (
                             <>
-                            <motion.div
-                            initial={{
-                                 opacity: 0,
-                                y:-10
-                            }}
-                            animate={{
-                                opacity: 1,
-                                y:0
-                            }}
-                            transition={{duration: 0.5, delay: i * 0.1}}
-                            >
+                            <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: i * 0.1}}>
                             <Feedback isUpvoted={x.isUpvoted} id={x.id} title={x.title} description={x.description} upvotes={x.itemVotes.length} type={x.type} session={session} itemVotes={x.itemVotes}/>
                             </motion.div>
                             <br />
                             </>
                         )
                     })
-                }
+                    }
                     </>
                     : 
                     <>
@@ -111,17 +105,7 @@ export default function Page() {
                     feedbacks.map((x, i) => {
                         return (
                             <>
-                            <motion.div
-                            initial={{
-                                 opacity: 0,
-                                y:-10
-                            }}
-                            animate={{
-                                opacity: 1,
-                                y:0
-                            }}
-                            transition={{duration: 0.5, delay: i * 0.1}}
-                            >
+                            <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: i * 0.1}}>
                             <Feedback isUpvoted={false} id={x.id} title={x.title} description={x.description} upvotes={x.itemVotes.length} type={x.type} session={session} itemVotes={x.itemVotes}/>
                             </motion.div>
                             <br />
@@ -130,7 +114,7 @@ export default function Page() {
                     })
                 }
                     </>
-                }
+            }
             </NewBoard>
             <br />
             <br />

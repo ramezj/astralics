@@ -2,7 +2,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
-export default function Dropdown() {
+export default function Dropdown({props, setSort}) {
   return (
     <div className="">
       <Menu as="div" className="relative inline-block text-left">
@@ -29,6 +29,7 @@ export default function Dropdown() {
               <Menu.Item>
                 {({ active }) => (
                   <button
+                  onClick={(() => {setSort("bug_report")})}
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-medium`}
@@ -40,6 +41,7 @@ export default function Dropdown() {
               <Menu.Item>
                 {({ active }) => (
                   <button
+                  onClick={(() => {setSort("feature_request")})}
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-medium`}
@@ -51,6 +53,7 @@ export default function Dropdown() {
               <Menu.Item>
                 {({ active }) => (
                   <button
+                  onClick={(() => {setSort("feedback")})}
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-medium`}
