@@ -56,7 +56,7 @@ export default function Feedback(props) {
         position="bottom-right"
         reverseOrder={true}
         />
-        <div key={props.id} className="border border-white/10 w-full flex bg-zinc-950 rounded-lg items-center cursor-pointer duration-300 hover:border-white/20">
+        <div key={props.id} className="border border-white/10 w-full flex bg-zinc-950 rounded-lg items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left text-white'>
         {
@@ -70,7 +70,7 @@ export default function Feedback(props) {
             props.type === "bug_report"
             ? 
             <>
-            <span class="border border-white/10 mt-2 -mb-1 bg-indigo-900 text-indigo-100 text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md dark:bg-indigo-900 dark:text-indigo-300">🐛 Bug Report</span>
+            <span class="border border-white/20 mt-2 -mb-1 bg-indigo-700 text-white text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md">🐛 Bug Report</span>
             </>
             : <></>
         }
@@ -78,7 +78,7 @@ export default function Feedback(props) {
             props.type === "feature_request"
             ? 
             <>
-            <span class="border border-white/10 mt-2 -mb-1 bg-yellow-900 text-yellow-100 text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md dark:bg-indigo-900 dark:text-indigo-300">💡 Feature Request</span>
+            <span class="border border-white/20 mt-2 -mb-1 bg-yellow-700 text-white text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md">💡 Feature Request</span>
             </>
             : <></>
         }
@@ -86,7 +86,7 @@ export default function Feedback(props) {
             props.type === "feedback"
             ? 
             <>
-            <span class="border border-white/10 mt-2 -mb-1 bg-green-900 text-green-100 text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md dark:bg-indigo-900 dark:text-indigo-300">📝 Feedback</span>
+            <span class="border border-white/20 mt-2 -mb-1 bg-green-700 text-white text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md">📝 Feedback</span>
             </>
             : <></>
         }
