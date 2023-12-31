@@ -33,8 +33,8 @@ export default function Pricing(props) {
                 <br />
                 {
                 session 
-                ? <><Link href='/app' className='shadow-xl btn w-full text-white normal-case bg-black hover:bg-black outline-none border-none font-bold rounded-xl'>Go to Dashboard</Link></>
-                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-black hover:bg-black outline-none border-none font-bold rounded-xl'>Get Started</button></>
+                ? <><Link href='/app' className='shadow-xl btn w-full text-white normal-case bg-black hover:bg-black outline-none border-none font-bold rounded-lg'>Go to Dashboard</Link></>
+                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-black hover:bg-black outline-none border-none font-bold rounded-lg'>Get Started</button></>
                 }
                 </PricingCard >
                 <PricingCard price='$10' title='Developer' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
@@ -51,10 +51,10 @@ export default function Pricing(props) {
                       passthrough: session.user.id
                     })
                 })} 
-                className='shadow-xl btn w-full text-white normal-case bg-black hover:bg-black outline-none border-none font-bold rounded-xl'>
+                className='shadow-xl btn w-full text-white normal-case bg-black hover:bg-black outline-none border-none font-bold rounded-lg'>
                     <CreditCardIcon className='text-white' width={22} height={22} />
                  Subscribe Now</button></>
-                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-black hover:bg-black outline-none border-none font-bold rounded-xl'>
+                : <><button onClick={signUserIn} className='shadow-xl btn w-full text-white normal-case bg-black hover:bg-black outline-none border-none font-bold rounded-lg'>
                     <CreditCardIcon className='text-white' width={22} height={22} />
                     Get Started</button></>
                 }

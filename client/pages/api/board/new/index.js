@@ -64,7 +64,7 @@ export default async function handler(req, res) {
             data: {
               title:'🚀 Welcome aboard!',
               description:"Your very first feedback, embrace it!",
-              type:"📝 Feedback",
+              type:"feedback",
               boardId:newBoard.id
             }
           })
