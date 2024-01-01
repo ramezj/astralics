@@ -63,7 +63,7 @@ export default function Feedback(props) {
             title.length > 100 ? `${title.substring(0,50)}...` : `${title}`
         }       
         </p>
-        <p className='text-xs text-left text-white'>
+        <p className='text-sm font-regular text-left text-white'>
           {props.description.length > 150 ? `${props.description.substring(0,150)}...` : `${props.description}`}
         </p>
         {
