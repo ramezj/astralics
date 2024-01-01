@@ -23,6 +23,15 @@ export default async function handler(req, res) {
             response: ' Unauthorized '
         })
     }
+    const deleteItemVotes = await prisma.itemVote.deleteMany({
+      where: {
+        feedback: {
+          board: {
+            id: id,
+          },
+        },
+      },
+    });
     const deleteFeedback = await prisma.feedback.deleteMany({
       where: {
         boardId:id

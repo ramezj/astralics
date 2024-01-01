@@ -32,7 +32,7 @@ export default function Dropdown({props, setSort}) {
                   onClick={(() => {setSort("bug_report")})}
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
-                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-medium`}
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     🐛 Bug Report
                   </button>
@@ -44,7 +44,7 @@ export default function Dropdown({props, setSort}) {
                   onClick={(() => {setSort("feature_request")})}
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
-                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-medium`}
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     💡 Feature Request
                   </button>
@@ -56,7 +56,7 @@ export default function Dropdown({props, setSort}) {
                   onClick={(() => {setSort("feedback")})}
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
-                    } group flex w-full items-center rounded-lg px-2 py-2 text-sm font-medium`}
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     📝 Feedback
                   </button>
