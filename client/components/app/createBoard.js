@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 
 export default function CreateBoard() {
     const router = useRouter();
-    const [ text, setText ] = useState("New Board");
+    const [ text, setText ] = useState("Create Board");
     const [ loading, setLoading ] = useState(false);
     const [ name, setName ] = useState();
     const [ handle, setHandle ] = useState();
@@ -47,10 +47,10 @@ export default function CreateBoard() {
         <input required autoFocus={false} type="url" placeholder="Link" onChange={(e) => {setUrl(e.target.value)}} className="input w-full mt-2 focus:outline-none bg-gray-200 text-zinc-950 font-bold text-sm mt-4 rounded-lg" />
         <input required autoFocus={false} type="text" placeholder="Handle" onChange={(e) => {setHandle(e.target.value)}} className="input w-full mt-2 focus:outline-none bg-gray-200 text-zinc-950 font-bold text-sm mt-4 rounded-lg" />
         <center>
-        <button className="mt-6 shadow-xl w-full py-2 rounded-lg text-base text-white normal-case bg-zinc-950 outline-none border-none font-bold " type='submit'>
+        <button className="mt-6 w-full py-2 rounded-lg text-base text-white normal-case bg-zinc-950 outline-none border-none font-medium" type='submit'>
         { 
         loading 
-        ? <><><span className="loading loading-spinner loading-xs align-middle"></span></></>
+        ? <><><span className="loading loading-spinner loading-xs"></span></></>
         : <>{text}</>
         }
         </button>

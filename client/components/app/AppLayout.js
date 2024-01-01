@@ -4,7 +4,7 @@ import AppNavbar from "./AppNavbar"
 export default function AppLayout(props) {
     const { data: session } = useSession()
     return (
-        <div className='backgroundColor h-full min-h-screen bg-bottom bg-no-repeat w-full'>
+        <div className='background3 h-full min-h-screen bg-bottom bg-no-repeat w-full'>
         <AppNavbar session={session} />
         {props.children}
         </div>

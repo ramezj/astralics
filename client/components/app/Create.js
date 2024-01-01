@@ -6,6 +6,8 @@ import { Fragment } from 'react'
 import CreateBoard from './createBoard';
 import { ChevronDownIcon } from 'lucide-react';
 import { ClipboardDocumentListIcon } from '@heroicons/react/20/solid';
+import { FolderPlusIcon } from '@heroicons/react/20/solid'
+import { FolderPlus } from 'lucide-react';
 import { ClipboardIcon } from 'lucide-react';
 
 export default function Create() {
@@ -52,7 +54,7 @@ export default function Create() {
     return (
         <>
         <button className='px-5 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
-                <ClipboardIcon width={16} /> New Board
+              Create Board
         </button>
 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
