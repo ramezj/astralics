@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { PlusIcon } from '@heroicons/react/24/outline';
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import CreateBoard from './CreateBoard';
-import { ChevronDownIcon } from 'lucide-react';
-import { ClipboardDocumentListIcon } from '@heroicons/react/20/solid';
-import { FolderPlusIcon } from '@heroicons/react/20/solid'
-import { FolderPlus } from 'lucide-react';
-import { ClipboardIcon } from 'lucide-react';
 
 export default function Create() {
     const router = useRouter();

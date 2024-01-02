@@ -47,7 +47,7 @@ export default function CreateBoard() {
         <input required autoFocus={false} type="url" placeholder="Board Website" onChange={(e) => {setUrl(e.target.value)}} className="input w-full mt-2 focus:outline-none bg-gray-200 text-zinc-950 font-bold text-sm mt-4 rounded-md" />
         <input required autoFocus={false} type="text" placeholder="Board Handle" onChange={(e) => {setHandle(e.target.value)}} className="input w-full mt-2 focus:outline-none bg-gray-200 text-zinc-950 font-bold text-sm mt-4 rounded-md" />
         <center>
-        <button className="mt-6 w-full py-2 rounded-md text-base text-white normal-case bg-zinc-950 outline-none border-none font-medium" type='submit'>
+        <button className="-mb-1 mt-6 w-full py-2 rounded-md text-base text-white normal-case bg-zinc-950 outline-none border-none font-medium" type='submit'>
         { 
         loading 
         ? <><><span className="loading loading-spinner loading-xs"></span></></>
