@@ -66,7 +66,7 @@ export default function Page() {
     <center>
     <h1 className="text-2xl font-bold">{router.query.id}</h1>
             <br /><br />
-            <NewBoard setSort={setSort} sort={sort}>
+            <NewBoard session={session} setSort={setSort} sort={sort}>
                 <br /><br /><br />
                 <h1 className="text-2xl ">this usually doesn't take long</h1>
                 <br />
@@ -81,7 +81,7 @@ export default function Page() {
         <center>
             <h1 className="text-2xl font-bold">{router.query.id}</h1>
             <br /><br />
-            <NewBoard setSort={setSort} sort={sort}>
+            <NewBoard session={session} setSort={setSort} sort={sort}>
             {
                     session 
                     ? 

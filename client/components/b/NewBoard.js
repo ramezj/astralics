@@ -13,7 +13,7 @@ export default function NewBoard(props) {
             {/* <SortBy /> */}
             </div>
             <div className='gap-4 flex'>
-            <CreateFeedback />
+            <CreateFeedback session={props.session}/>
             </div>
             </div>
             <br />

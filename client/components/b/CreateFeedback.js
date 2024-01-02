@@ -6,16 +6,24 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import SelectCategory from "./SelectCategory"
 import { ChevronLeftIcon } from "@heroicons/react/24/outline"
 import toast, { Toaster } from 'react-hot-toast';
+import AuthModal from "../Auth/AuthModal"
 
 export default function CreateFeedback(props) {
     const router = useRouter()
     const { id } = router.query;
     let [isOpen, setIsOpen] = useState(false)
+    let [ authIsOpen, setAuthIsOpen ] = useState(false);
     function closeModal() {
         setIsOpen(false)
     }
     function openModal() {
         setIsOpen(true)
+    }
+    function openAuthModal() {
+      setAuthIsOpen(true);
+    }
+    function closeAuthModal() {
+      setAuthIsOpen(false);
     }
     const [ title, setTitle ] = useState(null);
     const [ description, setDescription ] = useState(null);
@@ -67,10 +75,22 @@ export default function CreateFeedback(props) {
         <Toaster
         position="bottom-right"
         reverseOrder={true}
-        />
-        <button onClick={openModal} className='px-4 py-2.5 bg-blue-700 duration-300 hover:bg-blue-800 rounded-lg flex font-medium outline-none'>
+        />  
+        {
+          props.session 
+          ? 
+          <>
+          <button onClick={openModal} className='px-4 py-2.5 bg-blue-700 duration-300 hover:bg-blue-800 rounded-lg flex font-medium outline-none'>
                 Leave Feedback ✨
             </button>
+          </>
+          : 
+          <>
+          <button onClick={openAuthModal} className='px-4 py-2.5 bg-blue-700 duration-300 hover:bg-blue-800 rounded-lg flex font-medium outline-none'>
+                Leave Feedback ✨
+            </button>
+          </>
+        }
             <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -120,11 +140,6 @@ export default function CreateFeedback(props) {
                       className="textarea-md resize-none bg-zinc-950 rounded-lg outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
                       <br />
                     </div>
-                    {/* <div className="flex mt-3 gap-3">
-                        <button className="py-2 px-4 border border-white/10 rounded-md bg-zinc-950 text-xs">Feature Request</button>
-                        <button className="py-2 px-4 border border-white/10 rounded-md bg-zinc-950 text-xs">Bug Report</button>
-                        <button className="py-2 px-4 border border-white/10 rounded-md bg-zinc-950 text-xs">Feedback</button>
-                    </div> */}
                     <div className="mt-1">
                     <label className="text-white font-medium">Category</label>
                     <select className="mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-zinc-950 rounded-lg" onChange={((e) => {setType(e.target.value)})}>
@@ -147,6 +162,38 @@ export default function CreateFeedback(props) {
                   </div>
                   </center>
                   </form>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+      <Transition appear show={authIsOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeAuthModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black/70"/>
+          </Transition.Child>
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden align-middle transition-all">
+                  <AuthModal />
                 </Dialog.Panel>
               </Transition.Child>
             </div>
