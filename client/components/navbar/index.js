@@ -15,6 +15,7 @@ import Settings from './Settings'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import {Button} from "@nextui-org/react";
 import AuthModal from '../Auth/AuthModal'
+import { motion } from 'framer-motion'
 
 const products = [
   { name: 'Feedback Widget', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon }
@@ -51,7 +52,7 @@ export default function Navbar(props) {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-white"
+            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-white outline-none"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -128,10 +129,9 @@ export default function Navbar(props) {
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto backgroundColor px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto background3 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5 outline-none">
-              <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto outline-none"
                 src="/Logo.jpg"
@@ -150,45 +150,40 @@ export default function Navbar(props) {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+              <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: 0.1}}>
               <Link href="/b/lunar" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
                 {/* <BoltIcon width='20' className='flex' /> */}
                   Why?
                 </Link>
-              <Link href="/b/lunar" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
+                </motion.div>
+                <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: 0.2}}>
+                <Link href="/b/lunar" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
                 {/* <BoltIcon width='20' className='flex' /> */}
                   Demo
                 </Link>
+                </motion.div>
+                <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: 0.3}}>
                 <Link href="/pricing" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
                 {/* <CreditCardIcon width='20' className='flex' /> */}
                   Pricing
                 </Link>
+                </motion.div>
               </div>
-              <div className="py-6">
-                {
-                  props.session 
-                  ? <>
-                  {/* <a onClick={signUserOut} className="px-8 py-2 rounded-lg font-bold flex justify-center cursor-pointer"> Log Out </a> */}
-                  </>
-                  : <></>
-                }
-                <a
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-bold leading-7 text-white cursor-pointer"
-                >
+              <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: 0.4}}>
+              <div className="py-6 -mt-6 ">
                {
               props.session 
               ? <> 
-                {/* <Link href='/settings' className='text-black px-8 py-2 bg-white hover:bg-gray-200 duration-200 rounded-xl font-bold flex justify-center gap-2'>
-                Settings 
-                </Link> */}
-              <Link href='/app' className='text-black -mt-2 px-8 py-2 bg-white hover:bg-gray-200  duration-300 rounded-xl font-bold flex justify-center gap-2'>
+              <Link href='/app' className='text-black px-6 py-2 bg-white hover:bg-gray-200 duration-300 rounded-md font-bold flex justify-center gap-2'>
               Dashboard
                 </Link></>
-              : <><Link onClick={signUserIn} href='/' className='text-black -mt-2 px-8 py-2 bg-white hover:bg-gray-200 rounded-xl font-bold flex justify-center gap-2 duration-200'>
+              : <><Link onClick={signUserIn} href='/' className='text-black px-6 py-2 bg-white hover:bg-gray-200 rounded-md font-bold flex justify-center gap-2 duration-200'>
               try lunar 
               </Link></>
               }
-                </a>
+
               </div>
+              </motion.div>
             </div>
           </div>
         </Dialog.Panel>
