@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
-import CreateBoard from './CreateBoard';
+import CreateBoard from './createBoard';
 
 export default function Create() {
     const router = useRouter();
