@@ -54,7 +54,7 @@ export default function AppNavbar(props) {
               ? <> 
               <Billing />
               <Create />
-              <Link href='/app' className='rounded-md px-7 py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
+              <Link href='/app' className='rounded-md w-[9rem] py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
                 {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
                 Dashboard 
                 </Link></>

@@ -43,11 +43,11 @@ export default function CreateBoard() {
         <div className="card-body">
         <h2 className="card-title text-xl text-zinc-950 font-bold justify-center -mt-2 mb-2 drop-shadow">Board Information</h2>
         <form onSubmit={createProject}>
-        <input required autoFocus={false} type="text" placeholder="Name" onChange={(e) => {setName(e.target.value)}} className="input w-full mt-2 focus:outline-none bg-gray-200 text-zinc-950 font-bold text-sm rounded-lg" />
-        <input required autoFocus={false} type="url" placeholder="Link" onChange={(e) => {setUrl(e.target.value)}} className="input w-full mt-2 focus:outline-none bg-gray-200 text-zinc-950 font-bold text-sm mt-4 rounded-lg" />
-        <input required autoFocus={false} type="text" placeholder="Handle" onChange={(e) => {setHandle(e.target.value)}} className="input w-full mt-2 focus:outline-none bg-gray-200 text-zinc-950 font-bold text-sm mt-4 rounded-lg" />
+        <input required autoFocus={false} type="text" placeholder="Board name" onChange={(e) => {setName(e.target.value)}} className="input w-full mt-2 focus:outline-none bg-gray-200 text-zinc-950 font-bold text-sm rounded-lg" />
+        <input required autoFocus={false} type="url" placeholder="Board Website" onChange={(e) => {setUrl(e.target.value)}} className="input w-full mt-2 focus:outline-none bg-gray-200 text-zinc-950 font-bold text-sm mt-4 rounded-lg" />
+        <input required autoFocus={false} type="text" placeholder="Board Handle" onChange={(e) => {setHandle(e.target.value)}} className="input w-full mt-2 focus:outline-none bg-gray-200 text-zinc-950 font-bold text-sm mt-4 rounded-lg" />
         <center>
-        <button className="mt-6 w-full py-2 rounded-lg text-base text-white normal-case bg-zinc-950 outline-none border-none font-medium" type='submit'>
+        <button className="mt-6 w-full py-2 rounded-md text-base text-white normal-case bg-zinc-950 outline-none border-none font-medium" type='submit'>
         { 
         loading 
         ? <><><span className="loading loading-spinner loading-xs"></span></></>

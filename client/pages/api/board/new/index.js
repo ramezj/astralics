@@ -26,7 +26,6 @@ export default async function handler(req, res) {
                 boards:true
             }
         });
-        console.log(user.boards.length);
         if(user.boards.length >= 1) {
             if(user.premium === false) {
                 return res.status(400).json({
@@ -43,7 +42,7 @@ export default async function handler(req, res) {
         if(boardExist) {
             return res.status(400).json({
                 ok:false,
-                response:' Handle In Use '
+                response:' Handle unavailable '
             })
         }
         const newBoard = await prisma.board.create({
