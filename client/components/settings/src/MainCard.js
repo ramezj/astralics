@@ -22,19 +22,16 @@ export default function MainCard(props) {
     }
     return (
         <>
-        <div className="card w-96 bg-black bg-opacity-80 shadow-xl duration-300 outline-none">
+        <div className="card w-96 bg-white shadow-xl duration-300 outline-none rounded-md">
         <div className="card-body">
-        {/* <center>
-        <img class="w-12 h-12 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar" />
-        </center> */}
-        <h1 className="card-title text-2xl font-bold text-white justify-center mb-4">Account Information</h1>
+        <h1 className="card-title text-2xl font-bold justify-center text-black">Account Information</h1>
         <label className="float-left flex ml-1">Name</label>
-        <input type="text" className="input w-full bg-zinc-950 font-medium text-center outline-none border-none" value={name} onChange={((e) => {setName(e.target.value)})} />
+        <input type="text" className="input w-full bg-zinc-950 font-medium outline-none border-none" value={name} onChange={((e) => {setName(e.target.value)})} />
         <label className="float-left flex ml-1">Email</label>
-        <input type="text" disabled className="input w-full bg-gray-950 font-medium text-center" value={props.profileEmail}/>
+        <input type="text" disabled className="input w-full bg-gray-950 font-medium" value={props.profileEmail}/>
         <label className="float-left flex ml-1">Avatar URL</label>
-        <input type="text" disabled className="input w-full bg-gray-950 font-medium text-center" value={props.profileAvatar}/>
-        <button className='bg-green-400 text-white border-none normal-case font-bold hover:bg-green-700 px-12 py-2 rounded-xl mt-4 duration-300'
+        <input type="text" disabled className="input w-full bg-gray-950 font-medium" value={props.profileAvatar}/>
+        <button className='bg-green-400 text-white border-none normal-case font-bold hover:bg-green-700 px-12 py-2 rounded-lg mt-4 duration-300'
         onClick={fetchSettings}
         >
             {
