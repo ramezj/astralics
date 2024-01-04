@@ -2,28 +2,10 @@ import { Fragment, useState } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Link from 'next/link'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
-import {
-  Bars3Icon,
-  CursorArrowRaysIcon,
-  XMarkIcon,
-  CreditCardIcon,
-  BoltIcon,
-  QuestionMarkCircleIcon,
-  ChevronRightIcon
-} from '@heroicons/react/24/outline'
-import Settings from './Settings'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import {Button} from "@nextui-org/react";
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import AuthModal from '../Auth/AuthModal'
 import { motion } from 'framer-motion'
-
-const products = [
-  { name: 'Feedback Widget', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon }
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+import Avatar from './Avatar'
 
 export default function Navbar(props) {
     let [isOpen, setIsOpen] = useState(false)
@@ -79,13 +61,11 @@ export default function Navbar(props) {
             {
               props.session 
               ? <> 
-              {/* <LogOut /> */}
-              {/* <Settings /> */}
               <Link href='/app' className='rounded-md w-[9rem] py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
-                {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
                 Dashboard 
-                {/* <ChevronRightIcon className='flex items-end -mr-2' width={17} strokeWidth={2}/> */}
-                </Link></>
+                </Link>
+                  {/* <Avatar image={props.session.user.image}/> */}
+                </>
               : <> 
                 <button className='w-[9rem] py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 Get Started
