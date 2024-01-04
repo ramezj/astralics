@@ -10,6 +10,7 @@ import {
   BoltIcon,
 } from '@heroicons/react/24/outline'
 import AuthModal from '../Auth/AuthModal'
+import Avatar from '../navbar/Avatar'
 
 const products = [
   { name: 'Feedback Widget', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon }
@@ -41,9 +42,11 @@ export default function BoardNav(props) {
         {
               props.session 
               ? <> 
-                <button className='rounded-md px-7 py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
+                <Avatar image={props.session.user.image} />
+                {/* <button className='rounded-md px-7 py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
                 {props.session.user.name}
-                </button></>
+                </button> */}
+                </>
               : <> 
                 <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 Sign In
@@ -88,9 +91,11 @@ export default function BoardNav(props) {
             {
               props.session 
               ? <> 
-                <button className='rounded-md px-7 py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
+                <Avatar image={props.session.user.image} /> 
+                {/* <button className='rounded-md px-7 py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
                 {props.session.user.name}
-                </button></>
+                </button> */}
+                </>
               : <> 
                 <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 Sign In
