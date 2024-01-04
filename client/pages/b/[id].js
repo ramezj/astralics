@@ -27,6 +27,7 @@ export default function Page() {
             return;
         }
         const fetchProject = async () => {
+            await session;
             setLoading(true);
             const response = await fetch(`/api/b/${router.query.id}`)
             const res = await response.json();
