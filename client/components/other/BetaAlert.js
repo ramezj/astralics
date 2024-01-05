@@ -6,7 +6,7 @@ export default function BetaAlert(props) {
         2xl:w-[22rem] 
         lg:w-[20rem] 
         w-[21rem] 
-        rounded-2xl 
+        rounded-lg 
         bg-white
         shadow-sm
         text-black 
@@ -15,7 +15,7 @@ export default function BetaAlert(props) {
         2xl:-mb-6
         '>
         <h1 className="font-bold">
-        ⚡ lunar 1.0 just launched
+        ⚡ lightning fast & gorgeous.
         </h1>
         </div>
         </>
