@@ -155,8 +155,8 @@ export default function CreateFeedback(props) {
                   <button type="submit" className='text-middle w-full py-2.5 bg-white rounded-md font-medium outline-none text-black'>
                     {
                       loading 
-                      ? "Creating Feedback.."
-                      : "Create Feedback"
+                      ? "Submitting"
+                      : "Submit Feedback"
                     }
                   </button>
                   </div>
