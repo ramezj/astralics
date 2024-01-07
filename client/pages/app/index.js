@@ -1,12 +1,9 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import Layout from "@/components/layout";
 import Card from "@/components/app/Card";
 import Loading from "@/components/app/Loading";
 import { motion } from 'framer-motion'
-import Create from "@/components/app/Create";
 import AppLayout from "@/components/app/AppLayout";
 
 export default function Component() {

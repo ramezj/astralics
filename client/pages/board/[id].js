@@ -1,7 +1,6 @@
 import { useSession} from "next-auth/react"
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import Layout from "@/components/layout"
 import { motion } from "framer-motion"
 import Feedback from "@/components/board/Feedback"
 import Loading from "@/components/board/Loading"

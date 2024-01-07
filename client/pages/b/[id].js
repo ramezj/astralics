@@ -1,15 +1,10 @@
 import { useSession} from "next-auth/react"
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import BoardFeedbackDiv from "@/components/b/BoardFeedbackDiv"
 import BoardLayout from "@/components/b/Layout"
-import Layout from "@/components/layout"
-import Loading from "@/components/b/Loading"
 import NewBoard from "@/components/b/NewBoard"
 import Feedback from "@/components/b/Feedback"
 import { motion } from "framer-motion"
-import sortFeedback from "@/utils/sortFeedback"
-import Header from "@/components/b/Header"
 
 export default function Page() {
     const router = useRouter()
@@ -54,9 +49,6 @@ export default function Page() {
         }
         fetchProject();
     }, [id])
-    console.log("F :", f);
-    console.log("FR :", fr);
-    console.log("B :", b);
   return (
     <>
     <title>{router.query.id}</title>
