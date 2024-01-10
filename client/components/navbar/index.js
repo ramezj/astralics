@@ -60,10 +60,10 @@ export default function Navbar(props) {
             {
               props.session 
               ? <> 
-              {/* <Link href='/app' className='rounded-md w-[9rem] py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
+              <Link href='/app' className='rounded-md w-[9rem] py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
                 Dashboard 
-                </Link> */}
-                  <Avatar image={props.session.user.image}/>
+                </Link>
+                  {/* <Avatar image={props.session.user.image}/> */}
                 </>
               : <> 
                 <button className='w-[9rem] py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
