@@ -13,12 +13,6 @@ export default function Page() {
     const { data: session } = useSession({})
     const [ loading, setLoading ] = useState(false);
     const [ feedbacks, setFeedbacks ] = useState([]);
-    const [ sortedFeedbacksAuth, setSortedFeedbacksAuth ] = useState([])
-    const [ sortedFeatureRequestsAuth, setSortedFeatureRequestsAuth] = useState([])
-    const [ sortedBugReportsAuth, setSortedBugReportsAuth ] = useState([])
-    const [ sortedFeedbacks, setSortedFeedbacks ] = useState([])
-    const [ sortedFeatureRequests, setSortedFeatureRequests ] = useState([])
-    const [ sortedBugReports, setSortedBugReports ] = useState([])
     const [ sort, setSort ] = useState();
     useEffect(() => {
         if(!id) {
@@ -32,15 +26,9 @@ export default function Page() {
                 return router.push('/404')
             }
             if(res.ok == true && res.auth == true) {
-                setFeedbacks(res.merged) 
-                setSortedFeedbacksAuth(res.sortedFeedbacks);
-                setSortedFeatureRequestsAuth(res.sortedFeatureRequests);
-                setSortedBugReportsAuth(res.sortedBugReport);
+                setFeedbacks(res.sortedFeedbacks) 
             } else if(res.ok == true && res.auth == false) {
-                setFeedbacks(res.response.feedbacks);
-                setSortedFeedbacks(res.sortedFeedbacks);
-                setSortedFeatureRequests(res.sortedFeatureRequests);
-                setSortedBugReports(res.sortedBugReport);
+                setFeedbacks(res.sortedFeedbacks);
             }
             setLoading(false);
         }
@@ -53,7 +41,7 @@ export default function Page() {
     { loading === true && 
     <>
     <center>
-    <h1 className="text-2xl font-bold">{router.query.id}</h1>
+    <h1 className="text-2xl font-bold">📝 Feedback</h1>
             <br /><br />
             <NewBoard session={session}>
                 <br /><br /><br />
@@ -68,7 +56,7 @@ export default function Page() {
         { loading === false && 
         <>
         <center>
-            <h1 className="text-2xl font-bold">{router.query.id}</h1>
+            <h1 className="text-2xl font-bold">📝 Feedback</h1>
             <br /><br />
             <NewBoard session={session} setSort={setSort} sort={sort}>
             {
