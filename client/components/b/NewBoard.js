@@ -4,7 +4,7 @@ import CreateFeedback from "./CreateFeedback"
 import SortBy from "./SortBy"
 import { useRouter } from "next/router"
 
-export default function NewBoard(props) {
+export default function NewBoard(props, {filterFeedbacks}) {
     const router = useRouter();
     const { id } = router.query 
     return (
@@ -12,7 +12,7 @@ export default function NewBoard(props) {
         <div className='h-100 2xl:w-3/6 lg:w-3/5 w-full h-full'>
             <div className="w-5/6 flex justify-between">
             <div className='gap-4 flex'>
-            <Dropdown query={id}/>
+            <Dropdown query={id} filterFeedbacks={filterFeedbacks}/>
             {/* <SortBy /> */}
             </div>
             <div className='gap-4 flex'>

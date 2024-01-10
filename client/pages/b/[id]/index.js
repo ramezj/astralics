@@ -13,6 +13,9 @@ export default function Page() {
     const { data: session } = useSession({})
     const [ loading, setLoading ] = useState(false);
     const [ feedbacks, setFeedbacks ] = useState([]);
+    const [ sortedFeedbacksAuth, setSortedFeedbacksAuth ] = useState([])
+    const [ sortedFeatureRequestsAuth, setSortedFeatureRequestsAuth] = useState([])
+    const [ sortedBugReportsAuth, setSortedBugReportsAuth ] = useState([])
     const [ sortedFeedbacks, setSortedFeedbacks ] = useState([])
     const [ sortedFeatureRequests, setSortedFeatureRequests ] = useState([])
     const [ sortedBugReports, setSortedBugReports ] = useState([])
@@ -30,9 +33,9 @@ export default function Page() {
             }
             if(res.ok == true && res.auth == true) {
                 setFeedbacks(res.merged) 
-                setSortedFeedbacks(res.sortedFeedbacks);
-                setSortedFeatureRequests(res.sortedFeatureRequests);
-                setSortedBugReports(res.sortedBugReport);
+                setSortedFeedbacksAuth(res.sortedFeedbacks);
+                setSortedFeatureRequestsAuth(res.sortedFeatureRequests);
+                setSortedBugReportsAuth(res.sortedBugReport);
             } else if(res.ok == true && res.auth == false) {
                 setFeedbacks(res.response.feedbacks);
                 setSortedFeedbacks(res.sortedFeedbacks);
@@ -43,16 +46,26 @@ export default function Page() {
         }
         fetchProject();
     }, [id])
+    const filterFeedbacks = async () => {
+        console.log('CLICKKKK')
+        if(session) {
+            setFeedbacks(sortedFeedbacksAuth)
+        } else {
+            setFeedbacks(sortedFeedbacks)
+        }
+    }
+
   return (
     <>
     <title>{router.query.id}</title>
     <BoardLayout>
+        <button onClick={filterFeedbacks}>Click test</button>
     { loading === true && 
     <>
     <center>
     <h1 className="text-2xl font-bold">{router.query.id}</h1>
             <br /><br />
-            <NewBoard session={session} setSort={setSort} sort={sort}>
+            <NewBoard session={session}>
                 <br /><br /><br />
                 <h1 className="text-2xl ">this usually doesn't take long</h1>
                 <br />

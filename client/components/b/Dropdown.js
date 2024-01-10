@@ -3,7 +3,7 @@ import { Fragment, useEffect, useRef, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 
-export default function Dropdown({props, setSort}) {
+export default function Dropdown({props, filterFeedbacks} ) {
   return (
     <div className="">
       <Menu as="div" className="relative inline-block text-left">
@@ -65,14 +65,14 @@ export default function Dropdown({props, setSort}) {
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                 <Link
-                 href='/'
+                 <button
+                    onClick={filterFeedbacks}
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     📝 Feedback
-                    </Link>
+                    </button>
                 )}
               </Menu.Item>
             </div>
