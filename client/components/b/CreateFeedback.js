@@ -81,13 +81,13 @@ export default function CreateFeedback(props) {
           ? 
           <>
           <button onClick={openModal} className='px-4 py-2.5 bg-white text-black duration-300 hover:bg-gray-200 rounded-lg flex font-medium outline-none'>
-                Create Feedback ✨
+                Create Feedback
             </button>
           </>
           : 
           <>
           <button onClick={openAuthModal} className='px-4 py-2.5 bg-white text-black duration-300 hover:bg-gray-200 rounded-lg flex font-medium outline-none'>
-                Create Feedback ✨
+                Create Feedback
             </button>
           </>
         }
