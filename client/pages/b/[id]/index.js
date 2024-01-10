@@ -59,7 +59,6 @@ export default function Page() {
     <>
     <title>{router.query.id}</title>
     <BoardLayout>
-        <button onClick={filterFeedbacks}>Click test</button>
     { loading === true && 
     <>
     <center>

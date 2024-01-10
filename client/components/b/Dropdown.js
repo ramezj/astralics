@@ -2,8 +2,12 @@ import { Menu, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Dropdown({props, filterFeedbacks} ) {
+  const router = useRouter();
+  console.log(router);
+  console.log(router.asPath);
   return (
     <div className="">
       <Menu as="div" className="relative inline-block text-left">
