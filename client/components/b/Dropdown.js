@@ -1,6 +1,7 @@
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import Link from 'next/link'
 
 export default function Dropdown({props, setSort}) {
   return (
@@ -28,26 +29,26 @@ export default function Dropdown({props, setSort}) {
             <div className="px-1 py-1 ">
             <Menu.Item>
                 {({ active }) => (
-                  <button
-                  onClick={(() => {setSort("bug_report")})}
+                  <Link
+                    href='/'
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     ✨ All Feedback
-                  </button>
+                  </Link>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <button
-                  onClick={(() => {setSort("bug_report")})}
+                 <Link
+                    href='/'
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     🐛 Bug Report
-                  </button>
+                  </Link>
                 )}
               </Menu.Item>
               <Menu.Item>
