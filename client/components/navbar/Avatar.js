@@ -3,6 +3,7 @@ import { Fragment, useEffect, useRef, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
 import Link from 'next/link'
+import { signOut } from 'next-auth/react'
 
 export default function Avatar(props) {
   return (
@@ -53,6 +54,7 @@ export default function Avatar(props) {
               <Menu.Item>
                 {({ active }) => (
                   <button
+                  onClick={signOut}
                     className={`${
                       active ? 'bg-gray-200 text-black' : 'text-black'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
