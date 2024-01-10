@@ -53,26 +53,26 @@ export default function Dropdown({props, setSort}) {
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <button
-                  onClick={(() => {setSort("feature_request")})}
+                 <Link
+                 href='/'
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     💡 Feature Request
-                  </button>
+                    </Link>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <button
-                  onClick={(() => {setSort("feedback")})}
+                 <Link
+                 href='/'
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     📝 Feedback
-                  </button>
+                    </Link>
                 )}
               </Menu.Item>
             </div>
