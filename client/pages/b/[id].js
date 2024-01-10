@@ -13,9 +13,9 @@ export default function Page() {
     const { data: session } = useSession({})
     const [ loading, setLoading ] = useState(false);
     const [ feedbacks, setFeedbacks ] = useState([]);
-    const [ f, setF ] = useState([])
-    const [ fr, setFR ] = useState([])
-    const [ b, setB ] = useState([])
+    const [ sortedFeedbacks, setSortedFeedbacks ] = useState([])
+    const [ sortedFeatureRequests, setSortedFeatureRequests ] = useState([])
+    const [ sortedBugReports, setSortedBugReports ] = useState([])
     const [ sort, setSort ] = useState();
     useEffect(() => {
         if(!id) {
@@ -29,21 +29,15 @@ export default function Page() {
                 return router.push('/404')
             }
             if(res.ok == true && res.auth == true) {
-                setFeedbacks(res.merged);
-                let f = res.merged.filter((x) => x.type === "feedback");
-                setF(f);
-                let fr = res.merged.filter((x) => x.type === "feature_request");
-                setFR(fr);
-                let b = res.merged.filter((x) => x.type === "bug_report");
-                setB(b)
+                setFeedbacks(res.merged) 
+                setSortedFeedbacks(res.sortedFeedbacks);
+                setSortedFeatureRequests(res.sortedFeatureRequests);
+                setSortedBugReports(res.sortedBugReport);
             } else if(res.ok == true && res.auth == false) {
                 setFeedbacks(res.response.feedbacks);
-                let f = res.response.feedbacks.filter((x) => x.type === "feedback");
-                setF(f);
-                let fr = res.response.feedbacks.filter((x) => x.type === "feature_request");
-                setFR(fr);
-                let b = res.response.feedbacks.filter((x) => x.type === "bug_report");
-                setB(b)
+                setSortedFeedbacks(res.sortedFeedbacks);
+                setSortedFeatureRequests(res.sortedFeatureRequests);
+                setSortedBugReports(res.sortedBugReport);
             }
             setLoading(false);
         }

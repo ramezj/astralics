@@ -55,11 +55,17 @@ export default async function handler(req, res) {
                 }
             })
             const test = await sortFeedback(board.feedbacks,upvotes.feedbacks);
+            const sortedFeedbacks = await test.filter((x) => x.type === 'feedback');
+            const sortedFeatureRequests = await test.filter((x) => x.type === 'feature_request');
+            const sortedBugReport = await test.filter((x) => x.type === 'bug_report');  
             return res.status(200).json({
                 ok:true,
                 auth:true,
                 response:board,
-                merged:test
+                merged:test,
+                sortedFeedbacks: sortedFeedbacks,
+                sortedFeatureRequests:sortedFeatureRequests,
+                sortedBugReport:sortedBugReport
             })
         } catch (error) {
             console.error(error);
@@ -84,6 +90,9 @@ export default async function handler(req, res) {
                 },
             }
         })
+        const sortedFeedbacks = await board.feedbacks.filter((x) => x.type === 'feedback');
+        const sortedFeatureRequests = await board.feedbacks.filter((x) => x.type === 'feature_request');
+        const sortedBugReport = await board.feedbacks.filter((x) => x.type === 'bug_report');  
         if(!board) {
             return res.status(400).json({
                 ok:false,
@@ -93,7 +102,10 @@ export default async function handler(req, res) {
         return res.status(200).json({
             ok:true,
             auth:false,
-            response:board
+            response:board,
+            sortedFeedbacks: sortedFeedbacks,
+            sortedFeatureRequests:sortedFeatureRequests,
+            sortedBugReport:sortedBugReport
         })
     }
 }
