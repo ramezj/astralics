@@ -4,10 +4,9 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-export default function Dropdown({props, filterFeedbacks} ) {
+export default function Dropdown(props) {
   const router = useRouter();
-  console.log(router);
-  console.log(router.asPath);
+  const { id } = router.query;
   return (
     <div className="">
       <Menu as="div" className="relative inline-block text-left">
@@ -34,7 +33,7 @@ export default function Dropdown({props, filterFeedbacks} ) {
             <Menu.Item>
                 {({ active }) => (
                   <Link
-                    href='/'
+                    href={`/b/${id}`}
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
@@ -45,8 +44,8 @@ export default function Dropdown({props, filterFeedbacks} ) {
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                 <Link
-                    href='/'
+                  <Link
+                  href={`/b/${id}/bug_reports`}
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
@@ -57,8 +56,8 @@ export default function Dropdown({props, filterFeedbacks} ) {
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                 <Link
-                 href='/'
+                  <Link
+                  href={`/b/${id}/feature_requests`}
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
@@ -69,14 +68,14 @@ export default function Dropdown({props, filterFeedbacks} ) {
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                 <button
-                    onClick={filterFeedbacks}
+                  <Link
+                  href={`/b/${id}/feedback`}
                     className={`${
                       active ? 'bg-blue-700 text-gray-100' : 'text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     📝 Feedback
-                    </button>
+                    </Link>
                 )}
               </Menu.Item>
             </div>

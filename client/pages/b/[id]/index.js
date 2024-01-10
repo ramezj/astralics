@@ -46,15 +46,6 @@ export default function Page() {
         }
         fetchProject();
     }, [id])
-    const filterFeedbacks = async () => {
-        console.log('CLICKKKK')
-        if(session) {
-            setFeedbacks(sortedFeedbacksAuth)
-        } else {
-            setFeedbacks(sortedFeedbacks)
-        }
-    }
-
   return (
     <>
     <title>{router.query.id}</title>
@@ -64,7 +55,7 @@ export default function Page() {
     <center>
     <h1 className="text-2xl font-bold">{router.query.id}</h1>
             <br /><br />
-            <NewBoard session={session}>
+            <NewBoard session={session} id={router.query.id}>
                 <br /><br /><br />
                 <h1 className="text-2xl ">this usually doesn't take long</h1>
                 <br />
@@ -79,7 +70,7 @@ export default function Page() {
         <center>
             <h1 className="text-2xl font-bold">{router.query.id}</h1>
             <br /><br />
-            <NewBoard session={session} setSort={setSort} sort={sort}>
+            <NewBoard session={session} setSort={setSort} sort={sort} id={router.query.id}>
             {
                     session 
                     ? 
