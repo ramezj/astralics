@@ -40,7 +40,7 @@ export default function Pricing(props) {
                 </PricingCard >
                 <PricingCard price='$10' title='Developer' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
                 <Info><Svg /> 3 Boards</Info>
-                <Info><Svg /> Up to 300 Monthly Feedbacks</Info>
+                <Info><Svg /> Unlimited Monthly Feedbacks</Info>
                 <Info><Svg /> Authentication Check</Info>
                 <Info><Svg /> Custom Domain</Info>
                 <br />
