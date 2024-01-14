@@ -10,7 +10,6 @@ import Spinner from "@/components/b/Spinner"
 export default function Page() {
     const router = useRouter()
     const { id } = router.query;
-    const { category } = router.query;
     const { data: session } = useSession({})
     const [ loading, setLoading ] = useState(false);
     const [ feedbacks, setFeedbacks ] = useState([]);

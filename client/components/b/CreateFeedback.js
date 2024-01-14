@@ -2,9 +2,6 @@ import { HandThumbUpIcon} from "@heroicons/react/24/solid"
 import { Dialog, Transition, Listbox } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { useRouter } from 'next/router'
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
-import SelectCategory from "./SelectCategory"
-import { ChevronLeftIcon } from "@heroicons/react/24/outline"
 import toast, { Toaster } from 'react-hot-toast';
 import AuthModal from "../Auth/AuthModal"
 

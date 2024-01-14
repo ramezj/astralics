@@ -1,7 +1,5 @@
 import Dropdown from "./Dropdown"
-import { PlusCircleIcon } from "@heroicons/react/24/outline"
 import CreateFeedback from "./CreateFeedback"
-import SortBy from "./SortBy"
 import { useRouter } from "next/router"
 
 export default function NewBoard(props) {

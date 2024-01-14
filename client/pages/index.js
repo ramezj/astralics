@@ -2,8 +2,6 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import Layout from "@/components/layout"
 import BetaAlert from "@/components/other/BetaAlert"
 import { motion } from 'framer-motion'
-import Image from "next/image"
-import Feedback from "@/components/b/Feedback"
 import FeedbackDemo from "@/components/layout/FeedbackDemo"
 
 export default function Component() {

@@ -10,16 +10,9 @@ import Spinner from "@/components/b/Spinner"
 export default function Page() {
     const router = useRouter()
     const { id } = router.query;
-    const { category } = router.query;
     const { data: session } = useSession({})
     const [ loading, setLoading ] = useState(false);
     const [ feedbacks, setFeedbacks ] = useState([]);
-    const [ sortedFeedbacksAuth, setSortedFeedbacksAuth ] = useState([])
-    const [ sortedFeatureRequestsAuth, setSortedFeatureRequestsAuth] = useState([])
-    const [ sortedBugReportsAuth, setSortedBugReportsAuth ] = useState([])
-    const [ sortedFeedbacks, setSortedFeedbacks ] = useState([])
-    const [ sortedFeatureRequests, setSortedFeatureRequests ] = useState([])
-    const [ sortedBugReports, setSortedBugReports ] = useState([])
     const [ sort, setSort ] = useState();
     useEffect(() => {
         if(!id) {
@@ -34,14 +27,8 @@ export default function Page() {
             }
             if(res.ok == true && res.auth == true) {
                 setFeedbacks(res.merged) 
-                setSortedFeedbacksAuth(res.sortedFeedbacks);
-                setSortedFeatureRequestsAuth(res.sortedFeatureRequests);
-                setSortedBugReportsAuth(res.sortedBugReport);
             } else if(res.ok == true && res.auth == false) {
                 setFeedbacks(res.response.feedbacks);
-                setSortedFeedbacks(res.sortedFeedbacks);
-                setSortedFeatureRequests(res.sortedFeatureRequests);
-                setSortedBugReports(res.sortedBugReport);
             }
             setLoading(false);
         }

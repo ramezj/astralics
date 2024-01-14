@@ -2,23 +2,9 @@ import { Fragment, useState } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Link from 'next/link'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
-import {
-  Bars3Icon,
-  CursorArrowRaysIcon,
-  XMarkIcon,
-  CreditCardIcon,
-  BoltIcon,
-} from '@heroicons/react/24/outline'
 import AuthModal from '../Auth/AuthModal'
 import Avatar from '../navbar/Avatar'
 
-const products = [
-  { name: 'Feedback Widget', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon }
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function BoardNav(props) {
     let [isOpen, setIsOpen] = useState(false)
