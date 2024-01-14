@@ -5,6 +5,7 @@ import BoardLayout from "@/components/b/Layout"
 import NewBoard from "@/components/b/NewBoard"
 import Feedback from "@/components/b/Feedback"
 import { motion } from "framer-motion"
+import Spinner from "@/components/b/Spinner"
 
 export default function Page() {
     const router = useRouter()
@@ -57,7 +58,7 @@ export default function Page() {
             <br /><br />
             <NewBoard session={session} id={router.query.id}>
                 <br /><br /><br />
-                <h1 className="text-2xl ">this usually doesn't take long</h1>
+                <Spinner />
                 <br />
             </NewBoard>
             <br />
