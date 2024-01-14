@@ -34,8 +34,8 @@ export default function Pricing(props) {
                 <br />
                 {
                 session 
-                ? <><Link href='/app' className='btn w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md'>Go to Dashboard</Link></>
-                : <><button onClick={signUserIn} className='btn w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md'>Get Started</button></>
+                ? <><Link href='/app' className='btn w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md -mb-2'>Go to Dashboard</Link></>
+                : <><button onClick={signUserIn} className='btn w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md -mb-2'>Get Started</button></>
                 }
                 </PricingCard >
                 <PricingCard price='$10' title='Developer' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
@@ -53,10 +53,10 @@ export default function Pricing(props) {
                       passthrough: session.user.id
                     })
                 })} 
-                className='btn w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md'>
+                className='btn w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md -mb-2'>
                     <CreditCardIcon className='text-white' width={22} height={22} />
                  Subscribe Now</button></>
-                : <><button onClick={signUserIn} className='btn w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md'>
+                : <><button onClick={signUserIn} className='btn w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md -mb-2'>
                     <CreditCardIcon className='text-white' width={22} height={22} />
                     Get Started</button></>
                 }

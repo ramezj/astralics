@@ -112,7 +112,7 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-lg bg-black border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-lg bg-zinc-950 border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
                     <center>
                   <Dialog.Title
                     as="h3"
@@ -127,23 +127,22 @@ export default function CreateFeedback(props) {
                       <label className="text-white font-medium">Title</label>
                       <br />
                       <input placeholder='Title of your feedback' required value={title} onChange={((e) => {setTitle(e.target.value)})} 
-                      className='input-md h-10 bg-zinc-950 rounded-md outline-none w-full shadow-xl mt-1.5'/>
+                      className='input-md h-10 bg-zinc-900 border border-white/10 rounded-md outline-none w-full shadow-xl mt-1.5'/>
                       <br />
                     </div>
                     <div className="mt-3">
                       <label className="text-white font-medium">Description</label>
                       <br />
                       <textarea placeholder='Description of your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})} 
-                      className="textarea-md resize-none bg-zinc-950 rounded-md outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
+                      className="textarea-md resize-none bg-zinc-900 border border-white/10 rounded-md outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
                       <br />
                     </div>
                     <div className="mt-1">
                     <label className="text-white font-medium">Category</label>
-                    <select className="mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-zinc-950 rounded-md" onChange={((e) => {setType(e.target.value)})}>
-                      <option disabled selected>Category</option>
+                    <select className="mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-zinc-900 border border-white/10 rounded-md" onChange={((e) => {setType(e.target.value)})}>
+                      <option className="text-md font-medium">📝 Feedback</option>
                       <option className="text-md font-medium">🐛 Bug Report</option>
                       <option className="text-md font-medium">💡 Feature Request</option>
-                      <option className="text-md font-medium">📝 Feedback</option>
                     </select>
                     </div>
                   </div>
