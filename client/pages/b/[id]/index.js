@@ -34,6 +34,7 @@ export default function Page() {
         }
         fetchProject();
     }, [id])
+    console.log(feedbacks);
   return (
     <>
     <title>{router.query.id}</title>
@@ -68,7 +69,7 @@ export default function Page() {
                         return (
                             <>
                             <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: i * 0.1}}>
-                            <Feedback isUpvoted={x.isUpvoted} id={x.id} title={x.title} description={x.description} upvotes={x.itemVotes.length} type={x.type} session={session} itemVotes={x.itemVotes}/>
+                            <Feedback avatar={x.user.image} isUpvoted={x.isUpvoted} id={x.id} title={x.title} description={x.description} upvotes={x.itemVotes.length} type={x.type} session={session} itemVotes={x.itemVotes}/>
                             </motion.div>
                             <br />
                             </>

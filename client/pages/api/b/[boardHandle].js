@@ -35,7 +35,8 @@ export default async function handler(req, res) {
                         createdAt: 'desc',
                       },
                       include:{
-                        itemVotes:true
+                        itemVotes:true,
+                        user:true
                     }
                     },
                 }

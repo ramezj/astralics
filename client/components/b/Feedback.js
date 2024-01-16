@@ -57,6 +57,9 @@ export default function Feedback(props) {
         reverseOrder={true}
         />
         <div key={props.id} className="border border-white/10 w-full flex bg-zinc-950 rounded-lg items-center cursor-pointer duration-300">
+        <div className="ml-6">
+        <img className="avatar rounded-full w-6 h-6 2xl:w-14 2xl:h-14" src={props.avatar} />
+        </div>
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left text-white'>
         {
