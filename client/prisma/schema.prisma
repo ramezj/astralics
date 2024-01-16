@@ -22,7 +22,6 @@ model Account {
   id_token          String?
   session_state     String?
   user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-
   @@unique([provider, providerAccountId])
 }
 
@@ -44,6 +43,7 @@ model User {
   boards        Board[]
   sessions      Session[]
   itemVotes     itemVote[]
+  feedback      Feedback[]
 }
 model Board {
   id        String     @id @default(cuid())
@@ -60,6 +60,8 @@ model Feedback {
   description      String
   createdAt DateTime @default(now())
   type String @default("other")
+  userId    String
+  user      User       @relation(fields: [userId], references: [id])
   boardId   String
   board     Board    @relation(fields: [boardId], references: [id])
   itemVotes itemVote[]

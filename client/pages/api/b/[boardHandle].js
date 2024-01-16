@@ -11,6 +11,17 @@ export default async function handler(req, res) {
         })
     }
     const { boardHandle } = req.query;
+    const boardExist = await prisma.board.findFirst({
+        where: {
+            handle:boardHandle
+        },
+    })
+    if(!boardExist) {
+        return res.status(400).json({
+            ok:false,
+            response:'Board doesnt exist'
+        })
+    }
     const session = await getServerSession(req, res, authOptions);
     if(session) {
         try {

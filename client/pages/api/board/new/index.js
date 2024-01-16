@@ -59,14 +59,6 @@ export default async function handler(req, res) {
                 response:'Something went wrong'
             })
         }
-        const welcomeFeedback = await prisma.feedback.create({
-            data: {
-              title:'🚀 Welcome aboard!',
-              description:"Your very first feedback, embrace it!",
-              type:"feedback",
-              boardId:newBoard.id
-            }
-          })
         return res.status(200).json({
             ok:true,
             response:newBoard

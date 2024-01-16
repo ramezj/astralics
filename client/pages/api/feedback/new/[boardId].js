@@ -1,5 +1,7 @@
 import { prisma } from "@/lib/db"
 import NextCors from 'nextjs-cors';
+import { getServerSession } from "next-auth/next"
+import { authOptions } from "../../auth/[...nextauth]";
 
 export default async function handler(req, res) {
   await NextCors(req, res, {
@@ -8,6 +10,13 @@ export default async function handler(req, res) {
     origin: '*',
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
  });
+    const session = await getServerSession(req, res, authOptions);
+    if(!session) {
+      return res.status(401).json({
+          ok:true,
+          response: ' Unauthorized '
+      })
+  }
     const { title, description, type } = req.body;
     if(!title || !description || !type) {
       return res.status(400).json({
@@ -63,7 +72,8 @@ export default async function handler(req, res) {
         title:req.body.title,
         description:req.body.description,
         type:req.body.type,
-        boardId:board.id
+        boardId:board.id,
+        userId:session.user.id
       }
     })
     return res.status(200).json({
