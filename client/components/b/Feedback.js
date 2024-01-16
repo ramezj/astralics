@@ -41,7 +41,7 @@ export default function Feedback(props) {
         if(resp.ok == true) {
           return toast.success(resp.response, {
             style: {
-            borderRadius: '10px',
+            borderRadius: '10px'
             },
         })
         }
@@ -100,7 +100,7 @@ export default function Feedback(props) {
             }
         })}
         className={`border border-white/20 group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-lg items-center flex justify-center 
-        ${test ? 'bg-blue-700 border-none hover:bg-blue-700 ' : 'bg-transparent'}`}>
+        ${test ? 'bg-blue-700 hover:bg-blue-700 ' : 'bg-transparent'}`}>
         <h1 
         className={`m-1 font-bold group-hover:text-white ${test ? 'text-white' : 'text-white'}`}>
         {upvotes}</h1>

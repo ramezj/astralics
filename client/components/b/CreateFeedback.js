@@ -140,9 +140,9 @@ export default function CreateFeedback(props) {
                     <div className="mt-1">
                     <label className="text-white font-medium">Category</label>
                     <select className="mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-zinc-900 border border-white/10 focus:border-white/20 rounded-md" onChange={((e) => {setType(e.target.value)})}>
-                      <option className="text-md font-medium">📝 Feedback</option>
-                      <option className="text-md font-medium">🐛 Bug Report</option>
-                      <option className="text-md font-medium">💡 Feature Request</option>
+                      <option className="text-md font-regular">📝 Feedback</option>
+                      <option className="text-md font-regular">🐛 Bug Report</option>
+                      <option className="text-md font-regular">💡 Feature Request</option>
                     </select>
                     </div>
                   </div>
