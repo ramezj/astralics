@@ -24,7 +24,7 @@ export default function CreateFeedback(props) {
     }
     const [ title, setTitle ] = useState(null);
     const [ description, setDescription ] = useState(null);
-    const [ type, setType ] = useState("");
+    const [ type, setType ] = useState("feedback");
     const [ loading, setLoading ] = useState(false);
     const [ text, setText ] = useState();
     const [ response, setResponse ] = useState(null);
