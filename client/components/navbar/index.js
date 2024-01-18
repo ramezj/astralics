@@ -42,15 +42,12 @@ export default function Navbar(props) {
         </div>
         <Popover.Group className="hidden lg:flex gap-2">
         <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-white flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
-            {/* <QuestionMarkCircleIcon width='20' className='flex' /> */}
-            Why?
+          Features
           </Link>
         <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-white flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
-            {/* <BoltIcon width='20' className='flex' /> */}
             Demo
           </Link>
           <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-white flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
-            {/* <CreditCardIcon width='20' className='flex' /> */}
             Pricing
           </Link>
         </Popover.Group>
@@ -128,13 +125,11 @@ export default function Navbar(props) {
               <div className="space-y-2 py-6">
               <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: 0.1}}>
               <Link href="/b/lunar" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
-                {/* <BoltIcon width='20' className='flex' /> */}
-                  Why?
+                  Features
                 </Link>
                 </motion.div>
                 <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: 0.2}}>
                 <Link href="/b/lunar" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
-                {/* <BoltIcon width='20' className='flex' /> */}
                   Demo
                 </Link>
                 </motion.div>
