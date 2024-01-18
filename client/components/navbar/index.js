@@ -154,7 +154,7 @@ export default function Navbar(props) {
               Dashboard
                 </Link></>
               : <><Link onClick={signUserIn} href='/' className='text-black px-6 py-2 bg-white hover:bg-gray-200 rounded-md font-bold flex justify-center gap-2 duration-200'>
-                Get Started
+                Try for free
                 </Link></>
               }
 
