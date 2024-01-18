@@ -4,6 +4,7 @@ import { Fragment, useState } from 'react'
 import { useRouter } from 'next/router'
 import toast, { Toaster } from 'react-hot-toast';
 import AuthModal from "../Auth/AuthModal"
+import { X } from "lucide-react";
 
 export default function CreateFeedback(props) {
     const router = useRouter()
@@ -120,6 +121,9 @@ export default function CreateFeedback(props) {
                   >
                     Create Feedback
                   </Dialog.Title>
+                  <button onClick={closeModal} className='absolute top-6 right-4 text-gray-200 outline-none focus-none ring-none'>
+                    <X />
+                  </button>
                   </center>
                   <form onSubmit={createFeedback}>
                   <div className="mt-6">
