@@ -5,7 +5,7 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import AuthModal from '../Auth/AuthModal'
 import { motion } from 'framer-motion'
-import Avatar from './Avatar'
+import Dashboard from './Dashboard'
 
 export default function Navbar(props) {
     let [isOpen, setIsOpen] = useState(false)
@@ -60,14 +60,11 @@ export default function Navbar(props) {
             {
               props.session 
               ? <> 
-              <Link href='/app' className='rounded-md w-[9rem] py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
-                Dashboard 
-                </Link>
-                  {/* <Avatar image={props.session.user.image}/> */}
+                <Dashboard />
                 </>
               : <> 
-                <button className='w-[9rem] py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
-                Get Started
+                <button className='w-[9rem] py-2 bg-black text-white hover:bg-zinc-900 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
+                Try for free
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>

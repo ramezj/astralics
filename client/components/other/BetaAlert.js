@@ -6,7 +6,7 @@ export default function BetaAlert(props) {
         2xl:w-[22rem] 
         lg:w-[20rem] 
         w-[21rem] 
-        rounded-lg 
+        rounded-2xl 
         bg-white
         shadow-sm
         text-black 

@@ -148,7 +148,7 @@ export default function CreateFeedback(props) {
                   </div>
                   <center>
                   <div className="mt-6">
-                  <button type="submit" className='text-middle w-full py-2.5 bg-white rounded-md font-bold outline-none text-black'>
+                  <button type="submit" className='text-middle w-full py-2.5 bg-blue-700 rounded-md font-bold outline-none text-white'>
                     {
                       loading 
                       ? "Submitting"

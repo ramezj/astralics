@@ -12,6 +12,7 @@ import {
 } from '@heroicons/react/24/outline'
 import Create from './Create'
 import Billing from './Billing'
+import Dashboard from '../navbar/Dashboard'
 
 export default function AppNavbar(props) {
     let [isOpen, setIsOpen] = useState(false)
@@ -54,10 +55,8 @@ export default function AppNavbar(props) {
               ? <> 
               <Billing />
               <Create />
-              <Link href='/app' className='rounded-md w-[9rem] py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
-                {/* <Squares2X2Icon className='text-white' width={22} height={22}/> */}
-                Dashboard 
-                </Link></>
+              <Dashboard />
+              </>
               : <> 
                 <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 try lunar
