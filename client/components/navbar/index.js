@@ -63,7 +63,7 @@ export default function Navbar(props) {
                 <Dashboard />
                 </>
               : <> 
-                <button className='w-[9rem] py-2 bg-white text-black hover:bg-zinc-900 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
+                <button className='w-[9rem] py-2 bg-white text-black hover:bg-gray-200 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 Try for free
                 </button>
                 <Transition appear show={isOpen} as={Fragment}>
