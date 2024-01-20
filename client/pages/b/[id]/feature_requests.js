@@ -38,6 +38,7 @@ export default function Page() {
     <>
     <title>Feature Requests</title>
     <BoardLayout>
+    <br />
     { loading === true && 
     <>
     <center>

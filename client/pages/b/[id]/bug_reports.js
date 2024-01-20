@@ -38,6 +38,7 @@ export default function Page() {
     <>
     <title>Bug Reports</title>
     <BoardLayout>
+    <br />
     { loading === true && 
     <>
     <center>

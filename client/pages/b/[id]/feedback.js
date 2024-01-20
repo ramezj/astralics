@@ -38,6 +38,7 @@ export default function Page() {
     <>
     <title>Feedback</title>
     <BoardLayout>
+    <br />
     { loading === true && 
     <>
     <center>
