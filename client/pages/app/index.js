@@ -77,7 +77,7 @@ export default function Component() {
                             }}
                             transition={{duration: 0.5, delay: i * 0.15}}
                             >
-          <Card title={board.name} href={`/board/${board.id}`} website={board.website} settings={`/settings/${board.id}`} handle={`/b/${board.handle}`}/>
+          <Card title={board.name} href={`/b/${board.handle}`} website={board.website} settings={`/settings/${board.id}`} handle={`/b/${board.handle}`}/>
           </motion.div>
         )
       })}

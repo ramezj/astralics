@@ -19,19 +19,16 @@ export default function Card(props) {
     <br />
     <h1 className="font-medium -mb-3 duration-150 drop-shadow-lg text-black">{props.website}</h1>
     <div className="card-actions justify-end flex gap-6">
-      {/* <span className='-mt-8 -mr-2 w-10 h-8 rounded-lg justify-center items-center float-right flex hover:scale-[1.18] duration-300'>
-      <ChevronRightIcon className='text-gray-400' width={50} height={50} strokeWidth={'2'}/>
-      </span> */}
-    <span className='-mt-6 -mr-2 w-10 h-8 rounded-lg justify-center items-center float-right flex bg-gray-200 hover:scale-[1.18] duration-300 shadow-sm'>
+    <span className='-mt-6 -mr-2 w-10 h-8 rounded-lg justify-center items-center float-right flex bg-gray-200 hover:scale-[1.19] duration-200 shadow-sm'>
     <Link href={`${props.settings}`} className='drop-shadow-lg float-right flex justify-center'>
     <AdjustmentsHorizontalIcon className='text-black' width={22} height={23} strokeWidth={'2'}/>
     </Link>
     </span>
-    <span className='-mt-6 -mr-2 w-10 h-8 rounded-lg justify-center items-center float-right flex bg-gray-200 hover:scale-[1.18] duration-300 shadow-sm'>
+    {/* <span className='-mt-6 -mr-2 w-10 h-8 rounded-lg justify-center items-center float-right flex bg-gray-200 hover:scale-[1.18] duration-300 shadow-sm'>
     <Link href={`${props.handle}`} className='drop-shadow-lg float-right flex justify-center'>
     <LinkIcon className='text-black' width={21} height={22} strokeWidth={'2.3'}/>
     </Link>
-    </span>
+    </span> */}
     </div>
   </div>
 </Link>

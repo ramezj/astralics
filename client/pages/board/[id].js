@@ -30,6 +30,7 @@ export default function Page() {
         }
         fetchProject();
     }, [id])
+    console.log(feedback);
   return (
     <>
     <AppLayout>
@@ -54,7 +55,7 @@ export default function Page() {
     feedback.map((feedback) => {
         return (
             <>
-            <Feedback body={feedback.body} rating={feedback.rating} email={feedback.email} />
+            <Feedback content={feedback.description} title={feedback.title} />
             </>
         )
     })
