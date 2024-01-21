@@ -3,6 +3,7 @@ import Layout from "@/components/layout"
 import BetaAlert from "@/components/other/BetaAlert"
 import { motion } from 'framer-motion'
 import FeedbackDemo from "@/components/layout/FeedbackDemo"
+import { ArrowRight } from "lucide-react"
 
 export default function Component() {
   const { data: session } = useSession()
@@ -39,7 +40,13 @@ export default function Component() {
             built for developers, by developers.
             </motion.h1>
             <br />
-            {/* <p className='text-gray-100 lg:text-xl lg:w-2/6 md:w-3/6 w-4/5'>An easily embeddable, light-weight feedback widget package that is used to collect user feedback from anywhere.</p> */}
+            {/* <div className="flex flex-wrap gap-4 justify-center w-full mt-3 mb-3 lg:mb-5">
+            <button className='font-bold w-[12rem] py-2.5 bg-white text-black hover:bg-gray-200 rounded-xl flex gap-2 content-center justify-center items-center duration-200'>
+            Try for free 
+            <ArrowRight className='w-5 h-5  align-middle flex' />
+            </button>
+            
+            </div>     */}
         </div>  
           <br />
           <div className="w-full content-center items-center justify-items-center">
@@ -55,7 +62,7 @@ export default function Component() {
                   }}
                   transition={{duration: 0.5, delay: 0.15}}
                   >
-                <FeedbackDemo session={session} title="Feedback" type="🐛 Bug Report" description={"Lunar is launching soon.."} upvotes="1"/>
+                <FeedbackDemo session={session} title="Feedback" type="📝 Feedback" description={"Love the website, keep it up!"} upvotes="1"/>
                 </motion.div>
                 <br />
                 <motion.div
@@ -67,10 +74,10 @@ export default function Component() {
                    opacity: 1,
                    y:0
                   }}
-                  transition={{duration: 0.5, delay: 0.3}}
+                  transition={{duration: 0.5, delay: 0.30}}
                   >
-                <FeedbackDemo session={session} title="Feature Request" type="📝 Feedback" description={"Lunar is launching soon.."} upvotes="1"/>
-                  </motion.div>
+                <FeedbackDemo session={session} title="Feature Request" type="💡 Feature Request" description={"Can you add more authentication options? thanks!"} upvotes="1"/>
+                </motion.div>
               </div>
           </div>
             </center>

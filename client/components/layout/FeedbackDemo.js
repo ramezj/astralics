@@ -18,7 +18,9 @@ export default function FeedbackDemo(props) {
             title.length > 20 ? `${title.substring(0,20)}...` : `${title}`
         }       
         </p>
-        <p className='text-sm font-regular text-left text-black'>{props.description}</p>
+        <p className='text-sm font-medium text-left text-black'>
+            {props.description}
+            </p>
         {
             props.type == "🐛 Bug Report"
             ? 
