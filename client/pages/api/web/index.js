@@ -9,36 +9,36 @@ export default async function handler(req, res) {
         })
     }
     console.log(req.body);
-    if(req.body.alert_name == "subscription_created") {
-        if(req.body.subscription_plan_id == '63325') {
-            try {
-                const updateUser = await prisma.user.update({
-                    where: {
-                        id:req.body.passthrough
-                    },
-                    data: {
-                        premium: true,
-                        level:1
-                    }
-                })
-            } catch (error) {
-                console.error(error);
-            }
-        }
-        if(req.body.subscription_plan_id == '63601') {
-            try {
-                const updateUser = await prisma.user.update({
-                    where: {
-                        id:req.body.passthrough
-                    },
-                    data: {
-                        premium: true,
-                        level:2
-                    }
-                })
-            } catch (error) {
-                console.error(error);
-            }
-        }
-    }
+    // if(req.body.alert_name == "subscription_created") {
+    //     if(req.body.subscription_plan_id == '63325') {
+    //         try {
+    //             const updateUser = await prisma.user.update({
+    //                 where: {
+    //                     id:req.body.passthrough
+    //                 },
+    //                 data: {
+    //                     premium: true,
+    //                     level:1
+    //                 }
+    //             })
+    //         } catch (error) {
+    //             console.error(error);
+    //         }
+    //     }
+    //     if(req.body.subscription_plan_id == '63601') {
+    //         try {
+    //             const updateUser = await prisma.user.update({
+    //                 where: {
+    //                     id:req.body.passthrough
+    //                 },
+    //                 data: {
+    //                     premium: true,
+    //                     level:2
+    //                 }
+    //             })
+    //         } catch (error) {
+    //             console.error(error);
+    //         }
+    //     }
+    // }
  }
