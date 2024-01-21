@@ -27,7 +27,7 @@ export default function Navbar(props) {
       <nav className="mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 outline-none font-medium italic">
-            lunar<b>feed</b>
+            lunar
           </Link>
         </div>
         <div className="flex lg:hidden">
