@@ -25,7 +25,7 @@ export const Toggle = () => {
     {
       theme == 'dark' &&
       <>
-      <Button onClick={(() => setTheme('light'))} className='bg-white dark:bg-slate-950 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-slate-900'>
+      <Button onClick={(() => setTheme('light'))} className='rounded-lg bg-white dark:bg-slate-950 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-slate-900'>
         <MoonIcon className='w-5'/>
       </Button>
       </>
@@ -33,7 +33,7 @@ export const Toggle = () => {
     {
       theme == 'light' &&
       <>
-      <Button onClick={(() => setTheme('dark'))} className='bg-white dark:bg-slate-950 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-slate-900'>
+      <Button onClick={(() => setTheme('dark'))} className='rounded-lg bg-white dark:bg-slate-950 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-slate-900'>
         <SunIcon className='w-5'/>
       </Button>
       </>
