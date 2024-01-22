@@ -10,10 +10,19 @@ import { Button } from "@/components/ui/button"
 import { useState } from 'react'
 import { MoonIcon } from "lucide-react"
 import { SunIcon } from "lucide-react"
+import NoSSR from '@/utils/NoSSR'
 
 export const Toggle = () => {
   const { theme, setTheme } = useTheme()
+  const changeTheme = () => {
+    if(theme == 'dark') {
+      setTheme('light');
+    } else if (theme == 'light') {
+      setTheme('dark')
+    }
+  }
   return (
+    <NoSSR >
     <div suppressHydrationWarning={true}>
     {
       theme == 'dark' &&
@@ -32,5 +41,6 @@ export const Toggle = () => {
       </>
     }
     </div>
+    </NoSSR >
   )
 }
