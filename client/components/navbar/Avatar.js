@@ -33,7 +33,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { signOut } from "next-auth/react"
 import Link from "next/link"
-
+import { Separator } from "@/components/ui/separator"
 
 export const Profile = (props) => {
   return (
@@ -48,7 +48,7 @@ export const Profile = (props) => {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
-        <DropdownMenuSeparator />
+        <Separator />
         <DropdownMenuGroup>
         <Link href='/app'>
           <DropdownMenuItem className='cursor-pointer'>
@@ -69,7 +69,7 @@ export const Profile = (props) => {
           </DropdownMenuItem>
           </Link>
         </DropdownMenuGroup>
-        <DropdownMenuSeparator />
+        <Separator />
         <Link href='' onClick={(() => signOut())}>
         <DropdownMenuItem className='cursor-pointer'>
           <LogOut className="mr-2 h-4 w-4" />
