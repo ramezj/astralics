@@ -4,10 +4,9 @@ import ErrorBoundary from '@/components/ErrorBoundary'
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from 'geist/font/sans';
 import { Analytics } from '@vercel/analytics/react';
-import { NextUIProvider } from '@nextui-org/react';
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
- 
+
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',

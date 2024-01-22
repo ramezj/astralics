@@ -17,7 +17,7 @@ export default function BoardNav(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <header className="bg-transparent">
-      <nav className="mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav className="mx-auto max-w-[95rem] flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
         {/* <Link href="/" className="-m-1.5 p-1.5 outline-none font-medium italic">
             lunar<b>feed</b>
@@ -27,7 +27,6 @@ export default function BoardNav(props) {
         {
               props.session 
               ? <> 
-                {/* <Avatar image={props.session.user.image} /> */}
                 <button className='rounded-md px-7 py-2 bg-white hover:bg-gray-200 text-black flex gap-2 content-center justify-center items-center duration-200'>
                 {props.session.user.name}
                 </button>
