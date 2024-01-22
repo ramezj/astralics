@@ -33,7 +33,7 @@ export default function AppNavbar(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <header className="bg-transparent">
-      <nav className="mx-auto max-w-[95rem] flex items-center justify-between p-6 lg:px-8 " aria-label="Global">
+      <nav className="mx-auto max-w-[75rem] flex items-center justify-between p-6 lg:px-8 " aria-label="Global">
         <div className="flex lg:flex-1">
         <Link href="/" className="-m-1.5 p-1.5 outline-none font-medium italic">
             lunar

@@ -14,7 +14,6 @@ import {
   UserPlus,
   Users,
 } from "lucide-react"
- 
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -54,6 +53,12 @@ export const Profile = (props) => {
           <DropdownMenuItem className='cursor-pointer'>
             <User className="mr-2 h-4 w-4" />
             <span>Dashboard</span>
+          </DropdownMenuItem>
+          </Link>
+          <Link href='/billing'>
+          <DropdownMenuItem className='cursor-pointer'>
+            <CreditCard className="mr-2 h-4 w-4" />
+            <span>Mode</span>
           </DropdownMenuItem>
           </Link>
           <Link href='/billing'>

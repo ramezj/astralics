@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 import Dashboard from './Dashboard'
 import { Profile } from './Avatar'
 import { Toggle } from './Toggle'
+import { TryForFree } from './TryForFree'
 
 export default function Navbar(props) {
     let [isOpen, setIsOpen] = useState(false)
@@ -26,7 +27,7 @@ export default function Navbar(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <header className="bg-transparent">
-      <nav className="mx-auto max-w-[95rem] flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav className="mx-auto max-w-[75rem] flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 outline-none font-medium italic">
             lunar
@@ -63,9 +64,10 @@ export default function Navbar(props) {
                 <Profile image={props.session.user.image}/>
                 </>
               : <> 
-                <button className='w-[9rem] py-2 bg-white text-black hover:bg-gray-200 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
+                <TryForFree onClick={openModal} />
+                {/* <button className='w-[9rem] py-2 bg-white text-black hover:bg-gray-200 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 Try for free
-                </button>
+                </button> */}
                 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
