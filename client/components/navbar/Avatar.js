@@ -58,12 +58,6 @@ export const Profile = (props) => {
           <Link href='/billing'>
           <DropdownMenuItem className='cursor-pointer'>
             <CreditCard className="mr-2 h-4 w-4" />
-            <span>Mode</span>
-          </DropdownMenuItem>
-          </Link>
-          <Link href='/billing'>
-          <DropdownMenuItem className='cursor-pointer'>
-            <CreditCard className="mr-2 h-4 w-4" />
             <span>Billing</span>
           </DropdownMenuItem>
           </Link>
