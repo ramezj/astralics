@@ -5,6 +5,13 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from 'geist/font/sans';
 import { Analytics } from '@vercel/analytics/react';
 import { NextUIProvider } from '@nextui-org/react';
+import { Inter } from 'next/font/google'
+import { ThemeProvider } from 'next-themes'
+ 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 export default function App({
   Component,
@@ -12,14 +19,17 @@ export default function App({
 }) {
   return (
     <ErrorBoundary>
+    <ThemeProvider
+    attribute='class'
+    defaultTheme='system'
+    >
     <SessionProvider session={session}>
-      <NextUIProvider>
-    <main>
+    <main className={`${inter.variable} font-sans min-h-screen antialiased`}>
       <Component className='' {...pageProps} />
       <Analytics />
       </main>
-      </NextUIProvider>
     </SessionProvider>
+    </ThemeProvider>
     </ErrorBoundary>
   )
 }

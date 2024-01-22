@@ -6,6 +6,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import AuthModal from '../Auth/AuthModal'
 import { motion } from 'framer-motion'
 import Dashboard from './Dashboard'
+import { Profile } from './Avatar'
+import { Toggle } from './Toggle'
 
 export default function Navbar(props) {
     let [isOpen, setIsOpen] = useState(false)
@@ -54,10 +56,12 @@ export default function Navbar(props) {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
 
           <a className="text-sm font-bold leading-6 text-white flex gap-3">
+            <Toggle />
             {
               props.session 
               ? <> 
-                <Dashboard />
+                {/* <Dashboard /> */}
+                <Profile />
                 </>
               : <> 
                 <button className='w-[9rem] py-2 bg-white text-black hover:bg-gray-200 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>

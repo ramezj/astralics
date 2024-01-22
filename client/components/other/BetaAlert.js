@@ -8,6 +8,8 @@ export default function BetaAlert(props) {
         w-[21rem] 
         rounded-2xl 
         bg-white
+        dark:bg-black
+        dark:text-white
         shadow-sm
         text-black 
         py-2 
