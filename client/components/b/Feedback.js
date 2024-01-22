@@ -56,17 +56,14 @@ export default function Feedback(props) {
         position="bottom-right"
         reverseOrder={true}
         />
-        <div key={props.id} className="border border-white/10 w-full flex bg-zinc-950 rounded-lg items-center cursor-pointer duration-300">
-        {/* <div className="ml-6">
-        <img className="avatar rounded-full w-8 h-8 2xl:w-8 2xl:h-8" src={props.avatar} />
-        </div> */}
+        <div key={props.id} className="border border-white/10 w-full flex bg-white dark:bg-zinc-950 rounded-lg items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
-        <p className='text-lg font-bold text-left text-white'>
+        <p className='text-lg font-bold text-left text-black dark:text-white'>
         {
             title.length > 100 ? `${title.substring(0,50)}...` : `${title}`
         }       
         </p>
-        <p className='text-sm font-regular text-left text-white'>
+        <p className='text-sm font-regular text-left text-black dark:text-white'>
           {props.description.length > 50 ? `${props.description.substring(0,50)}...` : `${props.description}`}
         </p>
         {
