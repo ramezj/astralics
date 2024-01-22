@@ -10,9 +10,9 @@ export const Toggle = () => {
   const { theme, setTheme } = useTheme()
   return (
     <>
-   <Select onValueChange={e => setTheme(e)} className='focus-visible:ring-transparent'>
-  <SelectTrigger className="w-[100px]">
-    <SelectValue value={theme} placeholder={theme} />
+  <Select onValueChange={e => setTheme(e)} className=''>
+  <SelectTrigger className="w-[100px] text-black dark:text-white">
+    <SelectValue value={theme} placeholder={"System"} />
   </SelectTrigger>
   <SelectContent>
     <SelectItem value="light">Light</SelectItem>
