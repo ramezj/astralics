@@ -54,7 +54,7 @@ export default function Navbar(props) {
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
-          <a className="text-sm font-bold leading-6 text-white flex gap-3 mr-4">
+          <a className="text-sm font-bold leading-6 text-white flex gap-3">
             <Toggle />
             {
               props.session 

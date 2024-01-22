@@ -13,6 +13,8 @@ import {
 import Create from './Create'
 import Billing from './Billing'
 import Dashboard from '../navbar/Dashboard'
+import { Profile } from '../navbar/Avatar'
+import { Toggle } from '../navbar/Toggle'
 
 export default function AppNavbar(props) {
     let [isOpen, setIsOpen] = useState(false)
@@ -48,13 +50,15 @@ export default function AppNavbar(props) {
           </button>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
-          <a className="text-sm font-bold leading-6 text-white flex gap-4">
+          <a className="text-sm font-bold leading-6 text-white flex gap-3">
             {
               props.session 
               ? <> 
-              <Billing />
-              <Create />
-              <Dashboard />
+              {/* <Billing /> */}
+              {/* <Create /> */}
+              <Toggle />
+              <Profile image={props.session.user.image}/>
+              {/* <Dashboard /> */}
               </>
               : <> 
                 <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
