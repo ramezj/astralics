@@ -5,7 +5,7 @@ import BoardNav from "./BoardNav";
 export default function BoardLayout(props) {
     const { data: session } = useSession()
     return (
-        <div className='bg-gray-300 dark:bg-black h-full min-h-screen bg-bottom bg-no-repeat w-full'>
+        <div className='bg-gray-300 dark:bg-zinc-950 h-full min-h-screen bg-bottom bg-no-repeat w-full'>
             {/* <Navbar session={session}/> */}
             {/* bg-[#05050a] */}
         {/* <Navbar session={session}/> */}
