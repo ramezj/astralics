@@ -6,6 +6,8 @@ export const SignInButton = (props) => {
         border 
         border-black/20 
         dark:border-white/10
+        hover:border-black/0
+        dark:hover:border-white/0
         dark:bg-zinc-900
         dark:hover:bg-zinc-800
         dark:text-white
