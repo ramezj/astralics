@@ -49,8 +49,6 @@ export default function Page() {
                 <Spinner />
                 <br />
             </NewBoard>
-            <br />
-            <br />
         </center>
     </>
     }
@@ -94,8 +92,6 @@ export default function Page() {
                     </>
             }
             </NewBoard>
-            <br />
-            <br />
         </center>
         </>
         }
