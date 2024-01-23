@@ -28,14 +28,15 @@ export default function Dropdown(props) {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="border border-white/10 absolute left-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-lg bg-zinc-950 shadow-lg ring-1 ring-black/5 focus:outline-none">
+          <Menu.Items className="border border-white/10 absolute left-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-lg shadow-lg ring-1 ring-black/5 focus:outline-none 
+          bg-white dark:bg-zinc-900">
             <div className="px-1 py-1 ">
             <Menu.Item>
                 {({ active }) => (
                   <Link
                     href={`/b/${id}`}
                     className={`${
-                      active ? 'bg-blue-700 text-gray-100' : 'text-white'
+                      active ? 'bg-blue-700 text-gray-100' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     ✨ All Feedback
@@ -47,7 +48,7 @@ export default function Dropdown(props) {
                   <Link
                   href={`/b/${id}/bug_reports`}
                     className={`${
-                      active ? 'bg-blue-700 text-gray-100' : 'text-white'
+                      active ? 'bg-blue-700 text-gray-100' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     🐛 Bug Report
@@ -59,7 +60,7 @@ export default function Dropdown(props) {
                   <Link
                   href={`/b/${id}/feature_requests`}
                     className={`${
-                      active ? 'bg-blue-700 text-gray-100' : 'text-white'
+                      active ? 'bg-blue-700 text-gray-100' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     💡 Feature Request
@@ -71,7 +72,7 @@ export default function Dropdown(props) {
                   <Link
                   href={`/b/${id}/feedback`}
                     className={`${
-                      active ? 'bg-blue-700 text-gray-100' : 'text-white'
+                      active ? 'bg-blue-700 text-gray-100' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     📝 Feedback
