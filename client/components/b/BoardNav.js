@@ -77,6 +77,7 @@ export default function BoardNav(props) {
                 <Profile image={props.session.user.image}/>
                 </>
               : <> 
+                <Toggle />
                 <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 Sign In
                 </button>
