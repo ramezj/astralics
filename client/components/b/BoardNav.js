@@ -5,6 +5,7 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import AuthModal from '../Auth/AuthModal'
 import { Profile } from '../navbar/Avatar'
 import { Toggle } from '../navbar/Toggle'
+import { SignInButton } from "./SignInButton"
 
 export default function BoardNav(props) {
     let [isOpen, setIsOpen] = useState(false)
@@ -32,9 +33,7 @@ export default function BoardNav(props) {
                 </>
               : <> 
                 <Toggle />
-                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
-                Sign In
-                </button>
+                <SignInButton onClick={openModal} />
                 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -60,7 +59,6 @@ export default function BoardNav(props) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden rounded-2xl bg-transparent align-middle transition-all">
-                  
                 </Dialog.Panel>
               </Transition.Child>
             </div>
@@ -80,9 +78,7 @@ export default function BoardNav(props) {
                 </>
               : <> 
                 <Toggle />
-                <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
-                Sign In
-                </button>
+                <SignInButton onClick={openModal} />
                 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
