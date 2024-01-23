@@ -27,7 +27,7 @@ export const Toggle = () => {
     {
       theme == 'dark' &&
       <>
-      <Button onClick={(() => setTheme('light'))} className='duration-200 rounded-lg bg-white dark:bg-zinc-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-zinc-800'>
+      <Button onClick={(() => setTheme('light'))} className='border border-black/20 dark:border-white/10 hover:border-black/0 dark:hover:border-white/0 duration-200 rounded-lg bg-white dark:bg-zinc-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-zinc-800'>
         <MoonIcon className='w-5'/>
       </Button>
       </>
@@ -35,7 +35,7 @@ export const Toggle = () => {
     {
       theme == 'light' &&
       <>
-      <Button onClick={(() => setTheme('dark'))} className='duration-200 rounded-lg bg-white dark:bg-zinc-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-zinc-800'>
+      <Button onClick={(() => setTheme('dark'))} className='border border-black/20 dark:border-white/10 hover:border-black/0 dark:hover:border-white/0 duration-200 rounded-lg bg-white dark:bg-zinc-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-zinc-800'>
         <SunIcon className='w-5'/>
       </Button>
       </>
