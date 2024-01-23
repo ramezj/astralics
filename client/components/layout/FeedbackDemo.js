@@ -11,49 +11,53 @@ export default function FeedbackDemo(props) {
     const [ test, setTest ] = useState(props.isUpvoted)
     return (
         <>
-        <div key={props.id} className="w-full flex bg-white rounded-lg items-center cursor-pointer duration-300">
+                <div key={props.id} className="border hover:border-black/30 dark:hover:border-white/20 dark:border-white/10 border-black/20 w-full flex bg-white dark:bg-zinc-900 rounded-lg items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
-        <p className='text-lg font-bold text-left text-black'>
+        <p className='text-lg font-bold text-left text-black dark:text-white'>
         {
-            title.length > 20 ? `${title.substring(0,20)}...` : `${title}`
+            title.length > 100 ? `${title.substring(0,50)}...` : `${title}`
         }       
         </p>
-        <p className='text-sm font-medium text-left text-black'>
-            {props.description}
-            </p>
+        <p className='text-sm font-regular text-left text-black dark:text-white'>
+          {props.description.length > 50 ? `${props.description.substring(0,50)}...` : `${props.description}`}
+        </p>
+        <div className="mt-3 -mb-2">
         {
-            props.type == "🐛 Bug Report"
+            props.type === "bug_report"
             ? 
             <>
-            <span class="border border-white/20 mt-2 -mb-1 bg-indigo-700 text-white text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md">{props.type}</span>
+            <span class="border border-white/20 mt-2 -mb-1 bg-indigo-700 text-white text-xs font-medium me-2 px-2 py-[0.2rem] rounded-md">🐛 Bug Report</span>
             </>
             : <></>
         }
         {
-            props.type == "💡 Feature Request"
+            props.type === "feature_request"
             ? 
             <>
-            <span class="border border-white/20 mt-2 -mb-1 bg-yellow-700 text-white text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md">{props.type}</span>
+            <span class="border border-white/20 mt-2 -mb-1 bg-yellow-700 text-white text-xs font-medium me-2 px-2 py-[0.2rem] rounded-md">💡 Feature Request</span>
             </>
             : <></>
         }
         {
-            props.type == "📝 Feedback"
+            props.type === "feedback"
             ? 
             <>
-            <span class="border border-white/20 mt-2 -mb-1 bg-green-700 text-white text-xs font-medium me-2 px-2.5 py-[0.3rem] rounded-md">{props.type}</span>
+            <span class="border border-white/20 mt-2 -mb-1 bg-green-700 text-white text-xs font-medium me-2 px-2 py-[0.2rem] rounded-md">📝 Feedback</span>
             </>
             : <></>
         }
         </div>
-        <div className="m-8 ml-auto">
-        <button className={`group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-lg items-center flex justify-center bg-blue-700 border-none`}>
+        </div>
+        <div className="m-6 ml-auto">
+        <button
+        className={`border border-black/20 dark:border-white/20 group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-lg items-center flex justify-center 
+        ${test ? 'bg-blue-700 hover:bg-blue-700 ' : 'bg-transparent'}`}>
         <h1 
-        className={`m-1 font-bold group-hover:text-white text-white`}>
+        className={`m-1 font-bold group-hover:text-white ${test ? 'text-white dark:text-white' : 'text-black dark:text-white'}`}>
         {upvotes}</h1>
         <ChevronUpIcon 
         strokeWidth={2.5}
-        className={`w-6 h-6 group-hover:text-white text-white`}/>
+        className={`w-6 h-6 group-hover:text-white strokeWidth={2} ${test ? 'text-white dark:text-white' : 'text-black dark:text-white'}`}/>
         </button>
         </div>
         </div>

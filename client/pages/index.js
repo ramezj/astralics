@@ -64,7 +64,7 @@ export default function Component() {
                   }}
                   transition={{duration: 0.5, delay: 0.15}}
                   >
-                <FeedbackDemo session={session} title="Feedback" type="📝 Feedback" description={"Love the website, keep it up!"} upvotes="1"/>
+                <FeedbackDemo session={session} title="Feedback" type="feedback" description={"Love the website, keep it up!"} upvotes="1"/>
                 </motion.div>
                 <br />
                 <motion.div
@@ -78,7 +78,7 @@ export default function Component() {
                   }}
                   transition={{duration: 0.5, delay: 0.30}}
                   >
-                <FeedbackDemo session={session} title="Feature Request" type="💡 Feature Request" description={"Can you add more authentication options? thanks!"} upvotes="1"/>
+                <FeedbackDemo session={session} title="Feature Request" type="feature_request" description={"Can you add more authentication options? thanks!"} upvotes="1"/>
                 </motion.div>
               </div>
           </div>

@@ -66,6 +66,7 @@ export default function Feedback(props) {
         <p className='text-sm font-regular text-left text-black dark:text-white'>
           {props.description.length > 50 ? `${props.description.substring(0,50)}...` : `${props.description}`}
         </p>
+        <div className="mt-3 -mb-2">
         {
             props.type === "bug_report"
             ? 
@@ -90,6 +91,7 @@ export default function Feedback(props) {
             </>
             : <></>
         }
+        </div>
         </div>
         <div className="m-6 ml-auto">
         <button onClick={(() => {

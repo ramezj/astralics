@@ -8,7 +8,7 @@ export default function BetaAlert(props) {
         w-[21rem] 
         rounded-2xl 
         bg-white
-        dark:bg-slate-950
+        dark:bg-zinc-900
         dark:text-white
         shadow-sm
         text-black 
