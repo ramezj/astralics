@@ -23,13 +23,15 @@ export default function BoardNav(props) {
             lunar<b>feed</b>
           </Link> */}
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden gap-4">
         {
               props.session 
               ? <> 
+                <Toggle />
                 <Profile image={props}/>
                 </>
               : <> 
+                <Toggle />
                 <button className='px-8 py-2 bg-white text-black hover:bg-gray-200 rounded-md flex justify-center items-center gap-2 duration-200' onClick={openModal}>
                 Sign In
                 </button>
