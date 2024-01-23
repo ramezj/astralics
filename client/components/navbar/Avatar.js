@@ -45,17 +45,17 @@ export const Profile = (props) => {
         </Avatar>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-48">
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-        <Separator />
-        <DropdownMenuGroup>
-        <Link href='/app'>
+      <DropdownMenuContent className="w-48 bg-white dark:bg-zinc-900 border border-black/20 dark:border-white/10">
+        <DropdownMenuLabel className='mb-1'>My Account</DropdownMenuLabel>
+        <Separator/>
+        <DropdownMenuGroup className='mt-1 mb-1'>
+        <Link href='/app' className=''>
           <DropdownMenuItem className='cursor-pointer'>
             <User className="mr-2 h-4 w-4" />
             <span>Dashboard</span>
           </DropdownMenuItem>
           </Link>
-          <Link href='/billing'>
+          <Link href='/billing' className=''>
           <DropdownMenuItem className='cursor-pointer'>
             <CreditCard className="mr-2 h-4 w-4" />
             <span>Billing</span>
@@ -70,7 +70,7 @@ export const Profile = (props) => {
         </DropdownMenuGroup>
         <Separator />
         <Link href='' onClick={(() => signOut())}>
-        <DropdownMenuItem className='cursor-pointer'>
+        <DropdownMenuItem className='cursor-pointer mt-1'>
           <LogOut className="mr-2 h-4 w-4" />
           <span>Log out</span>
         </DropdownMenuItem>
