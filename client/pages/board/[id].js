@@ -5,6 +5,15 @@ import { motion } from "framer-motion"
 import Feedback from "@/components/board/Feedback"
 import Loading from "@/components/board/Loading"
 import AppLayout from "@/components/app/AppLayout"
+import {
+    Table,
+    TableBody,
+    TableCaption,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+  } from "@/components/ui/table"
 
 export default function Page() {
     const router = useRouter()
