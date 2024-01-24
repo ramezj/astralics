@@ -7,13 +7,21 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { MoonIcon } from "lucide-react"
 import { SunIcon } from "lucide-react"
 import NoSSR from '@/utils/NoSSR'
 
 export const Toggle = () => {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
   const changeTheme = () => {
     if(theme == 'dark') {
       setTheme('light');
@@ -22,7 +30,6 @@ export const Toggle = () => {
     }
   }
   return (
-    <NoSSR >
     <div suppressHydrationWarning={true}>
     {
       theme == 'dark' &&
@@ -41,6 +48,5 @@ export const Toggle = () => {
       </>
     }
     </div>
-    </NoSSR >
   )
 }

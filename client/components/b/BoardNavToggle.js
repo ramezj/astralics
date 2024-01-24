@@ -7,13 +7,21 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { MoonIcon } from "lucide-react"
 import { SunIcon } from "lucide-react"
 import NoSSR from '@/utils/NoSSR'
 
 export const BoardNavToggle = () => {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
   return (
     // <NoSSR >
     <div suppressHydrationWarning={true}>
