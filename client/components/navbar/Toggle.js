@@ -17,7 +17,7 @@ export function Toggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button size="icon"  className='py-2 border border-black/20 dark:border-white/10 hover:border-black/0 dark:hover:border-white/0 duration-200 rounded-lg bg-white dark:bg-zinc-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-zinc-800'>
+        <Button  className='py-2 border border-black/20 dark:border-white/10 hover:border-black/0 dark:hover:border-white/0 duration-200 rounded-lg bg-white dark:bg-zinc-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-zinc-800'>
           <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
