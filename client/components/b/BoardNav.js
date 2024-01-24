@@ -10,6 +10,7 @@ import { Profile } from '../navbar/Avatar'
 import { Toggle } from '../navbar/Toggle'
 import { TryForFree } from '../navbar/TryForFree'
 import { BoardNavToggle } from './BoardNavToggle'
+import { Debug } from './Debug'
 
 export default function BoardNav(props) {
     let [isOpen, setIsOpen] = useState(false)
@@ -36,6 +37,7 @@ export default function BoardNav(props) {
         </div>
         <div className="flex lg:hidden gap-4">
           {/* MOBILE NAVBAR */}
+        <Debug />
         <BoardNavToggle />
             {
               props.session 
@@ -81,6 +83,7 @@ export default function BoardNav(props) {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
           <a className="text-sm font-bold leading-6 text-white flex gap-3">
+            <Debug />
             <BoardNavToggle />
             {
               props.session 
