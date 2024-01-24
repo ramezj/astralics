@@ -22,17 +22,10 @@ export const Toggle = () => {
   if (!mounted) {
     return null
   }
-  const changeTheme = () => {
-    if(theme == 'dark') {
-      setTheme('light');
-    } else if (theme == 'light') {
-      setTheme('dark')
-    }
-  }
   return (
     <div suppressHydrationWarning={true}>
     {
-      theme == 'dark' &&
+      theme === 'dark' &&
       <>
       <Button onClick={(() => setTheme('light'))} className='border border-black/20 dark:border-white/10 hover:border-black/0 dark:hover:border-white/0 duration-200 rounded-lg bg-white dark:bg-zinc-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-zinc-800'>
         <MoonIcon className='w-5'/>
@@ -40,7 +33,7 @@ export const Toggle = () => {
       </>
     }
     {
-      theme == 'light' &&
+      theme === 'light' &&
       <>
       <Button onClick={(() => setTheme('dark'))} className='border border-black/20 dark:border-white/10 hover:border-black/0 dark:hover:border-white/0 duration-200 rounded-lg bg-white dark:bg-zinc-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-zinc-800'>
         <SunIcon className='w-5'/>
