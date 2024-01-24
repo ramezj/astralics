@@ -18,7 +18,7 @@ export const Toggle = () => {
   useEffect(() => {
     setMounted(true)
   }, [])
-
+  console.log({theme});
   if (!mounted) {
     return null
   }
