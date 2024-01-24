@@ -7,9 +7,8 @@ import AuthModal from '../Auth/AuthModal'
 import { motion } from 'framer-motion'
 import Dashboard from '../navbar/Dashboard'
 import { Profile } from '../navbar/Avatar'
-import { Toggle } from '../navbar/Toggle'
 import { TryForFree } from '../navbar/TryForFree'
-import { BoardNavToggle } from './BoardNavToggle'
+import { Toggle } from '../navbar/Toggle'
 import { Debug } from './Debug'
 
 export default function BoardNav(props) {
@@ -36,9 +35,7 @@ export default function BoardNav(props) {
           </Link>
         </div>
         <div className="flex lg:hidden gap-4">
-          {/* MOBILE NAVBAR */}
-        <Debug />
-        <BoardNavToggle />
+        <Toggle />
             {
               props.session 
               ? <> 
@@ -83,8 +80,7 @@ export default function BoardNav(props) {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
           <a className="text-sm font-bold leading-6 text-white flex gap-3">
-            <Debug />
-            <BoardNavToggle />
+            <Toggle />
             {
               props.session 
               ? <> 
