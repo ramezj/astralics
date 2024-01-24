@@ -3,6 +3,7 @@ import { Fragment, useEffect, useRef, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { FilterIcon } from 'lucide-react'
 
 export default function Dropdown(props) {
   const router = useRouter();
@@ -12,9 +13,9 @@ export default function Dropdown(props) {
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center bg-white dark:bg-zinc-900 text-black dark:text-white border border-white/10 px-4 py-2.5 rounded-lg font-medium focus:outline-none hover:border-white/20 duration-300 outline-none">
-            Filter
-            <ChevronDownIcon
-              className="mt-[0.20rem] ml-2 h-5 w-5 text-black dark:text-white"
+            
+            <FilterIcon
+              className="w-4 text-black dark:text-white"
               aria-hidden="true"
             />
           </Menu.Button>
