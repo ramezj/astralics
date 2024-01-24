@@ -69,12 +69,12 @@ export const Profile = (props) => {
           </Link>
         </DropdownMenuGroup>
         <Separator />
-        <Link href='' onClick={(() => signOut())}>
+        <button onClick={(() => signOut())} className="w-full">
         <DropdownMenuItem className='cursor-pointer mt-1'>
           <LogOut className="mr-2 h-4 w-4" />
           <span>Log out</span>
         </DropdownMenuItem>
-        </Link>
+        </button>
       </DropdownMenuContent>
     </DropdownMenu>
   )
