@@ -55,19 +55,15 @@ export default function Navbar(props) {
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
-          <a className="text-sm font-bold leading-6 text-white flex gap-3">
+          <a className="text-sm font-bold leading-6 text-white flex gap-1">
             <Toggle />
             {
               props.session 
               ? <> 
-                {/* <Dashboard /> */}
                 <Profile image={props.session.user.image}/>
                 </>
               : <> 
                 <TryForFree onClick={openModal} />
-                {/* <button className='w-[9rem] py-2 bg-white text-black hover:bg-gray-200 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
-                Try for free
-                </button> */}
                 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child

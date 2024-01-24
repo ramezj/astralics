@@ -45,7 +45,7 @@ export const Profile = (props) => {
         </Avatar>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-48 bg-white dark:bg-zinc-900 border border-black/20 dark:border-white/10">
+      <DropdownMenuContent align="end" className="w-48 bg-white dark:bg-zinc-900 border border-black/20 dark:border-white/10">
         <DropdownMenuLabel className='mb-1'>My Account</DropdownMenuLabel>
         <Separator/>
         <DropdownMenuGroup className='mt-1 mb-1'>

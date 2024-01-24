@@ -34,7 +34,7 @@ export default function BoardNav(props) {
             lunar
           </Link>
         </div>
-        <div className="flex lg:hidden gap-4">
+        <div className="flex lg:hidden gap-1">
         <Toggle />
             {
               props.session 
@@ -79,7 +79,7 @@ export default function BoardNav(props) {
             }
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
-          <a className="text-sm font-bold leading-6 text-white flex gap-3">
+          <a className="text-sm font-bold leading-6 text-white flex gap-1">
             <Toggle />
             {
               props.session 

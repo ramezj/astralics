@@ -50,13 +50,11 @@ export default function AppNavbar(props) {
           </button>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
-          <a className="text-sm font-bold leading-6 text-white flex gap-3">
+          <a className="text-sm font-bold leading-6 text-white flex gap-1">
+          <Toggle />
             {
               props.session 
               ? <> 
-              {/* <Billing /> */}
-              {/* <Create /> */}
-              <Toggle />
               <Profile image={props.session.user.image}/>
               {/* <Dashboard /> */}
               </>
@@ -145,7 +143,8 @@ export default function AppNavbar(props) {
                   ? <>
                   {/* <a onClick={signUserOut} className="px-8 py-2 rounded-lg font-bold flex justify-center cursor-pointer"> Log Out </a> */}
                   </>
-                  : <></>
+                  : 
+                  <></>
                 }
                 <a
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-bold leading-7 text-white cursor-pointer"
