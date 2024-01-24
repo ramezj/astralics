@@ -14,15 +14,8 @@ import NoSSR from '@/utils/NoSSR'
 
 export const BoardNavToggle = () => {
   const { theme, setTheme } = useTheme()
-  const changeTheme = () => {
-    if(theme == 'dark') {
-      setTheme('light');
-    } else if (theme == 'light') {
-      setTheme('dark')
-    }
-  }
   return (
-    <NoSSR >
+    // <NoSSR >
     <div suppressHydrationWarning={true}>
     {
       theme == 'dark' &&
@@ -41,6 +34,6 @@ export const BoardNavToggle = () => {
       </>
     }
     </div>
-    </NoSSR >
+    // </NoSSR >
   )
 }
