@@ -12,7 +12,7 @@ export default function Dropdown(props) {
     <div className="">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center bg-white dark:bg-zinc-900 text-black dark:text-white border border-white/10 px-4 py-2.5 rounded-lg font-medium focus:outline-none hover:border-white/20 duration-300 outline-none">
+          <Menu.Button className="inline-flex w-full justify-center bg-white dark:bg-zinc-900 text-black dark:text-white border border-white/10 px-4 py-2.5 rounded-lg font-medium focus:outline-none hover:border-white/0 dark:hover:bg-zinc-800 hover:bg-gray-200 duration-200 outline-none">
             
             <FilterIcon
               className="w-4 text-black dark:text-white"
@@ -37,7 +37,7 @@ export default function Dropdown(props) {
                   <Link
                     href={`/b/${id}`}
                     className={`${
-                      active ? 'bg-blue-700 text-gray-100' : 'text-black dark:text-white'
+                      active ? 'hover:bg-gray-200 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     ✨ All Feedback
@@ -49,7 +49,7 @@ export default function Dropdown(props) {
                   <Link
                   href={`/b/${id}/bug_reports`}
                     className={`${
-                      active ? 'bg-blue-700 text-gray-100' : 'text-black dark:text-white'
+                      active ? 'hover:bg-gray-200 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     🐛 Bug Report
@@ -61,7 +61,7 @@ export default function Dropdown(props) {
                   <Link
                   href={`/b/${id}/feature_requests`}
                     className={`${
-                      active ? 'bg-blue-700 text-gray-100' : 'text-black dark:text-white'
+                      active ? 'hover:bg-gray-200 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     💡 Feature Request
@@ -73,7 +73,7 @@ export default function Dropdown(props) {
                   <Link
                   href={`/b/${id}/feedback`}
                     className={`${
-                      active ? 'bg-blue-700 text-gray-100' : 'text-black dark:text-white'
+                      active ? 'hover:bg-gray-200 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     📝 Feedback
