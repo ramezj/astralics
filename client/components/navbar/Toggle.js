@@ -36,13 +36,13 @@ export function Toggle() {
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className='dark:bg-zinc-900 border dark:border-white/10'>
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+        <DropdownMenuItem onClick={() => setTheme("light")} className='hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem onClick={() => setTheme("dark")} className='hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem onClick={() => setTheme("system")} className='hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
           System
         </DropdownMenuItem>
       </DropdownMenuContent>
