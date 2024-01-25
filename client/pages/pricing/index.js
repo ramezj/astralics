@@ -34,7 +34,7 @@ export default function Pricing(props) {
                 <br />
                 {
                 session 
-                ? <><Link href='/app' className='py-2 w-full text-white normal-case bg-blue-700 hover:bg-blue-800 dark:bg-white dark:text-black outline-none border-none font-bold rounded-md -mb-2'>Go to Dashboard</Link></>
+                ? <><Link href='/app' className='py-2 w-full text-white normal-case bg-blue-700 hover:bg-blue-800 dark:bg-white dark:text-black outline-none border-none font-bold rounded-md -mb-2 align-middle'>Go to Dashboard</Link></>
                 : <><button onClick={signUserIn} className='py-2 w-full text-white normal-case bg-blue-700 hover:bg-blue-800 dark:bg-white dark:text-black outline-none border-none font-bold rounded-md -mb-2'>Get Started</button></>
                 }
                 </PricingCard >

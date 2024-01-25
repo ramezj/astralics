@@ -24,7 +24,6 @@ export function Toggle() {
         dark:hover:bg-zinc-800
         dark:text-white
         border
-        border-black/20
         hover:border-black/0
         dark:border-white/10
         dark:hover:border-white/0
