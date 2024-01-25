@@ -48,21 +48,21 @@ export const Profile = (props) => {
       <DropdownMenuContent align="end" className="w-48 bg-white dark:bg-zinc-900 border border-black/20 dark:border-white/10">
         <DropdownMenuLabel className='mb-1'>My Account</DropdownMenuLabel>
         <Separator/>
-        <DropdownMenuGroup className='mt-1 mb-1'>
+        <DropdownMenuGroup  className='mt-1 mb-1'>
         <Link href='/app' className=''>
-          <DropdownMenuItem className='cursor-pointer'>
+          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
             <User className="mr-2 h-4 w-4" />
             <span>Dashboard</span>
           </DropdownMenuItem>
           </Link>
           <Link href='/billing' className=''>
-          <DropdownMenuItem className='cursor-pointer'>
+          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
             <CreditCard className="mr-2 h-4 w-4" />
             <span>Billing</span>
           </DropdownMenuItem>
           </Link>
           <Link href='/settings'>
-          <DropdownMenuItem className='cursor-pointer'>
+          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
             <Settings className="mr-2 h-4 w-4" />
             <span>Settings</span>
           </DropdownMenuItem>
@@ -70,7 +70,7 @@ export const Profile = (props) => {
         </DropdownMenuGroup>
         <Separator />
         <button onClick={(() => signOut())} className="w-full">
-        <DropdownMenuItem className='cursor-pointer mt-1'>
+        <DropdownMenuItem className='cursor-pointer mt-1 hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
           <LogOut className="mr-2 h-4 w-4" />
           <span>Log out</span>
         </DropdownMenuItem>
