@@ -113,37 +113,37 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-lg bg-zinc-950 border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-lg bg-white dark:bg-zinc-900 border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
                     <center>
                   <Dialog.Title
                     as="h3"
-                    className="text-xl font-medium leading-6 text-white justify-center items-center self-center"
+                    className="text-xl font-medium leading-6 text-black dark:text-white justify-center items-center self-center"
                   >
                     Create Feedback
                   </Dialog.Title>
-                  <button onClick={closeModal} className='absolute top-6 right-4 text-gray-200 outline-none focus-none ring-none'>
+                  <button onClick={closeModal} className='bg-gray-200 dark:bg-zinc-800 rounded-md px-1 py-1 absolute top-5 right-5 text-gray-900 dark:text-gray-200 outline-none focus-none ring-none'>
                     <X />
                   </button>
                   </center>
                   <form onSubmit={createFeedback}>
                   <div className="mt-6">
                     <div className="mt-3">
-                      <label className="text-white font-medium">Title</label>
+                      <label className="text-black dark:text-white font-medium">Title</label>
                       <br />
                       <input placeholder='Title of your feedback' required value={title} onChange={((e) => {setTitle(e.target.value)})} 
-                      className='input-sm h-10 bg-zinc-900 border border-white/10 focus:border-white/20 rounded-md outline-none w-full shadow-xl mt-1.5'/>
+                      className='input-sm h-10 text-black dark:text-white bg-gray-200 dark:bg-zinc-800 border border-white/10 focus:border-white/20 rounded-md outline-none w-full mt-1.5'/>
                       <br />
                     </div>
                     <div className="mt-3">
-                      <label className="text-white font-medium">Content</label>
+                      <label className="text-black dark:text-white font-medium">Content</label>
                       <br />
                       <textarea placeholder='Describe your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})} 
-                      className="textarea-sm resize-none bg-zinc-900 border border-white/10 focus:border-white/20 rounded-md outline-none py-1 w-full shadow-xl mt-1.5" rows={3} />
+                      className="text-black dark:text-white textarea-sm resize-none bg-gray-200 dark:bg-zinc-800 border border-white/10 focus:border-white/20 rounded-md outline-none py-1 w-full mt-1.5" rows={3} />
                       <br />
                     </div>
                     <div className="mt-1">
-                    <label className="text-white font-medium">Category</label>
-                    <select className="mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-zinc-900 border border-white/10 focus:border-white/20 rounded-md" onChange={((e) => {setType(e.target.value)})}>
+                    <label className="text-black dark:text-white font-medium">Category</label>
+                    <select className="text-black dark:text-white mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-gray-200 dark:bg-zinc-800 border border-white/10 focus:border-white/20 rounded-md" onChange={((e) => {setType(e.target.value)})}>
                       <option className="text-md font-regular">📝 Feedback</option>
                       <option className="text-md font-regular">🐛 Bug Report</option>
                       <option className="text-md font-regular">💡 Feature Request</option>
