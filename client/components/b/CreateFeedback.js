@@ -122,7 +122,7 @@ export default function CreateFeedback(props) {
                   >
                     Create Feedback
                   </Dialog.Title>
-                  <button onClick={closeModal} className='bg-gray-200 dark:bg-zinc-800 rounded-md px-1 py-1 absolute top-5 right-5 text-gray-900 dark:text-gray-200 outline-none focus-none ring-none'>
+                  <button onClick={closeModal} className='bg-gray-200 dark:bg-zinc-800 rounded-md px-1 py-1 absolute top-5 right-6 text-gray-900 dark:text-gray-200 outline-none focus-none ring-none'>
                     <X />
                   </button>
                   </center>
