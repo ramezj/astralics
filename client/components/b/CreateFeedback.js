@@ -157,12 +157,6 @@ export default function CreateFeedback(props) {
                 <SelectItem value="feature_request" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>💡 Feature Request</SelectItem>
               </SelectContent>
             </Select>
-                    {/* <label className="text-black dark:text-white font-medium">Category</label>
-                    <select className="text-black dark:text-white mt-1.5 select focus:outline-none active:outline-none outline-none w-full bg-gray-200 dark:bg-zinc-800 border border-white/10 focus:border-white/20 rounded-md" onChange={((e) => {setType(e.target.value)})}>
-                      <option className="text-md font-regular">📝 Feedback</option>
-                      <option className="text-md font-regular">🐛 Bug Report</option>
-                      <option className="text-md font-regular">💡 Feature Request</option>
-                    </select> */}
                     </div>
                   </div>
                   <center>
@@ -171,7 +165,7 @@ export default function CreateFeedback(props) {
                     {
                       loading 
                       ? "Submitting"
-                      : "Submit feedback"
+                      : "Submit"
                     }
                   </button>
                   </div>
