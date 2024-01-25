@@ -42,7 +42,7 @@ export default function Page() {
     { loading === true && 
     <>
     <center>
-    <h1 className="text-2xl font-bold">💡 Feature Requests </h1>
+    <h1 className="text-2xl font-bold text-black dark:text-white">💡 Feature Requests </h1>
             <br /><br />
             <NewBoard session={session} id={router.query.id}>
                 <br /><br /><br />
@@ -55,7 +55,7 @@ export default function Page() {
         { loading === false && 
         <>
         <center>
-            <h1 className="text-2xl font-bold">💡 Feature Requests </h1>
+            <h1 className="text-2xl font-bold text-black dark:text-white">💡 Feature Requests </h1>
             <br /><br />
             <NewBoard session={session} setSort={setSort} sort={sort} id={router.query.id}>
             {
