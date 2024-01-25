@@ -120,12 +120,12 @@ export default function Navbar(props) {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
               <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: 0.1}}>
-              <Link href="/b/lunar" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white dark:text-zinc-950 hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
+              <Link href="/b/lunar" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
                   Features
                 </Link>
                 </motion.div>
                 <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: 0.2}}>
-                <Link href="/b/lunar" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white dark:text-zinc-950 hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
+                <Link href="/b/lunar" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
                   Demo
                 </Link>
                 </motion.div>
