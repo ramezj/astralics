@@ -151,10 +151,10 @@ export default function CreateFeedback(props) {
               >
                 <SelectValue placeholder="Select level"/>
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="feedback">📝 Feedback</SelectItem>
-                <SelectItem value="bug_report">🐛 Bug Report</SelectItem>
-                <SelectItem value="feature_request">💡 Feature Request</SelectItem>
+              <SelectContent className='dark:bg-zinc-900 border dark:border-white/10'>
+                <SelectItem value="feedback" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>📝 Feedback</SelectItem>
+                <SelectItem value="bug_report" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>🐛 Bug Report</SelectItem>
+                <SelectItem value="feature_request" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>💡 Feature Request</SelectItem>
               </SelectContent>
             </Select>
                     {/* <label className="text-black dark:text-white font-medium">Category</label>
