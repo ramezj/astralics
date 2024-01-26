@@ -22,16 +22,16 @@ export default function MainCard(props) {
     }
     return (
         <>
-        <div className="card w-96 bg-gray-200 shadow-xl duration-300 outline-none rounded-md">
+        <div className="card shadow-none w-96 bg-gray-200 dark:bg-zinc-900 border border-white/0 dark:border-white/10 duration-300 outline-none rounded-lg">
         <div className="card-body">
-        <h1 className="card-title text-2xl font-bold justify-center text-black">Account Information</h1>
-        <label className="float-left flex ml-1">Name</label>
-        <input type="text" className="input w-full bg-zinc-950 font-medium outline-none border-none" value={name} onChange={((e) => {setName(e.target.value)})} />
-        <label className="float-left flex ml-1">Email</label>
-        <input type="text" disabled className="input w-full bg-gray-950 font-medium" value={props.profileEmail}/>
-        <label className="float-left flex ml-1">Avatar URL</label>
-        <input type="text" disabled className="input w-full bg-gray-950 font-medium" value={props.profileAvatar}/>
-        <button className='bg-green-400 text-white border-none normal-case font-bold hover:bg-green-700 px-12 py-2 rounded-lg mt-4 duration-300'
+        <h1 className="card-title text-2xl font-bold justify-center text-black dark:text-white">Account Information</h1>
+        <label className="float-left flex ml-1 text-black dark:text-white">Name</label>
+        <input type="text" className="input w-full bg-white dark:bg-zinc-950 font-medium outline-none border-none text-black dark:text-white" value={name} onChange={((e) => {setName(e.target.value)})} />
+        <label className="float-left flex ml-1 text-black dark:text-white">Email</label>
+        <input type="text" className="input w-full bg-white dark:bg-gray-950 text-black dark:text-white font-medium" value={props.profileEmail}/>
+        <label className="float-left flex ml-1 text-black dark:text-white">Avatar URL</label>
+        <input type="text" className="input w-full bg-white dark:bg-gray-950 text-black dark:text-white font-medium" value={props.profileAvatar}/>
+        <button className='bg-green-400 text-white border-none normal-case font-bold hover:bg-green-700 px-12 py-2 rounded-lg mt-4 duration-300 -mb-1'
         onClick={fetchSettings}
         >
             {
