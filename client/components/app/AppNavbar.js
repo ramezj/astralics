@@ -42,7 +42,6 @@ return (
         <Link href="/" className="p-1.5 outline-none font-medium italic text-black dark:text-white">
           lunar
         </Link>
-        
       </div>
       <div className="flex lg:hidden gap-2">
           <Toggle />
