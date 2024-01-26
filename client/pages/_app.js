@@ -7,10 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
+const inter = Inter({ subsets: ['latin'], display: 'swap', adjustFontFallback: false})
 
 export default function App({
   Component,
@@ -23,7 +20,7 @@ export default function App({
     defaultTheme='system'
     >
     <SessionProvider session={session}>
-    <main className={`${inter.variable} font-sans min-h-screen antialiased`}>
+    <main className={`${inter.className} font-sans min-h-screen antialiased`}>
       <Component className='' {...pageProps} />
       <Analytics />
       </main>
