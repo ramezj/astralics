@@ -56,7 +56,7 @@ export default function Feedback(props) {
         position="bottom-right"
         reverseOrder={true}
         />
-        <div key={props.id} className="border hover:border-black/30 dark:hover:border-white/20 dark:border-white/10 border-black/20 w-full flex bg-white dark:bg-zinc-900 rounded-lg items-center cursor-pointer duration-300">
+        <div key={props.id} className="border hover:border-black/30 dark:hover:border-white/20 dark:border-white/10 border-black/20 w-full flex bg-gray-200 dark:bg-zinc-900 rounded-lg items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left text-black dark:text-white'>
         {

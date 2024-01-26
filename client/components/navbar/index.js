@@ -29,7 +29,7 @@ export default function Navbar(props) {
     <header className="bg-transparent">
       <nav className="mx-auto max-w-[75rem] flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 outline-none font-medium italic">
+          <Link href="/" className="-m-1.5 p-1.5 outline-none font-medium italic text-black dark:text-white">
             lunar
           </Link>
         </div>
@@ -44,13 +44,13 @@ export default function Navbar(props) {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex gap-2">
-        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-white flex justify-center items-center hover:text-gray-200 text-white px-5 py-2 rounded-xl duration-200">
+        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-white flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
           Features
           </Link>
-        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-white flex justify-center items-center hover:text-gray-200 text-white px-5 py-2 rounded-xl duration-200">
+        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-white flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
             Demo
           </Link>
-          <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-white flex justify-center items-center hover:text-gray-200 text-white px-5 py-2 rounded-xl duration-200">
+          <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-white flex justify-center items-center hover:text-gray-200px-5 py-2 rounded-xl duration-200">
             Pricing
           </Link>
         </Popover.Group>

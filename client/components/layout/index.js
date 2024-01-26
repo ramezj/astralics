@@ -5,7 +5,7 @@ export default function Layout(props) {
     const { data: session } = useSession()
     return (
         // background3
-        <div className='background3 h-full min-h-screen bg-bottom bg-no-repeat w-full'>
+        <div className='bg-white dark:bg-zinc-950 h-full min-h-screen bg-bottom bg-no-repeat w-full'>
             {/* bg-[#05050a] */}
         <Navbar session={session}/>
         {props.children}
