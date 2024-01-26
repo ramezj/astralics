@@ -37,7 +37,7 @@ export default function Navbar(props) {
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 return (
   <header className="bg-transparent">
-    <nav className="mx-auto max-w-[75rem] flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <nav className="mx-auto max-w-full flex items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div className="flex lg:flex-1">
         <Link href="/" className="p-1.5 outline-none font-medium italic text-black dark:text-white">
           lunar
@@ -45,27 +45,35 @@ return (
         
       </div>
       <div className="flex lg:hidden gap-2">
-        <Toggle />
-        <button
-          type="button"
-          className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-black dark:text-white outline-none"
-          onClick={() => setMobileMenuOpen(true)}
-        >
-          <span className="sr-only">Open main menu</span>
-          <Bars3Icon className="h-8 w-8 hover:outline-none active:outline-none outline-none text-black dark:text-white" aria-hidden="true"/>
-        </button>
-      </div>
-      <Popover.Group className="hidden lg:flex gap-2">
-      <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
-        Features
-        </Link>
-      <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
-          Demo
-        </Link>
-        <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200px-5 py-2 rounded-xl duration-200">
-          Pricing
-        </Link>
-      </Popover.Group>
+          <Toggle />
+          {
+            props.session
+            ? 
+            <> 
+            <Profile image={props.session.user.image} />
+            </>
+            : 
+            <> 
+            <button type="button"
+            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-black dark:text-white outline-none"
+            onClick={() => setMobileMenuOpen(true)}>
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon className="h-8 w-8 hover:outline-none active:outline-none outline-none text-black dark:text-white" aria-hidden="true"/>
+          </button>
+            </>
+          }
+        </div>
+        <Popover.Group className="hidden lg:flex gap-2">
+        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
+          Features
+          </Link>
+        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
+            Demo
+          </Link>
+          <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
+            Pricing
+          </Link>
+        </Popover.Group>
       <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
         <a className="text-sm font-bold leading-6 text-white flex gap-2">
           <Toggle />
