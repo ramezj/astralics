@@ -19,7 +19,7 @@ export function Toggle() {
       <DropdownMenuTrigger asChild>
       <button className='w-[3.5rem] py-2 
         outline-none
-        bg-white
+        bg-gray-200
         dark:bg-zinc-900
         dark:hover:bg-zinc-800
         dark:text-white

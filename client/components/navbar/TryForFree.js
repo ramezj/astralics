@@ -2,7 +2,7 @@ export const TryForFree = (props) => {
     return (
         <>
         <button className='w-[9rem] py-2 
-        bg-white
+        bg-gray-200
         dark:bg-zinc-900
         dark:hover:bg-zinc-800
         dark:text-white
