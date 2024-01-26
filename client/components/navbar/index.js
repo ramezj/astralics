@@ -9,17 +9,6 @@ import Dashboard from './Dashboard'
 import { Profile } from './Avatar'
 import { Toggle } from './Toggle'
 import { TryForFree } from './TryForFree'
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu"
-
 
 export default function Navbar(props) {
     let [isOpen, setIsOpen] = useState(false)
