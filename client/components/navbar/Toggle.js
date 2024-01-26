@@ -35,14 +35,14 @@ export function Toggle() {
           <span className="sr-only">Toggle theme</span>
         </button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className='dark:bg-zinc-900 border dark:border-white/10'>
-        <DropdownMenuItem onClick={() => setTheme("light")} className='hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
+      <DropdownMenuContent align="end" className='bg-gray-200 dark:bg-zinc-900 border border-black/10 dark:border-white/10'>
+        <DropdownMenuItem onClick={() => setTheme("light")} className='hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200'>
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")} className='hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
+        <DropdownMenuItem onClick={() => setTheme("dark")} className='hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200'>
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")} className='hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
+        <DropdownMenuItem onClick={() => setTheme("system")} className='hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200'>
           System
         </DropdownMenuItem>
       </DropdownMenuContent>

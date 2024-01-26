@@ -13,7 +13,6 @@ export default function Dropdown(props) {
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center bg-gray-200 dark:bg-zinc-900 text-black dark:text-white border border-none px-4 py-2.5 rounded-lg font-medium focus:outline-none hover:border-white/0 dark:hover:bg-zinc-800 hover:bg-gray-200 duration-200 outline-none">
-            
             <FilterIcon
               className="w-4 text-black dark:text-white"
               aria-hidden="true"
@@ -29,15 +28,15 @@ export default function Dropdown(props) {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="border border-white/10 absolute left-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-lg shadow-lg ring-1 ring-black/5 focus:outline-none 
-          bg-white dark:bg-zinc-900">
+          <Menu.Items className="border border-black/10 absolute left-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-lg shadow-lg ring-1 ring-black/5 focus:outline-none 
+          bg-gray-200 dark:bg-zinc-900">
             <div className="px-1 py-1 ">
             <Menu.Item>
                 {({ active }) => (
                   <Link
                     href={`/b/${id}`}
                     className={`${
-                      active ? 'hover:bg-gray-200 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
+                      active ? 'hover:bg-gray-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     ✨ All Feedback
@@ -49,7 +48,7 @@ export default function Dropdown(props) {
                   <Link
                   href={`/b/${id}/bug_reports`}
                     className={`${
-                      active ? 'hover:bg-gray-200 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
+                      active ? 'hover:bg-gray-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     🐛 Bug Report
@@ -61,7 +60,7 @@ export default function Dropdown(props) {
                   <Link
                   href={`/b/${id}/feature_requests`}
                     className={`${
-                      active ? 'hover:bg-gray-200 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
+                      active ? 'hover:bg-gray-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     💡 Feature Request
@@ -73,7 +72,7 @@ export default function Dropdown(props) {
                   <Link
                   href={`/b/${id}/feedback`}
                     className={`${
-                      active ? 'hover:bg-gray-200 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
+                      active ? 'hover:bg-gray-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
                     📝 Feedback
