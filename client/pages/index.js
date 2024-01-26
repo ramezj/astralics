@@ -53,6 +53,7 @@ export default function Component() {
           <br />
           <div className="w-full content-center items-center justify-items-center">
               <div className="2xl:-mt-2 xl:-mt-4 2xl:w-2/6 xl:w-2/5 w-4/5 flex-row">
+                <div></div>
               <motion.div
                   initial={{
                     opacity: 0,
@@ -80,6 +81,7 @@ export default function Component() {
                   >
                 <FeedbackDemo session={session} title="Feature Request" type="feature_request" description={"Can you add more authentication options? thanks!"} upvotes="1"/>
                 </motion.div>
+                
               </div>
           </div>
             </center>

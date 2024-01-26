@@ -29,18 +29,19 @@ export default function Navbar(props) {
     <header className="bg-transparent">
       <nav className="mx-auto max-w-[75rem] flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 outline-none font-medium italic text-black dark:text-white">
+          <Link href="/" className="p-1.5 outline-none font-medium italic text-black dark:text-white">
             lunar
           </Link>
+          
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-white outline-none"
+            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-black dark:text-white outline-none"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-8 w-8 hover:outline-none active:outline-none outline-none text-white" aria-hidden="true"/>
+            <Bars3Icon className="h-8 w-8 hover:outline-none active:outline-none outline-none text-black dark:text-white" aria-hidden="true"/>
           </button>
         </div>
         <Popover.Group className="hidden lg:flex gap-2">
