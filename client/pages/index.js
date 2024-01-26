@@ -36,7 +36,7 @@ export default function Component() {
             }}
             transition={{duration: 0.8}}
             className='
-            sm:text-6xl 2xl:text-7xl 2xl:mt-14 md:text-7xl lg:text-6xl lg:mt-4 2xl:w-3/6 lg:w-4/6 sm:mt-8 text-5xl w-4/5 font-bold tracking-tight leading-none text-transparent bg-clip-text text-zinc-950 dark:text-white mt-8 drop-shadow-sm'>
+            sm:text-6xl 2xl:text-7xl 2xl:mt-14 md:text-7xl lg:text-6xl lg:mt-4 2xl:w-3/6 lg:w-4/6 sm:mt-8 text-5xl w-4/5 font-bold tracking-tight leading-none text-transparent bg-clip-text text-zinc-900 dark:text-white mt-8 drop-shadow-sm'>
             Built for developers, by developers.
             </motion.h1>
             <br />
