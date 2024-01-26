@@ -45,13 +45,13 @@ export default function Navbar(props) {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex gap-2">
-        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-white flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
+        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
           Features
           </Link>
-        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-white flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
+        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
             Demo
           </Link>
-          <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-white flex justify-center items-center hover:text-gray-200px-5 py-2 rounded-xl duration-200">
+          <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200px-5 py-2 rounded-xl duration-200">
             Pricing
           </Link>
         </Popover.Group>
