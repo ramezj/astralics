@@ -39,7 +39,8 @@ export default function AppNavbar(props) {
             lunar
           </Link>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden gap-2">
+          <Toggle />
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-white"
@@ -50,7 +51,7 @@ export default function AppNavbar(props) {
           </button>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
-          <a className="text-sm font-bold leading-6 text-white flex gap-1">
+          <a className="text-sm font-bold leading-6 text-white flex gap-2">
           <Toggle />
             {
               props.session 
@@ -152,9 +153,6 @@ export default function AppNavbar(props) {
                {
               props.session 
               ? <> 
-                {/* <Link href='/settings' className='text-black px-8 py-2 bg-white hover:bg-gray-200 duration-200 rounded-xl font-bold flex justify-center gap-2'>
-                Settings 
-                </Link> */}
               <Link href='/app' className='text-black -mt-2 px-8 py-2 bg-white hover:bg-gray-200  duration-300 rounded-xl font-bold flex justify-center gap-2'>
                 dashboard
                 </Link></>
