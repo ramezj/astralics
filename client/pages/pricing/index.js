@@ -21,7 +21,7 @@ export default function Pricing(props) {
             <PaddleLoader />
             <center>
             <br />
-            <h1 className='text-4xl font-bold'>Pricing</h1>
+            <h1 className='text-4xl font-bold text-black dark:text-white'>Pricing</h1>
             </center>
             <br />
             <br />
