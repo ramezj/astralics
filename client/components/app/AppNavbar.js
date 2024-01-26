@@ -63,10 +63,7 @@ return (
             </>
           }
         </div>
-        <Popover.Group className="hidden lg:flex gap-2">
-        <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
-          Features
-          </Link>
+        <Popover.Group className="hidden lg:flex gap-1">
         <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
             Demo
           </Link>
