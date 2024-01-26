@@ -19,7 +19,7 @@ export default function Card(props) {
     <br />
     <h1 className="font-medium -mb-3 duration-150 drop-shadow-lg text-black dark:text-white">{props.website}</h1>
     <div className="card-actions justify-end flex gap-6">
-    <span className='-mt-8 mr-1 w-12 h-10 rounded-lg justify-center items-center float-right flex bg-gray-200 dark:bg-zinc-800 hover:scale-[1.19] duration-200 shadow-sm'>
+    <span className='-mt-8 -mr-2 w-12 h-10 rounded-lg justify-center items-center float-right flex bg-gray-200 dark:bg-zinc-800 hover:scale-[1.19] duration-200 shadow-sm'>
     <Link href={`${props.settings}`} className='drop-shadow-lg float-right flex justify-center'>
     <AdjustmentsHorizontalIcon className='text-black dark:text-white' width={22} height={23} strokeWidth={'2'}/>
     </Link>
