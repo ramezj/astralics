@@ -22,7 +22,7 @@ export default function MainCard(props) {
     }
     return (
         <>
-        <div className="card w-96 bg-white shadow-xl duration-300 outline-none rounded-md">
+        <div className="card w-96 bg-gray-200 shadow-xl duration-300 outline-none rounded-md">
         <div className="card-body">
         <h1 className="card-title text-2xl font-bold justify-center text-black">Account Information</h1>
         <label className="float-left flex ml-1">Name</label>
