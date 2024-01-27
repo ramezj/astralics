@@ -14,12 +14,12 @@ export default function Card(props) {
     }
     return (
     <div className='duration-300'>
-    <Link className="card border border-black/10 dark:border-white/10 w-96 bg-white hover:border-black/10 dark:border-white/0 hover:bg-gray-200 dark:bg-zinc-900 hover:dark:bg-zinc-900 dark:hover:border-white/0 cursor-pointer duration-200 outline-none rounded-lg" href={props.href}>
+    <Link className="card border border-black/10 dark:border-white/10 w-96 bg-white hover:border-black/10 hover:bg-gray-200 dark:bg-zinc-950 hover:dark:bg-zinc-900 cursor-pointer duration-200 outline-none rounded-lg" href={props.href}>
     <div className="card-body items-center">
     <h2 className="card-title font-extrabold text-black dark:text-white">{props.title}</h2>
     <h1 className="font-medium  duration-150 text-black dark:text-white">{props.website}</h1>
     <div className="card-actions justify-end flex gap-6">
-      <div className='flex flex-wrap gap-2 mt-4'>
+      <div className='flex flex-wrap gap-4 mt-4'>
         <Button>
           Settings
         </Button>
