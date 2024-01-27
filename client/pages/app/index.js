@@ -45,6 +45,10 @@ export default function Component() {
     <>
     <AppLayout>
     <title>Lunar, App</title>
+    <br /><br />
+    <center>
+    <h1 className='text-3xl font-bold text-black dark:text-white'>Hi, Welcome back 👋</h1>
+    </center>
     {loading 
     ?
     <>
