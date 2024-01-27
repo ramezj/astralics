@@ -18,12 +18,14 @@ export default function Card(props) {
     <div className="card-body items-center">
     <h2 className="card-title font-extrabold text-black dark:text-white">{props.title}</h2>
     <h1 className="font-medium  duration-150 text-black dark:text-white">{props.website}</h1>
-    <div className="card-actions justify-end flex gap-6">
-      <div className='flex flex-wrap gap-4 mt-4'>
-        <Button>
+    <div className="card-actions justify-end flex gap-6 mb-6 mt-4">
+      <div className='flex flex-wrap gap-4 -mb-6'>
+        <Link href={`${props.settings}`} className=''>
+          <Button>
           Settings
-        </Button>
-        <Button>
+          </Button>
+        </Link>
+        <Button className=''>
           Share
         </Button>
       </div>
