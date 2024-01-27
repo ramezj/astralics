@@ -8,7 +8,7 @@ export default function AppLayout(props) {
     return (
         <div className='bg-white dark:bg-zinc-950 h-full min-h-screen bg-bottom bg-no-repeat w-full'>
         <Header session={session} />
-        <Sidebar />
+        {/* <Sidebar /> */}
         {props.children}
         </div>
     )
