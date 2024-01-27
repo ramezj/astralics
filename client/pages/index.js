@@ -38,8 +38,13 @@ export default function Component() {
             transition={{duration: 0.8}}
             className='
             sm:text-6xl 2xl:text-7xl 2xl:mt-14 md:text-7xl lg:text-5xl lg:mt-4 2xl:w-3/6 lg:w-4/6 sm:mt-8 text-5xl w-4/5 font-medium tracking-tight leading-none text-transparent bg-clip-text text-zinc-900 dark:text-white mt-8 drop-shadow-sm'>
-           Built by developers, for developers.
+           The internet is truly yours.
             </motion.h1>
+            <div>
+            <p className="leading-7 [&:not(:first-child)]:mt-6 text-muted-foreground mt-3 text-xl">
+              Beautifully crafted feedback boards.
+            </p>
+            </div>
             <br />
         </div>  
           <br />

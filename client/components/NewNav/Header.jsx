@@ -6,6 +6,7 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { Toggle } from "../navbar/Toggle";
 import { Profile } from "../navbar/Avatar";
 import { TryForFree } from "../navbar/TryForFree";
+import Create from "../app/Create";
 
 export default function Header(props) {
   let [isOpen, setIsOpen] = useState(false)
@@ -51,6 +52,7 @@ export default function Header(props) {
                     props.session 
                     ?
                     <>
+                    <Create />
                     <Profile session={props.session} />
                     </> 
                     : 

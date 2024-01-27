@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import CreateBoard from './createBoard';
+import { Button } from '../ui/button';
 
 export default function Create() {
     const router = useRouter();
@@ -47,9 +48,9 @@ export default function Create() {
     }
     return (
         <>
-        <button className='px-5 py-2 bg-white text-black hover:bg-gray-200 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
-              Create Board
-        </button>
+        <Button className='px-5 bg-white dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800 text-black hover:bg-gray-200 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
+              New board
+        </Button>
 <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
