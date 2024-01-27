@@ -33,6 +33,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { signOut } from "next-auth/react"
 import Link from "next/link"
 import { Separator } from "@/components/ui/separator"
+import Create from "../app/Create"
 
 export const Profile = (props) => {
   return (
