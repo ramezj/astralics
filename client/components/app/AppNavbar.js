@@ -19,7 +19,6 @@ import { motion } from "framer-motion"
 import { TryForFree } from '../navbar/TryForFree'
 import AuthModal from '../Auth/AuthModal'
 
-
 export default function Navbar(props) {
   let [isOpen, setIsOpen] = useState(false)
   function closeModal() {

@@ -40,15 +40,6 @@ export default function Component() {
            Collect and keep track of feedback from multiple projects, all in one place.
             </motion.h1>
             <br />
-            {/* <div className="flex flex-wrap gap-4 justify-center w-full mt-3 mb-3 lg:mb-5">
-            <button className='font-bold w-[10rem] py-2 bg-white text-black hover:bg-gray-200 rounded-xl flex gap-2 content-center justify-center items-center duration-200'>
-            Try now 
-            </button>
-            <button className='font-bold w-[10rem] py-2 bg-white text-black hover:bg-gray-200 rounded-xl flex gap-2 content-center justify-center items-center duration-200'>
-            Demo
-            <ArrowRight className='w-5 h-5  align-middle flex' />
-            </button>
-            </div>     */}
         </div>  
           <br />
           <div className="w-full content-center items-center justify-items-center">
@@ -81,7 +72,6 @@ export default function Component() {
                   >
                 <FeedbackDemo session={session} title="Feature Request" type="feature_request" description={"Can you add more authentication options? thanks!"} upvotes="1"/>
                 </motion.div>
-                
               </div>
           </div>
             </center>

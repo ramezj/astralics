@@ -27,6 +27,7 @@ export default function Navbar(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <header className="bg-transparent">
+      
       <nav className="mx-auto max-w-full flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="p-1.5 outline-none font-medium italic text-black dark:text-white">

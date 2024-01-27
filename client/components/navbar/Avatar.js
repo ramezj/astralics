@@ -37,45 +37,50 @@ import { Separator } from "@/components/ui/separator"
 export const Profile = (props) => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant='link'>
-        <Avatar>
-          <AvatarImage src={props.image} alt="@shadcn" />
-            <AvatarFallback></AvatarFallback>
-        </Avatar>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className=" w-48 bg-gray-200 dark:bg-zinc-900 border border-black/20 dark:border-white/10">
-        <DropdownMenuLabel className='mb-1'>My Account</DropdownMenuLabel>
-        <Separator/>
-        <DropdownMenuGroup  className='mt-1 mb-1'>
-        <Link href='/app' className=''>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+            <Avatar className="h-8 w-8">
+              <AvatarImage
+                src={props.session.user.image}
+              />
+              <AvatarFallback>{props.session.user.name}</AvatarFallback>
+            </Avatar>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end" className=" w-48 bg-gray-200 dark:bg-zinc-900 border border-black/20 dark:border-white/10">
+          <DropdownMenuLabel className="font-normal mb-1">
+            <div className="flex flex-col space-y-1">
+              <p className="text-sm font-medium leading-none">
+                {props.session.user.name}
+              </p>
+              <p className="text-xs leading-none text-muted-foreground">
+                {props.session.user.email}
+              </p>
+            </div>
+          </DropdownMenuLabel>
+          <Separator/>
+          <DropdownMenuGroup className='mt-1 mb-1'>
+          <Link href='/app' className=''>
           <DropdownMenuItem className='cursor-pointer hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200'>
-            <User className="mr-2 h-4 w-4" />
-            <span>Dashboard</span>
-          </DropdownMenuItem>
+              Dashboard
+              <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+            </DropdownMenuItem>
           </Link>
-          <Link href='/billing' className=''>
-          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200'>
-            <CreditCard className="mr-2 h-4 w-4" />
-            <span>Billing</span>
+            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200'>
+              Billing
+              <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+            </DropdownMenuItem>
+            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200'>
+              Settings
+              <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+            </DropdownMenuItem>
+          </DropdownMenuGroup>
+          <Separator/>
+          <DropdownMenuItem onClick={() => signOut()} className='cursor-pointer hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200 mt-1'>
+            Log out
+            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
           </DropdownMenuItem>
-          </Link>
-          <Link href='/settings'>
-          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200'>
-            <Settings className="mr-2 h-4 w-4" />
-            <span>Settings</span>
-          </DropdownMenuItem>
-          </Link>
-        </DropdownMenuGroup>
-        <Separator />
-        <button onClick={(() => signOut())} className="w-full">
-        <DropdownMenuItem className='cursor-pointer mt-1 hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200'>
-          <LogOut className="mr-2 h-4 w-4" />
-          <span>Log out</span>
-        </DropdownMenuItem>
-        </button>
-      </DropdownMenuContent>
-    </DropdownMenu>
+        </DropdownMenuContent>
+      </DropdownMenu>
   )
 }
