@@ -23,9 +23,9 @@ export default function Header(props) {
       signOut();
     }
     return (
-        <div className="top-0 left-0 right-0 supports-backdrop-blur:bg-background/60 border-b dark:border-white/10 bg-background/95 backdrop-blur z-20">
-          <nav className="h-14 flex items-center justify-between px-4">
-            <div className="lg:block">
+      <header className="sticky top-0 z-50 w-full border-b border-border/70 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <nav className="h-14  flex items-center justify-between px-4">
+            <div className="flex gap-2 items-center">
               <Link
                 href='/' className="text-black dark:text-white"
               >
@@ -44,7 +44,7 @@ export default function Header(props) {
               </Link>
             </div>
             <div className="block lg:!hidden">
-              {/* <MobileSidebar /> */}
+              {/* test2 */}
             </div>
             <div className="flex items-center gap-3">
               <Toggle />
@@ -94,7 +94,7 @@ export default function Header(props) {
           </div>
         </Dialog>
       </Transition>
-        </div>
+        </header>
         
       );
 }
