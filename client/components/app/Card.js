@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { AdjustmentsHorizontalIcon, LinkIcon } from '@heroicons/react/24/outline'
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import React, { useState } from 'react';
+import { Button } from '../ui/button';
 
 export default function Card(props) {
     let [isOpen, setIsOpen] = useState(false)
@@ -13,20 +14,24 @@ export default function Card(props) {
     }
     return (
     <div className='duration-300'>
-    <Link className="card w-96 bg-gray-200 dark:bg-zinc-900 cursor-pointer duration-300 outline-none rounded-lg" href={props.href}>
-    <div className="card-body">
-    <h2 className="card-title font-extrabold drop-shadow-lg text-black dark:text-white">{props.title}</h2>
-    <br />
-    <h1 className="font-medium -mb-3 duration-150 drop-shadow-lg text-black dark:text-white">{props.website}</h1>
+    <Link className="card border border-black/10 dark:border-white/10 w-96 bg-white hover:border-black/0 hover:bg-gray-200 dark:bg-zinc-950 hover:dark:bg-zinc-900 dark:hover:border-white/0 cursor-pointer duration-200 outline-none rounded-lg" href={props.href}>
+    <div className="card-body items-center">
+    <h2 className="card-title font-extrabold text-black dark:text-white">{props.title}</h2>
+    <h1 className="font-medium  duration-150 text-black dark:text-white">{props.website}</h1>
     <div className="card-actions justify-end flex gap-6">
-    {/* <span onClick={(() => {navigator.clipboard.writeText(props.href)})} className='-mt-8 -mr-2 w-14 h-10 rounded-lg justify-center items-center float-right flex bg-white dark:bg-zinc-800 duration-200 shadow-sm'>
-      Copy 
-    </span> */}
-    <span className='-mt-8 -mr-2 w-12 h-10 rounded-lg justify-center items-center float-right flex bg-white dark:bg-zinc-800 duration-200 shadow-sm'>
+      <div className='flex flex-wrap gap-2 mt-4'>
+        <Button>
+          Settings
+        </Button>
+        <Button>
+          Share
+        </Button>
+      </div>
+    {/* <span className='-mt-8 -mr-2 w-12 h-10 rounded-lg justify-center items-center float-right flex bg-white dark:bg-zinc-800 duration-200 shadow-sm'>
     <Link href={`${props.settings}`} className='drop-shadow-lg float-right flex justify-center'>
     <AdjustmentsHorizontalIcon className='text-black dark:text-white' width={22} height={23} strokeWidth={'2'}/>
     </Link>
-    </span>
+    </span> */}
     </div>
   </div>
 </Link>
