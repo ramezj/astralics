@@ -44,7 +44,7 @@ export default function Page() {
     <>
     <center>
         <br />
-    <h1 className="text-3xl font-bold text-black dark:text-white">✨ All Feedback</h1>
+    <h1 className="text-3xl font-bold text-black dark:text-white">✨ All Posts</h1>
             <br /><br />
             <NewBoard session={session} id={router.query.id}>
                 <br /><br /><br />
@@ -58,7 +58,7 @@ export default function Page() {
         <>
         <center>
             <br />
-            <h1 className="text-3xl font-bold text-black dark:text-white">✨ All Feedback</h1>
+            <h1 className="text-3xl font-bold text-black dark:text-white">✨ All Posts</h1>
             <br /><br />
             <NewBoard session={session} setSort={setSort} sort={sort} id={router.query.id}>
             {

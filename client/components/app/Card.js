@@ -33,8 +33,8 @@ export default function Card(props) {
     <h1 className="font-medium  duration-150 text-black dark:text-white">{props.website}</h1>
     <div className="card-actions justify-end flex gap-6 mb-6 mt-4">
       <div className='flex flex-wrap gap-4 -mb-6'>
-        <Link href={`${props.settings}`} className=''>
-          <Button>
+        <Link href={`${props.settings}`}>
+          <Button className='bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0'>
           Settings
           </Button>
         </Link>
@@ -49,7 +49,7 @@ export default function Card(props) {
       </Link>
       <DialogContent className="sm:max-w-md border border-black/10 dark:border-white/10">
         <DialogHeader>
-          <DialogTitle>Share link</DialogTitle>
+          <DialogTitle className='text-black dark:text-white'>Share link</DialogTitle>
           <DialogDescription>
             Anyone who has this link will be able to view this.
           </DialogDescription>
@@ -60,13 +60,13 @@ export default function Card(props) {
               Link
             </Label>
             <Input
-            className='outline-none ring-offset-none'
+            className='outline-none ring-offset-none bg-gray-200 dark:bg-zinc-900 text-black dark:text-white'
               id="link"
               defaultValue={`https://trylunar.xyz${props.href}`}
               readOnly
             />
           </div>
-          <Button type="submit" size="sm" className="px-3 bg-white text-black dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-white">
+          <Button type="submit" size="sm" className="px-3 bg-gray-200 hover:bg-gray-300 text-black dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-white">
             <span className="sr-only">Copy</span>
             <Copy className="h-4 w-4" />
           </Button>

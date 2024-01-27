@@ -39,7 +39,7 @@ export default function Dropdown(props) {
                       active ? 'hover:bg-gray-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
-                    ✨ All Feedback
+                    ✨ All Posts
                   </Link>
                 )}
               </Menu.Item>
@@ -51,7 +51,7 @@ export default function Dropdown(props) {
                       active ? 'hover:bg-gray-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
-                    🐛 Bug Report
+                    🐛  Bug Reports
                   </Link>
                 )}
               </Menu.Item>
@@ -63,7 +63,7 @@ export default function Dropdown(props) {
                       active ? 'hover:bg-gray-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
                   >
-                    💡 Feature Request
+                    💡 Feature Requests
                     </Link>
                 )}
               </Menu.Item>

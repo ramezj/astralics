@@ -80,13 +80,13 @@ export default function CreateFeedback(props) {
           ? 
           <>
           <button onClick={openModal} className='px-4 py-2.5 bg-blue-700 text-white duration-300 hover:bg-blue-800 rounded-lg flex font-medium outline-none'>
-                Create feedback
+                Create Post
             </button>
           </>
           : 
           <>
           <button onClick={openAuthModal} className='px-4 py-2.5 bg-blue-700 text-white duration-300 hover:bg-blue-800 rounded-lg flex font-medium outline-none'>
-                Create feedback
+                Create Post
             </button>
           </>
         }
@@ -120,7 +120,7 @@ export default function CreateFeedback(props) {
                     as="h3"
                     className="text-xl font-medium leading-6 text-black dark:text-white justify-center items-center self-center"
                   >
-                    Create Feedback
+                   Post
                   </Dialog.Title>
                   <button onClick={closeModal} className='bg-gray-200 dark:bg-zinc-900 rounded-md px-1 py-1 absolute top-5 right-6 text-gray-900 dark:text-gray-200 outline-none focus-none ring-none'>
                     <X className=''/>
