@@ -26,7 +26,7 @@ export default function Header(props) {
           <nav className="h-14 flex items-center justify-between px-4">
             <div className="lg:block">
               <Link
-                href='/'
+                href='/' className="text-black dark:text-white"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
