@@ -44,7 +44,10 @@ export default function Settings() {
         <AppLayout>
         <title>Lunar, Settings</title>
             <center>
-                <div className="mt-4">
+              <br /><br />
+              <h1 className='text-3xl font-bold text-black dark:text-white'>Account Settings</h1>
+              <br /><br />
+                <div className="">
                     {
                         loading 
                         ? <><Loading/></>
