@@ -42,9 +42,18 @@ export default function Component() {
            The internet is truly yours.
             </motion.h1>
             <div>
-            <p className="leading-7 [&:not(:first-child)]:mt-6 text-muted-foreground mt-3 text-xl">
+            <motion.h1 
+            initial={{
+              opacity: 0,
+              x:-20
+            }}
+            animate={{
+              opacity: 1,
+              x:0
+            }}
+            transition={{duration: 0.8}} className="leading-7 [&:not(:first-child)]:mt-6 text-muted-foreground mt-3 text-xl">
               Beautifully crafted feedback boards.
-            </p>
+            </motion.h1>
             </div>
             <br />
         </div>  
