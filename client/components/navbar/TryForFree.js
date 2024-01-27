@@ -2,9 +2,9 @@ import { Button } from "../ui/button"
 export const TryForFree = (props) => {
     return (
         <>
-        <Button className='w-[7rem] 
+        <Button className='w-[8rem] 
         text-sm
-        bg-gray-200
+        bg-white
         dark:bg-zinc-900
         dark:hover:bg-zinc-800
         dark:text-white
