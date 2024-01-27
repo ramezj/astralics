@@ -47,7 +47,7 @@ export const Profile = (props) => {
             </Avatar>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className=" w-48 bg-gray-200 dark:bg-zinc-900 border border-black/20 dark:border-white/10">
+        <DropdownMenuContent align="end" className="mt-2 w-48 bg-gray-200 dark:bg-zinc-900 border border-black/20 dark:border-white/10">
           <DropdownMenuLabel className="font-normal mb-1">
             <div className="flex flex-col space-y-1">
               <p className="text-sm font-medium leading-none">
