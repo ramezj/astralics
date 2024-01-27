@@ -40,10 +40,12 @@ export default function Card(props) {
         </Link>
         <Dialog>
       <DialogTrigger asChild>
-        <Button>Share</Button>
+        <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
+          Share
+          </Button>
       </DialogTrigger>
       <Link href={props.href}>
-        <Button>
+        <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
           <ExternalLink className='w-4 h-4'/>
         </Button>
       </Link>
