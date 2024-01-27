@@ -114,7 +114,7 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-lg bg-white dark:bg-zinc-950 border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className=" w-full max-w-md transform overflow-hidden rounded-lg bg-white dark:bg-zinc-950 border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
                     <center>
                   <Dialog.Title
                     as="h3"
