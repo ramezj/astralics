@@ -18,7 +18,7 @@ export function Toggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon" className='outline-none
-        bg-gray-200
+        bg-white
         dark:bg-zinc-900
         dark:hover:bg-zinc-800
         dark:text-white
@@ -34,14 +34,14 @@ export function Toggle() {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+      <DropdownMenuContent align="end" className='bg-white dark:!bg-zinc-900 border border-black/10 dark:border-white/10'>
+        <DropdownMenuItem onClick={() => setTheme("light")} className='hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem onClick={() => setTheme("dark")} className='hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem onClick={() => setTheme("system")} className='hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
           System
         </DropdownMenuItem>
       </DropdownMenuContent>

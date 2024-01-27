@@ -47,7 +47,7 @@ export const Profile = (props) => {
             </Avatar>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="mt-2 w-48 bg-gray-200 dark:bg-zinc-900 border border-black/20 dark:border-white/10">
+        <DropdownMenuContent align="end" className="mt-2 w-48 bg-white dark:bg-zinc-900 border border-black/20 dark:border-white/10">
           <DropdownMenuLabel className="font-normal mb-1">
             <div className="flex flex-col space-y-1">
               <p className="text-sm font-medium leading-none">
@@ -61,22 +61,22 @@ export const Profile = (props) => {
           <Separator/>
           <DropdownMenuGroup className='mt-1 mb-1'>
           <Link href='/app' className=''>
-          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200'>
+          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
               Dashboard
               <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
             </DropdownMenuItem>
           </Link>
-            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200'>
+            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
               Billing
               <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
             </DropdownMenuItem>
-            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200'>
+            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
               Settings
               <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
             </DropdownMenuItem>
           </DropdownMenuGroup>
           <Separator/>
-          <DropdownMenuItem onClick={() => signOut()} className='cursor-pointer hover:!bg-gray-100 dark:hover:!bg-zinc-800 duration-200 mt-1'>
+          <DropdownMenuItem onClick={() => signOut()} className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 mt-1'>
             Log out
             <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
           </DropdownMenuItem>
