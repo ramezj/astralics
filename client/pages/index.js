@@ -12,6 +12,7 @@ export default function Component() {
       <title>Lunar</title>
       <center>
         <div className="lg:-mt-4 2xl:mt-0">
+          <br />
           <motion.div
           initial={{
             opacity: 0,
