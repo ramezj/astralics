@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 import FeedbackDemo from "@/components/layout/FeedbackDemo"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { ArrowRightIcon } from "lucide-react"
 
 export default function Component() {
   const { data: session } = useSession()
@@ -56,6 +58,11 @@ export default function Component() {
             </motion.h1>
             </div>
             <br />
+            {/* <div className='mt-2 mb-2'>
+            <Button className="gap-1 bg-gray-200 hover:bg-gray-300 text-black dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-white px-12">
+              Try for free <ArrowRightIcon className='w-4 h-4'/>
+            </Button>
+            </div> */}
         </div>  
           <br />
           <div className="w-full content-center items-center justify-items-center">
