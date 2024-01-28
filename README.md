@@ -1,3 +1,3 @@
 # 🪐 Lunar
 
-◆ Lunar is a simple & Reliable feedback widget that is easily integrated into websites.
+◆ Simply create stunning feedback boards, for multiple projects, all in one place. for free.
