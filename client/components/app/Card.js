@@ -44,7 +44,7 @@ export default function Card(props) {
           Share
           </Button>
       </DialogTrigger>
-      <Link href={props.href}>
+      <Link href={props.href} target="_blank">
         <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
           <ExternalLink className='w-4 h-4'/>
         </Button>
@@ -76,11 +76,6 @@ export default function Card(props) {
       </DialogContent>
     </Dialog>
       </div>
-    {/* <span className='-mt-8 -mr-2 w-12 h-10 rounded-lg justify-center items-center float-right flex bg-white dark:bg-zinc-800 duration-200 shadow-sm'>
-    <Link href={`${props.settings}`} className='drop-shadow-lg float-right flex justify-center'>
-    <AdjustmentsHorizontalIcon className='text-black dark:text-white' width={22} height={23} strokeWidth={'2'}/>
-    </Link>
-    </span> */}
     </div>
     
   </div>
