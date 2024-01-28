@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 
+
 export default function Settings() {
     const [ loading, setLoading ] = useState(true);
     const [ premium, setPremium ] = useState(false);
@@ -84,20 +85,6 @@ export default function Settings() {
           </>
         }
       </div> 
-            {/* <center>
-              <br /><br />
-              <h1 className='text-3xl font-bold text-black dark:text-white'>Account Settings</h1>
-              <br /><br />
-                <div className="">
-                    {
-                        loading 
-                        ? <><Loading/></>
-                        : <>
-                        <MainCard profileName={user.name} profileEmail={user.email} profileAvatar={user.image} session={session}/>
-                        </>
-                    }
-                </div>
-            </center> */}
         </AppLayout>
         </>
     )

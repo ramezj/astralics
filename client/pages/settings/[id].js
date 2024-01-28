@@ -6,6 +6,9 @@ import { motion } from "framer-motion"
 import Card from "@/components/settings/Card"
 import Loading from "@/components/settings/Loading"
 import AppLayout from "@/components/app/AppLayout"
+import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
+import { Input } from "@/components/ui/input"
 
 export default function Page() {
     const router = useRouter()
@@ -35,25 +38,47 @@ export default function Page() {
     }, [id])
   return (
     <>
-    <AppLayout>
-    <title>Lunar, Settings</title>
-     <br />
-     <br />
-     <center>
-     { 
-    loading ? 
-    <>
-    <Loading />
-    </>
-    : 
-    <> 
-    <center>
-    <Card projectId={data.id} projectName={data.name} projectWebsite={data.website}/>
-    </center>
-    </>
-    }
-    </center>
-    </AppLayout>
+<AppLayout>
+        <title>Lunar, Settings</title>
+        <div className="space-y-6 p-10 pb-16 md:block">
+        <div className="space-y-0.5">
+          <h2 className="text-2xl font-bold tracking-tight text-black dark:text-white">Settings</h2>
+          <p className="text-muted-foreground">
+            Manage your account settings and set e-mail preferences.
+          </p>
+        </div>
+        <Separator className="my-6" />
+        {
+          loading
+          ? 
+          <>
+          <p className="mt-2 text-lg font-bold tracking-tight text-black dark:text-white">Loading</p>
+          </>
+          : 
+          <>
+          <div className="2xl:w-2/5 w-full">
+          <div>
+          <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">ID</h2>
+          <Input type="email" placeholder="Email" value={data.id} className='text-black dark:text-white mt-2'/>
+          </div>
+          <div className='mt-4'>
+          <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Name</h2>
+          <Input type="email" placeholder="Email" value={data.name} className='text-black dark:text-white mt-2'/>
+          </div>
+          <div className='mt-4'>
+          <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Website</h2>
+          <Input type="email" placeholder="Email"value={data.website} className='text-black dark:text-white mt-2'/>
+          </div>
+          <div className='mt-6'>
+            <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
+              Save Changes
+            </Button>
+          </div>
+          </div>
+          </>
+        }
+      </div> 
+        </AppLayout>
     </>
   )
 }
