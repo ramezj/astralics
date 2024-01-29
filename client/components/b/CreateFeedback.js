@@ -127,8 +127,8 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="max-w-md transform overflow-hidden bg-transparent text-left align-middle transition-all">
-                <Card className="w-[25rem] border-black/10 dark:border-white/10">
+                <Dialog.Panel className="transform overflow-hidden bg-transparent text-left align-middle transition-all">
+                <Card className="2xl:w-[30rem] xl:w-[30rem] lg:w-[25rem] w-[23rem] border-black/10 dark:border-white/10">
       <CardHeader>
         <CardTitle>Create Feedback</CardTitle>
         <CardDescription>Create your feedback post in seconds.</CardDescription>
@@ -169,7 +169,7 @@ export default function CreateFeedback(props) {
         {
             loading ? (
                 <>
-                <Button disabled>
+                <Button disabled className='bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Creating post
                 </Button>

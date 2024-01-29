@@ -74,7 +74,7 @@ export default function CreateBoard(props) {
         {
             loading ? (
                 <>
-                <Button disabled>
+                <Button disabled className='bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Deploying
                 </Button>
