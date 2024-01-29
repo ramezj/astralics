@@ -76,7 +76,7 @@ export default function Create() {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="max-w-md transform overflow-hidden bg-transparent text-left align-middle transition-all">
-                <CreateBoard />
+                <CreateBoard closeModal={closeModal} />
                 </Dialog.Panel>
               </Transition.Child>
             </div>

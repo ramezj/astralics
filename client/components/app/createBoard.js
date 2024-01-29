@@ -13,7 +13,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-export default function CreateBoard() {
+export default function CreateBoard(props) {
     const router = useRouter();
     const [ text, setText ] = useState("Create board");
     const [ loading, setLoading ] = useState(false);
@@ -70,7 +70,7 @@ export default function CreateBoard() {
           </div>
       </CardContent>
       <CardFooter className="flex justify-between">
-        <Button variant="outline" className='bg-gray-200 text-black dark:bg-zinc-950 dark:text-white dark:border-white/10 dark:hover:!bg-zinc-900 hover:!bg-gray-300 duration-200 border-black/10'>Cancel</Button>
+        <Button type='button' onClick={props.closeModal} variant="outline" className='bg-gray-200 text-black dark:bg-zinc-950 dark:text-white dark:border-white/10 dark:hover:!bg-zinc-900 hover:!bg-gray-300 duration-200 border-black/10'>Cancel</Button>
         {
             loading ? (
                 <>

@@ -164,19 +164,19 @@ export default function CreateFeedback(props) {
           </div>
       </CardContent>
       <CardFooter className="flex justify-between">
-        <Button variant="outline" className='bg-gray-200 text-black dark:bg-zinc-950 dark:text-white dark:border-white/10 dark:hover:!bg-zinc-900 hover:!bg-gray-300 duration-200 border-black/10'>Cancel</Button>
+        <Button type='button' onClick={closeModal} variant="outline" className='bg-gray-200 text-black dark:bg-zinc-950 dark:text-white dark:border-white/10 dark:hover:!bg-zinc-900 hover:!bg-gray-300 duration-200 border-black/10'>Cancel</Button>
         {
             loading ? (
                 <>
                 <Button disabled>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Deploying
+                Creating post
                 </Button>
                 </>
             )
             : (
                 <>
-                <Button type='submit'>Deploy</Button>
+                <Button type='submit'>Create post</Button>
                 </>
             )
         }
