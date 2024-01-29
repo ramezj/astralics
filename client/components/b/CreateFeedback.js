@@ -128,7 +128,7 @@ export default function CreateFeedback(props) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="transform overflow-hidden bg-transparent text-left align-middle transition-all">
-                <Card className="2xl:w-[30rem] xl:w-[30rem] lg:w-[25rem] w-[23rem] border-black/10 dark:border-white/10">
+                <Card className="2xl:w-[30rem] xl:w-[30rem] lg:w-[25rem] w-[25rem] border-black/10 dark:border-white/10">
       <CardHeader>
         <CardTitle>Create Feedback</CardTitle>
         <CardDescription>Create your feedback post in seconds.</CardDescription>
