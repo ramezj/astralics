@@ -93,13 +93,13 @@ export default function CreateFeedback(props) {
           ? 
           <>
           <button onClick={openModal} className='px-4 py-2.5 bg-blue-700 text-white duration-300 hover:bg-blue-800 rounded-lg flex font-medium outline-none'>
-                Create Post
+                Leave Feedback
             </button>
           </>
           : 
           <>
           <button onClick={openAuthModal} className='px-4 py-2.5 bg-blue-700 text-white duration-300 hover:bg-blue-800 rounded-lg flex font-medium outline-none'>
-                Create Post
+                Leave Feedback
             </button>
           </>
         }
@@ -130,19 +130,20 @@ export default function CreateFeedback(props) {
                 <Dialog.Panel className="max-w-md transform overflow-hidden bg-transparent text-left align-middle transition-all">
                 <Card className="w-[25rem] border-black/10 dark:border-white/10">
       <CardHeader>
-        <CardTitle>Create post</CardTitle>
+        <CardTitle>Create Feedback</CardTitle>
+        <CardDescription>Create your feedback post in seconds.</CardDescription>
       </CardHeader>
       <form onSubmit={createFeedback}>
       <CardContent>
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Title</Label>
-              <Input id="name" placeholder="Title of your feedback" onChange={(e) => {setName(e.target.value)}}/>
+              <Input id="name" placeholder="Title of your feedback" onChange={(e) => {setTitle(e.target.value)}}/>
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Content</Label>
               <Textarea rows={4} placeholder="Describe your feedback" value={description} onChange={((e) => {setDescription(e.target.value)})}
-              className='resize-none'
+              className='resize-none outline-none'
               />
             </div>
             <div className="flex flex-col space-y-1.5">
@@ -176,7 +177,7 @@ export default function CreateFeedback(props) {
             )
             : (
                 <>
-                <Button type='submit'>Create post</Button>
+                <Button type='submit' className='bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>Create post</Button>
                 </>
             )
         }

@@ -82,7 +82,7 @@ export default function CreateBoard(props) {
             )
             : (
                 <>
-                <Button type='submit'>Deploy</Button>
+                <Button type='submit' className='bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>Deploy</Button>
                 </>
             )
         }
