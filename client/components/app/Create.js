@@ -75,7 +75,7 @@ export default function Create() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="max-w-md transform overflow-hidden bg-transparent  text-left align-middle transition-all">
+                <Dialog.Panel className="max-w-md transform overflow-hidden bg-transparent text-left align-middle transition-all">
                 <CreateBoard />
                 </Dialog.Panel>
               </Transition.Child>

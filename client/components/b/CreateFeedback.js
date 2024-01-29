@@ -6,6 +6,19 @@ import toast, { Toaster } from 'react-hot-toast';
 import AuthModal from "../Auth/AuthModal"
 import { X } from "lucide-react";
 import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "../ui/select";
+import { Loader2 } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Button } from "@/components/ui/button"
+import { Textarea } from "@/components/ui/textarea"
 
 export default function CreateFeedback(props) {
     const router = useRouter()
@@ -101,10 +114,10 @@ export default function CreateFeedback(props) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black/70"/>
+            <div className="fixed inset-0 bg-black/70 "/>
           </Transition.Child>
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <div className="flex min-h-full items-center justify-center text-center">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -114,9 +127,64 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className=" w-full max-w-md transform overflow-hidden rounded-lg bg-white dark:bg-zinc-950 border border-white/10 p-6 text-left align-middle shadow-xl transition-all">
-                    <center>
-                  <Dialog.Title
+                <Dialog.Panel className="max-w-md transform overflow-hidden bg-transparent text-left align-middle transition-all">
+                <Card className="w-[25rem] border-black/10 dark:border-white/10">
+      <CardHeader>
+        <CardTitle>Create post</CardTitle>
+      </CardHeader>
+      <form onSubmit={createFeedback}>
+      <CardContent>
+          <div className="grid w-full items-center gap-4">
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="name">Title</Label>
+              <Input id="name" placeholder="Title of your feedback" onChange={(e) => {setName(e.target.value)}}/>
+            </div>
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="name">Content</Label>
+              <Textarea rows={4} placeholder="Describe your feedback" value={description} onChange={((e) => {setDescription(e.target.value)})}
+              className='resize-none'
+              />
+            </div>
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="name">Category</Label>
+              <Select defaultValue="feedback" className='w-full' onValueChange={((e) => {setType(e)})}>
+              <SelectTrigger
+                id="security-level"
+                className="line-clamp-1 truncate w-full bg-white dark:bg-zinc-950 text-black dark:text-white border dark:border-white/10 mt-1.5"
+              >
+                <SelectValue placeholder="Select level"/>
+              </SelectTrigger>
+              <SelectContent className='dark:bg-zinc-950 border dark:border-white/10'>
+                <SelectItem value="feedback" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>📝 Feedback</SelectItem>
+                <SelectItem value="bug_report" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>🐛 Bug Report</SelectItem>
+                <SelectItem value="feature_request" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>💡 Feature Request</SelectItem>
+              </SelectContent>
+            </Select>
+            </div>
+          </div>
+      </CardContent>
+      <CardFooter className="flex justify-between">
+        <Button variant="outline" className='bg-gray-200 text-black dark:bg-zinc-950 dark:text-white dark:border-white/10 dark:hover:!bg-zinc-900 hover:!bg-gray-300 duration-200 border-black/10'>Cancel</Button>
+        {
+            loading ? (
+                <>
+                <Button disabled>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Deploying
+                </Button>
+                </>
+            )
+            : (
+                <>
+                <Button type='submit'>Deploy</Button>
+                </>
+            )
+        }
+      </CardFooter>
+      </form>
+    </Card>
+                 
+                  {/* <Dialog.Title
                     as="h3"
                     className="text-xl font-medium leading-6 text-black dark:text-white justify-center items-center self-center"
                   >
@@ -171,7 +239,8 @@ export default function CreateFeedback(props) {
                   </div>
                   </center>
                   </form>
-                </Dialog.Panel>
+                </Dialog.Panel> */}
+                </Dialog.Panel >
               </Transition.Child>
             </div>
           </div>
