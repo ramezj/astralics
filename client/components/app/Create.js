@@ -48,7 +48,7 @@ export default function Create() {
     }
     return (
         <>
-        <Button className='px-5 bg-white dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800 text-black hover:bg-gray-200 rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
+        <Button className='px-5 bg-gray-200 hover:bg-gray-300 dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800 text-black rounded-lg flex justify-center items-center gap-2 duration-200' onClick={openModal}>
               New board
         </Button>
 <Transition appear show={isOpen} as={Fragment}>
