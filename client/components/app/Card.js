@@ -20,7 +20,8 @@ import { Label } from "@/components/ui/label"
 export default function Card(props) {
     let [isOpen, setIsOpen] = useState(false)
     const [ copied, setisCopied ] = useState(false);
-    const copyLink = () => {
+    const copyLink = (e) => {
+      navigator.clipboard.writeText(`https://lunarfeed.up.railway.app${props.href}`)
       setisCopied(true);
     }
     function closeModal() {
