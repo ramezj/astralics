@@ -127,8 +127,8 @@ export default function CreateFeedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="transform overflow-hidden bg-transparent text-left align-middle transition-all">
-                <Card className="2xl:w-[30rem] xl:w-[30rem] lg:w-[25rem] w-[25rem] border-black/10 dark:border-white/10">
+                <Dialog.Panel className="w-11/12 w- max-w-md transform overflow-hidden bg-transparent text-left align-middle transition-all">
+                <Card className="w-full border-black/10 dark:border-white/10">
       <CardHeader>
         <CardTitle>Create Feedback</CardTitle>
         <CardDescription>Create your feedback post in seconds.</CardDescription>
@@ -142,7 +142,7 @@ export default function CreateFeedback(props) {
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Content</Label>
-              <Textarea rows={4} placeholder="Describe your feedback" value={description} onChange={((e) => {setDescription(e.target.value)})}
+              <Textarea rows={5} placeholder="Describe your feedback" value={description} onChange={((e) => {setDescription(e.target.value)})}
               className='resize-none outline-none'
               />
             </div>
