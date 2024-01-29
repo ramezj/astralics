@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 import { useRouter } from 'next/navigation';
-import { Input } from "../ui/input";
+import { Button } from "@/components/ui/button"
+import { Loader2 } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 
 export default function CreateBoard() {
     const router = useRouter();
@@ -22,7 +33,7 @@ export default function CreateBoard() {
               body: JSON.stringify({
                 name: name,
                 url: url,
-                handle:handle
+                handle:name
               })
         });
         const resp = await res.json();
@@ -40,7 +51,45 @@ export default function CreateBoard() {
     }
     return (
         <>
-        <div className="card w-[22.5rem] bg-white dark:bg-zinc-950 border border-black/10 dark:border-white/10 duration-300 rounded-lg">
+        <Card className="w-[25rem] border-black/10 dark:border-white/10">
+      <CardHeader>
+        <CardTitle>Create board</CardTitle>
+        <CardDescription>Deploy your new feedback board in one-click.</CardDescription>
+      </CardHeader>
+      <form onSubmit={createProject}>
+      <CardContent>
+          <div className="grid w-full items-center gap-4">
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="name">Name</Label>
+              <Input id="name" placeholder="Name of your board" onChange={(e) => {setName(e.target.value)}}/>
+            </div>
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="name">Website</Label>
+              <Input id="website" placeholder="Website of your board" onChange={(e) => {setUrl(e.target.value)}} />
+            </div>
+          </div>
+      </CardContent>
+      <CardFooter className="flex justify-between">
+        <Button variant="outline" className='bg-gray-200 text-black dark:bg-zinc-950 dark:text-white dark:border-white/10 dark:hover:!bg-zinc-900 hover:!bg-gray-300 duration-200 border-black/10'>Cancel</Button>
+        {
+            loading ? (
+                <>
+                <Button disabled>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Deploying
+                </Button>
+                </>
+            )
+            : (
+                <>
+                <Button type='submit'>Deploy</Button>
+                </>
+            )
+        }
+      </CardFooter>
+      </form>
+    </Card>
+        {/* <div className="card w-[22.5rem] bg-white dark:bg-zinc-950 border border-black/10 dark:border-white/10 duration-300 rounded-lg">
         <div className="card-body">
         <h2 className="card-title text-xl text-black dark:text-white font-bold justify-center -mt-2 mb-2 drop-shadow">Board Information</h2>
         <form onSubmit={createProject}>
@@ -59,7 +108,7 @@ export default function CreateBoard() {
         </center>
         </form>
         </div>
-        </div>
+        </div> */}
         </>
     )
 }
