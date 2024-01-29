@@ -3,7 +3,7 @@ import { AdjustmentsHorizontalIcon, LinkIcon } from '@heroicons/react/24/outline
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import React, { useState } from 'react';
 import { Button } from '../ui/button';
-import { Copy, ExternalLink } from "lucide-react"
+import { Copy, ExternalLink, Check } from "lucide-react"
 import {
   Dialog,
   DialogClose,
@@ -19,6 +19,10 @@ import { Label } from "@/components/ui/label"
 
 export default function Card(props) {
     let [isOpen, setIsOpen] = useState(false)
+    const [ copied, setisCopied ] = useState(false);
+    const copyLink = () => {
+      setisCopied(true);
+    }
     function closeModal() {
       setIsOpen(false)
     }
@@ -38,43 +42,26 @@ export default function Card(props) {
           Settings
           </Button>
         </Link>
-        <Dialog>
-      <DialogTrigger asChild>
-        <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
-          Share
-          </Button>
-      </DialogTrigger>
+        <Button onClick={copyLink} type="submit" className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
+            {
+              copied
+              ? (
+                <>
+                    <Check className='h-4 w-4' />
+                </>
+              )
+              : (
+                <>
+                    <Copy className="h-4 w-4" />
+                </>
+              )
+            }
+        </Button>
       <Link href={props.href} target="_blank">
         <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
           <ExternalLink className='w-4 h-4'/>
         </Button>
       </Link>
-      <DialogContent className="sm:max-w-md border border-black/10 dark:border-white/10">
-        <DialogHeader>
-          <DialogTitle className='text-black dark:text-white'>Share link</DialogTitle>
-          <DialogDescription>
-            Anyone who has this link will be able to view this.
-          </DialogDescription>
-        </DialogHeader>
-        <div className="flex items-center space-x-2">
-          <div className="grid flex-1 gap-2">
-            <Label htmlFor="link" className="sr-only">
-              Link
-            </Label>
-            <Input
-            className='outline-none ring-offset-none bg-gray-200 dark:bg-zinc-900 text-black dark:text-white'
-              id="link"
-              defaultValue={`https://trylunar.xyz${props.href}`}
-              readOnly
-            />
-          </div>
-          <Button type="submit" size="sm" className="px-3 bg-gray-200 hover:bg-gray-300 text-black dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-white">
-            <span className="sr-only">Copy</span>
-            <Copy className="h-4 w-4" />
-          </Button>
-        </div>
-      </DialogContent>
-    </Dialog>
       </div>
     </div>
     
