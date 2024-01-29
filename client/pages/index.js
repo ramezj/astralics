@@ -44,6 +44,7 @@ export default function Component() {
            The internet is truly yours.
             </motion.h1>
             <div>
+              <div className='2xl:w-full lg:w-full md:w-full w-3/4 mt-4 '>
             <motion.h1 
             initial={{
               opacity: 0,
@@ -53,9 +54,10 @@ export default function Component() {
               opacity: 1,
               x:0
             }}
-            transition={{duration: 0.8}} className="leading-7 [&:not(:first-child)]:mt-6 text-muted-foreground mt-3 text-xl">
-              Beautifully crafted feedback boards.
+            transition={{duration: 0.8}} className="leading-7 [&:not(:first-child)]:mt-6 text-muted-foreground text-xl">
+              Create stunning feedback boards, completely for free.
             </motion.h1>
+            </div>
             </div>
             <br />
             {/* <div className='mt-2 mb-2'>
