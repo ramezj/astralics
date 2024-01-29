@@ -4,7 +4,7 @@ export const TryForFree = (props) => {
         <>
         <Button className='w-[8rem]
         text-sm
-        bg-white
+        bg-gray-200
         dark:bg-zinc-900
         dark:hover:bg-zinc-800
         dark:text-white
@@ -13,7 +13,7 @@ export const TryForFree = (props) => {
         hover:border-black/0
         dark:border-white/10
         dark:hover:border-white/0
-        text-black hover:bg-gray-200 rounded-lg items-center
+        text-black hover:bg-gray-300 rounded-lg items-center
         duration-200
         ' 
         onClick={props.onClick}>
