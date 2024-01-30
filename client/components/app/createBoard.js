@@ -42,7 +42,7 @@ export default function CreateBoard(props) {
             setText("Created Successfully");
             setResponse(resp);
             console.log(resp);
-            router.push(`/board/${resp.response.id}`)
+            // router.push(`/board/${resp.response.id}`)
         } else if (resp.ok == false) {
             setLoading(false);
             setText(resp.response);

@@ -9,12 +9,14 @@ import AppLayout from "@/components/app/AppLayout"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Input } from "@/components/ui/input"
+import { Loader2 } from "lucide-react"
 
 export default function Page() {
     const router = useRouter()
     const { id } = router.query;
     const { data: session } = useSession({})
     const [ loading, setLoading ] = useState(false);
+    const [ deleteLoading, setDeleteLoading ] = useState(false);
     const [ projectName, setProjectName ] = useState();
     const [ projectWebsite, setProjectWebsite ] = useState();
     const [ data, setData ] = useState(false); 
@@ -36,6 +38,19 @@ export default function Page() {
         }
         fetchProject();
     }, [id])
+    const deleteProject = async () => {
+      setDeleteLoading(true);
+      const response = await fetch(`/api/settings/delete/${router.query.id}`);
+      const resp = await response.json();
+      if(resp.ok == true) {
+          setLoading(false);
+          router.push('/app')
+      } else {
+          if(resp.ok == false) {
+              console.error('Sometrhing Went Wrnog')
+          }
+      }
+  }
   return (
     <>
 <AppLayout>
@@ -69,10 +84,28 @@ export default function Page() {
           <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Website</h2>
           <Input type="email" placeholder="Email"value={data.website} className='text-black dark:text-white mt-2'/>
           </div>
-          <div className='mt-6'>
-            <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
-              Save Changes
-            </Button>
+          <div className='mt-6 flex gap-4'>
+          {
+            deleteLoading 
+            ? (
+              <>
+              <Button disabled variant="destructive" onClick={deleteProject}>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Deleting
+              </Button>
+              </>
+            )
+            : (
+              <>
+              <Button variant="destructive" onClick={deleteProject}>
+              Delete Project
+              </Button>
+              </>
+            )
+          }
+          <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
+            Save Changes
+          </Button>
           </div>
           </div>
           </>
