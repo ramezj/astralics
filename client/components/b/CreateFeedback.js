@@ -41,7 +41,7 @@ export default function CreateFeedback(props) {
     const [ description, setDescription ] = useState(null);
     const [ type, setType ] = useState("feedback");
     const [ loading, setLoading ] = useState(false);
-    const [ text, setText ] = useState();
+    const [ text, setText ] = useState("Create Post");
     const [ response, setResponse ] = useState(null);
     if(type === "🐛 Bug Report") {
       setType("bug_report");
@@ -70,11 +70,7 @@ export default function CreateFeedback(props) {
       if(resp.ok == true) {
           setLoading(false);
           setText("Created Successfully");
-          toast.success("Created Successfully!", {
-            style: {
-            borderRadius: '10px',
-            },}
-        )
+          router.reload();
       } else if (resp.ok == false) {
           setLoading(false);
           setText(resp.response);
@@ -84,10 +80,6 @@ export default function CreateFeedback(props) {
   }
     return (
         <>
-        <Toaster
-        position="bottom-right"
-        reverseOrder={true}
-        />  
         {
           props.session 
           ? 
@@ -138,11 +130,11 @@ export default function CreateFeedback(props) {
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Title</Label>
-              <Input id="name" placeholder="Title of your feedback" onChange={(e) => {setTitle(e.target.value)}}/>
+              <Input required id="name" placeholder="Title of your feedback" onChange={(e) => {setTitle(e.target.value)}}/>
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Content</Label>
-              <Textarea rows={5} placeholder="Describe your feedback" value={description} onChange={((e) => {setDescription(e.target.value)})}
+              <Textarea required rows={5} placeholder="Describe your feedback" value={description} onChange={((e) => {setDescription(e.target.value)})}
               className='resize-none outline-none'
               />
             </div>
@@ -177,7 +169,7 @@ export default function CreateFeedback(props) {
             )
             : (
                 <>
-                <Button type='submit' className='bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>Create post</Button>
+                <Button type='submit' className='bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>{text}</Button>
                 </>
             )
         }
