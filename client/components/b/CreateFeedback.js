@@ -73,8 +73,8 @@ export default function CreateFeedback(props) {
           toast.success("Created Successfully!", {
             style: {
             borderRadius: '10px',
-            },
-        })
+            },}
+        )
       } else if (resp.ok == false) {
           setLoading(false);
           setText(resp.response);
