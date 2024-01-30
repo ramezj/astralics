@@ -47,7 +47,12 @@ export default function Component() {
     <title>Lunar, App</title>
     <br /><br />
     <center>
-    <h1 className='text-3xl font-bold text-black dark:text-white'>Hi, Welcome back 👋</h1>
+      <div className="space-y-1">
+        <h1 className='text-3xl font-bold text-black dark:text-white'>Hi, Welcome back 👋</h1>
+          <p className="text-muted-foreground">
+          Below you'll find all your feedback boards.
+          </p>
+      </div>
     </center>
     {loading 
     ?
