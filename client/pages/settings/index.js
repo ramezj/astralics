@@ -13,8 +13,10 @@ import { Separator } from "@/components/ui/separator"
 
 export default function Settings() {
     const [ loading, setLoading ] = useState(true);
+    const [ nameLoading, setNameLoading ] = useState(false);
     const [ premium, setPremium ] = useState(false);
     const [ user, setUser ] = useState();
+    const [ name, setName ] = useState();
     const router = useRouter();
     const { data: session } = useSession({
         required:true,
@@ -43,6 +45,21 @@ export default function Settings() {
         }
         fetchUser();
       }, [])
+      const fetchSettings = async () => {
+        setNameLoading(true);
+        const response = await fetch(`/api/settings`, {
+            method:'POST',
+            headers: {
+                "Content-Type": "application/json"
+              },
+            body: JSON.stringify({
+                name:name
+            })
+        });
+        const res = await response.json();
+            setLoading(false);
+            setResponse(res.response);
+    }
     return (
         <>
         <AppLayout>
@@ -66,7 +83,7 @@ export default function Settings() {
           <div className="2xl:w-2/5 w-full">
           <div>
           <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Name</h2>
-          <Input type="email" placeholder="Email" value={user.name} className='text-black dark:text-white mt-2'/>
+          <Input type="email" placeholder="Name" value={user.name} onChange={((e) => {setName(e.target.value)})} className='text-black dark:text-white mt-2'/>
           </div>
           <div className='mt-4'>
           <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Email</h2>
