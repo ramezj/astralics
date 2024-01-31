@@ -30,7 +30,7 @@ export default function Navbar(props) {
     <header className="bg-transparent sticky top-0 z-10">
       <nav className="h-14 mx-auto max-w-full flex items-center justify-between p-6 lg:px-3 border-b border-border/70 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="p-1.5 outline-none font-medium italic text-black dark:text-white">
+          <Link href="/" className="p-1.5 outline-none font-bold text-black dark:text-white text-lg">
             lunar
           </Link>
         </div>
