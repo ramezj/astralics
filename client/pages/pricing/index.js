@@ -21,12 +21,17 @@ export default function Pricing(props) {
             <PaddleLoader />
             <center>
             <br /><br />
-            <h1 className='text-4xl font-bold text-black dark:text-white'>Pricing</h1>
+            <div className='space-y-2'>
+                <h1 className='text-4xl font-bold text-black dark:text-white'>Pricing</h1>
+                <p className="text-muted-foreground">
+                Prices listed reflect the monthly subscription fee.
+                </p>
+            </div>
             </center>
             <br />
             <br />
             <div className='flex flex-wrap gap-12 justify-center w-full'>
-                <PricingCard price='$0 forever' title='Starter' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
+                <PricingCard price='$0' title='Starter' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
                 <Info><Svg /> 1 Board</Info>
                 <Info><Svg /> 15 Feedbacks</Info>
                 <Info><Svg /> Authentication Check</Info>
@@ -38,9 +43,9 @@ export default function Pricing(props) {
                 : <><button onClick={signUserIn} className='py-2 w-full text-white normal-case bg-blue-700 hover:bg-blue-800 dark:bg-white dark:text-black outline-none border-none font-bold rounded-md -mb-2'>Get Started</button></>
                 }
                 </PricingCard >
-                <PricingCard price='$10 / month' title='Developer' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
+                <PricingCard price='$10' title='Developer' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
                 <Info><Svg /> Up to 3 Boards</Info>
-                <Info><Svg /> Unlimited Feedbacks</Info>
+                <Info><Svg /> Unlimited Monthly Feedbacks</Info>
                 <Info><Svg /> Authentication Check</Info>
                 <Info><Svg /> Custom Domain - soon</Info>
                 <br />
