@@ -35,15 +35,15 @@ export default function Navbar(props) {
           </Link>
         </div>
         <div className="flex lg:hidden gap-3 -m-2.5 items-center">
+        <Toggle />
           {
             props.session
             ? 
-            <> 
-            <Toggle />
+            <>
             <Profile session={props.session} />
             </>
             : 
-            <> 
+            <>
             <button type="button"
             className="inline-flex items-center justify-center rounded-xl text-black dark:text-white outline-none"
             onClick={() => setMobileMenuOpen(true)}>
