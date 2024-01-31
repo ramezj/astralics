@@ -25,7 +25,7 @@ export default function Header(props) {
     return (
       <header className="sticky top-0 z-10 w-full border-b border-border/70 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <nav className="h-14  flex items-center justify-between px-4">
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-6 items-center">
               <Link
                 href='/' className="text-black dark:text-white"
               >
@@ -41,6 +41,12 @@ export default function Header(props) {
                 >
                   <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
                 </svg>
+              </Link>
+              <Link href='/'>
+                Demo
+              </Link>
+              <Link href='/'>
+                Pricing
               </Link>
             </div>
             <div className="block lg:!hidden">
