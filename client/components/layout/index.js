@@ -8,7 +8,7 @@ export default function Layout(props) {
         // background3
         <div className='bg-white dark:bg-zinc-950 h-full min-h-screen bg-bottom bg-no-repeat w-full '>
             {/* bg-[#05050a] */}
-        <Header session={session}/>
+        <Navbar session={session}/>
         {/* <Navbar session={session} /> */}
         {props.children}
         </div>

@@ -24,7 +24,7 @@ export default function Header(props) {
     }
     return (
       <header className="sticky top-0 z-10 w-full border-b border-border/70 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <nav className="h-14  flex items-center justify-between px-4">
+          <nav className="h-14 flex items-center justify-between px-4">
             <div className="flex gap-6 items-center">
               <Link
                 href='/' className="text-black dark:text-white"
@@ -50,7 +50,6 @@ export default function Header(props) {
               </Link>
             </div>
             <div className="block lg:!hidden">
-              {/* test2 */}
             </div>
             <div className="flex items-center gap-3">
               <Toggle />
