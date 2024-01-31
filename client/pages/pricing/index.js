@@ -20,7 +20,7 @@ export default function Pricing(props) {
             <title>Lunar, Pricing</title>
             <PaddleLoader />
             <center>
-            <br />
+            <br /><br />
             <h1 className='text-4xl font-bold text-black dark:text-white'>Pricing</h1>
             </center>
             <br />
