@@ -34,7 +34,7 @@ export default function Navbar(props) {
             lunar
           </Link>
         </div>
-        <div className="flex lg:hidden gap-3 -m-2.5">
+        <div className="flex lg:hidden gap-3 -m-2.5 items-center">
           {
             props.session
             ? 
@@ -62,7 +62,7 @@ export default function Navbar(props) {
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
-          <a className="text-sm font-bold leading-6 text-white flex gap-3">
+          <a className="text-sm font-bold leading-6 text-white flex gap-3 items-center">
           <Toggle />
             {
               props.session 

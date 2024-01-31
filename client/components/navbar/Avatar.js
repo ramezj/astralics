@@ -39,7 +39,7 @@ export const Profile = (props) => {
   return (
     <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="relative h-8 w-8 rounded-full mt-1">
+          <Button variant="ghost" className="relative h-8 w-8 rounded-full">
             <Avatar className="h-9 w-9">
               <AvatarImage
                 src={props.session.user.image}
