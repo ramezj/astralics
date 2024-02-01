@@ -33,7 +33,7 @@ export const TryForFree = (props) => {
         text-black hover:bg-gray-300 rounded-lg items-center
         duration-200'
         onClick={openModal}>
-        Try for free
+        {props.title}
         </Button>
         <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>

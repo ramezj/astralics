@@ -71,7 +71,7 @@ export default function Navbar(props) {
                 <Profile session={props.session} />
                 </>
               : <> 
-                <TryForFree/>
+                <TryForFree title={'Try for free'}/>
                 </>
             }
           </a>
