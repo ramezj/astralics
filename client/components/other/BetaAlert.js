@@ -1,25 +1,17 @@
 import { ArrowRight } from "lucide-react"
+import { ChevronRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Mail } from "lucide-react"
 export default function BetaAlert(props) {
     return (
         <>
-        <div className='
+        <Button className='rounded-xl 
         mt-6 
-        2xl:w-[16rem] 
-        lg:w-[14rem] 
-        w-[21rem] 
-        rounded-lg 
-        bg-gray-200
-        dark:bg-zinc-900
-        dark:text-white
-        text-black 
-        py-1.5 
         2xl:mt-4 
-        2xl:-mb-6
         '>
-        <h1 className="font-bold">
-        ⚡ Introducting Lunar
-        </h1>
-        </div>
+            Lunar just launched
+            <ChevronRight className="ml-2 h-4 w-4" /> 
+        </Button>
         </>
     )
 }
