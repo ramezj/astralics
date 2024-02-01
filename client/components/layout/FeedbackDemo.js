@@ -26,7 +26,7 @@ export default function FeedbackDemo(props) {
             props.type === "bug_report"
             ? 
             <>
-            <span class="border border-white/20 mt-2 -mb-1 bg-indigo-700 text-white text-xs font-medium me-2 px-2 py-[0.2rem] rounded-md">🐛 Bug Report</span>
+            <span class="mt-2 -mb-1 bg-indigo-600 text-white text-xs font-medium me-2 px-2 py-[0.2rem] rounded-sm">🐛 Bug Report</span>
             </>
             : <></>
         }
@@ -34,7 +34,7 @@ export default function FeedbackDemo(props) {
             props.type === "feature_request"
             ? 
             <>
-            <span class="border border-white/20 mt-2 -mb-1 bg-yellow-700 text-white text-xs font-medium me-2 px-2 py-[0.2rem] rounded-md">💡 Feature Request</span>
+            <span class="mt-2 -mb-1 bg-yellow-600 text-white text-xs font-medium me-2 px-2 py-[0.2rem] rounded-sm">💡 Feature Request</span>
             </>
             : <></>
         }
@@ -42,7 +42,7 @@ export default function FeedbackDemo(props) {
             props.type === "feedback"
             ? 
             <>
-            <span class="border border-white/20 mt-2 -mb-1 bg-green-700 text-white text-xs font-medium me-2 px-2 py-[0.2rem] rounded-md">📝 Feedback</span>
+            <span class="mt-2 -mb-1 bg-green-600 text-white text-xs font-medium me-2 px-2 py-[0.2rem] rounded-sm">📝 Feedback</span>
             </>
             : <></>
         }
