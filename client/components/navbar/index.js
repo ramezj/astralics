@@ -55,11 +55,11 @@ export default function Navbar(props) {
         </div>
         <Popover.Group className="hidden lg:flex">
         <Link href="/b/lunar" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
-            Demo
+          Demo
           </Link>
-          <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
-            Pricing
-          </Link>
+        <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
+          Pricing
+        </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
           <a className="text-sm font-bold leading-6 text-white flex gap-3 items-center">
