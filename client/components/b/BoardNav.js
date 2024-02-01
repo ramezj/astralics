@@ -55,7 +55,6 @@ return (
           {
             props.session 
             ? <> 
-              <Create />
               <Profile session={props.session} />
               </>
             : <> 
