@@ -20,6 +20,7 @@ export const TryForFree = (props) => {
     return (
         <>
         <Button className='w-[8rem]
+        font-bold
         text-sm
         bg-zinc-950
         dark:bg-white
