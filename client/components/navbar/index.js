@@ -54,10 +54,10 @@ export default function Navbar(props) {
           }
         </div>
         <Popover.Group className="hidden lg:flex">
-        <Link href="/b/astralics" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
+        <Link href="/b/astralics" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:bg-gray-200 dark:hover:bg-zinc-800 px-5 py-2 rounded-lg duration-200">
           Demo
           </Link>
-        <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:text-gray-200 px-5 py-2 rounded-xl duration-200">
+        <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:bg-gray-200 dark:hover:bg-zinc-800 px-5 py-2 rounded-lg duration-200">
           Pricing
         </Link>
         </Popover.Group>
@@ -71,7 +71,7 @@ export default function Navbar(props) {
                 <Profile session={props.session} />
                 </>
               : <> 
-                <TryForFree title={'Try for free'}/>
+                <TryForFree title={'use for free'}/>
                 </>
             }
           </a>
@@ -80,12 +80,12 @@ export default function Navbar(props) {
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="bg-white dark:bg-zinc-950 fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between -m-2">
           <Link href="/" className="-m-1.5 p-1.5 outline-none font-medium italic">
           </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-xl p-2.5 text-white"
+              className="-m-2.5 rounded-xl p-2.5 text-black dark:text-white"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -95,18 +95,13 @@ export default function Navbar(props) {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-              <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: 0.1}}>
-              <Link href="/b/lunar" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
-                  Features
-                </Link>
-                </motion.div>
                 <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: 0.2}}>
-                <Link href="/b/astralics" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
+                <Link href="/b/astralics" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:bg-gray-200 dark:hover:bg-zinc-800 px-5 py-2 rounded-lg duration-200">
                   Demo
                 </Link>
                 </motion.div>
                 <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: 0.3}}>
-                <Link href="/pricing" className="drop-shadow-md -mx-3 rounded-xl px-3 py-2 text-base font-bold leading-7 text-white hover:text-gray-200 flex justify-center items-center gap-2 duration-500">
+                <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:bg-gray-200 dark:hover:bg-zinc-800 px-5 py-2 rounded-lg duration-200">
                   Pricing
                 </Link>
                 </motion.div>
@@ -119,8 +114,9 @@ export default function Navbar(props) {
               <Link href='/app' className='text-black px-6 py-2 bg-white hover:bg-gray-200 duration-300 rounded-md font-bold flex justify-center gap-2'>
               Dashboard
                 </Link></>
-              : <><Link onClick={signUserIn} href='/' className='text-black px-6 py-2 bg-white hover:bg-gray-200 rounded-md font-bold flex justify-center gap-2 duration-200'>
-                Try for free
+              : <>
+              <Link onClick={signUserIn} href='/' className='text-white px-6 py-2 bg-zinc-950 dark:bg-white dark:text-black hover:bg-gray-200 rounded-lg font-bold flex justify-center gap-2 duration-200'>
+                use for free
                 </Link></>
               }
               </div>
