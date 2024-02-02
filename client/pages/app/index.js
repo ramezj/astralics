@@ -44,7 +44,7 @@ export default function Component() {
   return (
     <>
     <AppLayout>
-    <title>Lunar, App</title>
+    <title>Dashboard</title>
     <br /><br />
     <center>
       <div className="space-y-1">

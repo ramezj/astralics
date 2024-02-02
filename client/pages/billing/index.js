@@ -24,7 +24,7 @@ export default function BillingPage() {
     return (
         <>
         <AppLayout>
-        <title>Lunar, Settings</title>
+        <title>Billing</title>
         <div className="space-y-6 p-10 pb-16 md:block">
         <div className="space-y-0.5">
           <h2 className="text-2xl font-bold tracking-tight text-black dark:text-white">Billing</h2>

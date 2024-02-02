@@ -32,7 +32,7 @@ return (
     <nav className="h-14 mx-auto max-w-full flex items-center justify-between p-6 lg:px-3 border-b border-border/70 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" aria-label="Global">
       <div className="flex lg:flex-1">
         <Link href="/" className="p-1.5 outline-none font-bold text-black dark:text-white text-lg">
-          lunar
+        astralics
         </Link>
       </div>
       <div className="flex lg:hidden gap-3 -m-2.5 items-center">

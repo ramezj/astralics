@@ -12,7 +12,7 @@ export default function Component() {
   const { data: session } = useSession()
   return (
     <Layout>
-      <title>Lunar</title>
+      <title>astralics</title>
       <center>
         <div className="">
           {/* <motion.div
@@ -54,7 +54,7 @@ export default function Component() {
               x:0
             }}
             transition={{duration: 0.8}} className="leading-7 [&:not(:first-child)]:mt-6 text-muted-foreground text-xl">
-              Create stunning feedback boards, completely for free.
+              Create stunning feedback pages, completely for free.
             </motion.h1>
             </div>
             </div>
