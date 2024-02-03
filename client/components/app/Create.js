@@ -104,15 +104,15 @@ export default function Create() {
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Name</Label>
-              <Input required id="name" placeholder="Name of your board" onChange={(e) => {setName(e.target.value)}}/>
+              <Input required id="name" placeholder="Name of your board" onChange={(e) => {setName(e.target.value)}} className='bg-gray-200 dark:bg-zinc-900'/>
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Slug</Label>
-              <Input required id="slug" placeholder="trylunar.xyz/b/slug" onChange={(e) => {setSlug(e.target.value)}} />
+              <Input required id="slug" placeholder="trylunar.xyz/b/slug" onChange={(e) => {setSlug(e.target.value)}} className='bg-gray-200 dark:bg-zinc-900'/>
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Website</Label>
-              <Input required id="website" placeholder="Website of your board" onChange={(e) => {setUrl(e.target.value)}} />
+              <Input required id="website" placeholder="Website of your board" onChange={(e) => {setUrl(e.target.value)}} className='bg-gray-200 dark:bg-zinc-900'/>
             </div>
           </div>
       </CardContent>
