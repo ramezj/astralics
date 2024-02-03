@@ -130,12 +130,12 @@ export default function CreateFeedback(props) {
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Title</Label>
-              <Input required id="name" placeholder="Title of your feedback" onChange={(e) => {setTitle(e.target.value)}}/>
+              <Input required id="name" placeholder="Title of your feedback" onChange={(e) => {setTitle(e.target.value)}} className='dark:bg-zinc-900 bg-gray-200'/>
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Content</Label>
               <Textarea required rows={5} placeholder="Describe your feedback" value={description} onChange={((e) => {setDescription(e.target.value)})}
-              className='resize-none outline-none'
+              className='resize-none outline-none bg-gray-200 dark:bg-zinc-900'
               />
             </div>
             <div className="flex flex-col space-y-1.5">
@@ -143,7 +143,7 @@ export default function CreateFeedback(props) {
               <Select defaultValue="feedback" className='w-full' onValueChange={((e) => {setType(e)})}>
               <SelectTrigger
                 id="security-level"
-                className="line-clamp-1 truncate w-full bg-white dark:bg-zinc-950 text-black dark:text-white border dark:border-white/10 mt-1.5"
+                className="line-clamp-1 truncate w-full bg-gray-200 dark:bg-zinc-900 text-black dark:text-white border dark:border-white/10 mt-1.5"
               >
                 <SelectValue placeholder="Select level"/>
               </SelectTrigger>
