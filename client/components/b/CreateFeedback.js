@@ -176,63 +176,6 @@ export default function CreateFeedback(props) {
       </CardFooter>
       </form>
     </Card>
-                 
-                  {/* <Dialog.Title
-                    as="h3"
-                    className="text-xl font-medium leading-6 text-black dark:text-white justify-center items-center self-center"
-                  >
-                   Post
-                  </Dialog.Title>
-                  <button onClick={closeModal} className='bg-gray-200 dark:bg-zinc-900 rounded-md px-1 py-1 absolute top-5 right-6 text-gray-900 dark:text-gray-200 outline-none focus-none ring-none'>
-                    <X className=''/>
-                  </button>
-                  </center>
-                  <form onSubmit={createFeedback}>
-                  <div className="mt-6">
-                    <div className="mt-3">
-                      <label className="text-black dark:text-white font-medium">Title</label>
-                      <br />
-                      <input placeholder='Title of your feedback' required value={title} onChange={((e) => {setTitle(e.target.value)})} 
-                      className='input-sm h-10 text-black dark:text-white bg-gray-200 dark:bg-zinc-900 border border-white/10 focus:border-white/20 rounded-md outline-none w-full mt-1.5'/>
-                      <br />
-                    </div>
-                    <div className="mt-3">
-                      <label className="text-black dark:text-white font-medium">Content</label>
-                      <br />
-                      <textarea placeholder='Describe your feedback' required value={description} onChange={((e) => {setDescription(e.target.value)})} 
-                      className="text-black dark:text-white textarea-sm resize-none bg-gray-200 dark:bg-zinc-900 border border-white/10 focus:border-white/20 rounded-md outline-none py-1 w-full mt-1.5" rows={3} />
-                      <br />
-                    </div>
-                    <div className="mt-1">
-                    <label className="text-black dark:text-white font-medium">Category</label>
-                    <Select defaultValue="feedback" className='w-full' onValueChange={((e) => {setType(e)})}>
-              <SelectTrigger
-                id="security-level"
-                className="line-clamp-1 truncate w-full bg-gray-200 dark:bg-zinc-900 text-black dark:text-white border dark:border-white/10 mt-1.5"
-              >
-                <SelectValue placeholder="Select level"/>
-              </SelectTrigger>
-              <SelectContent className='dark:bg-zinc-900 border dark:border-white/10'>
-                <SelectItem value="feedback" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>📝 Feedback</SelectItem>
-                <SelectItem value="bug_report" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>🐛 Bug Report</SelectItem>
-                <SelectItem value="feature_request" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>💡 Feature Request</SelectItem>
-              </SelectContent>
-            </Select>
-                    </div>
-                  </div>
-                  <center>
-                  <div className="mt-6">
-                  <button type="submit" className='text-middle w-full py-2.5 bg-blue-700 rounded-md font-bold outline-none text-white'>
-                    {
-                      loading 
-                      ? "Submitting"
-                      : "Submit"
-                    }
-                  </button>
-                  </div>
-                  </center>
-                  </form>
-                </Dialog.Panel> */}
                 </Dialog.Panel >
               </Transition.Child>
             </div>
