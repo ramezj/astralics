@@ -108,7 +108,7 @@ export default function Create() {
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Slug</Label>
-              <Input required id="slug" placeholder="trylunar.xyz/b/slug" onChange={(e) => {setSlug(e.target.value)}} className='bg-gray-200 dark:bg-zinc-900'/>
+              <Input required id="slug" placeholder="astralics.com/b/slug" onChange={(e) => {setSlug(e.target.value)}} className='bg-gray-200 dark:bg-zinc-900'/>
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Website</Label>
