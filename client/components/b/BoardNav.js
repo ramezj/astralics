@@ -45,7 +45,7 @@ return (
           </>
           : 
           <>
-          <TryForFree title={'Log in'}/>
+          <TryForFree title={'sign in'}/>
           </>
         }
       </div>
@@ -58,7 +58,7 @@ return (
               <Profile session={props.session} />
               </>
             : <> 
-              <TryForFree title={'Log in'}/>
+              <TryForFree title={'sign in'}/>
               </>
           }
         </a>
