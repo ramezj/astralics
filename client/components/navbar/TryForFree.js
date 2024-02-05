@@ -22,16 +22,16 @@ export const TryForFree = (props) => {
         <Button className='w-[8rem]
         font-bold
         text-sm
-        bg-zinc-950
-        dark:bg-white
-        dark:hover:bg-gray-300
-        dark:text-black
+        bg-blue-700
+        dark:bg-blue-700
+        dark:hover:bg-blue-800
+        dark:text-white
         border
         border-none
         hover:border-black/0
         dark:border-white/10
         dark:hover:border-white/0
-        text-white hover:bg-zinc-800 rounded-lg items-center
+        text-white hover:bg-blue-800 rounded-lg items-center
         duration-200'
         onClick={openModal}>
         {props.title}
