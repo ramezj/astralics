@@ -40,10 +40,10 @@ export default function Component() {
             transition={{duration: 0.8}}
             className='
             sm:text-6xl 2xl:text-7xl 2xl:mt-14 md:text-7xl lg:text-5xl lg:mt-12 2xl:w-3/6 lg:w-4/6 sm:mt-8 text-4xl w-4/5 font-bold tracking-tight leading-none text-transparent bg-clip-text text-zinc-900 dark:text-gray-100 mt-10 drop-shadow-sm'>
-           Your users. Your feedback.
+           Feedback at your fingertips. Get the data you need, effortlessly.
             </motion.h1>
             <div>
-              <div className='2xl:w-full lg:w-full md:w-full w-3/4 mt-4 '>
+              <div className='2xl:w-full lg:w-full md:w-full w-3/4 mt-2 '>
             <motion.h1 
             initial={{
               opacity: 0,
