@@ -59,6 +59,13 @@ export default function Page() {
             <br />
             <h1 className="text-3xl font-bold text-black dark:text-white">📝 Feedback</h1>
             <br /><br />
+            {/* {feedbacks.length === 0 && (
+                <>
+                <NewBoard session={session} id={router.query.id}>
+                <p>nothing to see here</p>
+                </NewBoard>
+                </>
+            )} */}
             <NewBoard session={session} setSort={setSort} sort={sort} id={router.query.id}>
             {
                     session 
