@@ -116,12 +116,12 @@ export default function Create() {
             </div>
           </div>
       </CardContent>
-      <CardFooter className="flex justify-between">
-        <Button type='button' onClick={closeModal} variant="outline" className='bg-gray-200 text-black dark:bg-zinc-950 dark:text-white dark:border-white/10 dark:hover:!bg-zinc-900 hover:!bg-gray-300 duration-200 border-black/10'>Cancel</Button>
+      <CardFooter className="flex justify-between gap-x-2">
+        <Button type='button' onClick={closeModal} variant="outline" className='w-full bg-gray-200 text-black dark:bg-zinc-950 dark:text-white dark:border-white/10 dark:hover:!bg-zinc-900 hover:!bg-gray-300 duration-200 border-black/10'>Cancel</Button>
         {
             loading ? (
                 <>
-                <Button disabled className='bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>
+                <Button disabled className='w-full bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Deploying
                 </Button>
@@ -129,7 +129,7 @@ export default function Create() {
             )
             : (
                 <>
-                <Button type='submit' className='bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>{text}</Button>
+                <Button type='submit' className='w-full bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>{text}</Button>
                 </>
             )
         }
