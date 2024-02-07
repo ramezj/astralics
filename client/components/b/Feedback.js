@@ -1,26 +1,27 @@
 import { ChevronUpIcon } from "@heroicons/react/24/outline"
 import { Fragment, useState, useEffect } from 'react'
+import { useRouter} from "next/navigation";
 import { useSession, signIn, signOut } from "next-auth/react"
 import toast, { Toaster } from 'react-hot-toast';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import AuthModal from "../Auth/AuthModal";
 
 export default function Feedback(props) {
+    const router = useRouter();
     const [ upvotes, setUpvotes ] = useState(props.upvotes);
     const [ title, setTitle ] = useState(props.title);
     const [ test, setTest ] = useState(props.isUpvoted)
     let [isOpen, setIsOpen] = useState(false);
+    const [ isOpen2, setIsOpen2 ] = useState(false);
     function closeModal() {
       setIsOpen(false)
     }
     function openModal() {
       setIsOpen(true)
     }
-    const signUserIn = async () => {
-        signIn('google');
-    }
-    const signUserOut = async () => {
-      signOut();
+    function redirectLink() {
+      router.push(`/feedback/${props.id}`)
+      console.log(props.id);
     }
     const upvoteFeedback = async (e) => {
         const res = await fetch(`/api/feedback/upvote/${props.id}`, {
@@ -56,7 +57,7 @@ export default function Feedback(props) {
         position="bottom-right"
         reverseOrder={true}
         />
-        <div key={props.id} className=" w-full flex bg-gray-200 dark:bg-zinc-900 rounded-lg items-center cursor-pointer duration-300">
+        <div onClick={redirectLink} key={props.id} className=" w-full flex bg-gray-200 dark:bg-zinc-900 rounded-lg items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left text-black dark:text-white'>
         {
@@ -98,7 +99,7 @@ export default function Feedback(props) {
             {
                 props.session 
                 ? upvoteFeedback()
-                : setIsOpen(true)
+                : openModal()
             }
         })}
         className={`border border-black/20 dark:border-white/20 group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-lg items-center flex justify-center 
