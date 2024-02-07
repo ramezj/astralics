@@ -11,15 +11,21 @@ export default function Feedback(props) {
     const [ upvotes, setUpvotes ] = useState(props.upvotes);
     const [ title, setTitle ] = useState(props.title);
     const [ test, setTest ] = useState(props.isUpvoted)
-    let [isOpen, setIsOpen] = useState(false);
-    const [ isOpen2, setIsOpen2 ] = useState(false);
+    let [ isOpen, setIsOpen] = useState(false);
+    let [ open, setOpen ] = useState(false);
     function closeModal() {
       setIsOpen(false)
     }
     function openModal() {
       setIsOpen(true)
     }
-    function redirectLink() {
+    function openM() {
+      setOpen(true)
+    }
+    function closeM() {
+      setOpen(false)
+    }
+    function redirectLink(e) {
       router.push(`/feedback/${props.id}`)
       console.log(props.id);
     }
@@ -57,7 +63,9 @@ export default function Feedback(props) {
         position="bottom-right"
         reverseOrder={true}
         />
-        <div key={props.id} className=" w-full flex bg-gray-200 dark:bg-zinc-900 rounded-lg items-center cursor-pointer duration-300">
+        <div onClick={(() => {
+          openM()
+        })} key={props.id} className=" w-full flex bg-gray-200 dark:bg-zinc-900 rounded-lg items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left text-black dark:text-white'>
         {
@@ -95,7 +103,8 @@ export default function Feedback(props) {
         </div>
         </div>
         <div className="m-6 ml-auto">
-        <button onClick={(() => {
+        <button onClick={((e) => {
+          e.stopPropagation();
             {
                 props.session 
                 ? upvoteFeedback()
@@ -139,6 +148,38 @@ export default function Feedback(props) {
               >
                 <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden bg-transparent align-middle transition-all">
                 <AuthModal />
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+      <Transition appear show={open} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeM}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-80"/>
+          </Transition.Child>
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden bg-transparent align-middle transition-all">
+                HELLO WORLD
                 </Dialog.Panel>
               </Transition.Child>
             </div>
