@@ -5,6 +5,18 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import toast, { Toaster } from 'react-hot-toast';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import AuthModal from "../Auth/AuthModal";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Button } from "@/components/ui/button"
+import { Textarea } from "@/components/ui/textarea"
 
 export default function Feedback(props) {
     const router = useRouter();
