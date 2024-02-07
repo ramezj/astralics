@@ -57,7 +57,7 @@ export default function Feedback(props) {
         position="bottom-right"
         reverseOrder={true}
         />
-        <div onClick={redirectLink} key={props.id} className=" w-full flex bg-gray-200 dark:bg-zinc-900 rounded-lg items-center cursor-pointer duration-300">
+        <div key={props.id} className=" w-full flex bg-gray-200 dark:bg-zinc-900 rounded-lg items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left text-black dark:text-white'>
         {
