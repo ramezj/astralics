@@ -191,7 +191,19 @@ export default function Feedback(props) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden bg-transparent align-middle transition-all">
-                HELLO WORLD
+                <Card className="w-full border-black/10 dark:border-white/10">
+      <CardHeader>
+        <CardTitle>{props.title}</CardTitle>
+        <CardDescription>{props.description}</CardDescription>
+      </CardHeader>
+      <form>
+      <CardContent>
+      </CardContent>
+      <CardFooter className="flex justify-between gap-x-2">
+        <Button type='button' onClick={closeModal} variant="outline" className='w-full bg-gray-200 text-black dark:bg-zinc-950 dark:text-white dark:border-white/10 dark:hover:!bg-zinc-900 hover:!bg-gray-300 duration-200 border-black/10'>Cancel</Button>
+      </CardFooter>
+      </form>
+    </Card>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
