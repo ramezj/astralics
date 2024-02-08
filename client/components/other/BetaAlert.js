@@ -13,7 +13,7 @@ export default function BetaAlert(props) {
         duration-300
         text-white dark:text-white
         '>
-            🥳 astralics v1 just launched
+            🥳 astralics just launched on producthunt!
             <ChevronRight className="ml-2 h-4 w-4" /> 
         </Button>
         </>
