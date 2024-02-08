@@ -27,6 +27,9 @@ export default function Pricing(props) {
                 Prices listed reflect the monthly subscription fee.
                 </p>
             </div>
+            <p className="text-muted-foreground -mt-1">
+                before subscribing please make sure you have read & accept our <Link href='/terms' className='text-blue-500 font-bold underline decoration-dotted'>terms & conditions</Link>
+            </p>
             </center>
             <br />
             <br />
