@@ -5,11 +5,15 @@ import { Mail } from "lucide-react"
 export default function BetaAlert(props) {
     return (
         <>
-        <Button className='rounded-xl 
-        mt-6 
-        2xl:mt-4 
+        <Button 
+        className='
+        rounded-2xl 
+        bg-blue-700 dark:bg-blue-700
+        hover:bg-blue-800 dark:hover:!bg-blue-800
+        duration-300
+        text-white dark:text-white
         '>
-            Lunar just launched
+            🥳 astralics v1 just launched
             <ChevronRight className="ml-2 h-4 w-4" /> 
         </Button>
         </>

@@ -14,8 +14,9 @@ export default function Component() {
     <Layout>
       <title>astralics</title>
       <center>
+        <br /><br />
         <div className="">
-          {/* <motion.div
+          <motion.div
           initial={{
             opacity: 0,
             y:-10
@@ -27,7 +28,7 @@ export default function Component() {
           transition={{duration: 0.8}}
           >
           <BetaAlert />
-          </motion.div> */}
+          </motion.div>
             <motion.h1 
             initial={{
               opacity: 0,
@@ -39,8 +40,8 @@ export default function Component() {
             }}
             transition={{duration: 0.8}}
             className='
-            sm:text-6xl 2xl:text-7xl 2xl:mt-14 md:text-7xl lg:text-5xl lg:mt-12 2xl:w-3/6 lg:w-4/6 sm:mt-8 text-4xl w-4/5 font-bold tracking-tight leading-none text-transparent bg-clip-text text-zinc-900 dark:text-gray-100 mt-10 drop-shadow-sm'>
-           Feedback at your fingertips. Get the data you need, effortlessly.
+            sm:text-6xl 2xl:text-7xl 2xl:mt-6 md:text-7xl lg:text-5xl lg:mt-6 2xl:w-3/6 lg:w-4/6 sm:mt-8 text-4xl w-4/5 font-bold tracking-tight leading-none text-transparent bg-clip-text text-zinc-900 dark:text-gray-100 mt-10 drop-shadow-sm'>
+           Feedback made simple.
             </motion.h1>
             <div>
               <div className='2xl:w-full lg:w-full md:w-full w-3/4 mt-2 '>
@@ -54,7 +55,7 @@ export default function Component() {
               x:0
             }}
             transition={{duration: 0.8}} className="leading-7 [&:not(:first-child)]:mt-6 text-muted-foreground text-xl">
-              Create stunning feedback pages, completely for free.
+              Create beautiful feedback pages in minutes.
             </motion.h1>
             </div>
             </div>
