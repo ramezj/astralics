@@ -5,6 +5,7 @@ export default function Terms() {
     return (
         <>
         <Layout>
+            <title>Terms & Conditions</title>
         <div className="space-y-6 p-10 pb-16 md:block">
         <div className="space-y-0.5 text-center">
           <h2 className="text-2xl font-bold tracking-tight text-black dark:text-white">Terms & Conditions</h2>
