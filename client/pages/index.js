@@ -40,7 +40,7 @@ export default function Component() {
             }}
             transition={{duration: 0.8}}
             className='
-            sm:text-6xl 2xl:text-7xl 2xl:mt-6 md:text-7xl lg:text-5xl lg:mt-6 2xl:w-3/6 lg:w-4/6 sm:mt-8 text-4xl w-4/5 font-bold tracking-tight leading-none text-transparent bg-clip-text text-zinc-900 dark:text-gray-100 mt-10 drop-shadow-sm'>
+            sm:text-6xl 2xl:text-7xl 2xl:mt-6 md:text-7xl lg:text-5xl lg:mt-6 2xl:w-3/6 lg:w-4/6 sm:mt-8 text-4xl w-4/5 font-bold tracking-tight leading-none text-black dark:text-white mt-10 drop-shadow-sm'>
            Feedback made simple.
             </motion.h1>
             <div>
