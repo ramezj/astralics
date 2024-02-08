@@ -12,7 +12,7 @@ export default function Terms() {
         <Separator className="my-6" />
         <h2 className='text-lg font-bold tracking-tight text-black dark:text-white'>1.Terms & Conditions ( " Terms ")</h2>
         <p className='text-muted-foreground'>
-        Please read these Terms of Service (“Terms”, “Terms of Service”) carefully before using the https://astralics.com website (the “Service”) operated by Upvoty (“us”, “we”, or “our”).
+        Please read these Terms of Service (“Terms”, “Terms of Service”) carefully before using the https://astralics.com website (the “Service”) operated by astralics (“us”, “we”, or “our”).
 Your access to and use of the Service is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who wish to access or use the Service.
 By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you do not have permission to access the Service.
         </p>
