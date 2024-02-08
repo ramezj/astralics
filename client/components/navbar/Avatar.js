@@ -34,6 +34,7 @@ import { signOut } from "next-auth/react"
 import Link from "next/link"
 import { Separator } from "@/components/ui/separator"
 import Create from "../app/Create"
+import { LayoutGrid } from "lucide-react" 
 
 export const Profile = (props) => {
   return (
@@ -62,28 +63,27 @@ export const Profile = (props) => {
           <Separator/>
           <DropdownMenuGroup className='mt-1 mb-1'>
           <Link href='/app' className=''>
-          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
-              Dashboard
-              <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 gap-2'>
+              <LayoutGrid className='w-4 h-4'/> Dashboard
             </DropdownMenuItem>
           </Link>
           <Link href='/billing' className=''>
-            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
+            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 gap-2'>
+              <CreditCard className='w-4 h-4' />
               Billing
-              <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
             </DropdownMenuItem>
             </Link>
             <Link href='/settings' className=''>
-            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200'>
+            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 gap-2'>
+              <Settings className='w-4 h-4' />
               Settings
-              <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
             </DropdownMenuItem>
             </Link>
           </DropdownMenuGroup>
           <Separator/>
-          <DropdownMenuItem onClick={() => signOut()} className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 mt-1'>
+          <DropdownMenuItem onClick={() => signOut()} className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 mt-1 gap-2'>
+            <LogOut className='w-4 h-4' />
             Log out
-            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
