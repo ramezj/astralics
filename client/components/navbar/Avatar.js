@@ -64,10 +64,10 @@ export const Profile = (props) => {
           <DropdownMenuGroup className='mt-1 mb-1'>
           <Link href='/app' className=''>
           <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 gap-2'>
-              <LayoutGrid className='w-4 h-4'/> Dashboard
+              <LayoutGrid className='w-4 h-4'/>Dashboard
             </DropdownMenuItem>
           </Link>
-          <Link href='/billing' className=''>
+            <Link href='/billing' className=''>
             <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 gap-2'>
               <CreditCard className='w-4 h-4' />
               Billing
