@@ -190,7 +190,7 @@ export default function Feedback(props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden bg-transparent align-middle transition-all">
+                <Dialog.Panel className="xl:w-full   w-[22.5rem] max-w-md transform overflow-hidden bg-transparent align-middle transition-all">
                 <Card className="w-full border-black/10 dark:border-white/10">
                   <CardHeader>
                     <CardTitle>{props.title}</CardTitle>

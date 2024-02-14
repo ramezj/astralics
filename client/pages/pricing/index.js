@@ -45,7 +45,7 @@ export default function Pricing(props) {
                 : <><button onClick={signUserIn} className='duration-200 py-2 w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md -mb-2'>Get Started</button></>
                 }
                 </PricingCard >
-                <PricingCard price='$10' title='Developer' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
+                <PricingCard price='$25' title='Developer' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
                 <Info><Svg /> Up to 5 Boards</Info>
                 <Info><Svg /> Unlimited Monthly Feedbacks</Info>
                 <Info><Svg /> Authentication Check</Info>
