@@ -50,7 +50,7 @@ export default function Create() {
       const resp = await res.json();
       if(resp.ok == true) {
           setLoading(false);
-          setText("Created Successfully");
+          setText("Deployed!");
           setResponse(resp);
           console.log(resp);
           router.push(`/b/${resp.response.handle}`)
@@ -123,7 +123,7 @@ export default function Create() {
                 <>
                 <Button disabled className='w-full bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Deploying
+                Deploy
                 </Button>
                 </>
             )

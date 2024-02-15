@@ -91,7 +91,7 @@ export default function Page() {
               <>
               <Button disabled variant="destructive" onClick={deleteProject}>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Deleting
+              Delete Proect
               </Button>
               </>
             )
