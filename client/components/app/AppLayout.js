@@ -1,7 +1,6 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import AppNavbar from "./AppNavbar"
 import Navbar from "../navbar"
-import Header from "../NewNav/Header"
 import Sidebar from "./Sidebar"
 
 export default function AppLayout(props) {

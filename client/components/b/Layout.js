@@ -1,7 +1,6 @@
 import Navbar from "../navbar";
 import { useSession, signIn, signOut } from "next-auth/react"
 import BoardNav from "./BoardNav";
-import Header from "../NewNav/Header";
 
 export default function BoardLayout(props) {
     const { data: session } = useSession()
