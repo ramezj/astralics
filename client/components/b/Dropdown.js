@@ -34,7 +34,7 @@ export default function Dropdown(props) {
             <Menu.Item>
                 {({ active }) => (
                   <Link
-                    href={`/b/${id}`}
+                    href={`/${id}`}
                     className={`${
                       active ? 'hover:bg-gray-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
@@ -46,7 +46,7 @@ export default function Dropdown(props) {
               <Menu.Item>
                 {({ active }) => (
                   <Link
-                  href={`/b/${id}/bug_reports`}
+                  href={`/${id}/bug_reports`}
                     className={`${
                       active ? 'hover:bg-gray-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
@@ -58,7 +58,7 @@ export default function Dropdown(props) {
               <Menu.Item>
                 {({ active }) => (
                   <Link
-                  href={`/b/${id}/feature_requests`}
+                  href={`/${id}/feature_requests`}
                     className={`${
                       active ? 'hover:bg-gray-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
@@ -70,7 +70,7 @@ export default function Dropdown(props) {
               <Menu.Item>
                 {({ active }) => (
                   <Link
-                  href={`/b/${id}/feedback`}
+                  href={`/${id}/feedback`}
                     className={`${
                       active ? 'hover:bg-gray-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-black dark:text-white'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}
