@@ -17,6 +17,12 @@ export default async function handler(req, res) {
             response: 'Credentials Missing'
         })
     }
+    if(handle == 'pricing' || handle == 'app') {
+        return res.status(400).json({
+            ok:false,
+            response: 'handle in use'
+        })
+    }
     try {
         const user = await prisma.user.findUnique({
             where: {

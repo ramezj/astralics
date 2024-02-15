@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
+import { Loader2 } from "lucide-react"
 
 
 export default function Settings() {
@@ -17,6 +18,7 @@ export default function Settings() {
     const [ premium, setPremium ] = useState(false);
     const [ user, setUser ] = useState();
     const [ name, setName ] = useState();
+    const [ response, setResponse ] = useState();
     const router = useRouter();
     const { data: session } = useSession({
         required:true,
@@ -40,6 +42,7 @@ export default function Settings() {
               setPremium(true);
             }
             setUser(res.response);
+            setName(res.response.name);
             setLoading(false);
           }
         }
@@ -57,8 +60,9 @@ export default function Settings() {
             })
         });
         const res = await response.json();
-            setLoading(false);
-            setResponse(res.response);
+        console.log(res);
+        setNameLoading(false);
+        setResponse(res.response);
     }
     return (
         <>
@@ -83,7 +87,7 @@ export default function Settings() {
           <div className="2xl:w-2/5 w-full">
           <div>
           <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Name</h2>
-          <Input type="email" placeholder="Name" value={user.name} onChange={((e) => {setName(e.target.value)})} className='text-black dark:text-white mt-2'/>
+          <Input type="email" placeholder="Name" value={name} onChange={((e) => {setName(e.target.value)})} className='text-black dark:text-white mt-2'/>
           </div>
           <div className='mt-4'>
           <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Email</h2>
@@ -94,9 +98,22 @@ export default function Settings() {
           <Input type="email" placeholder="Email"value={user.image} className='text-black dark:text-white mt-2'/>
           </div>
           <div className='mt-6'>
-            <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
+            {
+              nameLoading
+              ? 
+              <>
+               <Button disabled>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Save Changes
+              </Button>
+              </>
+              :
+              <>
+              <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0" onClick={fetchSettings}>
               Save Changes
-            </Button>
+              </Button>
+              </>
+            }
           </div>
           </div>
           </>
