@@ -54,7 +54,7 @@ export default function Navbar(props) {
           }
         </div>
         <Popover.Group className="hidden lg:flex">
-        <Link href="/b/astralics" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:bg-gray-200 dark:hover:bg-zinc-800 px-5 py-2 rounded-lg duration-200">
+        <Link href="/astralics" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:bg-gray-200 dark:hover:bg-zinc-800 px-5 py-2 rounded-lg duration-200">
           Demo
           </Link>
         <Link href="/pricing" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:bg-gray-200 dark:hover:bg-zinc-800 px-5 py-2 rounded-lg duration-200">
@@ -96,7 +96,7 @@ export default function Navbar(props) {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <motion.div initial={{opacity: 0,y:-10}} animate={{opacity: 1,y:0}} transition={{duration: 0.5, delay: 0.2}}>
-                <Link href="/b/astralics" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:bg-gray-200 dark:hover:bg-zinc-800 px-5 py-2 rounded-lg duration-200">
+                <Link href="/astralics" className="drop-shadow-sm text-md font-bold leading-6 text-black dark:text-gray-100 flex justify-center items-center hover:bg-gray-200 dark:hover:bg-zinc-800 px-5 py-2 rounded-lg duration-200">
                   Demo
                 </Link>
                 </motion.div>
