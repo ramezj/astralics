@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRightIcon } from "lucide-react"
+import { Feature } from "@/components/layout/Feature"
 
 export default function Component() {
   const { data: session } = useSession()
@@ -60,18 +61,9 @@ export default function Component() {
             </div>
             </div>
             <br />
-            {/* <div className='mt-2 mb-2'>
-            <Button className="gap-1 bg-gray-200 hover:bg-gray-300 text-black dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-white px-12">
-              Try for free <ArrowRightIcon className='w-4 h-4'/>
-            </Button>
-            </div> */}
         </div>  
           <br />
           <div className="w-full content-center items-center justify-items-center">
-            {/* <img src="/Screenshot.png"
-            className='h-[30rem] w-[60rem] border border-black/10 dark:border-white/10 rounded-lg'
-            alt="Picture of the author"
-            /> */}
               <div className="2xl:-mt-2 xl:-mt-4 2xl:w-2/6 xl:w-2/5 w-4/5 flex-row">
               <motion.div
                   initial={{
@@ -100,6 +92,13 @@ export default function Component() {
                   >
                 <FeedbackDemo session={session} title="Feature Request" type="feature_request" description={"Can you add more authentication options? thanks!"} upvotes="1"/>
                 </motion.div>
+              </div>
+              <br />
+              <h2 className='text-2xl font-bold'>Features</h2>
+              <br />
+              <div className='flex flex-wrap gap-4 justify-center'>
+                <Feature />
+                <Feature />
               </div>
           </div>
             </center>
