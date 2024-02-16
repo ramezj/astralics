@@ -6,7 +6,7 @@ export function PaddleLoader() {
         onLoad={() => {
             Paddle.Environment.set("sandbox");
             Paddle.Setup({
-                vendor:168889
+                vendor: Number(process.env.NEXT_PUBLIC_PADDLE_VENDOR_ID)
             })
         }}
         />
