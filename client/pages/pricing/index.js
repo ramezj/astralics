@@ -6,8 +6,8 @@ import PricingCard from '@/components/pricing/PricingCard';
 import Info from '@/components/pricing/Info';
 import Svg from '@/components/pricing/svg';
 import Xsvg from '@/components/pricing/Xsvg';
-import { PaddleLoader } from '@/components/PaddleLoader';
 import { CreditCardIcon } from '@heroicons/react/24/outline';
+import { PaddleLoader } from '@/components/PaddleLoader';
 
 export default function Pricing(props) {
     const signUserIn = async () => {
@@ -54,16 +54,14 @@ export default function Pricing(props) {
                 session 
                 ? <><button onClick={(() => {
                     Paddle.Checkout.open({
-                      product:873284,
+                      product:23772,
                       success:'/success',
                       passthrough: session.user.id
                     })
                 })} 
                 className='duration-200 py-2 w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md -mb-2'>
-                    {/* <CreditCardIcon className='text-white' width={22} height={22} /> */}
                  Subscribe Now</button></>
                 : <><button onClick={signUserIn} className='duration-200 py-2 w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md -mb-2'>
-                    {/* <CreditCardIcon className='text-white dark:text-black' width={22} height={22} /> */}
                     Get Started</button></>
                 }
                 </PricingCard >
