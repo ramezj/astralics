@@ -54,10 +54,10 @@ export default function Pricing(props) {
                 session 
                 ? <><button onClick={(() => {
                     Paddle.Checkout.open({
-                      product:873402,
-                      success:'/success',
-                      passthrough: session.user.id
-                    })
+                        product:63325,
+                        success:'/success',
+                        passthrough: session.user.id
+                      })
                 })} 
                 className='duration-200 py-2 w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md -mb-2'>
                  Subscribe Now</button></>

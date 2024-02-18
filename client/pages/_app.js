@@ -22,7 +22,7 @@ export default function App({
     >
     <SessionProvider session={session}>
     <main className={`${inter.className} font-sans min-h-screen antialiased`}>
-      <PaddleLoader />
+      {/* <PaddleLoader /> */}
       <Component className='' {...pageProps} />
       <Analytics />
       </main>
