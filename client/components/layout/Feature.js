@@ -8,17 +8,17 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-export function Feature() {
+export function Feature(props) {
     return (
         <>
         <Card className='w-[23rem] cursor-pointer bg-gray-200 text-black dark:bg-zinc-950 dark:text-white dark:border-white/10 dark:hover:!bg-zinc-900 hover:!bg-gray-300 duration-200 border-black/10'>
             <CardHeader>
                 <CardTitle>
-                    Dark Mode
+                    {props.children}
                 </CardTitle>
             </CardHeader>
             <CardContent className='justify-center items-center'>
-                <h2>Design beautiful feedback pages in light or dark mode.</h2>
+                <h2>{props.Description}</h2>
             </CardContent>
         </Card>
         </>
