@@ -1,10 +1,10 @@
 
+import { CheckCircle } from 'lucide-react';
+
 export default function Svg() {
     return (
         <>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className=" w-6 h-6 stroke-green-500">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-        </svg>
+       <CheckCircle className='text-green-500 w-5 h-5 align-middle mt-[0.10rem]'/>
         </>
     )
 }
