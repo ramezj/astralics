@@ -7,13 +7,14 @@ export default function BetaAlert(props) {
         <>
         <Button 
         className='
+        tracking-wider
         rounded-2xl 
         bg-blue-700 dark:bg-blue-700
         hover:bg-blue-800 dark:hover:!bg-blue-800
         duration-300
         text-white dark:text-white
         '>
-            🥳 astralics just launched on producthunt!
+            astralics just launched on producthunt!
             <ChevronRight className="ml-2 h-4 w-4" /> 
         </Button>
         </>
