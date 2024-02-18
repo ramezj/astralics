@@ -54,7 +54,7 @@ export default function Pricing(props) {
                 session 
                 ? <><button onClick={(() => {
                     Paddle.Checkout.open({
-                      product:23772,
+                      product:873402,
                       success:'/success',
                       passthrough: session.user.id
                     })
