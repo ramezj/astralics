@@ -50,7 +50,7 @@ export default function FeedbackDemo(props) {
         </div>
         <div className="m-6 ml-auto">
         <button
-        className={`border border-black/20 dark:border-white/20 group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 shadow-sm rounded-lg items-center flex justify-center 
+        className={`border border-black/20 dark:border-white/20 group hover:bg-blue-700 duration-300 w-[4.5rem] h-12 rounded-lg items-center flex justify-center 
         ${test ? 'bg-blue-700 hover:bg-blue-700 ' : 'bg-transparent'}`}>
         <h1 
         className={`m-1 font-bold group-hover:text-white ${test ? 'text-white dark:text-white' : 'text-black dark:text-white'}`}>
