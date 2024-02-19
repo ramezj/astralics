@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar"
 export default function AppLayout(props) {
     const { data: session } = useSession()
     return (
-        <div className='bg-white dark:bg-zinc-950 h-full min-h-screen bg-bottom bg-no-repeat w-full'>
+        <div className='bg-white dark:bg-black h-full min-h-screen bg-bottom bg-no-repeat w-full'>
         <Navbar session={session}/>
         {/* <Sidebar /> */}
         {props.children}
