@@ -94,7 +94,7 @@ export default function Component() {
                 <FeedbackDemo session={session} title="Feature Request" type="feature_request" description={"Can you add more authentication options? thanks!"} upvotes="1"/>
                 </motion.div>
               </div>
-              <motion.h1 
+              {/* <motion.h1 
             initial={{
               opacity: 0,
               x:20
@@ -108,16 +108,15 @@ export default function Component() {
             sm:text-6xl 2xl:text-4xl 2xl:mt-6 md:text-4xl lg:text-4xl lg:mt-6 2xl:w-3/6 lg:w-4/6 sm:mt-8 text-3xl w-4/5 font-bold tracking-tight leading-none text-black dark:text-white mt-10 drop-shadow-sm'>
            Features
             </motion.h1>
-              <br />
-              <div className='flex flex-wrap gap-8 justify-center'>
+              <br /> */}
+              {/* <div className='flex flex-wrap gap-8 justify-center'>
                 <Feature Description={'Design beautiful feedback pages in light or dark mode.'}>
                 <h2 className='flex justify-center align-middle gap-2'><MoonStar className='w-5 h-5'/> Dark mode</h2>
                 </Feature>
                 <Feature Description={'Let your users upvote and downvote their favorite feedback. '}>
                 <h2 className='flex justify-center align-middle gap-2'><ChevronUp className='w-5 h-5'/> Upvoting</h2>
                 </Feature>
-                {/* <Feature title={''} /> */}
-              </div>
+              </div> */}
           </div>
             </center>
     </Layout>

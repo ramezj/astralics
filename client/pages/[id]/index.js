@@ -46,7 +46,7 @@ export default function Page() {
         <br />
     <h1 className="text-3xl font-bold text-black dark:text-white">✨ All Posts</h1>
             <br /><br />
-            <NewBoard session={session} id={router.query.id}>
+            <NewBoard session={session} id={router.query.id} dropdownText={'All Posts'}>
                 <br /><br /><br />
                 <Spinner />
                 <br />
@@ -60,7 +60,7 @@ export default function Page() {
             <br />
             <h1 className="text-3xl font-bold text-black dark:text-white">✨ All Posts</h1>
             <br /><br />
-            <NewBoard session={session} setSort={setSort} sort={sort} id={router.query.id}>
+            <NewBoard session={session} setSort={setSort} sort={sort} id={router.query.id} dropdownText={'All Posts'}>
             {
                     session 
                     ? 

@@ -45,7 +45,7 @@ export default function Page() {
         <br />
     <h1 className="text-3xl font-bold text-black dark:text-white">🐛 Bug Reports</h1>
             <br /><br />
-            <NewBoard session={session} id={router.query.id}>
+            <NewBoard session={session} id={router.query.id} dropdownText={'Bug Reports'}>
                 <br /><br /><br />
                 <Spinner />
                 <br />
@@ -59,7 +59,7 @@ export default function Page() {
             <br />
             <h1 className="text-3xl font-bold text-black dark:text-white">🐛 Bug Reports</h1>
             <br /><br />
-            <NewBoard session={session} setSort={setSort} sort={sort} id={router.query.id}>
+            <NewBoard session={session} setSort={setSort} sort={sort} id={router.query.id} dropdownText={'Bug Reports'}>
             {
                     session 
                     ? 

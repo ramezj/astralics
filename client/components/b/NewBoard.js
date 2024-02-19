@@ -10,7 +10,7 @@ export default function NewBoard(props) {
         <div className='h-100 2xl:w-3/6 lg:w-3/5 w-full h-full'>
             <div className="w-5/6 flex justify-between">
             <div className='gap-4 flex'>
-            <Dropdown id={props.id}/>
+            <Dropdown id={props.id} dropdownText={props.dropdownText}/>
             {/* <SortBy /> */}
             </div>
             <div className='gap-4 flex'>

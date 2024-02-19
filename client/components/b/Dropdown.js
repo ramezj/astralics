@@ -12,11 +12,12 @@ export default function Dropdown(props) {
     <div className="">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center bg-gray-200 hover:bg-gray-300 dark:bg-zinc-900 text-black dark:text-white border border-none px-4 py-2.5 rounded-lg font-medium focus:outline-none hover:border-white/0 dark:hover:bg-zinc-800 duration-200 outline-none">
-            <FilterIcon
+          <Menu.Button className="inline-flex w-full justify-center bg-gray-200 hover:bg-gray-300 dark:bg-zinc-900 text-black dark:text-white border border-black/10 dark:border-white/10 px-4 py-2.5 rounded-lg font-medium focus:outline-none hover:border-white/0 dark:hover:bg-zinc-800 duration-200 outline-none">
+            {/* <FilterIcon
               className="w-4 text-black dark:text-white"
               aria-hidden="true"
-            />
+            /> */}
+            {props.dropdownText}
           </Menu.Button>
         </div>
         <Transition
