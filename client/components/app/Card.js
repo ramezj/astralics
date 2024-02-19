@@ -32,7 +32,7 @@ export default function Card(props) {
     }
     return (
     <div className='duration-300'>
-    <div className="card border border-black/10 dark:border-white/10 w-96 bg-white hover:border-black/10 hover:bg-gray-200 dark:bg-zinc-950 hover:dark:bg-zinc-900 cursor-pointer duration-200 outline-none rounded-lg">
+    <div className="card border border-black/10 dark:border-white/10 w-96 bg-white hover:border-black/10 hover:bg-gray-200 dark:bg-black hover:dark:bg-zinc-900 cursor-pointer duration-200 outline-none rounded-lg">
     <div className="card-body items-center">
     <h2 className="card-title font-extrabold text-black dark:text-white">{props.title}</h2>
     <h1 className="font-medium  duration-150 text-black dark:text-white">{props.website}</h1>
