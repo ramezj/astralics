@@ -5,7 +5,7 @@ export default function Layout(props) {
     const { data: session } = useSession()
     return (
         // background3
-        <div className='bg-white dark:bg-black h-full min-h-screen bg-bottom bg-no-repeat w-full '>
+        <div className='bg-white dark:bg-black h-full min-h-screen bg-bottom bg-no-repeat w-full antialiased'>
             {/* bg-[#05050a] */}
         <Navbar session={session}/>
         {/* <Navbar session={session} /> */}
