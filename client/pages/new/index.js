@@ -14,6 +14,7 @@ import {
   import { Input } from "@/components/ui/input"
   import { Button } from "@/components/ui/button"
   import { useState } from "react";
+  import { Loader2 } from "lucide-react";
 
 export default function NewPage () {
     const router = useRouter();
@@ -50,13 +51,9 @@ export default function NewPage () {
           setText("Deployed!");
           setResponse(resp);
           console.log(resp);
-          router.push(`/b/${resp.response.handle}`)
+          router.push(`/${resp.response.handle}`)
       } else if (resp.ok == false) {
           setLoading(false);
-          toast.success("Created Successfully!", {
-            style: {
-            borderRadius: '10px',
-            },})
           setText(resp.response);
           setResponse(resp.response);
       }

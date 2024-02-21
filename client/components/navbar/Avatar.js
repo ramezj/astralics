@@ -13,7 +13,7 @@ import {
   Settings,
   User,
   UserPlus,
-  Users,
+  Users
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
