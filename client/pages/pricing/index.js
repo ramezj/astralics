@@ -8,6 +8,8 @@ import Svg from '@/components/pricing/svg';
 import Xsvg from '@/components/pricing/Xsvg';
 import { CreditCardIcon } from '@heroicons/react/24/outline';
 import { PaddleLoader } from '@/components/PaddleLoader';
+import { Free } from '@/components/pricing/Free';
+import { Developer } from '@/components/pricing/Developer';
 
 export default function Pricing(props) {
     const signUserIn = async () => {
@@ -33,8 +35,10 @@ export default function Pricing(props) {
             </center>
             <br />
             <br />
-            <div className='flex flex-wrap gap-12 justify-center w-full'>
-                <PricingCard price='$0' title='Starter' button='Get Started' shadow={'shadow-lg'}>
+            <div className='flex flex-wrap gap-8 justify-center w-full'>
+                <Free session={session}/>
+                <Developer session={session}/>
+                {/* <PricingCard price='$0' title='Starter' button='Get Started' shadow={'shadow-lg'}>
                 <Info><Svg /> 1 Board</Info>
                 <Info><Svg /> 20 Feedbacks</Info>
                 <Info><Svg /> Authentication Check</Info>
@@ -54,7 +58,7 @@ export default function Pricing(props) {
                 session 
                 ? <><button onClick={(() => {
                     Paddle.Checkout.open({
-                        product:63325,
+                        product:873402,
                         success:'/success',
                         passthrough: session.user.id
                       })
@@ -64,7 +68,7 @@ export default function Pricing(props) {
                 : <><button onClick={signUserIn} className='duration-200 py-2 w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md -mb-2'>
                     Get Started</button></>
                 }
-                </PricingCard >
+                </PricingCard > */}
             </div>    
             <br />  
         </Layout>

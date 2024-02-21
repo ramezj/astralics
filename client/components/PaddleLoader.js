@@ -4,7 +4,7 @@ export function PaddleLoader() {
     return (
         <Script src="https://cdn.paddle.com/paddle/paddle.js"
         onLoad={() => {
-            Paddle.Environment.set("sandbox");
+            Paddle.Environment.set("production");
             Paddle.Setup({
                 vendor:168889
             })
