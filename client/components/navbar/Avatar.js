@@ -9,6 +9,7 @@ import {
   MessageSquare,
   Plus,
   PlusCircle,
+  PlusSquare,
   Settings,
   User,
   UserPlus,
@@ -62,14 +63,14 @@ export const Profile = (props) => {
           </DropdownMenuLabel>
           <Separator/>
           <DropdownMenuGroup className='mt-1 mb-1'>
-          <Link href='/new' className=''>
-          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 gap-2'>
-              <Plus className='w-4 h-4'/>New Project
-            </DropdownMenuItem>
-          </Link>
           <Link href='/app' className=''>
           <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 gap-2'>
-              <LayoutGrid className='w-4 h-4'/>Dashboard
+          <LayoutGrid className='w-4 h-4'/>Dashboard
+            </DropdownMenuItem>
+          </Link>
+          <Link href='/new' className=''>
+          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 gap-2'>
+              <PlusCircle className='w-4 h-4'/>Create board
             </DropdownMenuItem>
           </Link>
             <Link href='/billing' className=''>

@@ -67,7 +67,7 @@ export default function Navbar(props) {
             {
               props.session 
               ? <> 
-                <Create />
+                {/* <Create /> */}
                 <Profile session={props.session} />
                 </>
               : <> 
