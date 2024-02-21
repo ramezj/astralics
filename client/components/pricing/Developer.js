@@ -50,11 +50,11 @@ export function Developer(props) {
           props.session
           ? 
           <>
-            <Button className='w-full bg-black hover:bg-zinc-900'>Get Started</Button>
+            <Button className='w-full bg-black hover:bg-zinc-900 font-bold'>Get Started</Button>
           </>
           : 
           <>
-             <Button className='w-full bg-black hover:bg-zinc-900'>Get Started</Button>
+             <Button className='w-full bg-black hover:bg-zinc-900 font-bold'>Get Started</Button>
           </>
         }
       </CardFooter>
