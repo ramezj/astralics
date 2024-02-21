@@ -34,7 +34,7 @@ export default function Pricing(props) {
             <br />
             <br />
             <div className='flex flex-wrap gap-12 justify-center w-full'>
-                <PricingCard price='$0' title='Starter' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
+                <PricingCard price='$0' title='Starter' button='Get Started' shadow={'shadow-lg'}>
                 <Info><Svg /> 1 Board</Info>
                 <Info><Svg /> 20 Feedbacks</Info>
                 <Info><Svg /> Authentication Check</Info>
@@ -45,7 +45,7 @@ export default function Pricing(props) {
                 : <><button onClick={signUserIn} className='duration-200 py-2 w-full text-white normal-case bg-blue-700 hover:bg-blue-800 outline-none border-none font-bold rounded-md -mb-2'>Get Started</button></>
                 }
                 </PricingCard >
-                <PricingCard price='$20' title='Developer' button='Get Started' background={'bg-white'} shadow={'shadow-lg'}>
+                <PricingCard price='$15' title='Developer' button='Get Started' background={''} shadow={'shadow-lg'}>
                 <Info><Svg /> Up to 5 Boards</Info>
                 <Info><Svg /> Unlimited Monthly Feedbacks</Info>
                 <Info><Svg /> Authentication Check</Info>
