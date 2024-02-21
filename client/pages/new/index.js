@@ -23,7 +23,7 @@ export default function NewPage () {
           router.push('/');
       }
     })
-    const [ text, setText ] = useState("Deploy");
+    const [ text, setText ] = useState("Deploy Board");
     const [ loading, setLoading ] = useState(false);
     const [ name, setName ] = useState();
     const [ error, setError ] = useState();
@@ -66,17 +66,48 @@ export default function NewPage () {
         <AppLayout>
         <div className="space-y-6 p-10 pb-16 md:block">
         <div className="space-y-0.5">
-          <h2 className="text-2xl font-bold tracking-tight text-black dark:text-white">New Board</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-black dark:text-white">Create Board</h2>
           <p className="text-muted-foreground">
             Create a new board and share it with your users to start collecting feedback.
           </p>
         </div>
         <Separator className="my-6" />
-        <Card className="w-[25rem] border-black/10 dark:border-white/10">
-      <CardHeader>
-        <CardTitle>Create board</CardTitle>
-        <CardDescription>Deploy your new feedback board in one-click.</CardDescription>
-      </CardHeader>
+        <div className="2xl:w-2/5 w-full">
+        <form onSubmit={createProject}>
+          <div className="grid w-full items-center gap-4">
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="name">Name</Label>
+              <Input required id="name" placeholder="Name of your board" onChange={(e) => {setName(e.target.value)}} className=''/>
+            </div>
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="name">Slug</Label>
+              <Input required id="slug" placeholder="astralics.com/b/slug" onChange={(e) => {setSlug(e.target.value)}} className=''/>
+            </div>
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="name">Website</Label>
+              <Input required id="website" placeholder="Website of your board" onChange={(e) => {setUrl(e.target.value)}} className=''/>
+            </div>
+          </div>
+          <div className='mt-6'>
+        {
+            loading ? (
+                <>
+                <Button disabled className='bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Deploy Board
+                </Button>
+                </>
+            )
+            : (
+                <>
+                <Button type='submit' className='bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>{text}</Button>
+                </>
+            )
+        }
+        </div>
+      </form>
+      </div>
+    {/* <Card className="w-[25rem] border-black/10 dark:border-white/10">
       <form onSubmit={createProject}>
       <CardContent>
           <div className="grid w-full items-center gap-4">
@@ -112,7 +143,7 @@ export default function NewPage () {
         }
       </CardFooter>
       </form>
-    </Card>
+    </Card> */}
     </div>
         </AppLayout>
         </>
