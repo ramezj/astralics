@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -12,6 +11,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Laptop, CheckIcon } from "lucide-react"
+import Link from 'next/link'
 
 export function Developer(props) {
   return (
@@ -50,7 +50,12 @@ export function Developer(props) {
           props.session
           ? 
           <>
-            <Button className='w-full bg-black hover:bg-zinc-900 font-bold'>Get Started</Button>
+            <Button asChild className='w-full bg-black hover:bg-zinc-900 font-bold'>
+                <Link href={`https://astralics.lemonsqueezy.com/checkout/buy/0ec6b5db-d173-4a02-8d6f-2c63517cb77a?media=0&discount=0&user_id=${props.session.user.id}`}>
+                Get Started
+                </Link>
+                </Button>
+                
           </>
           : 
           <>
