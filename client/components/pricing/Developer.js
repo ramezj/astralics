@@ -15,7 +15,7 @@ import Link from 'next/link'
 
 export function Developer(props) {
     const params  = new URLSearchParams()
-    params.set('checkout[custom][user_id]', 'helloworld')
+    params.set('checkout[custom][user_id]', `${props.session?.user.id}`)
   return (
     <Card className="w-[350px] border-none bg-gray-200 dark:bg-zinc-900">
       <CardHeader>
