@@ -50,11 +50,11 @@ export function Free(props) {
           props.session
           ? 
           <>
-            <Button className='w-full bg-black hover:bg-zinc-900 font-bold'>Get Started</Button>
+            <Button className='w-full bg-astralicsblue dark:bg-astralicsblue font-bold dark:text-white hover:bg-astralicsblue dark:hover:bg-astralicsblue '>Get Started</Button>
           </>
           : 
           <>
-             <Button className='w-full bg-black hover:bg-zinc-900 font-bold'>Get Started</Button>
+             <Button className='w-full bg-astralicsblue dark:bg-astralicsblue font-bold dark:text-white hover:bg-astralicsblue dark:hover:bg-astralicsblue '>Get Started</Button>
           </>
         }
       </CardFooter>

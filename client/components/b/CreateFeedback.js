@@ -84,13 +84,13 @@ export default function CreateFeedback(props) {
           props.session 
           ? 
           <>
-          <button onClick={openModal} className='px-4 py-2.5 bg-blue-700 text-white duration-300 hover:bg-blue-800 rounded-lg flex font-medium outline-none'>
+          <button onClick={openModal} className='px-4 py-2.5 bg-astralicsblue text-white duration-300 hover:bg-astralicsblue rounded-lg flex font-medium outline-none'>
                 Leave Feedback
             </button>
           </>
           : 
           <>
-          <button onClick={openAuthModal} className='px-4 py-2.5 bg-blue-700 text-white duration-300 hover:bg-blue-800 rounded-lg flex font-medium outline-none'>
+          <button onClick={openAuthModal} className='px-4 py-2.5 bg-astralicsblue text-white duration-300 hover:bg-astralicsblue rounded-lg flex font-medium outline-none'>
                 Leave Feedback
             </button>
           </>

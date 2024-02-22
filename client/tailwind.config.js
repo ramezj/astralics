@@ -18,6 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        'astralicsblue':'#0031ef',
         'darkblue':'#03071E',
         'ylw':"#F9E900",
         'lightblue':'#00b4d8',

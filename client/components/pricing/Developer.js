@@ -52,7 +52,7 @@ export function Developer(props) {
           props.session
           ? 
           <>
-            <Button asChild className='w-full bg-black hover:bg-zinc-900 font-bold'>
+            <Button asChild className='w-full bg-astralicsblue dark:bg-astralicsblue hover:bg-astralicsblue font-bold dark:text-white dark:hover:bg-astralicsblue'>
                 <Link href={`https://astralics.lemonsqueezy.com/checkout/buy/90fbb10d-ad89-4525-b259-009c2ae274f0?` + params.toString()}>
                 Get Started
                 </Link>
@@ -61,7 +61,7 @@ export function Developer(props) {
           </>
           : 
           <>
-             <Button className='w-full bg-black hover:bg-zinc-900 font-bold'>Get Started</Button>
+             <Button className='w-full bg-astralicsblue dark:bg-astralicsblue font-bold dark:text-white hover:bg-astralicsblue dark:hover:bg-astralicsblue'>Get Started</Button>
           </>
         }
       </CardFooter>
