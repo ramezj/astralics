@@ -14,6 +14,8 @@ import { Laptop, CheckIcon } from "lucide-react"
 import Link from 'next/link'
 
 export function Developer(props) {
+    const params  = new URLSearchParams()
+    params.set('checkout[custom][user_id]', 'helloworld')
   return (
     <Card className="w-[350px] border-none bg-gray-200 dark:bg-zinc-900">
       <CardHeader>
@@ -51,7 +53,7 @@ export function Developer(props) {
           ? 
           <>
             <Button asChild className='w-full bg-black hover:bg-zinc-900 font-bold'>
-                <Link href={`https://astralics.lemonsqueezy.com/checkout/buy/0ec6b5db-d173-4a02-8d6f-2c63517cb77a?media=0&discount=0&user_id=${props.session.user.id}`}>
+                <Link href={`https://astralics.lemonsqueezy.com/checkout/buy/90fbb10d-ad89-4525-b259-009c2ae274f0?` + params.toString()}>
                 Get Started
                 </Link>
                 </Button>
