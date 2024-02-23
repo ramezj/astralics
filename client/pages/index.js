@@ -51,7 +51,7 @@ export default function Component() {
               x:0
             }}
             transition={{duration: 0.8}} className="leading-7 [&:not(:first-child)]:mt-6 text-muted-foreground text-xl">
-              Create beautiful feedback pages in minutes.
+              Create beautiful feedback pages in *minutes*
             </motion.h1>
             </div>
             </div>
