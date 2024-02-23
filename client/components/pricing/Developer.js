@@ -12,11 +12,28 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Laptop, CheckIcon } from "lucide-react"
 import Link from 'next/link'
+import { Fragment, useState } from 'react'
+import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import AuthModal from "../Auth/AuthModal"
 
 export function Developer(props) {
+    let [isOpen, setIsOpen] = useState(false)
+    function closeModal() {
+      setIsOpen(false)
+    }
+    function openModal() {
+      setIsOpen(true)
+    }
+    const signUserIn = async () => {
+        signIn('google');
+    }
+    const signUserOut = async () => {
+      signOut();
+    }
     const params  = new URLSearchParams()
     params.set('checkout[custom][user_id]', `${props.session?.user.id}`)
   return (
+    <>
     <Card className="w-[350px] border-none bg-gray-200 dark:bg-zinc-900">
       <CardHeader>
         <CardTitle className='flex gap-2 font-bold tracking-normal'> <Laptop/>Developer</CardTitle>
@@ -67,12 +84,45 @@ export function Developer(props) {
           </>
           : 
           <>
-             <Button className='w-full bg-astralicsblue dark:bg-astralicsblue font-bold dark:text-white hover:bg-astralicsblue dark:hover:bg-astralicsblue'>
+             <Button onClick={openModal} className='w-full bg-astralicsblue dark:bg-astralicsblue font-bold dark:text-white hover:bg-astralicsblue dark:hover:bg-astralicsblue'>
               Choose Developer
               </Button>
           </>
         }
       </CardFooter>
     </Card>
+    <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-[1px]" />
+          </Transition.Child>
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-[22.5rem] max-w-md transform overflow-hidden align-middle transition-all">
+                  <AuthModal />
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+    </>
   )
 }
