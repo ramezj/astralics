@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { UserCircleIcon, CheckIcon } from "lucide-react"
+import { UserCircleIcon, CheckIcon, ArrowRight } from "lucide-react"
 
 export function Free(props) {
   return (
@@ -40,6 +40,12 @@ export function Free(props) {
             <div className="flex flex-col space-y-1.5">
                 <h2 className="flex gap-2">
                     <CheckIcon className="text-green-500"/>
+                    Upvote Feedback
+                    </h2>
+            </div>
+            <div className="flex flex-col space-y-1.5">
+                <h2 className="flex gap-2">
+                    <CheckIcon className="text-green-500"/>
                     Authentication Check
                     </h2>
             </div>
@@ -50,11 +56,15 @@ export function Free(props) {
           props.session
           ? 
           <>
-            <Button className='w-full bg-astralicsblue dark:bg-astralicsblue font-bold dark:text-white hover:bg-astralicsblue dark:hover:bg-astralicsblue '>Get Started</Button>
+            <Button className='w-full bg-astralicsblue dark:bg-astralicsblue font-bold dark:text-white hover:bg-astralicsblue dark:hover:bg-astralicsblue '>
+              Choose Free
+              </Button>
           </>
           : 
           <>
-             <Button className='w-full bg-astralicsblue dark:bg-astralicsblue font-bold dark:text-white hover:bg-astralicsblue dark:hover:bg-astralicsblue '>Get Started</Button>
+             <Button className='w-full bg-astralicsblue dark:bg-astralicsblue font-bold dark:text-white hover:bg-astralicsblue dark:hover:bg-astralicsblue '>
+              Choose Free
+              </Button>
           </>
         }
       </CardFooter>
