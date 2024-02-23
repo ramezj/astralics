@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Laptop, CheckIcon } from "lucide-react"
+import { Laptop, CheckIcon, XIcon } from "lucide-react"
 import Link from 'next/link'
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
@@ -66,6 +66,12 @@ export function Developer(props) {
                 <h2 className="flex gap-2">
                     <CheckIcon className="text-green-500"/>
                     Authentication Check
+                    </h2>
+            </div>
+            <div className="flex flex-col space-y-1.5">
+                <h2 className="flex gap-2">
+                    <CheckIcon className="text-green-500"/>
+                    No Astralics Branding
                     </h2>
             </div>
           </div>

@@ -67,6 +67,12 @@ export function Free(props) {
                     Authentication Check
                     </h2>
             </div>
+            <div className="flex flex-col space-y-1.5">
+                <h2 className="flex gap-2">
+                    <CheckIcon className="text-green-500"/>
+                    Astralics Branding
+                    </h2>
+            </div>
           </div>
       </CardContent>
       <CardFooter className="flex justify-between">
