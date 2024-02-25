@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     if(!signature) {
         return res.status(400).json({ message: 'Missing required headers' });
     }
-    const computedSignature = crypto.createHmac('sha256', SECRET_KEY).update(JSON.stringify(req.body)).digest('hex');
+    const computedSignature = crypto.createHmac('sha256', SECRET).update(JSON.stringify(req.body)).digest('hex');
     if(computedSignature !== signature) {
         return res.status(401).json({ message: 'Invalid signature' });
     }
