@@ -10,12 +10,11 @@ export default async function handler(req, res) {
             response:'Invalid Method'
         })
     }
-    const signature = req.headers['x-lemon-squeezy-signature'];
-    const timestamp = req.headers['x-lemon-squeezy-timestamp'];
-    if(!signature || !timestamp) {
+    const signature = req.headers['x-signature'];
+    if(!signature) {
         return res.status(400).json({ message: 'Missing required headers' });
     }
-    const computedSignature = crypto.createHmac('sha256', SECRET).update(JSON.stringify(req.body) + timestamp).digest('hex');
+    const computedSignature = crypto.createHmac('sha256', SECRET_KEY).update(JSON.stringify(req.body)).digest('hex');
     if(computedSignature !== signature) {
         return res.status(401).json({ message: 'Invalid signature' });
     }
