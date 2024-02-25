@@ -3,7 +3,7 @@ import { prisma } from "@/lib/db"
 import crypto from "crypto"
 
 export default async function handler(req, res) {
-    const SECRET = process.env.LEMON_SQUEEZY_SECRET_KEY;
+    const SECRET = "Q2HDAQ89BHDA728BDAIUBDA8727DB";
     if(req.method !== 'POST') {
         return res.status(400).json({
             ok:false,
@@ -11,6 +11,7 @@ export default async function handler(req, res) {
         })
     }
     const signature = req.headers['x-signature'];
+    console.log("Signature :", signature)
     if(!signature) {
         return res.status(400).json({ message: 'Missing required headers' });
     }
