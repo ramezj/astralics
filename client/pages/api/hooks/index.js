@@ -16,10 +16,12 @@ export default async function handler(req, res) {
         return res.status(400).json({ message: 'Missing required headers' });
     }
     const computedSignature = crypto.createHmac('sha256', SECRET).update(JSON.stringify(req.body)).digest('hex');
+    console.log("Computed Signature :", computedSignature)
     if(computedSignature !== signature) {
         return res.status(401).json({ message: 'Invalid signature' });
     }
-    const event = req.body.event;
+    const event = req.body.data.meta.event_name;
+    console.log(req.body.data);
     switch (event) {
         case 'subscription_created':
         console.log('Subscription created: ', req.body);
