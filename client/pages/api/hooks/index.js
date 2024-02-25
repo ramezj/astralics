@@ -1,17 +1,38 @@
 // for paddle webhooks
 import { prisma } from "@/lib/db"
+import crypto from "crypto"
 
 export default async function handler(req, res) {
-    if(req.method == 'GET') {
+    const SECRET = process.env.LEMON_SQUEEZY_SECRET_KEY;
+    if(req.method !== 'POST') {
         return res.status(400).json({
             ok:false,
             response:'Invalid Method'
         })
     }
-    console.log(req.body);
-    console.log("CUSTOM DATA =====" , req.body.data.meta.custom_data);
-    return res.status(200).json({
-        ok:true,
-        response: 'Webhook Received Successfully'
-    })
+    const signature = req.headers['x-lemon-squeezy-signature'];
+    const timestamp = req.headers['x-lemon-squeezy-timestamp'];
+    if(!signature || !timestamp) {
+        return res.status(400).json({ message: 'Missing required headers' });
+    }
+    const computedSignature = crypto.createHmac('sha256', SECRET).update(JSON.stringify(req.body) + timestamp).digest('hex');
+    if(computedSignature !== signature) {
+        return res.status(401).json({ message: 'Invalid signature' });
+    }
+    const event = req.body.event;
+    switch (event) {
+        case 'subscription_created':
+        console.log('Subscription created: ', req.body);
+        break;
+        case 'subscription_updated':
+        console.log('Subscription updated: ', req.body);
+        break;
+        case 'subscription_cancelled':
+        console.log('Subscription cancelled: ', req.body);
+        break;
+        default:
+        console.warn('Unhandled webhook event:', event);
+        break;
+    }
+    return res.status(200).json({ message: 'Webhook received and processed successfully' });
  }
