@@ -3,38 +3,35 @@ import { prisma } from "@/lib/db"
 import crypto from "crypto"
 
 export default async function handler(req, res) {
-    const SECRET = "Q2HDAQ89BHDA728BDAIUBDA8727DB";
     if(req.method !== 'POST') {
         return res.status(400).json({
             ok:false,
             response:'Invalid Method'
         })
     }
-    const signature = req.headers['x-signature'];
-    console.log("Signature :", signature)
-    if(!signature) {
-        return res.status(400).json({ message: 'Missing required headers' });
-    }
-    const computedSignature = crypto.createHmac('sha256', SECRET).update(JSON.stringify(req.body)).digest('hex');
-    console.log("Computed Signature :", computedSignature)
-    if(computedSignature !== signature) {
-        return res.status(401).json({ message: 'Invalid signature' });
-    }
-    const event = req.body.data.meta.event_name;
-    console.log(req.body.data);
-    switch (event) {
-        case 'subscription_created':
-        console.log('Subscription created: ', req.body);
-        break;
-        case 'subscription_updated':
-        console.log('Subscription updated: ', req.body);
-        break;
-        case 'subscription_cancelled':
-        console.log('Subscription cancelled: ', req.body);
-        break;
-        default:
-        console.warn('Unhandled webhook event:', event);
-        break;
-    }
-    return res.status(200).json({ message: 'Webhook received and processed successfully' });
+    try {
+        // Catch the event type
+        const clonedReq = req.clone();
+        const eventType = req.headers.get("X-Event-Name");
+        const body = await req.json();
+    
+        // Check signature
+        const secret = "Q2HDAQ89BHDA728BDAIUBDA8727DB";
+        const hmac = crypto.createHmac("sha256", secret);
+        const digest = Buffer.from(
+          hmac.update(await clonedReq.text()).digest("hex"),
+          "utf8"
+        );
+        const signature = Buffer.from(req.headers.get("X-Signature") || "", "utf8");
+    
+        if (!crypto.timingSafeEqual(digest, signature)) {
+          throw new Error("Invalid signature.");
+        }
+        console.log(body);
+        return Response.json({ message: "Webhook received" });
+      } catch (err) {
+        console.error(err);
+        console.error(err);
+        return Response.json({ message: "Server error" }, { status: 500 });
+      }
  }
