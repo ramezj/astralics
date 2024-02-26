@@ -10,23 +10,16 @@ export default async function handler(req, res) {
         })
     }
     try {
-        const rawBody = req.body;
         const secret = "Q2HDAQ89BHDA728BDAIUBDA8727DB";
-        const hmac = crypto.createHmac('sha256', secret);
-        const digest = Buffer.from(hmac.update(rawBody).digest('hex'), 'utf8');
-        const signature = Buffer.from(req.headers('X-Signature') || '', 'utf8');
+        const rawBody = (await buffer(req)).toString('utf-8')
+        const hmac = crypto.createHmac('sha256', secret)
+        const digest = Buffer.from(hmac.update(rawBody).digest('hex'), 'utf8')
+        const signature = Buffer.from(req.headers['x-signature'], 'utf8')
         if (!crypto.timingSafeEqual(digest, signature)) {
-          throw new Error('Invalid signature.');
+          return res.status(400).json({
+            message: 'Invalid signature.',
+          })
         }
-        const data = JSON.parse(rawBody)
-        const eventName = data['meta']['event_name']
-        const obj = data['data']['attributes']
-        const objId = data['data']['id']
-        console.log(eventName)
-        return res.status(200).json({
-            ok:false,
-            response: 'webhook received'
-        })
       } catch (err) {
         console.error(err);
         return res.status(400).json({
