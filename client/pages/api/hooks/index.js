@@ -20,10 +20,10 @@ export default async function handler(req, res) {
             message: 'Invalid signature.',
           })
         }
+        console.log(req);
         return res.status(200).json({
             message:'Signatures are alike :)'
         })
-        console.log(req);
       } catch (err) {
         console.error(err);
         return res.status(400).json({
