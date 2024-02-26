@@ -10,7 +10,7 @@ export default async function handler(req, res) {
         })
     }
     try {
-        const rawBody = await req.body();
+        const rawBody = req.body;
         const secret = "Q2HDAQ89BHDA728BDAIUBDA8727DB";
         const hmac = crypto.createHmac('sha256', secret);
         const digest = Buffer.from(hmac.update(rawBody).digest('hex'), 'utf8');
