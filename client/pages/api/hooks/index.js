@@ -12,7 +12,8 @@ export default async function handler(req, res) {
     }
     const secret = "Q2HDAQ89BHDA728BDAIUBDA8727DB";
     const hmac = crypto.createHmac('sha256', secret);
-	const digest = Buffer.from(hmac.update(text(req.body)).digest('hex'), 'utf8');
+    const textBody = await text(req.body);
+	const digest = Buffer.from(hmac.update(textBody).digest('hex'), 'utf8');
 	const signature = Buffer.from(req.headers['x-signature'] || '', 'utf8');
     if(!crypto.timingSafeEqual(digest, signature)) {
         return res.status(400).json({
