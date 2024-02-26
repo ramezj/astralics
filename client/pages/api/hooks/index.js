@@ -2,7 +2,17 @@
 import { prisma } from "@/lib/db"
 import crypto from "crypto"
 import { buffer, text } from "micro";
+import { parse } from "url";
+import { createReadStream } from "fs";
 
+function verifySignature(payload, secret, signature) {
+    const hmac = crypto.createHmac('sha256', secret);
+    const digest = Buffer.from(payload, 'utf8');
+    hmac.update(digest);
+    const hash = hmac.digest('hex');
+    return hash === signature;
+}
+  
 export default async function handler(req, res) {
     if(req.method !== 'POST') {
         return res.status(400).json({
@@ -10,23 +20,23 @@ export default async function handler(req, res) {
             response:'Invalid Method'
         })
     }
-    const secret = "Q2HDAQ89BHDA728BDAIUBDA8727DB";
-    const hmac = crypto.createHmac('sha256', secret);
-    const rawBody = (await buffer(req)).toString('utf-8')
-	const digest = Buffer.from(hmac.update(rawBody).digest('hex'), 'utf8');
-	const signature = Buffer.from(req.headers['x-signature'] || '', 'utf8');
-    console.log("Lemon-Squeezy Signature :", signature);
-    console.log("Digest :", digest);
-    if(!crypto.timingSafeEqual(digest, signature)) {
-        console.log('Invalid Signature..')
-        return res.status(400).json({
-            ok:false,
-            response:'Invalid signature'
-        })
+    const { query } = parse(req.url, true);
+    const secret = 'Q2HDAQ89BHDA728BDAIUBDA8727DB';
+    const payload = createReadStream(req);
+    const signature = req.headers['X-Signature'];
+    const isValidSignature = verifySignature(payload, secret, signature);
+    if(!isValidSignature) {
+        res.statusCode = 401;
+        res.end('Invalid signature');
+        return;
     }
-    console.log("Signature verified");
-    return res.status(200).json({
-        ok:true,
-        response:'Webhook received successfully!'
-    })
+    try {
+        console.log('Webhook payload:', req.body);
+        res.statusCode = 200;
+        res.end('Webhook received successfully');
+      } catch (error) {
+        console.error('Error processing webhook:', error.message);
+        res.statusCode = 500;
+        res.end('Internal Server Error');
+      }
  }
