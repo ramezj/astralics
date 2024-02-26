@@ -1,6 +1,7 @@
 // for paddle webhooks
 import { prisma } from "@/lib/db"
 import crypto from "crypto"
+import { buffer } from "micro";
 
 export default async function handler(req, res) {
     if(req.method !== 'POST') {
