@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     const { query } = parse(req.url, true);
     const secret = 'Q2HDAQ89BHDA728BDAIUBDA8727DB';
     const signature = req.headers['X-Signature'];
-    const payload = JSON.stringify(req.body);
+    const payload = (await buffer(req)).toString();
     const isValidSignature = verifySignature(payload, secret, signature);
     if(!isValidSignature) {
         res.statusCode = 401;
