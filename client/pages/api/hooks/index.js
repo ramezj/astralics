@@ -2,17 +2,13 @@
 import { prisma } from "@/lib/db"
 import crypto from "crypto"
 import { buffer, text } from "micro";
-import { parse } from "url";
 import { createReadStream } from "fs";
-
-function verifySignature(payload, secret, signature) {
-    const hmac = crypto.createHmac('sha256', secret);
-    const digest = Buffer.from(payload, 'utf8');
-    hmac.update(digest);
-    const hash = hmac.digest('hex');
-    return hash === signature;
-}
-  
+import { NextRequest} from "next/server";
+    export const config = {
+        api: {
+            bodyParser:false
+        }
+    }
 export default async function handler(req, res) {
     if(req.method !== 'POST') {
         return res.status(400).json({
@@ -20,23 +16,24 @@ export default async function handler(req, res) {
             response:'Invalid Method'
         })
     }
-    const { query } = parse(req.url, true);
+    const rawBody = req;
+    const rawText = await text(rawBody);
+    const body = JSON.parse(rawText);
     const secret = 'Q2HDAQ89BHDA728BDAIUBDA8727DB';
-    const signature = req.headers['X-Signature'];
-    const payload = (await buffer(req)).toString();
-    const isValidSignature = verifySignature(payload, secret, signature);
-    if(!isValidSignature) {
-        res.statusCode = 401;
-        res.end('Invalid signature');
-        return;
+    const hmac = crypto.createHmac('sha256',secret);
+    const digest = Buffer.from(hmac.update(rawText).digest('hex'), 'utf8');
+    const signature = Buffer.from(req.headers['x-signature'] || '', 'utf8');
+    if(!crypto.timingSafeEqual(digest, signature)) {
+        console.error('INVALID TOKEN')
+        return res.status(401).json({
+            ok:false,
+            response:'Invalid Token'
+        })
     }
-    try {
-        console.log('Webhook payload:', req.body);
-        res.statusCode = 200;
-        res.end('Webhook received successfully');
-      } catch (error) {
-        console.error('Error processing webhook:', error.message);
-        res.statusCode = 500;
-        res.end('Internal Server Error');
-      }
+    console.log('VALID TOKEN, WEBHOOK RECEIVED')
+    console.log(body.meta.event_name);
+    return res.status(200).json({
+        ok:true,
+        response:'Webhook Received Successfully!'
+    })
  }
