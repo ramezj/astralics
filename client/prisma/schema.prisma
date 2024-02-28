@@ -39,6 +39,8 @@ model User {
   emailVerified DateTime?
   image         String?
   premium       Boolean   @default(false)
+  customer_portal   String?
+  update_payment_method   String?
   accounts      Account[]
   boards        Board[]
   sessions      Session[]

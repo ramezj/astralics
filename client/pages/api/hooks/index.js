@@ -31,7 +31,36 @@ export default async function handler(req, res) {
         })
     }
     console.log('VALID TOKEN, WEBHOOK RECEIVED')
+    const event = body.meta.event_name;
+    if(event === 'subscription_created') {
+        const userId = body.meta.custom_data.user_id;
+        try {
+            const updateUser = await prisma.user.update({
+                where: {
+                    id: userId,
+                },
+                data: {
+                    premium:true,
+                    customer_portal:body.data.attributes.urls.customer_portal,
+                    update_payment_method:body.data.attributes.urls.update_payment_method
+                }
+            });
+            console.log(updateUser);
+            return res.status(200).json({
+                ok:true,
+                response: 'Subscription Created Successfully!'
+            })
+        } catch (error) {
+            console.error(error);
+            res.status(400).json({
+                ok:false,
+                response: error
+            })
+        }
+    }
     console.log(body.meta.event_name);
+    console.log(body);
+    console.log('URLS :', body.data.attributes.urls)
     return res.status(200).json({
         ok:true,
         response:'Webhook Received Successfully!'
