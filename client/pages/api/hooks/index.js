@@ -58,6 +58,40 @@ export default async function handler(req, res) {
             })
         }
     }
+    if(event === 'subscription_updated') {
+        const userId = body.meta.custom_data.user_id;
+        try {
+            
+        } catch (error) {
+            
+        }
+    }
+    if(event === 'subscription_cancelled') {
+        const userId = body.meta.custom_data.user_id;
+        try {
+            const updateUser = await prisma.user.update({
+                where: {
+                    id: userId,
+                },
+                data: {
+                    premium:false,
+                    customer_portal:null,
+                    update_payment_method:null
+                }
+            });
+            console.log(updateUser);
+            return res.status(200).json({
+                ok:true,
+                response: 'Subscription Created Successfully!'
+            })
+        } catch (error) {
+            console.error(error);
+            res.status(400).json({
+                ok:false,
+                response: error
+            })
+        }
+    }
     console.log(body.meta.event_name);
     console.log(body);
     console.log('URLS :', body.data.attributes.urls)
