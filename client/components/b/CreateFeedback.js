@@ -147,7 +147,7 @@ export default function CreateFeedback(props) {
               >
                 <SelectValue placeholder="Select level"/>
               </SelectTrigger>
-              <SelectContent className='dark:bg-zinc-950 border dark:border-white/10'>
+              <SelectContent className='dark:bg-zinc-900 border dark:border-white/10'>
                 <SelectItem value="feedback" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>📝 Feedback</SelectItem>
                 <SelectItem value="bug_report" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>🐛 Bug Report</SelectItem>
                 <SelectItem value="feature_request" className='hover:!bg-gray-200 focus:!bg-gray-200 dark:hover:!bg-zinc-800 dark:focus:!bg-zinc-800'>💡 Feature Request</SelectItem>
@@ -163,7 +163,7 @@ export default function CreateFeedback(props) {
                 <>
                 <Button disabled className='w-full bg-zinc-950 hover:bg-zinc-800 dark:hover:!bg-gray-300 duration-200'>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Creating post
+                Create post
                 </Button>
                 </>
             )
