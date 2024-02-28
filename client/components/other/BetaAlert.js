@@ -7,14 +7,14 @@ export default function BetaAlert(props) {
         <>
         <Button 
         className='
-        rounded-2xl
+        rounded-3xl
         px-8
         bg-astralicsblue dark:bg-astralicsblue
         hover:bg-astralicsblue dark:hover:!bg-astralicsblue
         duration-300
         text-white dark:text-white
         '>
-            🎉 astralics just launched on producthunt 
+            Astralics just launched on ProductHunt 
             <ChevronRight className="ml-2 h-4 w-4" /> 
         </Button>
         </>
