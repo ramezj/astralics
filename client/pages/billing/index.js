@@ -9,18 +9,44 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
+import Link from "next/link"
 
 export default function BillingPage() {
-    const [ loading, setLoading ] = useState(true);
-    const [ premium, setPremium ] = useState(false);
-    const [ user, setUser ] = useState();
-    const router = useRouter();
-    const { data: session } = useSession({
-        required:true,
-        onUnauthenticated() {
-            router.push('/');
+  const [ loading, setLoading ] = useState(true);
+  const [ nameLoading, setNameLoading ] = useState(false);
+  const [ premium, setPremium ] = useState(false);
+  const [ customer_portal, setCustomerPortal ] = '/billing';
+  const [ cancel, setCancel ] = useState('/billing')
+  const [ user, setUser ] = useState();
+  const [ name, setName ] = useState();
+  const [ response, setResponse ] = useState();
+  const router = useRouter();
+  const { data: session } = useSession({
+      required:true,
+      onUnauthenticated() {
+          router.push('/');
+      }
+  })
+  useEffect(() => {
+      const fetchUser = async () => {
+        setLoading(true);
+        const response = await fetch('/api/billing');
+        const res = await response.json();
+        console.log(res);
+        if(res.ok == false) {
+          router.push('/')
         }
-    })
+        if(res.ok == true) {
+          setPremium(res.response.premium);
+          setCancel(res.response.customer_portal);
+          setUser(res.response);
+          setName(res.response.name);
+          setLoading(false);
+        }
+      }
+      fetchUser();
+    }, [])
+    console.log(cancel);
     return (
         <>
         <AppLayout>
@@ -54,9 +80,14 @@ export default function BillingPage() {
           <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Avatar</h2>
           <Input type="email" placeholder="Email"value={user.image} className='text-black dark:text-white mt-2'/>
           </div>
-          <div className='mt-6'>
+          <div className='mt-6 flex gap-4'>
             <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
-              Save Changes
+              {/* <Link href={cancel}> */}
+              Manage Subscription
+              {/* </Link> */}
+            </Button>
+            <Button variant="destructive">
+              Cancel Subscription
             </Button>
           </div>
           </div>
