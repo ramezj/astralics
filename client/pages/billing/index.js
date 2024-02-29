@@ -10,14 +10,14 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import Link from "next/link"
-import { UserCircleIcon, Laptop } from "lucide-react"
+import { UserCircleIcon, Laptop, ArrowUpRightSquare } from "lucide-react"
 
 export default function BillingPage() {
   const [ loading, setLoading ] = useState(true);
   const [ nameLoading, setNameLoading ] = useState(false);
   const [ premium, setPremium ] = useState(false);
-  const [ customer_portal, setCustomerPortal ] = '/billing';
-  const [ cancel, setCancel ] = useState('/billing')
+  const [ updatePayment, setUpdatePayment ] = useState('/pricing');
+  const [ cancel, setCancel ] = useState('/pricing')
   const [ user, setUser ] = useState();
   const [ name, setName ] = useState();
   const [ response, setResponse ] = useState();
@@ -39,7 +39,16 @@ export default function BillingPage() {
         }
         if(res.ok == true) {
           setPremium(res.response.premium);
-          setCancel(res.response.customer_portal);
+          if(res.response.update_payment_method === null) {
+            setUpdatePayment('/pricing');
+          } else {
+            setUpdatePayment(res.response.update_payment_method);
+          }
+          if(res.response.customer_portal === null) {
+            setCancel('/pricing');
+          } else {
+            setCancel(res.response.customer_portal);
+          }
           setUser(res.response);
           setName(res.response.name);
           setLoading(false);
@@ -78,29 +87,34 @@ export default function BillingPage() {
               : 
               <>
                 <h1 className='text-xl font-bold tracking-normal flex gap-2'>You are currently subscribed to <UserCircleIcon /> Personal</h1>
+                <Link target="_blank" href='/pricing' className='flex text-black dark:text-white font-bold underline decoration-dotted gap-2 mt-2'>Upgrade to Developer <ArrowUpRightSquare/></Link>
               </>
             }
-          {/* <div>
-          <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Name</h2>
-          <Input type="email" placeholder="Email" value={user.name} className='text-black dark:text-white mt-2'/>
-          </div>
-          <div className='mt-4'>
-          <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Email</h2>
-          <Input type="email" placeholder="Email" value={user.email} className='text-black dark:text-white mt-2'/>
-          </div>
-          <div className='mt-4'>
-          <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Avatar</h2>
-          <Input type="email" placeholder="Email"value={user.image} className='text-black dark:text-white mt-2'/>
-          </div> */}
           <div className='mt-6 flex gap-4'>
-            <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
-              {/* <Link href={cancel}> */}
+            {
+              premium 
+              ? 
+              <>
+              <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
+              <Link href={cancel}>
               Manage Subscription
-              {/* </Link> */}
+              </Link>
+            </Button>
+            <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
+              <Link href={updatePayment}>
+              Change Payment Method
+              </Link>
             </Button>
             <Button variant="destructive">
-              Cancel Subscription
+              <Link href={cancel}>
+                Cancel Subscription
+              </Link>
             </Button>
+              </>
+              :
+              <>
+              </>
+            }
           </div>
           </div>
           </>
