@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import Link from "next/link"
+import { UserCircleIcon, Laptop } from "lucide-react"
 
 export default function BillingPage() {
   const [ loading, setLoading ] = useState(true);
@@ -55,7 +56,7 @@ export default function BillingPage() {
         <div className="space-y-0.5">
           <h2 className="text-2xl font-bold tracking-tight text-black dark:text-white">Billing</h2>
           <p className="text-muted-foreground">
-            Manage your account settings and change your avatar.
+            Manage Plan, Update Payment or Cancel Subscription.
           </p>
         </div>
         <Separator className="my-6" />
@@ -68,7 +69,18 @@ export default function BillingPage() {
           : 
           <>
           <div className="2xl:w-2/5 w-full">
-          <div>
+            {
+              premium 
+              ? 
+              <>
+              <h1 className='text-xl font-bold tracking-normal flex gap-2'>You are currently subscribed to <Laptop /> Developer </h1>
+              </>
+              : 
+              <>
+                <h1 className='text-xl font-bold tracking-normal flex gap-2'>You are currently subscribed to <UserCircleIcon /> Personal</h1>
+              </>
+            }
+          {/* <div>
           <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Name</h2>
           <Input type="email" placeholder="Email" value={user.name} className='text-black dark:text-white mt-2'/>
           </div>
@@ -79,7 +91,7 @@ export default function BillingPage() {
           <div className='mt-4'>
           <h2 className="text-lg font-medium tracking-tight text-black dark:text-white">Avatar</h2>
           <Input type="email" placeholder="Email"value={user.image} className='text-black dark:text-white mt-2'/>
-          </div>
+          </div> */}
           <div className='mt-6 flex gap-4'>
             <Button className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-gray-200 hover:border-white/0">
               {/* <Link href={cancel}> */}
