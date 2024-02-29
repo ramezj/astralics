@@ -77,7 +77,7 @@ export default function Feedback(props) {
         />
         <div onClick={(() => {
           openM()
-        })} key={props.id} className=" w-full flex bg-gray-200 dark:bg-zinc-950 border border-black/10 dark:border-white/10 rounded-lg items-center cursor-pointer duration-300">
+        })} key={props.id} className="w-full flex bg-gray-200 dark:bg-zinc-950 border border-black/10 dark:border-white/10 rounded-lg items-center cursor-pointer duration-300">
         <div className="m-8 flex flex-col items-start text-left">
         <p className='text-lg font-bold text-left text-black dark:text-white'>
         {
