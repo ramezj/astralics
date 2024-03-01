@@ -50,7 +50,7 @@ export const Profile = (props) => {
             </Avatar>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="mt-2 w-48 bg-white dark:bg-zinc-900 border border-black/20 dark:border-white/10">
+        <DropdownMenuContent align="end" className="mt-2 w-48 bg-white dark:bg-zinc-950 border border-black/20 dark:border-white/10">
           <DropdownMenuLabel className="font-normal mb-1">
             <div className="flex flex-col space-y-1">
               <p className="text-sm font-medium leading-none">
@@ -64,30 +64,30 @@ export const Profile = (props) => {
           <Separator/>
           <DropdownMenuGroup className='mt-1 mb-1'>
           <Link href='/app' className=''>
-          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 gap-2'>
+          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-900 duration-200 gap-2'>
           <LayoutGrid className='w-4 h-4'/>Dashboard
             </DropdownMenuItem>
           </Link>
           <Link href='/new' className=''>
-          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 gap-2'>
+          <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-900 duration-200 gap-2'>
               <PlusCircle className='w-4 h-4'/>Create board
             </DropdownMenuItem>
           </Link>
             <Link href='/billing' className=''>
-            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 gap-2'>
+            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-900 duration-200 gap-2'>
               <CreditCard className='w-4 h-4' />
               Billing
             </DropdownMenuItem>
             </Link>
             <Link href='/settings' className=''>
-            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 gap-2'>
+            <DropdownMenuItem className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-900 duration-200 gap-2'>
               <Settings className='w-4 h-4' />
               Settings
             </DropdownMenuItem>
             </Link>
           </DropdownMenuGroup>
           <Separator/>
-          <DropdownMenuItem onClick={() => signOut()} className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-800 duration-200 mt-1 gap-2'>
+          <DropdownMenuItem onClick={() => signOut()} className='cursor-pointer hover:!bg-gray-200 dark:hover:!bg-zinc-900 duration-200 mt-1 gap-2'>
             <LogOut className='w-4 h-4' />
             Log out
           </DropdownMenuItem>
