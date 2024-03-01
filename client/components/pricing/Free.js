@@ -33,7 +33,7 @@ export function Free(props) {
     }
   return (
     <>
-    <Card className="w-[350px] border-none bg-gray-200 dark:bg-zinc-900">
+    <Card className="w-[350px] border-none bg-gray-200 dark:bg-zinc-950">
       <CardHeader>
         <CardTitle className='flex gap-2 font-bold tracking-normal'> <UserCircleIcon/>Personal</CardTitle>
         <CardDescription>Free forever</CardDescription>
