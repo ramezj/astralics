@@ -24,12 +24,6 @@ export function Developer(props) {
     function openModal() {
       setIsOpen(true)
     }
-    const signUserIn = async () => {
-        signIn('google');
-    }
-    const signUserOut = async () => {
-      signOut();
-    }
     const params  = new URLSearchParams()
     params.set('checkout[custom][user_id]', `${props.session?.user.id}`)
   return (

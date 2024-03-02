@@ -25,12 +25,6 @@ export function Free(props) {
     function openModal() {
       setIsOpen(true)
     }
-    const signUserIn = async () => {
-        signIn('google');
-    }
-    const signUserOut = async () => {
-      signOut();
-    }
   return (
     <>
     <Card className="w-[350px] border-none bg-gray-200 dark:bg-zinc-950">
