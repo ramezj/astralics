@@ -11,7 +11,7 @@ export default function Component() {
       <title>astralics</title>
       <center>
         <br /><br />
-        <div className="">
+        <div className="-mt-3">
           <motion.div
           initial={{
             opacity: 0,
