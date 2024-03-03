@@ -71,7 +71,7 @@ export default function Navbar(props) {
                 <Profile session={props.session} />
                 </>
               : <> 
-                <TryForFree title={'use for free'}/>
+                <TryForFree title={'Sign In'}/>
                 </>
             }
           </a>
@@ -116,7 +116,7 @@ export default function Navbar(props) {
                 </Link></>
               : <>
               <Link onClick={signUserIn} href='/' className='text-white px-6 py-2 bg-astralicsblue rounded-lg font-bold flex justify-center gap-2 duration-200'>
-                use for free
+              Sign In
                 </Link></>
               }
               </div>
