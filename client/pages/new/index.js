@@ -61,6 +61,7 @@ export default function NewPage () {
     return (
         <>
         <AppLayout>
+          <title>Create Board</title>
         <div className="space-y-6 p-10 pb-16 md:block">
         <div className="space-y-0.5">
           <h2 className="text-2xl font-bold tracking-tight text-black dark:text-white">Create Board</h2>
@@ -78,7 +79,7 @@ export default function NewPage () {
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Slug</Label>
-              <Input required id="slug" placeholder="astralics.com/b/slug" onChange={(e) => {setSlug(e.target.value)}} className=''/>
+              <Input required id="slug" placeholder="astralics.com/slug" onChange={(e) => {setSlug(e.target.value)}} className=''/>
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Website</Label>
