@@ -8,7 +8,7 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 export default function FeedbackDemo(props) {
     const [ upvotes, setUpvotes ] = useState(props.upvotes);
     const [ title, setTitle ] = useState(props.title);
-    const [ test, setTest ] = useState(props.isUpvoted)
+    const [ test, setTest ] = useState(true)
     return (
         <>
         <div key={props.id} className="w-full flex bg-gray-200 dark:bg-zinc-950 border border-black/10 dark:border-white/10 rounded-lg items-center cursor-pointer duration-300">

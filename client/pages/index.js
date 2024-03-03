@@ -37,7 +37,7 @@ export default function Component() {
             transition={{duration: 0.8}}
             className='
             sm:text-6xl 2xl:text-7xl 2xl:mt-6 md:text-7xl lg:text-5xl lg:mt-6 2xl:w-3/6 lg:w-4/6 sm:mt-8 text-3xl w-4/5 font-bold tracking-tight leading-none text-black dark:text-white mt-10 drop-shadow-sm'>
-           Feedback made simple.
+           Feedback made simple
             </motion.h1>
             <div>
               <div className='2xl:w-full lg:w-full md:w-full w-3/4 mt-2 '>
@@ -51,7 +51,7 @@ export default function Component() {
               x:0
             }}
             transition={{duration: 0.8}} className="leading-7 [&:not(:first-child)]:mt-6 text-muted-foreground text-xl">
-              Create beautiful feedback pages in *minutes*
+              Create beautiful feedback pages in <b><i>seconds</i></b>
             </motion.h1>
             </div>
             </div>
@@ -85,7 +85,7 @@ export default function Component() {
                   }}
                   transition={{duration: 0.5, delay: 0.30}}
                   >
-                <FeedbackDemo session={session} title="Feature Request" type="feature_request" description={"Can you add more authentication options? thanks!"} upvotes="1"/>
+                <FeedbackDemo isUpvoted={true} session={session} title="Feature Request" type="feature_request" description={"Can you add more authentication options? thanks!"} upvotes="1"/>
                 </motion.div>
               </div>
           </div>

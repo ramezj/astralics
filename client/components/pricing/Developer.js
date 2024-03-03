@@ -36,12 +36,12 @@ export function Developer(props) {
       <CardContent>
           <div className="grid w-full items-center gap-4">
         <h2 className="flex text-2xl font-semibold -mt-3">
-                    $15
+                    $10
         </h2>
             <div className="flex flex-col space-y-1.5">
                 <h2 className="flex gap-2">
                     <CheckIcon className="text-green-500"/>
-                    5 Boards
+                    3 Boards
                     </h2>
             </div>
             <div className="flex flex-col space-y-1.5">
@@ -60,12 +60,6 @@ export function Developer(props) {
                 <h2 className="flex gap-2">
                     <CheckIcon className="text-green-500"/>
                     Authentication Check
-                    </h2>
-            </div>
-            <div className="flex flex-col space-y-1.5">
-                <h2 className="flex gap-2">
-                    <CheckIcon className="text-green-500"/>
-                    No Astralics Branding
                     </h2>
             </div>
           </div>

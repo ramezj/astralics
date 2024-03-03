@@ -79,7 +79,7 @@ export default function Navbar(props) {
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="bg-white dark:bg-zinc-950 fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="bg-white dark:bg-black fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between -m-2">
           <Link href="/" className="-m-1.5 p-1.5 outline-none font-medium italic">
           </Link>
@@ -115,7 +115,7 @@ export default function Navbar(props) {
               Dashboard
                 </Link></>
               : <>
-              <Link onClick={signUserIn} href='/' className='text-white px-6 py-2 bg-zinc-950 dark:bg-white dark:text-black hover:bg-gray-200 rounded-lg font-bold flex justify-center gap-2 duration-200'>
+              <Link onClick={signUserIn} href='/' className='text-white px-6 py-2 bg-astralicsblue rounded-lg font-bold flex justify-center gap-2 duration-200'>
                 use for free
                 </Link></>
               }
