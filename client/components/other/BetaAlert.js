@@ -14,7 +14,7 @@ export default function BetaAlert(props) {
         duration-300
         text-white dark:text-white
         '>
-           Astralics just launched on ProductHunt 
+            Astralics just launched on ProductHunt 
             <ChevronRight className="ml-2 h-4 w-4" /> 
         </Button>
         </>
