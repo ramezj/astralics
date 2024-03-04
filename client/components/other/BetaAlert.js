@@ -13,9 +13,8 @@ export default function BetaAlert(props) {
         hover:bg-astralicsblue dark:hover:!bg-astralicsblue
         duration-300
         text-white dark:text-white
-        border !border-white/0 dark:!border-white/30
         '>
-            Astralics just launched on ProductHunt 
+           Astralics just launched on ProductHunt 
             <ChevronRight className="ml-2 h-4 w-4" /> 
         </Button>
         </>
