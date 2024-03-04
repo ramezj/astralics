@@ -46,7 +46,7 @@ export function Free(props) {
             <div className="flex flex-col space-y-1.5">
                 <h2 className="flex gap-2">
                     <CheckIcon className="text-green-500"/>
-                    20 Monthly feedbacks
+                    15 Monthly feedbacks
                     </h2>
             </div>
             <div className="flex flex-col space-y-1.5">
