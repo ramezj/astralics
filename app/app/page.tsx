@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { auth } from "@/auth"
 import {
   Activity,
   ArrowUpRight,
@@ -42,7 +43,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-export default function Dashboard() {
+export default async function Dashboard() {
+  const session = await auth()
   return (
     <div className="flex min-h-screen w-full flex-col">
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
@@ -54,20 +56,44 @@ export default function Dashboard() {
             Features
           </Link>
           <Link href="/" className="text-foreground transition-colors hover:text-foreground">
-            Pricing
+            Demo
           </Link>
           <Link href="/" className="text-foreground transition-colors hover:text-foreground">
-            Demo
+            Pricing
           </Link>
         </nav>
         <Sheet>
           <SheetTrigger asChild>
-            <Button
-              variant="outline"
-              size="icon"
-              className="shrink-0 md:hidden"
-            >
-              <Menu className="h-5 w-5" />
+            <Button variant="ghost" size="icon" className="shrink-0 md:hidden">
+            <svg
+            strokeWidth="1.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+          >
+            <path
+              d="M3 5H11"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
+            <path
+              d="M3 12H16"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
+            <path
+              d="M3 19H21"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
+          </svg>
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
@@ -75,37 +101,18 @@ export default function Dashboard() {
             <nav className="grid gap-6 text-lg font-medium">
               <Link
                 href="#"
-                className="flex items-center gap-2 text-lg font-semibold"
+                className="flex items-center gap-2 text-lg font-bold"
               >
-                <Package2 className="h-6 w-6" />
-                <span className="sr-only">Acme Inc</span>
+                astralics
               </Link>
               <Link href="#" className="hover:text-foreground">
-                Dashboard
+                Features
               </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Orders
+              <Link href="#" className="hover:text-foreground">
+                Demo
               </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Products
-              </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Customers
-              </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Analytics
+              <Link href="#" className="hover:text-foreground">
+                Pricing
               </Link>
             </nav>
           </SheetContent>
@@ -131,6 +138,7 @@ export default function Dashboard() {
           </DropdownMenu>
         </div>
       </header>
+      {JSON.stringify(session)}
     </div>
   )
 }
