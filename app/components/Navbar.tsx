@@ -1,35 +1,10 @@
+'use client'
 import Link from "next/link"
-import {
-  Activity,
-  ArrowUpRight,
-  CircleUser,
-  CreditCard,
-  DollarSign,
-  Menu,
-  Package2,
-  Search,
-  Users,
-} from "lucide-react"
-
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 
-export function Header() {
+export function Navbar() {
   return (
     <div className="flex min-h-screen w-full flex-col">
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-3 md:px-3">
@@ -99,7 +74,7 @@ export function Header() {
         <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4 ">
           <div className="ml-auto flex-1 sm:flex-initial">
           </div>
-          <Button>Sign Up For Free</Button>
+          <Button>Get Started</Button>
         </div>
       </header>
     </div>

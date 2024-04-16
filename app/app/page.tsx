@@ -43,12 +43,12 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { Header } from "@/shared/Header"
+import { Navbar } from "@/components/Navbar"
 export default async function Dashboard() {
   const session = await auth()
   return (
     <>
-    <Header />
+    <Navbar />
     </>
   )
 }
