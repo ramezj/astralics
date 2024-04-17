@@ -85,19 +85,41 @@ export default function DashboardLayout({
         </div>
       </div>
       <div className="flex flex-col">
-        <header className="flex h-16 items-center gap-4 border-b px-4 lg:h-16 lg:px-6 sticky top-0 bg-background/75 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <header className="flex h-16 items-center gap-4 border-b px-3 lg:h-16 lg:px-3 sticky top-0 bg-background/75 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="shrink-0 md:hidden">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </Button>
-            </SheetTrigger>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" className="shrink-0 md:hidden">
+            <svg strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5">
+            <path
+              d="M3 5H11"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
+            <path
+              d="M3 12H16"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
+            <path
+              d="M3 19H21"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
+          </svg>
+              <span className="sr-only">Toggle navigation menu</span>
+            </Button>
+          </SheetTrigger>
             <SheetContent side="left" className="flex flex-col">
               <nav className="grid gap-3 text-lg font-medium">
               <SheetClose asChild>
-                <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
-                  JobSpire
+                <Link href="/" className="flex items-center gap-2 text-lg font-bold">
+                  astralics
                 </Link>
                 </SheetClose>
                 <SheetClose asChild>
