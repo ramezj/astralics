@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 
-export function Navbar() {
+export function Navbar(props:any) {
   return (
     <div className="flex min-h-screen w-full flex-col">
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-3 md:px-3">
@@ -74,7 +74,25 @@ export function Navbar() {
         <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4 ">
           <div className="ml-auto flex-1 sm:flex-initial">
           </div>
-          <Button>Get Started</Button>
+          {
+            props.session 
+            ? 
+            <>
+                <Button asChild>
+                  <Link href='/overview'>
+                  Dashboard
+                  </Link>
+                  </Button>
+            </>
+            :
+            <>
+                <Button asChild>
+                  <Link href='/login'>
+                  Get Started
+                  </Link>
+                  </Button>
+            </>
+          }
         </div>
       </header>
     </div>

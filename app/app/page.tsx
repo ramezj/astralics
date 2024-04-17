@@ -12,7 +12,7 @@ export default async function Dashboard() {
   const session = await auth()
   return (
     <>
-    <Navbar />
+    <Navbar session={session}/>
     </>
   )
 }
