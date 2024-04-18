@@ -13,7 +13,10 @@ import {
   Users,
   BriefcaseBusiness,
   Settings,
-  CreditCard
+  CreditCard,
+  MessageCircle,
+  Lightbulb,
+  BanIcon
 } from "lucide-react"
 import { usePathname } from 'next/navigation'
 import { Badge } from "@/components/ui/badge"
@@ -37,8 +40,8 @@ export default function DashboardLayout({
     <div className="grid min-h-screen w-full md:grid-cols-[200px_1fr] lg:grid-cols-[250px_1fr]">
       <div className="hidden border-r md:block ">
         <div className="flex h-full max-h-screen flex-col gap-2 sticky top-0">
-          <div className="flex h-16 items-center border-b px-3 lg:h-16 lg:px-3">
-            <Link href="/overview" className="flex items-center gap-2 font-bold">
+          <div className="flex h-16 items-center border-b px-4 lg:h-16 lg:px-6">
+            <Link href="/overview" className="flex items-center text-center gap-2 font-bold">
               <span className="">astralics</span>
             </Link>
           </div>
@@ -48,17 +51,17 @@ export default function DashboardLayout({
                 <Home className="h-4 w-4" />
                 Overview
               </Link>
-              <Link href="/jobs" className={`${pathname == '/jobs' ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
-                <BriefcaseBusiness className="h-4 w-4" />
+              <Link href="/feedback" className={`${pathname == '/feedback' ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
+                <MessageCircle className="h-4 w-4" />
                 Feedback
               </Link>
-              <Link href="/applicants" className={`${pathname == '/applicants' ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
-              <Users className="h-4 w-4" />
-                Feature Requests
+              <Link href="/ideas" className={`${pathname == '/ideas' ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
+              <Lightbulb className="h-4 w-4" />
+                Ideas
               </Link>
-              <Link href="/billing" className={`${pathname == '/billing' ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
-              <CreditCard className="h-4 w-4" />
-                Bug Reports
+              <Link href="/issues" className={`${pathname == '/issues' ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
+              <BanIcon className="h-4 w-4" />
+                Issues
               </Link>
               <Link href="/settings" className={`${pathname == '/settings' ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
               <Settings className="h-4 w-4" />
