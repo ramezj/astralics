@@ -1,3 +1,4 @@
+"use server"
 import prisma from "@/lib/database";
 import { auth } from "@/auth";
 

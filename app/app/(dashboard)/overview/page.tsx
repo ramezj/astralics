@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { auth } from "@/auth";
 import { GetUser } from "@/actions/user/GetUser";
 import { redirect } from "next/navigation";
+import { CreateNewPageForm } from "@/components/CreateNewPageForm";
 
 export const metadata: Metadata = {
     title: "Astralics | Overview",
@@ -17,6 +18,7 @@ export default async function Page() {
     }
     return (
         <>
+        
         </>
     )
 }

@@ -1,3 +1,4 @@
+"use server"
 import prisma from "@/lib/database";
 
 export default async function CheckIsFirstTimeUser(userId: string) {
