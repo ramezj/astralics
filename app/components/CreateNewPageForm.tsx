@@ -5,6 +5,7 @@ import { Input } from "./ui/input"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Label } from "./ui/label";
 import { Separator } from "./ui/separator";
+import { Loader2 } from "lucide-react"
 import { CreatePage } from "@/actions/page/CreatePage";
 
 export function CreateNewPageForm() {
@@ -33,14 +34,27 @@ export function CreateNewPageForm() {
           <Separator />
         </CardHeader>
         <CardContent>
-          <form className="grid gap-4 w-full">
+          <form className="grid gap-4 w-full" onSubmit={CreateNewPage}>
               <Label>Name</Label>
               <Input placeholder='astralics' className='w-full md:w-1/2' required/>
               <Label>Handle</Label>
               <Input placeholder='astralics.com/' className='w-full md:w-1/2' required/>
               <Label>Website URL</Label>
               <Input placeholder='https://astralics.com' className='w-full md:w-1/2' required/>
-            <Button className="w-full md:w-1/2">Create Page</Button>
+              {
+                loading
+                ? 
+                <>
+                  <Button disabled>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Crete Page
+                  </Button>
+                </>
+                : 
+                <>
+                  <Button className="w-full md:w-1/2">Create Page</Button>
+                </>
+              }
           </form>
         </CardContent>
       </Card>
