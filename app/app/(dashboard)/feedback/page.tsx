@@ -1,4 +1,5 @@
-import { Metadata } from "next"
+import { Metadata } from "next";
+import { TableComponent } from "@/components/TableComponent";
 
 export const metadata: Metadata = {
     title: "Astralics | Feedback",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
 export default async function Page() {
     return (
         <>
+        <TableComponent />
         </>
     )
 }
