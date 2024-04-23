@@ -25,7 +25,7 @@ export function CreateNewPageForm() {
     setLoading(false);
   }
     return (
-        <Card>
+        <Card className="border-none">
         <CardHeader>
           <CardTitle>Create Feedback Page</CardTitle>
           <CardDescription>
@@ -36,11 +36,11 @@ export function CreateNewPageForm() {
         <CardContent>
           <form className="grid gap-4 w-full" onSubmit={CreateNewPage}>
               <Label>Name</Label>
-              <Input placeholder='astralics' className='w-full md:w-1/2' required/>
+              <Input placeholder='astralics' className='w-full md:w-1/2' required value={name} onChange={((e) => {setName(e.target.value)})}/>
               <Label>Handle</Label>
-              <Input placeholder='astralics.com/' className='w-full md:w-1/2' required/>
+              <Input placeholder='astralics.com/' className='w-full md:w-1/2' required value={handle} onChange={((e) => {setHandle(e.target.value)})}/>
               <Label>Website URL</Label>
-              <Input placeholder='https://astralics.com' className='w-full md:w-1/2' required/>
+              <Input placeholder='https://astralics.com' className='w-full md:w-1/2' required value={website} onChange={((e) => {setWebsite(e.target.value)})}/>
               {
                 loading
                 ? 

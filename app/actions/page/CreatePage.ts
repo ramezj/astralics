@@ -20,6 +20,14 @@ export async function CreatePage(name: string, handle: string, website: string) 
                 website:website
             }
         })
+        const changeflag = await prisma.user.update({
+            where: {
+                id:session.user?.id
+            },
+            data: {
+                isFirstTimeUser: false
+            }
+        })
         return { page: newpage }
     } catch (error) {
         return { error }

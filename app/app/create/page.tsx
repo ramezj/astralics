@@ -19,9 +19,9 @@ export default async function Page() {
     return (
         <>
         {user.user?.isFirstTimeUser === true && 
-        <>
+        <div>
         <CreateNewPageForm />
-        </>
+        </div>
         } 
         </>
     )
