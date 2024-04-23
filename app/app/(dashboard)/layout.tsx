@@ -27,6 +27,7 @@ import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
 import { Metadata } from "next"
 import { useState } from "react"
+import { Combobox } from "@/components/Combobox"
 
 export const dynamic = 'force-static'
 
@@ -133,20 +134,20 @@ export default function DashboardLayout({
                 </SheetClose>
                 <SheetClose asChild>
                 <Link href="/jobs" className={`${pathname == '/jobs' ? 'bg-muted text-foreground' : ' text-muted-foreground'} mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 hover:text-foreground`}>
-                  <BriefcaseBusiness className="h-5 w-5" />
-                  Jobs
+                <MessageCircle className="h-4 w-4" />
+                Feedback
                 </Link>
                 </SheetClose>
                 <SheetClose asChild>
                 <Link href="/applicants" className={`${pathname == '/applicants' ? 'bg-muted text-foreground' : ' text-muted-foreground'} mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 hover:text-foreground`}>
-                  <Users className="h-5 w-5" />
-                  Applicants
+                <Lightbulb className="h-4 w-4" />
+                Ideas
                 </Link>
                 </SheetClose>
                 <SheetClose asChild>
                 <Link href="/billing" className={`${pathname == '/billing' ? 'bg-muted text-foreground' : ' text-muted-foreground'} mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 hover:text-foreground`}>
-                  <CreditCard className="h-5 w-5" />
-                  Billing
+                <BanIcon className="h-4 w-4" />
+                Issues
                 </Link>
                 </SheetClose>
                 <SheetClose asChild>
