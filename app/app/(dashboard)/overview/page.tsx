@@ -18,7 +18,7 @@ export default async function Page() {
     }
     return (
         <>
-        
+        <h1 className="font-bold text-3xl">Overview</h1>
         </>
     )
 }
