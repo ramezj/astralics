@@ -13,6 +13,7 @@ export default async function Dashboard() {
   return (
     <>
     <Navbar session={session}/>
+      <h1 className="font-bold text-3xl">Feedback at your fingertips.</h1>
     </>
   )
 }
