@@ -30,7 +30,7 @@ export default async function Page() {
                 </>
             )
         })}
-        {/* {JSON.stringify(pages)} */}
+        {JSON.stringify(pages)}
         </>
     )
 }
