@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default async function Page() {
     return (
         <>
-        <h1 className="font-bold text-3xl">Feedback</h1>
+        <h1 className="font-bold text-2xl">Feedback</h1>
         <TableComponent />
         </>
     )

@@ -2,7 +2,8 @@ import { Metadata } from "next"
 import { auth } from "@/auth";
 import { GetUser } from "@/actions/user/GetUser";
 import { redirect } from "next/navigation";
-import { CreateNewPageForm } from "@/components/CreateNewPageForm";
+import { GetAllUserPages } from "@/actions/page/GetAllUserPages";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
     title: "Astralics | Overview",
@@ -13,12 +14,14 @@ export default async function Page() {
     const session = await auth();
     if(!session) redirect('/login');
     const user = await GetUser();
-    if(user.user?.isFirstTimeUser === true) {
-        redirect('/create')
-    }
+    const pages = await GetAllUserPages();
     return (
         <>
-        <h1 className="font-bold text-3xl">Overview</h1>
+        <div className="flex justify-between items-center w-full">
+        <h1 className="font-bold text-2xl">Overview</h1>
+        <Button> Create Page</Button>
+        </div>
+        {/* {JSON.stringify(pages)} */}
         </>
     )
 }

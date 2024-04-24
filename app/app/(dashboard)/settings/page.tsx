@@ -14,7 +14,7 @@ export default async function Page() {
     if(!session?.user) redirect('/login');
     return (
         <>
-        <h1 className="font-bold text-3xl">Settings</h1>
+        <h1 className="font-bold text-2xl">Settings</h1>
         <Separator />
         </>
     )
