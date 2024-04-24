@@ -4,6 +4,8 @@ import { GetUser } from "@/actions/user/GetUser";
 import { redirect } from "next/navigation";
 import { GetAllUserPages } from "@/actions/page/GetAllUserPages";
 import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
+import { PageCard } from "@/components/PageCard";
 
 export const metadata: Metadata = {
     title: "Astralics | Overview",
@@ -19,7 +21,7 @@ export default async function Page() {
         <>
         <div className="flex justify-between items-center w-full">
         <h1 className="font-bold text-2xl">Overview</h1>
-        <Button> Create Page</Button>
+        <Button> <Plus className="w-4 h-4 mr-2"/> Create new page</Button>
         </div>
         {/* {JSON.stringify(pages)} */}
         </>
