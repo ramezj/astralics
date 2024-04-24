@@ -56,8 +56,8 @@ const invoices = [
 
 export function TableComponent() {
   return (
+    <div className="rounded-lg border">
     <Table>
-      <TableCaption></TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead>Title</TableHead>
@@ -75,5 +75,6 @@ export function TableComponent() {
         ))}
       </TableBody>
     </Table>
+    </div>
   )
 }

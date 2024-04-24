@@ -23,6 +23,13 @@ export default async function Page() {
         <h1 className="font-bold text-2xl">Overview</h1>
         <Button> <Plus className="w-4 h-4 mr-2"/> Create new page</Button>
         </div>
+        {pages.pages?.map((page) => {
+            return (
+                <>
+                <PageCard title={page.name} website={page.website}/>
+                </>
+            )
+        })}
         {/* {JSON.stringify(pages)} */}
         </>
     )
