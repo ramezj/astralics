@@ -79,11 +79,12 @@ export function Navbar(props:any) {
             ? 
             <>
                 <Button asChild>
-                  <Link href='/overview'>
+                  <Link href='/choose-page'>
                   Dashboard
                   </Link>
                   </Button>
             </>
+            
             :
             <>
                 <Button asChild>

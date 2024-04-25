@@ -26,7 +26,7 @@ export default async function Page() {
         {pages.pages?.map((page) => {
             return (
                 <>
-                <PageCard title={page.name} website={page.website}/>
+                <PageCard title={page.name} website={page.website} handle={page.handle} id={page.id}/>
                 </>
             )
         })}

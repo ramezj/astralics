@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next"
 import { Separator } from "@/components/ui/separator" 
 import { GoogleSignIn } from "@/components/GoogleSignIn";
+import { GithubSignIn } from "@/components/GithubSignIn";
 
 export const metadata: Metadata = {
   title: "Astralics | Authentication",
@@ -21,6 +22,7 @@ export default function Page() {
               <Separator />
             </div>
                 <GoogleSignIn />
+                <GithubSignIn />
           </div>
         </div>
       </div>

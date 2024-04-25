@@ -42,10 +42,8 @@ export default function DashboardLayout({
     <div className="grid min-h-screen w-full md:grid-cols-[200px_1fr] lg:grid-cols-[250px_1fr]">
       <div className="hidden border-r md:block ">
         <div className="flex h-full max-h-screen flex-col gap-2 sticky top-0">
-          <div className="flex h-16 items-center border-b px-4 lg:h-16 lg:px-6">
-            <Link href="/overview" className="flex items-center text-center gap-2 font-bold">
-              <span className="">astralics</span>
-            </Link>
+          <div className="flex h-16 items-center border-b px-4 lg:h-16 lg:px-6 justify-center">
+           <Combobox />
           </div>
           <div className="flex-1 ">
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4 gap-2">
