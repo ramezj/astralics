@@ -24,7 +24,7 @@ export default async function Page() {
         <br />
         <br />
         <div className="w-full items-center flex justify-center">
-        <Card className="sm:w-[30%] w-[90%]">
+        <Card className="md:w-[30%] w-[90%]">
             <CardHeader>
                 <CardTitle className="align-middle text-center text-lg">Choose Your Page</CardTitle>
             </CardHeader>
@@ -33,7 +33,7 @@ export default async function Page() {
                 return (
                     <>
                     <Button variant="outline" asChild className="w-[90%]">
-                        <Link href={page.id}>
+                        <Link href={`/overview/${page.id}`}>
                             {page.name}
                         </Link>
                     </Button>

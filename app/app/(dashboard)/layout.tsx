@@ -32,12 +32,9 @@ import { Combobox } from "@/components/Combobox"
 
 export const dynamic = 'force-static'
 
-export default function DashboardLayout({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
+export default function DashboardLayout({ children }: Readonly<{ children: React.ReactNode;}>) {
     const pathname = usePathname();
+    console.log(pathname);
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[200px_1fr] lg:grid-cols-[250px_1fr]">
       <div className="hidden border-r md:block ">
@@ -47,23 +44,23 @@ export default function DashboardLayout({
           </div>
           <div className="flex-1 ">
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4 gap-2">
-              <Link href="/overview" className={`${pathname == '/overview' ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
+              <Link href="/overview" className={`${pathname.includes('/overview') ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
                 <Home className="h-4 w-4" />
                 Overview
               </Link>
-              <Link href="/feedback" className={`${pathname == '/feedback' ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
+              <Link href="/feedback" className={`${pathname.includes('/feedback') ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
                 <MessageCircle className="h-4 w-4" />
                 Feedback
               </Link>
-              <Link href="/ideas" className={`${pathname == '/ideas' ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
+              <Link href="/ideas" className={`${pathname.includes('/ideas') ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
               <Lightbulb className="h-4 w-4" />
                 Ideas
               </Link>
-              <Link href="/issues" className={`${pathname == '/issues' ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
+              <Link href="/issues" className={`${pathname.includes('/issues') ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
               <BanIcon className="h-4 w-4" />
                 Issues
               </Link>
-              <Link href="/settings" className={`${pathname == '/settings' ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
+              <Link href="/settings" className={`${pathname.includes('/settings') ? 'bg-muted' : ''} flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted duration-200`}>
               <Settings className="h-4 w-4" />
                 Settings
               </Link>
