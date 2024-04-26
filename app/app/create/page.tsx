@@ -13,16 +13,11 @@ export default async function Page() {
     const session = await auth();
     if(!session) redirect('/login');
     const user = await GetUser();
-    if(user.user?.isFirstTimeUser === false) {
-        redirect('/create')
-    }
     return (
         <>
-        {user.user?.isFirstTimeUser === true && 
         <div>
         <CreateNewPageForm />
         </div>
-        } 
         </>
     )
 }
